@@ -8,6 +8,24 @@ parts:
     chapters:
       - file: introduction/whypython
       - file: introduction/jlab_environ
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+  - caption: Meteorological Concepts, Data Analysis, and Visualization using MetPy
+    chapters:
+      - file: weather_technology/metpy_intro
+        sections:
+          - file: weather_technology/metpy_declarative_plotobs
+          - file: weather_technology/metpy_declarative_mappanel
+          - file: weather_technology/metpy_declarative_panelcontainer
+      - file: weather_technology/surface_obs_intro
+        sections:
+          - file: weather_technology/surface_obs
+          - file: weather_technology/surface_charts
+          - file: weather_technology/typical_notebook_structure
+          - file: weather_technology/current_surface_observation_plots
+          - file: weather_technology/practice_tasks_surface
+          - file: weather_technology/observation_locations
+          - file: weather_technology/full_surface_station_model
+          - file: weather_technology/saving_images
+          - file: weather_technology/map_making_summary
+  - caption: Appendix
+    chapters:
+      - file: appendix/surface_data_access
