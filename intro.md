@@ -1,11 +1,12 @@
-# Welcome to your Jupyter Book
+# Introduction to Weather Technology using MetPy
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This is a textbook to demonstrate the use of the MetPy declarative syntax and develop
+knowledge within the meteorological domain at an early collegiate level. Prior coursework
+in an introductory meteorology is expected to be able to follow and work through all material
+but even just a basic understanding of meteorology content and processes should be enough
+to understand the vast majority of the content of this book.
 
-Check out the content pages bundled with this sample book to see more.
+The text is contain in four main parts as exhibited in the table of contents below.
 
 ```{tableofcontents}
 ```
