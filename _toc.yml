@@ -15,17 +15,39 @@ parts:
           - file: weather_technology/metpy_declarative_plotobs
           - file: weather_technology/metpy_declarative_mappanel
           - file: weather_technology/metpy_declarative_panelcontainer
-      - file: weather_technology/surface_obs_intro
+      - file: weather_technology/surface_plots/surface_obs_intro
         sections:
-          - file: weather_technology/surface_obs
-          - file: weather_technology/surface_charts
-          - file: weather_technology/typical_notebook_structure
-          - file: weather_technology/current_surface_observation_plots
-          - file: weather_technology/practice_tasks_surface
-          - file: weather_technology/observation_locations
-          - file: weather_technology/full_surface_station_model
-          - file: weather_technology/saving_images
-          - file: weather_technology/map_making_summary
+          - file: weather_technology/surface_plots/surface_obs
+          - file: weather_technology/surface_plots/surface_charts
+          - file: weather_technology/surface_plots/typical_notebook_structure
+          - file: weather_technology/surface_plots/current_surface_observation_plots
+          - file: weather_technology/surface_plots/practice_tasks_surface
+          - file: weather_technology/surface_plots/observation_locations
+          - file: weather_technology/surface_plots/full_surface_station_model
+          - file: weather_technology/surface_plots/saving_images
+          - file: weather_technology/surface_plots/map_making_summary
+      - file: weather_technology/upperair_plots/upperair_intro
+        sections:
+          - file: weather_technology/upperair_plots/upperair_station_model
+          - file: weather_technology/upperair_plots/upperair_station_model_decoding_practice
+          - file: weather_technology/upperair_plots/map_projections
+          - file: weather_technology/upperair_plots/using_projections
+          - file: weather_technology/upperair_plots/plot_areas
+          - file: weather_technology/upperair_plots/upperair_observation_plot
+          - file: weather_technology/upperair_plots/projection_practice
+          - file: weather_technology/upperair_plots/upperair_practice_tasks
+      - file: weather_technology/hand_analysis/hand_analysis_intro
+        sections:
+          - file: weather_technology/hand_analysis/hand_analysis_step1
+          - file: weather_technology/hand_analysis/hand_analysis_step2
+          - file: weather_technology/hand_analysis/hand_analysis_step3
+          - file: weather_technology/hand_analysis/hand_analysis_step4
+          - file: weather_technology/hand_analysis/upperair_analysis_contour_parameters
+          - file: weather_technology/hand_analysis/hand_analysis_practice_tasks
+          - file: weather_technology/hand_analysis/surface_analysis_contour_parameters
+          - file: weather_technology/hand_analysis/drawing_fronts
+          - file: weather_technology/hand_analysis/practice_surface_analysis
+
   - caption: Appendix
     chapters:
       - file: appendix/surface_data_access

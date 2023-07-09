@@ -5,7 +5,7 @@
 <img src="../images/surface_station_model.png" width="300" height="300">
 </p> -->
 
-```{figure} ../images/surface_station_model.png
+```{figure} ../../images/surface_station_model.png
 :alt: surface station model
 :width: 300px
 :height: 300px

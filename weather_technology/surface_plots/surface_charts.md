@@ -19,7 +19,7 @@ containing many surface station models ({numref}`Fig. %s <sfc_station_model>`)
 representing surface variables using the MetPy declarative syntax. Notice
 how we can change the colors of elements of the station model to be able to 
 more easily read the disparate pieces of information.
-```{figure} ../images/example_sfc_map_20230223_0000.png
+```{figure} ../../images/example_sfc_map_20230223_0000.png
 :alt: example surface map
 :width: 1000px
 :align: center
