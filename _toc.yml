@@ -74,6 +74,17 @@ parts:
           - file: weather_technology/colorfilled_plots/smooth_field.md
           - file: weather_technology/colorfilled_plots/smooth_contour.md
           - file: weather_technology/colorfilled_plots/colorfilled_practice_tasks.md
+      - file: weather_technology/midlat_cyclone/midlatitude_cyclone_intro.md
+        sections:
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_pre_environment.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_cyclogenesis.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_mature.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_occlusion.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_precipitation.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warmfront.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_coldfront.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warm_sector.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_tracks.md
 
   - caption: Appendix
     chapters:
