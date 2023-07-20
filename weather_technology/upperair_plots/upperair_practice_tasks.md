@@ -1,4 +1,4 @@
-# Upperair Maps Practice Tasks
+# Practice Tasks - Upperair Maps
 
 1.	Create a 500-hPa map displaying the information in the proper format in a Jupyter Notebook.
 

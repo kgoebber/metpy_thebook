@@ -67,6 +67,13 @@ parts:
           - file: weather_technology/force_balances/gradient_balance.md
           - file: weather_technology/force_balances/surface_balance.md
           - file: weather_technology/force_balances/thermal_wind_balance.md
+      - file: weather_technology/colorfilled_plots/colorfilled_intro.md
+        sections:
+          - file: weather_technology/colorfilled_plots/colorfilled_gridded_output.ipynb
+          - file: weather_technology/colorfilled_plots/smoothing_data.md
+          - file: weather_technology/colorfilled_plots/smooth_field.md
+          - file: weather_technology/colorfilled_plots/smooth_contour.md
+          - file: weather_technology/colorfilled_plots/colorfilled_practice_tasks.md
 
   - caption: Appendix
     chapters:
@@ -74,6 +81,7 @@ parts:
         sections:
           - file: appendix/metpy_declarative_plotobs
           - file: appendix/metpy_declarative_contourplot
+          - file: appendix/metpy_declarative_filledcontourplot
           - file: appendix/metpy_declarative_barbplot
           - file: appendix/metpy_declarative_mappanel
           - file: appendix/metpy_declarative_panelcontainer

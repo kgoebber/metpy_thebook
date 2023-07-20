@@ -81,3 +81,14 @@ model output from the GFS, NAM, or RAP.
 * If you want to change the units for plotting purposes, add the string
   value of the units desired. For example, if you want to plot temperature
   in Celsius, then set this attribute to 'degC'.
+
+### **smooth_contour**
+* This attribute is best used to smooth contours when contouring a
+  sparse grid (e.g., when your data has a large grid spacing). This will
+  produce smoothed geopotential heights for all levels available in the
+  DataArray using a spline interpolation.
+
+### **smooth_field**
+* This attribute is best used to smooth contours when contouring a
+  higher resolution (smaller grid spacing with lots of grid points) field.
+  This will produce a smoothed field using the nine-point smoother twice.

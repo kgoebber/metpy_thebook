@@ -1,4 +1,4 @@
-# Surface Observation Practice Tasks
+# Practice Tasks - Surface Observation
 
 So, what did we set? Just the required and a few of the optional
 parameters to make a plot. Use the practice tasks below to explore more

@@ -1,4 +1,4 @@
-# Hand Analysis Practice Tasks
+# Practice Tasks - Upperair Hand Analysis
 
 1. Practice drawing 500-hPa heights every 60 m.
 

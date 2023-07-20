@@ -1,4 +1,4 @@
-# Practice Tasks
+# Practice Tasks - Contour Plotting
 1.	Create a 500-hPa map with height contoured in solid black
     and temperature in Kelvin contoured in dashed red.
 2.	Add winds to your map.

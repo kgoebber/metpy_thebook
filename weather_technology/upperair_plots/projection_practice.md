@@ -1,4 +1,4 @@
-# Practice Using Projections
+# Practice Tasks - Using Projections
 
 1. Open a notebook and create a map using the Lambert Conic projection by using:
 
