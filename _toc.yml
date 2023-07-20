@@ -50,13 +50,7 @@ parts:
           - file: weather_technology/atmospheric_forces/centrifugal_force.md
           - file: weather_technology/atmospheric_forces/friction_force.md
           - file: weather_technology/atmospheric_forces/gravity.md
-      - file: weather_technology/force_balances/force_balances_intro.md
-        sections:
-          - file: weather_technology/force_balances/hydrostatic_balance.md
-          - file: weather_technology/force_balances/geostrophic_balance.md
-          - file: weather_technology/force_balances/gradient_balance.md
-          - file: weather_technology/force_balances/surface_balance.md
-          - file: weather_technology/force_balances/thermal_wind_balance.md
+          - file: weather_technology/atmospheric_forces/forces_practice_tasks.md
       - file: weather_technology/contour_plots/gridded_data_intro.md
         sections:
           - file: weather_technology/contour_plots/gridded_data_location.md
@@ -66,6 +60,13 @@ parts:
           - file: weather_technology/contour_plots/overlay_contours.md
           - file: weather_technology/contour_plots/multiple_contours.ipynb
           - file: weather_technology/contour_plots/contour_plot_practice_tasks.md
+      - file: weather_technology/force_balances/force_balances_intro.md
+        sections:
+          - file: weather_technology/force_balances/hydrostatic_balance.md
+          - file: weather_technology/force_balances/geostrophic_balance.md
+          - file: weather_technology/force_balances/gradient_balance.md
+          - file: weather_technology/force_balances/surface_balance.md
+          - file: weather_technology/force_balances/thermal_wind_balance.md
 
   - caption: Appendix
     chapters:
