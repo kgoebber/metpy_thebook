@@ -1,6 +1,6 @@
 # Map Making Summary
 
-## Summary of process for making a map:**
+## Summary of process for making a map:
 
 1.  Open Jupyter Lab
 

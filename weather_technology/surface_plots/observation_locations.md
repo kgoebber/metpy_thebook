@@ -3,7 +3,7 @@
 The layout of data around a station model is very important. At the
 beginning of this section we reviewed the typical layout for the display
 of meteorological variables around a surface station. In our plotting of
-surface observations ([`PlotObs`](../metpy_declarative_plotobs)) we can set everything in the same way.
+surface observations ([`PlotObs`](../../appendix/metpy_declarative_plotobs)) we can set everything in the same way.
 The following is the location where a variable will be placed ({numref}`Fig. %s <locations>`), depending
 on the string at each location.
 

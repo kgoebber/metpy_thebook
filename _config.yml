@@ -3,7 +3,7 @@
 
 title: Introduction to Weather Technology using MetPy
 author: Kevin Goebbert
-logo: logo.png
+logo: metpy_thebook_graphic.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

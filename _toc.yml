@@ -11,10 +11,6 @@ parts:
   - caption: Meteorological Concepts, Data Analysis, and Visualization using MetPy
     chapters:
       - file: weather_technology/metpy_intro
-        sections:
-          - file: weather_technology/metpy_declarative_plotobs
-          - file: weather_technology/metpy_declarative_mappanel
-          - file: weather_technology/metpy_declarative_panelcontainer
       - file: weather_technology/surface_plots/surface_obs_intro
         sections:
           - file: weather_technology/surface_plots/surface_obs
@@ -47,7 +43,38 @@ parts:
           - file: weather_technology/hand_analysis/surface_analysis_contour_parameters
           - file: weather_technology/hand_analysis/drawing_fronts
           - file: weather_technology/hand_analysis/practice_surface_analysis
+      - file: weather_technology/atmospheric_forces/forces_intro.md
+        sections:
+          - file: weather_technology/atmospheric_forces/pressure_gradient_force.md
+          - file: weather_technology/atmospheric_forces/coriolis_force.md
+          - file: weather_technology/atmospheric_forces/centrifugal_force.md
+          - file: weather_technology/atmospheric_forces/friction_force.md
+          - file: weather_technology/atmospheric_forces/gravity.md
+      - file: weather_technology/force_balances/force_balances_intro.md
+        sections:
+          - file: weather_technology/force_balances/hydrostatic_balance.md
+          - file: weather_technology/force_balances/geostrophic_balance.md
+          - file: weather_technology/force_balances/gradient_balance.md
+          - file: weather_technology/force_balances/surface_balance.md
+          - file: weather_technology/force_balances/thermal_wind_balance.md
+      - file: weather_technology/contour_plots/gridded_data_intro.md
+        sections:
+          - file: weather_technology/contour_plots/gridded_data_location.md
+          - file: weather_technology/contour_plots/model_file_info.ipynb
+          - file: weather_technology/contour_plots/contour_plotting.ipynb
+          - file: weather_technology/contour_plots/add_wind_barbs.ipynb
+          - file: weather_technology/contour_plots/overlay_contours.md
+          - file: weather_technology/contour_plots/multiple_contours.ipynb
+          - file: weather_technology/contour_plots/contour_plot_practice_tasks.md
 
   - caption: Appendix
     chapters:
+      - file: appendix/metpy_declarative_details
+        sections:
+          - file: appendix/metpy_declarative_plotobs
+          - file: appendix/metpy_declarative_contourplot
+          - file: appendix/metpy_declarative_barbplot
+          - file: appendix/metpy_declarative_mappanel
+          - file: appendix/metpy_declarative_panelcontainer
       - file: appendix/surface_data_access
+    

@@ -1,4 +1,4 @@
-# MetPy - `PlotObs`
+# MetPy - `PlotObs()`
 
 To make a plot of observations requires the use of the `PlotObs` module from the MetPy declarative
 syntax. This is a Class of the declarative syntax and note that Classes contain MiXeD case names. This class
