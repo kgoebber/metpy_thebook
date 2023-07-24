@@ -85,6 +85,9 @@ parts:
           - file: weather_technology/midlat_cyclone/midlatitude_cyclone_coldfront.md
           - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warm_sector.md
           - file: weather_technology/midlat_cyclone/midlatitude_cyclone_tracks.md
+      - file: weather_technology/overlay_maps/overlay_maps_intro.md
+        sections:
+          - file: weather_technology/overlay_maps/upperair_500_obs_contours.ipynb
 
   - caption: Appendix
     chapters:
