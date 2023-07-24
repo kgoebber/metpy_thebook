@@ -88,6 +88,10 @@ parts:
       - file: weather_technology/overlay_maps/overlay_maps_intro.md
         sections:
           - file: weather_technology/overlay_maps/upperair_500_obs_contours.ipynb
+      - file: weather_technology/nwp/nwp_intro.md
+        sections:
+          - file: weather_technology/nwp/nwp_overview.md
+          - file: weather_technology/nwp/operational_models.md
 
   - caption: Appendix
     chapters:
