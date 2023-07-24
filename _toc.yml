@@ -92,6 +92,12 @@ parts:
         sections:
           - file: weather_technology/nwp/nwp_overview.md
           - file: weather_technology/nwp/operational_models.md
+      - file: weather_technology/derived_parameters/derived_intro.md
+        sections:
+          - file: weather_technology/derived_parameters/thickness.md
+          - file: weather_technology/derived_parameters/vorticity.md
+          - file: weather_technology/derived_parameters/advection.md
+          - file: weather_technology/derived_parameters/derived_parameters_practice_tasks.md
 
   - caption: Appendix
     chapters:
