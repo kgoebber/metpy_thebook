@@ -125,6 +125,13 @@ parts:
           - file: weather_technology/skewt/skewt_stability_indices.md
           - file: weather_technology/skewt/advanced_skewt.ipynb
           - file: weather_technology/skewt/metpy_skewt_calc_practice.md
+      - file: weather_technology/satellites/satellite_intro.md
+        sections:
+          - file: weather_technology/satellites/satellite_types.md
+          - file: weather_technology/satellites/satellite_channels.md
+          - file: weather_technology/satellites/satellite_imagery.ipynb
+          - file: weather_technology/satellites/satellite_features.md
+          - file: weather_technology/satellites/colorenhanced_satellite_imagery.ipynb
 
   - caption: Appendix
     chapters:
