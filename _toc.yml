@@ -98,6 +98,20 @@ parts:
           - file: weather_technology/derived_parameters/vorticity.md
           - file: weather_technology/derived_parameters/advection.md
           - file: weather_technology/derived_parameters/derived_parameters_practice_tasks.md
+      - file: weather_technology/metpy_calculations/calc_intro.md
+        sections:
+          - file: weather_technology/metpy_calculations/simple_calcs.md
+          - file: weather_technology/metpy_calculations/gridded_calculation_thickness.ipynb
+          - file: weather_technology/metpy_calculations/scaling_values.md
+          - file: weather_technology/metpy_calculations/scaling_example.ipynb
+          - file: weather_technology/metpy_calculations/simple_calc_practice_tasks.md
+          - file: weather_technology/metpy_calculations/wind_speed.md
+          - file: weather_technology/metpy_calculations/gridded_calculation_wind_speed.ipynb
+          - file: weather_technology/metpy_calculations/advection_info.md
+          - file: weather_technology/metpy_calculations/gridded_calculation_advection.ipynb
+          - file: weather_technology/metpy_calculations/relative_vorticity_info.md
+          - file: weather_technology/metpy_calculations/gridded_calculation_vorticity.ipynb
+          - file: weather_technology/metpy_calculations/calculation_practice_tasks.md
 
   - caption: Appendix
     chapters:

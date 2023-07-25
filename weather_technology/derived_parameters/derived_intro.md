@@ -1,4 +1,4 @@
-# Derived Atmospheric Variables
+# Derived Atmospheric Parameters
 
 So far we have focused on plotting variables that exist in a given
 data file (e.g., temperature, mean sea-level pressure, geopotential heights).
