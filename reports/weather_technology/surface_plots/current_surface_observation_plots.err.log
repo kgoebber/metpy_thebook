@@ -1,0 +1,220 @@
+Traceback (most recent call last):
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Plot desired data
+obs = declarative.PlotObs()
+obs.data = df
+obs.time = date
+obs.time_window = timedelta(minutes=30)
+obs.fields = ['air_temperature']
+obs.plot_units = ['degF']
+
+# Panel for plot with Map features
+panel = declarative.MapPanel()
+panel.layout = (1, 1, 1)
+panel.projection = 'lcc'
+panel.area = 'in'
+panel.layers = ['states']
+panel.title = f'Air temperature on {date:%Y%m%d} at {date:%H}UTC'
+panel.plots = [obs]
+
+# Bringing it all together
+pc = declarative.PanelContainer()
+pc.size = (10, 10)
+pc.panels = [panel]
+
+pc.show()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:3652[0m, in [0;36mIndex.get_loc[0;34m(self, key)[0m
+[1;32m   3651[0m [38;5;28;01mtry[39;00m:
+[0;32m-> 3652[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_engine[38;5;241m.[39mget_loc(casted_key)
+[1;32m   3653[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:549[0m, in [0;36mpandas._libs.index.DatetimeEngine.get_loc[0;34m()[0m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:578[0m, in [0;36mpandas._libs.index.DatetimeEngine.get_loc[0;34m()[0m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:214[0m, in [0;36mpandas._libs.index.IndexEngine._get_loc_duplicates[0;34m()[0m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:222[0m, in [0;36mpandas._libs.index.IndexEngine._maybe_get_bool_indexer[0;34m()[0m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:114[0m, in [0;36mpandas._libs.index._unpack_bool_indexer[0;34m()[0m
+
+[0;31mKeyError[0m: 1690207173835680000
+
+The above exception was the direct cause of the following exception:
+
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py:584[0m, in [0;36mDatetimeIndex.get_loc[0;34m(self, key)[0m
+[1;32m    583[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 584[0m     [38;5;28;01mreturn[39;00m [43mIndex[49m[38;5;241;43m.[39;49m[43mget_loc[49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43mkey[49m[43m)[49m
+[1;32m    585[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:3654[0m, in [0;36mIndex.get_loc[0;34m(self, key)[0m
+[1;32m   3653[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
+[0;32m-> 3654[0m     [38;5;28;01mraise[39;00m [38;5;167;01mKeyError[39;00m(key) [38;5;28;01mfrom[39;00m [38;5;21;01merr[39;00m
+[1;32m   3655[0m [38;5;28;01mexcept[39;00m [38;5;167;01mTypeError[39;00m:
+[1;32m   3656[0m     [38;5;66;03m# If we have a listlike key, _check_indexing_error will raise[39;00m
+[1;32m   3657[0m     [38;5;66;03m#  InvalidIndexError. Otherwise we fall through and re-raise[39;00m
+[1;32m   3658[0m     [38;5;66;03m#  the TypeError.[39;00m
+
+[0;31mKeyError[0m: Timestamp('2023-07-24 13:59:33.835680')
+
+The above exception was the direct cause of the following exception:
+
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+Cell [0;32mIn[3], line 23[0m
+[1;32m     20[0m pc[38;5;241m.[39msize [38;5;241m=[39m ([38;5;241m10[39m, [38;5;241m10[39m)
+[1;32m     21[0m pc[38;5;241m.[39mpanels [38;5;241m=[39m [panel]
+[0;32m---> 23[0m [43mpc[49m[38;5;241;43m.[39;49m[43mshow[49m[43m([49m[43m)[49m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:179[0m, in [0;36mPanelContainer.show[0;34m(self)[0m
+[1;32m    177[0m [38;5;28;01mdef[39;00m [38;5;21mshow[39m([38;5;28mself[39m):
+[1;32m    178[0m [38;5;250m    [39m[38;5;124;03m"""Show the constructed graphic on the screen."""[39;00m
+[0;32m--> 179[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43m)[49m
+[1;32m    180[0m     plt[38;5;241m.[39mshow()
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:166[0m, in [0;36mPanelContainer.draw[0;34m(self)[0m
+[1;32m    164[0m [38;5;28;01mfor[39;00m panel [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39mpanels:
+[1;32m    165[0m     [38;5;28;01mwith[39;00m panel[38;5;241m.[39mhold_trait_notifications():
+[0;32m--> 166[0m         [43mpanel[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43m)[49m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:461[0m, in [0;36mMapPanel.draw[0;34m(self)[0m
+[1;32m    459[0m [38;5;28;01mfor[39;00m p [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39mplots:
+[1;32m    460[0m     [38;5;28;01mwith[39;00m p[38;5;241m.[39mhold_trait_notifications():
+[0;32m--> 461[0m         [43mp[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43m)[49m
+[1;32m    463[0m [38;5;66;03m# Add all of the maps[39;00m
+[1;32m    464[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m([38;5;28mself[39m[38;5;241m.[39mlayers) [38;5;241m>[39m [38;5;28mlen[39m([38;5;28mself[39m[38;5;241m.[39mlayers_edgecolor):
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1551[0m, in [0;36mPlotObs.draw[0;34m(self)[0m
+[1;32m   1549[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39m_need_redraw:
+[1;32m   1550[0m     [38;5;28;01mif[39;00m [38;5;28mgetattr[39m([38;5;28mself[39m, [38;5;124m'[39m[38;5;124mhandle[39m[38;5;124m'[39m, [38;5;28;01mNone[39;00m) [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m-> 1551[0m         [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_build[49m[43m([49m[43m)[49m
+[1;32m   1552[0m     [38;5;28mself[39m[38;5;241m.[39m_need_redraw [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1563[0m, in [0;36mPlotObs._build[0;34m(self)[0m
+[1;32m   1561[0m [38;5;28;01mdef[39;00m [38;5;21m_build[39m([38;5;28mself[39m):
+[1;32m   1562[0m [38;5;250m    [39m[38;5;124;03m"""Build the plot by calling needed plotting methods as necessary."""[39;00m
+[0;32m-> 1563[0m     lon, lat, data [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mplotdata[49m
+[1;32m   1565[0m     [38;5;66;03m# Use the cartopy map projection to transform station locations to the map and[39;00m
+[1;32m   1566[0m     [38;5;66;03m# then refine the number of stations plotted by setting a radius[39;00m
+[1;32m   1567[0m     scale [38;5;241m=[39m [38;5;241m1.[39m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mparent[38;5;241m.[39m_proj_obj [38;5;241m==[39m ccrs[38;5;241m.[39mPlateCarree() [38;5;28;01melse[39;00m [38;5;241m100000.[39m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1538[0m, in [0;36mPlotObs.plotdata[0;34m(self)[0m
+[1;32m   1532[0m [38;5;250m[39m[38;5;124;03m"""Return the data for plotting.[39;00m
+[1;32m   1533[0m 
+[1;32m   1534[0m [38;5;124;03mThe data arrays, x coordinates, and y coordinates.[39;00m
+[1;32m   1535[0m 
+[1;32m   1536[0m [38;5;124;03m"""[39;00m
+[1;32m   1537[0m plot_data [38;5;241m=[39m {}
+[0;32m-> 1538[0m [38;5;28;01mfor[39;00m dim_name [38;5;129;01min[39;00m [38;5;28mlist[39m([38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mobsdata[49m):
+[1;32m   1539[0m     [38;5;28;01mif[39;00m dim_name[38;5;241m.[39mfind([38;5;124m'[39m[38;5;124mlat[39m[38;5;124m'[39m) [38;5;241m!=[39m [38;5;241m-[39m[38;5;241m1[39m:
+[1;32m   1540[0m         lat [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mobsdata[dim_name]
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1514[0m, in [0;36mPlotObs.obsdata[0;34m(self)[0m
+[1;32m   1510[0m     [38;5;66;03m# Indexes need to be properly sorted for the slicing below to work; the[39;00m
+[1;32m   1511[0m     [38;5;66;03m# error you get if that's not the case really convoluted, which is why[39;00m
+[1;32m   1512[0m     [38;5;66;03m# we don't rely on users doing it.[39;00m
+[1;32m   1513[0m     data [38;5;241m=[39m data[38;5;241m.[39msort_index()
+[0;32m-> 1514[0m     data [38;5;241m=[39m [43mdata[49m[43m[[49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtime[49m[43m [49m[38;5;241;43m-[39;49m[43m [49m[43mwindow[49m[43m:[49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtime[49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[43mwindow[49m[43m][49m
+[1;32m   1516[0m [38;5;66;03m# Look for the station column[39;00m
+[1;32m   1517[0m stn_vars [38;5;241m=[39m [[38;5;124m'[39m[38;5;124mstation[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mstn[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mstation_id[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mstid[39m[38;5;124m'[39m]
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/frame.py:3735[0m, in [0;36mDataFrame.__getitem__[0;34m(self, key)[0m
+[1;32m   3733[0m [38;5;66;03m# Do we have a slicer (on rows)?[39;00m
+[1;32m   3734[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(key, [38;5;28mslice[39m):
+[0;32m-> 3735[0m     indexer [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mindex[49m[38;5;241;43m.[39;49m[43m_convert_slice_indexer[49m[43m([49m[43mkey[49m[43m,[49m[43m [49m[43mkind[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mgetitem[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[1;32m   3736[0m     [38;5;28;01mif[39;00m [38;5;28misinstance[39m(indexer, np[38;5;241m.[39mndarray):
+[1;32m   3737[0m         [38;5;66;03m# reachable with DatetimeIndex[39;00m
+[1;32m   3738[0m         indexer [38;5;241m=[39m lib[38;5;241m.[39mmaybe_indices_to_slice(
+[1;32m   3739[0m             indexer[38;5;241m.[39mastype(np[38;5;241m.[39mintp, copy[38;5;241m=[39m[38;5;28;01mFalse[39;00m), [38;5;28mlen[39m([38;5;28mself[39m)
+[1;32m   3740[0m         )
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:4131[0m, in [0;36mIndex._convert_slice_indexer[0;34m(self, key, kind)[0m
+[1;32m   4129[0m     indexer [38;5;241m=[39m key
+[1;32m   4130[0m [38;5;28;01melse[39;00m:
+[0;32m-> 4131[0m     indexer [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mslice_indexer[49m[43m([49m[43mstart[49m[43m,[49m[43m [49m[43mstop[49m[43m,[49m[43m [49m[43mstep[49m[43m)[49m
+[1;32m   4133[0m [38;5;28;01mreturn[39;00m indexer
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py:636[0m, in [0;36mDatetimeIndex.slice_indexer[0;34m(self, start, end, step)[0m
+[1;32m    628[0m [38;5;66;03m# GH#33146 if start and end are combinations of str and None and Index is not[39;00m
+[1;32m    629[0m [38;5;66;03m# monotonic, we can not use Index.slice_indexer because it does not honor the[39;00m
+[1;32m    630[0m [38;5;66;03m# actual elements, is only searching for start and end[39;00m
+[1;32m    631[0m [38;5;28;01mif[39;00m (
+[1;32m    632[0m     check_str_or_none(start)
+[1;32m    633[0m     [38;5;129;01mor[39;00m check_str_or_none(end)
+[1;32m    634[0m     [38;5;129;01mor[39;00m [38;5;28mself[39m[38;5;241m.[39mis_monotonic_increasing
+[1;32m    635[0m ):
+[0;32m--> 636[0m     [38;5;28;01mreturn[39;00m [43mIndex[49m[38;5;241;43m.[39;49m[43mslice_indexer[49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43mstart[49m[43m,[49m[43m [49m[43mend[49m[43m,[49m[43m [49m[43mstep[49m[43m)[49m
+[1;32m    638[0m mask [38;5;241m=[39m np[38;5;241m.[39marray([38;5;28;01mTrue[39;00m)
+[1;32m    639[0m raise_mask [38;5;241m=[39m np[38;5;241m.[39marray([38;5;28;01mTrue[39;00m)
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6341[0m, in [0;36mIndex.slice_indexer[0;34m(self, start, end, step)[0m
+[1;32m   6297[0m [38;5;28;01mdef[39;00m [38;5;21mslice_indexer[39m(
+[1;32m   6298[0m     [38;5;28mself[39m,
+[1;32m   6299[0m     start: Hashable [38;5;241m|[39m [38;5;28;01mNone[39;00m [38;5;241m=[39m [38;5;28;01mNone[39;00m,
+[1;32m   6300[0m     end: Hashable [38;5;241m|[39m [38;5;28;01mNone[39;00m [38;5;241m=[39m [38;5;28;01mNone[39;00m,
+[1;32m   6301[0m     step: [38;5;28mint[39m [38;5;241m|[39m [38;5;28;01mNone[39;00m [38;5;241m=[39m [38;5;28;01mNone[39;00m,
+[1;32m   6302[0m ) [38;5;241m-[39m[38;5;241m>[39m [38;5;28mslice[39m:
+[1;32m   6303[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[1;32m   6304[0m [38;5;124;03m    Compute the slice indexer for input labels and step.[39;00m
+[1;32m   6305[0m 
+[0;32m   (...)[0m
+[1;32m   6339[0m [38;5;124;03m    slice(1, 3, None)[39;00m
+[1;32m   6340[0m [38;5;124;03m    """[39;00m
+[0;32m-> 6341[0m     start_slice, end_slice [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mslice_locs[49m[43m([49m[43mstart[49m[43m,[49m[43m [49m[43mend[49m[43m,[49m[43m [49m[43mstep[49m[38;5;241;43m=[39;49m[43mstep[49m[43m)[49m
+[1;32m   6343[0m     [38;5;66;03m# return a slice[39;00m
+[1;32m   6344[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m is_scalar(start_slice):
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6534[0m, in [0;36mIndex.slice_locs[0;34m(self, start, end, step)[0m
+[1;32m   6532[0m start_slice [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[1;32m   6533[0m [38;5;28;01mif[39;00m start [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;32m-> 6534[0m     start_slice [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mget_slice_bound[49m[43m([49m[43mstart[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mleft[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[1;32m   6535[0m [38;5;28;01mif[39;00m start_slice [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m   6536[0m     start_slice [38;5;241m=[39m [38;5;241m0[39m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6459[0m, in [0;36mIndex.get_slice_bound[0;34m(self, label, side)[0m
+[1;32m   6456[0m         [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_searchsorted_monotonic(label, side)
+[1;32m   6457[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mValueError[39;00m:
+[1;32m   6458[0m         [38;5;66;03m# raise the original KeyError[39;00m
+[0;32m-> 6459[0m         [38;5;28;01mraise[39;00m err
+[1;32m   6461[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(slc, np[38;5;241m.[39mndarray):
+[1;32m   6462[0m     [38;5;66;03m# get_loc may return a boolean array, which[39;00m
+[1;32m   6463[0m     [38;5;66;03m# is OK as long as they are representable by a slice.[39;00m
+[1;32m   6464[0m     [38;5;28;01massert[39;00m is_bool_dtype(slc[38;5;241m.[39mdtype)
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6453[0m, in [0;36mIndex.get_slice_bound[0;34m(self, label, side)[0m
+[1;32m   6451[0m [38;5;66;03m# we need to look up the label[39;00m
+[1;32m   6452[0m [38;5;28;01mtry[39;00m:
+[0;32m-> 6453[0m     slc [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mget_loc[49m[43m([49m[43mlabel[49m[43m)[49m
+[1;32m   6454[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
+[1;32m   6455[0m     [38;5;28;01mtry[39;00m:
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py:586[0m, in [0;36mDatetimeIndex.get_loc[0;34m(self, key)[0m
+[1;32m    584[0m     [38;5;28;01mreturn[39;00m Index[38;5;241m.[39mget_loc([38;5;28mself[39m, key)
+[1;32m    585[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m [38;5;28;01mas[39;00m err:
+[0;32m--> 586[0m     [38;5;28;01mraise[39;00m [38;5;167;01mKeyError[39;00m(orig_key) [38;5;28;01mfrom[39;00m [38;5;21;01merr[39;00m
+
+[0;31mKeyError[0m: Timestamp('2023-07-24 13:59:33.835680')
+

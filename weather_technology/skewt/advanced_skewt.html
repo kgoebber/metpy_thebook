@@ -1,0 +1,912 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Advanced Skew-T Calculations and Plotting &#8212; Introduction to Weather Technology using MetPy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weather_technology/skewt/advanced_skewt';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Practice Tasks - MetPy Sounding Calculations" href="metpy_skewt_calc_practice.html" />
+    <link rel="prev" title="Stability Indices" href="skewt_stability_indices.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to Weather Technology using MetPy
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/whypython.html">Why Python?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/jlab_environ.html">Jupyter Lab Environment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meteorological Concepts, Data Analysis, and Visualization using MetPy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../metpy_intro.html">MetPy Introduction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../surface_plots/surface_obs_intro.html">Surface Obs and Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/surface_obs.html">Review of Surface Station Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/surface_charts.html">Surface Observation Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/typical_notebook_structure.html">Common Notebook Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/current_surface_observation_plots.html">Surface Data and Plotting using MetPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/practice_tasks_surface.html">Practice Tasks - Surface Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/observation_locations.html">Station Model Location Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/full_surface_station_model.html">Full Surface Station Model Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/saving_images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surface_plots/map_making_summary.html">Map Making Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../upperair_plots/upperair_intro.html">Upperair Obs and Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_station_model.html">Upperair Station Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_station_model_decoding_practice.html">Practice Decoding Upperair Station Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/map_projections.html">Map Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/using_projections.html">Using Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/plot_areas.html">Setting the Plot Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_observation_plot.html">Upperair Observation Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/projection_practice.html">Practice Tasks - Using Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_practice_tasks.html">Practice Tasks - Upperair Maps</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_analysis/hand_analysis_intro.html">Introduction to Hand Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step1.html">Step 1: Draw Contours In Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step2.html">Step 2: Meteorological Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step3.html">Step 3: Labeling contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step4.html">Step 4: INK the contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/upperair_analysis_contour_parameters.html">Upperair Map Contour Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_practice_tasks.html">Practice Tasks - Upperair Hand Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/surface_analysis_contour_parameters.html">Surface Maps Contour Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/drawing_fronts.html">Drawing Fronts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hand_analysis/practice_surface_analysis.html">Practice Tasks - Surface Contouring</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../atmospheric_forces/forces_intro.html">Atmospheric Forces</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/pressure_gradient_force.html">Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/coriolis_force.html">Coriolis Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/centrifugal_force.html">Centrifugal Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/friction_force.html">Friction Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/gravity.html">Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/forces_practice_tasks.html">Practice Tasks - Forces</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contour_plots/gridded_data_intro.html">Gridded Data and Contour Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/gridded_data_location.html">Gridded Data Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/model_file_info.html">Model Output Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/contour_plotting.html">Contour Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/add_wind_barbs.html">Contour Plotting with Wind Barbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/overlay_contours.html">Overlay Multiple Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/multiple_contours.html">Plotting Multiple Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contour_plots/contour_plot_practice_tasks.html">Practice Tasks - Contour Plotting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../force_balances/force_balances_intro.html">Atmospheric Force Balances</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../force_balances/hydrostatic_balance.html">Hydrostatic Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_balances/geostrophic_balance.html">Geostrophic Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_balances/gradient_balance.html">Gradient Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_balances/surface_balance.html">Guldberg-Mohn Balance (Surface Balance)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_balances/thermal_wind_balance.html">Thermal Wind Balance</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../colorfilled_plots/colorfilled_intro.html">Color-filled Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/colorfilled_gridded_output.html">Color-filled Contouring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smoothing_data.html">Smoothing Data Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smooth_field.html">Smooth Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smooth_contour.html">Smooth Contour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/colorfilled_practice_tasks.html">Practice Tasks - Color-filled Plotting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_intro.html">Life Cycle of Mid-Latitude Cyclones</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_pre_environment.html">Pre-Environment Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_cyclogenesis.html">Cyclogenesis Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_mature.html">Mature Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_occlusion.html">Occlusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_precipitation.html">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_warmfront.html">Warm Front</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_coldfront.html">Cold Front Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_warm_sector.html">Warm Sector Rain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_tracks.html">Cyclone Tracks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../overlay_maps/overlay_maps_intro.html">Overlay Observations and Contours</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overlay_maps/upperair_500_obs_contours.html">Overlay Observations and Contours</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nwp/nwp_intro.html">Numerical Weather Prediction</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nwp/nwp_overview.html">NWP Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nwp/operational_models.html">Operational NWP Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../derived_parameters/derived_intro.html">Derived Atmospheric Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../derived_parameters/thickness.html">Atmospheric Thickness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../derived_parameters/vorticity.html">Vorticity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../derived_parameters/advection.html">Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../derived_parameters/derived_parameters_practice_tasks.html">Practice Tasks - Derived Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../metpy_calculations/calc_intro.html">Calculations with MetPy</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/simple_calcs.html">Simple Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_thickness.html">Thickness Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/scaling_values.html">Scaling Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/scaling_example.html">Scaling Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/simple_calc_practice_tasks.html">Practice Tasks - Simple Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/wind_speed.html">Wind Speed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_wind_speed.html">Wind Speed Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/advection_info.html">Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_advection.html">Advection Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/relative_vorticity_info.html">Relative Vorticity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_vorticity.html">Relative Vorticity Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/calculation_practice_tasks.html">Practice Tasks - MetPy Calculations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="skewt_intro.html">Skew-T Log-p Diagram</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stability_review.html">Atmospheric Stability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skewt_diagram.html">Skew-T Log-p Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skewt_attributes.html">Sounding attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skewt_practice_tasks.html">Practice Tasks - Skew-T Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_skewt_intro.html">SkewTs with Metpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_skewt.html">Visulalizing and Calculating Parameters on a Skew-T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_skewt_practice.html">Practice Tasks - Basic MetPy SkewTs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skewt_parcel_path.html">Skew-T Parcel Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skewt_stability_indices.html">Stability Indices</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Advanced Skew-T Calculations and Plotting</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="metpy_skewt_calc_practice.html">Practice Tasks - MetPy Sounding Calculations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../satellites/satellite_intro.html">Satellite Observations</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_types.html">Types of Satellites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_channels.html">Satellite Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_imagery.html">Satellite Imagery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_features.html">Satellite Feature Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../satellites/colorenhanced_satellite_imagery.html">Color-Enhanced Satellite Imagery</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/surface_data_access.html">Accessing Surface Data</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fweather_technology/skewt/advanced_skewt.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/weather_technology/skewt/advanced_skewt.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Advanced Skew-T Calculations and Plotting</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Advanced Skew-T Calculations and Plotting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages">Import Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#subsetting-data">Subsetting Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-sounding-parameters">Calculation of Sounding Parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lifting-condensation-level">Lifting Condensation Level</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parcel-profile">Parcel Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cape-cin">CAPE/CIN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lifted-index">Lifted Index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-skew-t-with-parcel-path">Plot Skew-T with Parcel Path</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="advanced-skew-t-calculations-and-plotting">
+<h1>Advanced Skew-T Calculations and Plotting<a class="headerlink" href="#advanced-skew-t-calculations-and-plotting" title="Permalink to this headline">#</a></h1>
+<p>This notebook demonstrates calculating a number of common sounding parameters and plotting some of them on a skew-T diagram.</p>
+<section id="import-packages">
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
+<span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">SkewT</span>
+<span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span><span class="p">,</span> <span class="n">pandas_dataframe_to_unit_arrays</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">siphon.simplewebservice.wyoming</span> <span class="kn">import</span> <span class="n">WyomingUpperAir</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-data">
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set date that you want</span>
+<span class="c1"># Data goes back to the 1970&#39;s</span>
+<span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Set station ID, there are different stations back in the day</span>
+<span class="c1"># Current station IDs found at http://weather.rap.ucar.edu/upper</span>
+<span class="n">station</span> <span class="o">=</span> <span class="s1">&#39;DDC&#39;</span>
+
+<span class="c1"># Use Siphon module to grab data from remote server</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">WyomingUpperAir</span><span class="o">.</span><span class="n">request_data</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">station</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="subsetting-data">
+<h1>Subsetting Data<a class="headerlink" href="#subsetting-data" title="Permalink to this headline">#</a></h1>
+<p>When performing calculations on radiosonde data it is best to subset the
+data to only use the data needed, which is typically pressures &gt;= 100
+hPa. This can be accomplished via code by creating a Boolean
+(true/false) array from a simple inequality and then using that array to
+subset all of the variable arrays.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create dictionary of unit arrays</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pandas_dataframe_to_unit_arrays</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Isolate united pressure array from dictionary</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;pressure&#39;</span><span class="p">]</span>
+
+<span class="c1"># Setting a subset to only use the data needed</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">m</span> <span class="o">&gt;</span> <span class="mi">99</span>
+
+<span class="c1"># Isolate united arrays and subset from dictionary</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span>
+<span class="n">Td</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;dewpoint&#39;</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;u_wind&#39;</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;v_wind&#39;</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="calculation-of-sounding-parameters">
+<h2>Calculation of Sounding Parameters<a class="headerlink" href="#calculation-of-sounding-parameters" title="Permalink to this headline">#</a></h2>
+<p>Once we have our data, we can calculate any of the skew-T variables we desire, such as LCL using the functions available in MetPy (<a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings">https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings</a>).</p>
+<section id="lifting-condensation-level">
+<h3>Lifting Condensation Level<a class="headerlink" href="#lifting-condensation-level" title="Permalink to this headline">#</a></h3>
+<p>This is the level at which a lifted parcel will become saturated (e.g.,
+have 100% RH). The function in MetPy is called lcl and takes inputs of
+pressure, temperature, and dewpoint.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.lcl.html#metpy.calc.lcl">MetPy LCL Documentation</a></p>
+<p>This function will output two values, the first is the pressure level of
+the LCL and the second is the temperature of the LCL.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate LCL pressure and temperature</span>
+<span class="c1"># Note: since lcl function returns two values, we can have</span>
+<span class="c1"># two variables to the left of the equal sign</span>
+
+<span class="n">lcl_pressure</span><span class="p">,</span> <span class="n">lcl_temperature</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">lcl</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Td</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;LCL: </span><span class="si">{</span><span class="n">lcl_pressure</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LCL: 849.75 hectopascal
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="parcel-profile">
+<h3>Parcel Profile<a class="headerlink" href="#parcel-profile" title="Permalink to this headline">#</a></h3>
+<p>The parcel path is essential the temperature that a parcel would have if
+lifted from a given level. This is an essential component to determining
+the stability of the atmosphere (a la introduction to meteorology) and determining the
+available energy for thunderstorm production.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.parcel_profile.html">MetPy Parcel Profile Documentation</a></p>
+<p>The input would be all of the pressures from the sounding and the
+starting temperature and dewpoint values for where the parcel is being
+lifted from. Typically, this is the zeroth element since we want to lift
+a surface parcel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate full surface parcel profile and add to plot as black line</span>
+<span class="n">prof</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">parcel_profile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Td</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cape-cin">
+<h3>CAPE/CIN<a class="headerlink" href="#cape-cin" title="Permalink to this headline">#</a></h3>
+<p>Often, we want to know how much energy might be available for use in the
+generation of thunderstorms, so we want the ability to calculate CAPE.
+This is actually not a trivial calculation due to any number of details
+that could be considered, but it is not too hard to do a basic
+estimation that works well for forecasting purposes. Along with CAPE, we
+get CIN or convective inhibition, a measure of the excess amount of
+energy we need to be able to realize any CAPE that might be present in a
+profile. MetPy has a function that computes both of these values using a
+trapezoid integration scheme (and you thought you would never hear about
+estimating an integral outside of calculus!?!).</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.cape_cin.html">MetPy CAPE/CIN Documentation</a></p>
+<p>Here our inputs expand to four items, pressure, temperature, dewpoint,
+and the parcel profile. Each variable must contain the same number of
+points corresponding to all of the pressure levels given in the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the CAPE and CIN of the profile</span>
+<span class="n">cape</span><span class="p">,</span> <span class="n">cin</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">cape_cin</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">Td</span><span class="p">,</span> <span class="n">prof</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;CAPE: </span><span class="si">{</span><span class="n">cape</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;CIN: </span><span class="si">{</span><span class="n">cin</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CAPE: 2032.69 joule / kilogram
+CIN: -126.51 joule / kilogram
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lifted-index">
+<h3>Lifted Index<a class="headerlink" href="#lifted-index" title="Permalink to this headline">#</a></h3>
+<p>The LI is the difference between the parcel temperature and
+environmental temperature at 500 hPa. If you have calculated the parcel
+profile, then this becomes a simple difference of two values once you
+have found both values at 500 hPa.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.lifted_index.html">MetPy Lifted Index Documentation</a></p>
+<p>Here we need to feed the function the pressure, temperature, and parcel profile temperature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute LI and print result</span>
+<span class="n">LI</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">lifted_index</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">prof</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;LI: </span><span class="si">{</span><span class="n">LI</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">m</span><span class="si">:</span><span class="s1">.02f</span><span class="si">}</span><span class="s1"> C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LI: -6.18 C
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="plot-skew-t-with-parcel-path">
+<h2>Plot Skew-T with Parcel Path<a class="headerlink" href="#plot-skew-t-with-parcel-path" title="Permalink to this headline">#</a></h2>
+<p>A common thing to plot on a skew-T image is the parcel path, this allows
+a meteorologist to visually estimate the amount of CAPE and CIN since
+the area on a skew-T is directly proportional to energy. The key area
+being between the environmental temperature and the parcel profile.</p>
+<p>Plotting the parcel profile is pretty easy, we can use the same
+skew.plot to plot on the same axis and use our pressure and profile
+temperature to plot the parcel profile line. In the code below we are
+plotting the parcel path in black with a thicker line than normal.</p>
+<p>The LCL is also highlighted with a straight line at the pressure level
+at which our parcel becomes saturated.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot a skew-T image</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Set up the skewT axes</span>
+<span class="n">skew</span> <span class="o">=</span> <span class="n">SkewT</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span>  <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="c1"># Plot the data using normal plotting functions, in this case using</span>
+<span class="c1"># log scaling in Y, as dictated by the typical meteorological plot</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">Td</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot barbs skipping to every other barb</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot_barbs</span><span class="p">(</span><span class="n">p</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="n">u</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="n">v</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="n">y_clip_radius</span><span class="o">=</span><span class="mf">0.03</span><span class="p">)</span>
+
+<span class="c1"># Set sensible axis limits</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># Plot the skew-T parcel temperature profile</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">prof</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Plot a line marker at the LCL level</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lcl_pressure</span><span class="p">,</span> <span class="n">lcl_temperature</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> 
+          <span class="n">markeredgewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add the relevant special lines</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot_dry_adiabats</span><span class="p">(</span><span class="n">t0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">233</span><span class="p">,</span><span class="mi">555</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot_moist_adiabats</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">skew</span><span class="o">.</span><span class="n">plot_mixing_lines</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot some titles</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Station: K</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Skew-T/Log-p&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1"> UTC&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Save the plot by uncommenting the following line</span>
+<span class="c1">#plt.savefig(&#39;advanced_skewt_image.png&#39;, bbox_inches=&#39;tight&#39;, dpi=150)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/827066ceb0e77a9a6b3929cd27eaa1f4e88f1509bd0972dcb5a92c3539451f00.png" src="../../_images/827066ceb0e77a9a6b3929cd27eaa1f4e88f1509bd0972dcb5a92c3539451f00.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weather_technology/skewt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="skewt_stability_indices.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Stability Indices</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="metpy_skewt_calc_practice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Practice Tasks - MetPy Sounding Calculations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Advanced Skew-T Calculations and Plotting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages">Import Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#subsetting-data">Subsetting Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-sounding-parameters">Calculation of Sounding Parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lifting-condensation-level">Lifting Condensation Level</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parcel-profile">Parcel Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cape-cin">CAPE/CIN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lifted-index">Lifted Index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-skew-t-with-parcel-path">Plot Skew-T with Parcel Path</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kevin Goebbert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

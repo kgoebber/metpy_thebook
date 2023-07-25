@@ -1,0 +1,1071 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>vector_plot_units The desired units to plot the vector field in. &#8212; Introduction to Weather Technology using MetPy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weather_technology/plotobs_description';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Introduction to Weather Technology using MetPy</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/whypython.html">Why Python?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/jlab_environ.html">Jupyter Lab Environment</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meteorological Concepts, Data Analysis, and Visualization using MetPy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="metpy_intro.html">MetPy Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="surface_obs_intro.html">Introduction to Surface Observations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="surface_obs.html">Review of Surface Station Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surface_charts.html">Surface Observation Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typical_notebook_structure.html">Common Notebook Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="current_surface_observation_plots.html">Surface Data and Plotting using MetPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice_tasks_surface.html">Surface Observation Practice Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="observation_locations.html"><code class="docutils literal notranslate"><span class="pre">PlotObs</span></code> Location Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="full_surface_station_model.html">Full Surface Station Model Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saving_images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_making_summary.html">Map Making Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/surface_data_access.html">Accessing Surface Data</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fweather_technology/plotobs_description.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/weather_technology/plotobs_description.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>vector_plot_units       The desired units to plot the vector field in.</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>vector_plot_units</strong>       The desired units to plot the vector field in.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#title-fontsize-an-integer-or-string-value-for-the-font-size-of-the-title-of-the-figure"><strong>title_fontsize</strong>       An integer or string value for the font size of the title of the figure.</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><strong>Met 130: Introduction to Weather Technology</strong></p>
+<p><strong>MetPy Introduction</strong></p>
+<p><strong>Part 1: MetPy – Meteorological Python</strong></p>
+<p>MetPy is a Python module that contains domain specific functionality
+(e.g., plotting surface observations in the above describe station model
+format) for use in the Python programming language. This is a relatively
+new module and has just recently passed its 1.0 version (meaning it has
+reached at least a base-level of maturity). Throughout learning how to
+use MetPy you will be introduced to some of the basics of the Python
+programming language, but this is not strictly a course that will teach
+you Python. Primarily you’ll use the declarative syntax from MetPy to
+plot various types of meteorological observations and model output.
+Remember that whatever you tell Python to do in your code, whether it
+was what you intended or not, is what it is going to do! So be sure to
+check what you have typed in – if you are not getting a map that you
+think you should be getting (or get an error), it is most likely a human
+input error (an i-d-10-t error, as they say).</p>
+<p>Important Notes (before we get started):</p>
+<p>MetPy Website: <a class="reference external" href="https://unidata.github.io/MetPy/latest/index.html">https://unidata.github.io/MetPy/latest/index.html</a></p>
+<p>This website has all the documentation for the current version of MetPy.
+You will only be introduced to what small bits of MetPy can do here
+today; the reference guide will go into more detail about all of the
+different aspects of the module that can be used to plot observational
+data and model output.</p>
+<p>OR</p>
+<p>There will be ways to get some of the help information from the
+development environment you will use throughout the semester (jupyter
+notebooks). More on that as we go along!</p>
+<p>As a <em><strong>last resort</strong></em> you can always ask someone who has a more
+experience using Python, Jupyter notebooks/lab, and MetPy, as they will
+probably have seen and dealt with many of the problems that you might be
+having.</p>
+<p>**<br />
+**</p>
+<p><strong>Part 2: Creating Surface Maps using MetPy</strong></p>
+<p><strong>Surface Maps in MetPy</strong></p>
+<p>Since MetPy is a module within the scientific Python ecosystem we will
+use Jupyter Notebooks through the Jupyter Lab environment to create our
+desired maps over the course of the semester. To begin, log into the
+JupyterHub environment through your web browser, like we did for our
+introduction to Linux. To launch jupyter lab type,</p>
+<p>&gt; jupyter lab</p>
+<p>To learn more about about the Jupyter Lab web interface, visit the
+following website:</p>
+<p><a class="reference external" href="https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b?#0992">https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b?#0992</a></p>
+<p>Common Keyboard Commands:</p>
+<blockquote>
+<div><p>Run A Cell and move to next cell): &lt;shift&gt;-&lt;return&gt;</p>
+<p>Run A Cell and stay on the cell): &lt;ctrl&gt;-&lt;return&gt;</p>
+<p>To Undo Typing in Cell: &lt;alt&gt;-z</p>
+</div></blockquote>
+<p>Cell Types:</p>
+<ul class="simple">
+<li><p>Code – executable Python code</p></li>
+<li><p>Raw – raw text, won’t execute</p></li>
+<li><p>Markdown – formatted text output</p></li>
+</ul>
+<p>When the Jupyter Lab environment opens in your web browser you’ll have
+two areas in the window: a file browser on the left, and a launcher tab
+on the right. Now, let’s copy over a notebook to start with. Using a
+terminal window and change to your met130 directory. Then copy over the
+first Jupyter notebook with the following command:</p>
+<p>&gt; cp
+/archive/valpo_courses/wxtech/notebooks/current_surface_observation_plots.ipynb
+.</p>
+<p>It is always best to make a copy of an example notebook to a new
+place/name so that you can always get back to the original. If you
+copied that notebook to your met130 directory, you’ll want to navigate
+to that directory in the file browser on the left side of the Jupyter
+Lab environment. The notebook will have a small orange icon associated
+with the name of the notebook. To launch that notebook simple double
+click on that file and it will open the notebook as a second tab in the
+right pane.</p>
+<p>We’ll now briefly describe some of the main elements of this initial
+notebook and spend some time running the cells and generating images.</p>
+<p><strong>Import Statements</strong></p>
+<blockquote>
+<div><p>Python is the base language that is now commonly used within the
+broader scientific enterprise for conducting data analysis and
+visualization. By design, the base language is relatively small,
+providing intuitive control structures that are amenable to a large
+variety of computing problems. On top of this base is built an entire
+ecosystem of packages or modules that provide domain-specific methods
+for the calculation and visualization of data. In order to incorporate
+those modules into any Python script, one must import those elements.</p>
+<p><em>datetime</em></p>
+</div></blockquote>
+<ul>
+<li><p>A built-in Python module (part of base Python) to help handle date</p>
+<blockquote>
+<div><p>and time issues. Both the datetime and timedelta portions of the
+module are brought in here.</p>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><p><em>metpy</em></p>
+</div></blockquote>
+<ul>
+<li><p>A module developed to add functionality specific for the atmospheric</p>
+<blockquote>
+<div><p>science/meteorology scientific community. Here we bring in three
+elements of the module, the METAR reader, the declarative plotting
+interface, and the units module.</p>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Read Data</strong></p>
+<blockquote>
+<div><p>Before we can work with any data within our notebook, data must first
+be brought in. In this instance we are using MetPy’s ability to read a
+file containing METAR codes (a long-serving surface data code
+developed for aviation purposes). Once we read in the data and have it
+saved to a namespace (in this case df) we can then use it at some
+later point in the notebook.</p>
+</div></blockquote>
+<p><strong>Plot Data</strong></p>
+<blockquote>
+<div><p>This is the main part of the code where you get to describe what and
+how you want to plot some (or all) of the data that you have read into
+the notebook. Details of this declarative interface is given below.
+The result will be a map of observed data cover a part of the world.</p>
+</div></blockquote>
+<p><strong>Declarative Plotting in MetPy</strong></p>
+<p>To make a plot of surface observations requires three elements
+(observations to be plotted, the map panel to plot it on, and a
+container to collect one or more panels). These three elements are
+separate parts of the declarative module. In Python we call these parts
+Classes and note that they contain MiXeD case names. These classes
+contain a number of attributes that can be set to specify what and how
+to plot the data in a figure. The descriptions of some of the basic
+elements of each element are given below.</p>
+<p><strong>PlotObs()</strong>
+[<a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs">https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs</a>]</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.colors"><strong>colors</strong></a>                             List of the scalar and symbol field colors.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.data"><strong>data</strong></a>                                 Pandas dataframe that contains the fields to be
+plotted.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.fields"><strong>fields</strong></a>                             Name of the scalar or symbol fields to be
+plotted.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.fontsize"><strong>fontsize</strong></a>                         An integer value to set the font size of station
+plots.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.formats"><strong>formats</strong></a>                           List of the scalar, symbol, and text field data
+formats.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.level"><strong>level</strong></a>                               The level of the field to be plotted.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.locations"><strong>locations</strong></a>                       List of strings for scalar or symbol field
+plotting locations.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.plot_units"><strong>plot_units</strong></a>                     A list of the desired units to plot the fields
+in.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.reduce_points"><strong>reduce_points</strong></a>               Float to reduce number of points plotted.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.time"><strong>time</strong></a>                                 Set the valid time to be plotted as a datetime
+object.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.time_window"><strong>time_window</strong></a>                   Set a range to look for data to plot as a
+timedelta object.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field"><strong>vector_field</strong></a>                 List of the vector field to be plotted.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_color"><strong>vector_field_color</strong></a>     String color name to plot the vector.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_length"><strong>vector_field_length</strong></a>   Integer value to set the length of the plotted
+vector.</p>
+<section id="vector-plot-units-the-desired-units-to-plot-the-vector-field-in">
+<h1><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_plot_units"><strong>vector_plot_units</strong></a>       The desired units to plot the vector field in.<a class="headerlink" href="#vector-plot-units-the-desired-units-to-plot-the-vector-field-in" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>data</p></li>
+</ul>
+<p>This attribute needs to be set to the DataFrame variable containing the
+fields that you desire to plot.</p>
+<ul class="simple">
+<li><p>fields</p></li>
+</ul>
+<p>This attribute is a list of variable names from your DataFrame that you
+desire to plot at the given locations around the station model.</p>
+<ul class="simple">
+<li><p>level</p></li>
+</ul>
+<p>For a surface plot this needs to be set to None.</p>
+<ul class="simple">
+<li><p>time</p></li>
+</ul>
+<p>This attribute needs to be set to subset your data attribute for the
+time of the observations to be plotted. This needs to be a datetime
+object.</p>
+<ul class="simple">
+<li><p>locations (optional)</p></li>
+</ul>
+<p>This attribute sets the location of the fields to be plotted around the
+surface station model. The default location is center (‘C’)</p>
+<ul class="simple">
+<li><p>time_range (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>This attribute allows you to define a window for valid observations
+(e.g., 15 minutes on either side of the datetime object setting. This
+is important for surface data since actual observed times are not all
+exactly on the hour. If multiple observations exist in the defined
+window, the most recent observations is retained for plotting
+purposes.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>formats (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>This attribute sets a formatter for text or plotting symbols around
+the station model. For example, plotting mean sea-level pressure is
+done in a three-digit code and a formatter can be used to achieve that
+on the station plot.</p>
+<p>MSLP Formatter: lambda v: format(10 * v, ‘.0f’)[-3:]</p>
+<p>For plotting symbols use the available MetPy options through their
+name. Valid symbol formats are current_weather, sky_cover, low_clouds,
+mid_clouds, high_clouds, and pressure_tendency.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>colors (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>This attribute can change the color of the plotted observation.
+Default is ‘black’. Acceptable colors are those available through
+Matplotlib:
+<a class="reference external" href="https://matplotlib.org/3.1.1/_images/sphx_glr_named_colors_003.png">https://matplotlib.org/3.1.1/_images/sphx_glr_named_colors_003.png</a></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>plot_units (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>A list of the desired units to plot the fields in. Will only work if
+data have units attached.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>vector_field (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>This attribute can be set to a list of wind component values for
+plotting (e.g., [‘uwind’, ‘vwind’])</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>vector_field_color (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>Same as colors except only controls the color of the wind barbs.
+Default is ‘black’.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>vector_field_length (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>Set an integer value for the length of the plotted vector. Default is
+6.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>vector_plot_units (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>The desired units you want the vector field plotted in. Will only work
+if data have units attached.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>fontsize (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>An integer value to set the font size of station plots. Default is 10
+pt.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>reduce_points (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>This attribute can be set to a real number to reduce the number of
+stations that are plotted. Default value is zero (e.g., no points are
+removed from the plot).</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>fontsize (optional)</p></li>
+</ul>
+<blockquote>
+<div><p>This attribute can be set to an integer value to set the font size of
+station plots. Default is 10 pt.</p>
+</div></blockquote>
+<p><strong>MapPanel()</strong>
+[<a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel">https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel</a>]</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers"><strong>layers</strong></a>                       A list of strings for a pre-defined feature layer or a Cartopy Feature object.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_edgecolor"><strong>layers_edgecolor</strong></a>   A list of strings for a pre-defined edgecolor for a layer.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_linewidth"><strong>layers_linewidth</strong></a>   A list of values defining the linewidth for a layer.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layout"><strong>layout</strong></a>                       A tuple that contains the description (nrows, ncols, index) of the panel position; default value is (1, 1, 1).</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.left_title"><strong>left_title</strong></a>               A string to set a title for the figure with the location on the top left of the figure.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.plots"><strong>plots</strong></a>                         A list of handles that represent the plots
+(e.g., <a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot"><strong>ContourPlot</strong></a>, <a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot"><strong>FilledContourPlot</strong></a>, <a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot"><strong>ImagePlot</strong></a>)
+to put on a given panel.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.projection"><strong>projection</strong></a>               A string for a pre-defined projection or a Cartopy projection object.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.right_title"><strong>right_title</strong></a>             A string to set a title for the figure with the location on the top right of the figure.</p>
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.title"><strong>title</strong></a>                         A string to set a title for the figure.</p>
+</section>
+<section id="title-fontsize-an-integer-or-string-value-for-the-font-size-of-the-title-of-the-figure">
+<h1><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.title_fontsize"><strong>title_fontsize</strong></a>       An integer or string value for the font size of the title of the figure.<a class="headerlink" href="#title-fontsize-an-integer-or-string-value-for-the-font-size-of-the-title-of-the-figure" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>layout</p></li>
+</ul>
+<p>The Matplotlib layout of the figure. For a single panel figure the
+setting should be</p>
+<p>(1, 1, 1)</p>
+<ul class="simple">
+<li><p>projection</p></li>
+</ul>
+<p>The projection can be set with the name of a default projection (‘lcc’,
+‘mer’, or ‘ps’) or it can be set to a Cartopy projection.</p>
+<ul class="simple">
+<li><p>layers</p></li>
+</ul>
+<p>This attribute will add map layers to identify boundaries or features to
+plot on the map. Valid layers are borders, coastline, states, lakes,
+land, ocean, rivers, counties.</p>
+<ul class="simple">
+<li><p>layers_edgecolor</p></li>
+</ul>
+<p>This attribute will set the edgecolor for those values listed in the map
+layers attribute. Valid colors correspond to valid Matplotlib named
+colors.</p>
+<ul class="simple">
+<li><p>layers_linewidth</p></li>
+</ul>
+<p>This attribute will set the linewidth (as a float) for those values
+listed in the map layers attribute.</p>
+<ul class="simple">
+<li><p>area</p></li>
+</ul>
+<p>This attribute sets the geographical area of the panel. This can be set
+with a predefined name of an area including all US state postal
+abbreviations (e.g., ‘us’, ‘natl’, ‘in’, ‘il’, ‘wi’, ‘mi’, etc.) or a
+tuple value that corresponds to longitude/latitude box based on the
+projection of the map with the format (west-most longitude, east-most
+longitude, south-most latitude, north-most latitude). This tuple defines
+a box from the lower-left to the upper-right corner.</p>
+<ul class="simple">
+<li><p>title</p></li>
+</ul>
+<p>This attribute sets a title for the panel in the center of the figure.</p>
+<ul class="simple">
+<li><p>left_title</p></li>
+</ul>
+<p>This attribute sets a title for the panel at the left edge of the
+figure.</p>
+<ul class="simple">
+<li><p>right_title</p></li>
+</ul>
+<p>This attribute sets a title for the panel at the right edge of the
+figure.</p>
+<ul class="simple">
+<li><p>plots</p></li>
+</ul>
+<p>A list collecting the observations to be plotted in the panel.</p>
+<p><strong>PanelContainer()</strong>
+[<a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer">https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer</a>]</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer.panels"><strong>panels</strong></a>   A list of panels to plot on the figure.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer.size"><strong>size</strong></a>       This trait takes a tuple of (width, height) to set the size of
+the figure.</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>size</p></li>
+</ul>
+<p>The size of the figure in inches (e.g., (10, 8))</p>
+<ul class="simple">
+<li><p>panels</p></li>
+</ul>
+<p>A list collecting the panels to be plotted in the figure.</p>
+<ul class="simple">
+<li><p>show</p></li>
+</ul>
+<p>Calling this will show the image.</p>
+<p><strong>Locations:</strong></p>
+<p>The layout of data around a station model is very important. At the
+beginning of this handout we reviewed the typical layout for the display
+of meteorological variables around a surface station. In our plotting of
+surface observations (<em>PlotObs</em>) we can set everything in the same way.
+The following is the location where a variable will be placed, depending
+on the string at each location.</p>
+<p>NNW N2 NNE</p>
+<p>WNW NW N NE ENE</p>
+<p>W2 W C E E2</p>
+<p>WSW SW S SE ESE</p>
+<p>SSW S2 SSE</p>
+<p>The default location is C.</p>
+<ol class="arabic simple">
+<li><p>What variable should be plotted with the location of C (center)?</p></li>
+<li><p>What about the W (west) location?</p></li>
+<li><p>What about for a station model that you wanted to plot: temperature,
+dewpoint, mslp, current weather, and visibility?</p></li>
+</ol>
+<p>For your first map, let’s just plot the temperature from 1200 UTC today.
+Let’s go to our notebook to see the following settings for making a map
+(all is contained in the notebook):</p>
+<p>Basic Plot of Surface Temperatures:</p>
+<ol class="arabic simple">
+<li><p><strong>from</strong> datetime <strong>import</strong> datetime, timedelta</p></li>
+<li><p><strong>from</strong> io <strong>import</strong> StringIO</p></li>
+<li><p><strong>from</strong> urllib.request <strong>import</strong> urlopen</p></li>
+<li><p></p></li>
+<li><p><strong>from</strong> <a class="reference external" href="http://metpy.io">metpy.io</a> <strong>import</strong> metar</p></li>
+<li><p><strong>from</strong> metpy.plots <strong>import</strong> declarative</p></li>
+<li><p><strong>from</strong> metpy.units <strong>import</strong> units</p></li>
+<li><p></p></li>
+<li><p>date <strong>=</strong> datetime(2022, 1, 4, 12)</p></li>
+<li><p></p></li>
+<li><p># Remote Access - Read current METAR files</p></li>
+<li><p>data <strong>=</strong>
+StringIO(urlopen(‘<a class="reference external" href="http://bergeron.valpo.edu/current_surface_data/">http://bergeron.valpo.edu/current_surface_data/</a>’</p></li>
+<li><p>f’{date:%Y%m%d%H}_sao.wmo’).read().decode(‘utf-8’,</p></li>
+<li><p>‘backslashreplace’))</p></li>
+<li><p></p></li>
+<li><p>df <strong>=</strong> metar.parse_metar_file(data, year**=<strong>date.year,
+month</strong>=**date.month)</p></li>
+<li><p></p></li>
+<li><p># Plot desired data</p></li>
+<li><p>obs <strong>=</strong> declarative.PlotObs()</p></li>
+<li><p>obs.data <strong>=</strong> df</p></li>
+<li><p>obs.time <strong>=</strong> date</p></li>
+<li><p>obs.time_window <strong>=</strong> timedelta(minutes**=**15)</p></li>
+<li><p>obs.fields <strong>=</strong> [‘air_temperature’]</p></li>
+<li><p>obs.plot_units <strong>=</strong> [‘degF’]</p></li>
+<li><p></p></li>
+<li><p># Panel for plot with Map features</p></li>
+<li><p>panel <strong>=</strong> declarative.MapPanel()</p></li>
+<li><p>panel.layout <strong>=</strong> (1, 1, 1)</p></li>
+<li><p>panel.projection <strong>=</strong> ‘lcc’</p></li>
+<li><p>panel.area <strong>=</strong> ‘in’</p></li>
+<li><p>panel.layers <strong>=</strong> [‘states’]</p></li>
+<li><p>panel.title <strong>=</strong> f’Air temperature on {date:%Y%m%d} at
+{date:%H}UTC’</p></li>
+<li><p>panel.plots <strong>=</strong> [obs]</p></li>
+<li><p></p></li>
+<li><p># Bringing it all together</p></li>
+<li><p>pc <strong>=</strong> declarative.PanelContainer()</p></li>
+<li><p>pc.size <strong>=</strong> (10, 10)</p></li>
+<li><p>pc.panels <strong>=</strong> [panel]</p></li>
+<li><p></p></li>
+<li><p>pc.show()</p></li>
+</ol>
+<p>So, what did we set? Just the required and a few of the optional
+parameters to make a plot. Use the practice tasks below to explore more
+of the options.</p>
+<p><img alt="A picture containing text, map Description automaticallygenerated" src="weather_technology/media/image1.png" />{width=“6.026916010498688in”
+height=“5.721360454943132in”}</p>
+<blockquote>
+<div><p>Fig. 1 A simple surface temperature map</p>
+</div></blockquote>
+<p><strong>Part 4: Practice Tasks</strong></p>
+<ol class="arabic simple">
+<li><p>Open a new notebook and make a plot of temperatures and dewpoints
+using different colors.</p></li>
+<li><p>Plot the full surface station model (e.g., temperature, dewpoint,
+MSLP, current weather, and wind speed and direction) over Oklahoma.</p></li>
+<li><p>Plot the temperature with temperatures equal to or less than 32
+colored blue and greater than 32 colored red.</p></li>
+</ol>
+<blockquote>
+<div><p><em>Note: You’ll have to subset your dataframe and plot to sets of
+observations. To subset a dataframe it would look something like:</em></p>
+<p><em>obs.data = df[df.air_temperature &lt;= 0]</em></p>
+<p><em>which would only plot observations where the air temperature was less
+than or equal to 0.</em></p>
+</div></blockquote>
+<p><strong>Part 5: Saving Images</strong></p>
+<p>Let’s start with a new notebook to learn a few more attributes of the
+declarative interface to plot our desired observations around the
+station model. After launching JupyterHub use the terminal window to
+copy the full_surface_station_model.ipynb notebook to your working
+directory.</p>
+<p>&gt; cp
+/archive/valpo_courses/wxtech/notebooks/full_surface_station_model.ipynb
+.</p>
+<p>Once you get this copied over to your wxtech directory, navigate to the
+appropriate folder and open the notebook.</p>
+<p><strong>Saving Images</strong></p>
+<p>Last time we started creating maps, but they were only visible within
+the Jupyter environment. What if I want to save the image that I
+created? There is only one small addition to make to your cell where you
+create your image:</p>
+<p>pc.save(‘test.png’)</p>
+<p>This will save the same image that is shown in your notebook to the
+local working directory (likely your working directory). It is saving to
+the name you give the file between the quote marks (in this case
+<strong>test.png</strong>). That’s it. It really is that simple.</p>
+<p>There are a few different types of images you can save as, the most
+common being the PNG (portable network graphic), but you can also save
+as a JPG, PDF, PS, and TIF. Just switch out the .png for the desired
+graphical output type.</p>
+<p>Additionally, you can set other parameters about how the image will
+save. We’ll highlight two of them here, but for all of the available
+options go the Matplotlib help pages for savefig:
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html</a></p>
+<p><em>dpi</em> – This setting is to allow you to specify a “dots per inch”,
+which will give you a nicer looking image with a higher value. Common
+value to get a good image is 150.</p>
+<p><em>bbox_inches</em> – This setting is set to ‘tight’ to remove excessive
+white space surrounding the image. It is best that this always be set to
+True (the default is false).</p>
+<p>So, putting it all together, a good line for saving a file is:</p>
+<p>pc.save(‘test.png’, dpi=150, bbox_inches=‘tight’)</p>
+<p>Simply change the name within the quote marks to save to a different
+name (good habit is to name the image something unique each time so as
+not to accidentally overwrite something you really want to keep!).</p>
+<p><strong>Viewing Saved Images</strong></p>
+<p>To view any saved image, one just needs to navigate to the folder it was
+saved in and double-click the image file. It will open on the right-hand
+side of the Jupyter Lab environment.</p>
+<p>There are two ways to view your created file. Either type into the
+terminal within the directory that contains the newly created image,</p>
+<p><strong>Downloading Images</strong></p>
+<p>To download an image to your local machine, find the file you wish to
+download (most likely an image file), right-click on the file and a
+dialogue box should appear and find the option to “Download”. Depending
+on the settings of your web browser, you’ll either be asked where to
+save the file, or it will save to your Downloads (or other designated)
+folder.</p>
+<p><strong>Part 6: Map Making Summary and Notes</strong></p>
+<p><strong>Setting a Title</strong></p>
+<p><strong>Note:</strong> Your title on the map should always be produced through the
+<strong>title</strong> attribute in the MapPanel() and <em>must</em> include your name. An
+acceptable default title would be as follows:</p>
+<p>panel.title = f’My Map by Kevin Goebbert {obs.time}’</p>
+<p><strong>Finding Data</strong></p>
+<p>If you can’t find the data file in the location for the current data</p>
+<p>Local Access Current Data: /data/ldmdata/surface/sao</p>
+<blockquote>
+<div><p>Python Access:</p>
+<p>from <a class="reference external" href="http://metpy.io">metpy.io</a> import metar</p>
+<p>data = ‘/data/ldmdata/surface/sao/20220114_sao.wmo’</p>
+</div></blockquote>
+<p>df = metar.parse_metar_file(data, year=2021, month=1)</p>
+<p>Remote Access Current Data:
+<a class="reference external" href="http://bergeron.valpo.edu/current_surface_data">http://bergeron.valpo.edu/current_surface_data</a></p>
+<blockquote>
+<div><p>Python Access:</p>
+<p>from io import StringIO</p>
+<p>from urllib.request import urlopen</p>
+<p>from <a class="reference external" href="http://metpy.io">metpy.io</a> import metar</p>
+<p>data = StringIO(urlopen(</p>
+<p>‘<a class="reference external" href="http://bergeron.valpo.edu/current_surface_data/">http://bergeron.valpo.edu/current_surface_data/</a>’</p>
+<p>‘20201221_sao.wmo’).read().decode(‘utf-8’, ‘backslashreplace’))</p>
+<p>df = metar.parse_metar_file(data, year=2020, month=12)</p>
+</div></blockquote>
+<p>Remote Access Archived Data (1950-current): Iowa State ASOS Archive</p>
+<blockquote>
+<div><p>Python Access:</p>
+<p># Set a date and time for the observations you want</p>
+<p>date = datetime(1993, 3, 13, 12)</p>
+<p># Set a time window to look for observations</p>
+<p>dt = timedelta(minutes=15)</p>
+<p># Use datetime and time window to set final start/end times</p>
+<p>sdate = date - dt</p>
+<p>edate = date + dt</p>
+<p># Use Pandas remote csv reading capability to grab desired data</p>
+<p># Make Missing values (‘M’) into NaNs</p>
+<p># Replace Trace precip with very small float value</p>
+<p>df = pd.read_csv(‘<a class="reference external" href="http://mesonet.agron.iastate.edu/">http://mesonet.agron.iastate.edu/</a>’</p>
+<p>‘cgi-bin/request/asos.py?data=all&amp;tz=Etc/UTC&amp;format=comma&amp;’</p>
+<p>f’latlon=yes&amp;elev=yes&amp;year1={sdate.year}&amp;month1={sdate.month}&amp;’</p>
+</div></blockquote>
+<p>f’day1={sdate.day}&amp;hour1={sdate.hour}&amp;minute1={sdate.minute}&amp;’</p>
+<p>f’year2={edate.year}&amp;month2={edate.month}&amp;day2={edate.day}&amp;’</p>
+<p>f’hour2={edate.hour}&amp;minute2={edate.minute}’, skiprows=5,</p>
+<p>na_values=[‘M’], low_memory=False).replace(‘T’, 0.00001)</p>
+<blockquote>
+<div><p># Since we may have gotten more than 1 ob in our time window, only
+keep the latest observation</p>
+<p>data = df.groupby(‘station’).tail(1)</p>
+</div></blockquote>
+<p><strong>Summary of process for making a map:</strong></p>
+<ol class="arabic simple">
+<li><p>Open Jupyter Lab</p></li>
+<li><p>Open an existing or new notebook</p></li>
+<li><p>Set up all parameters to read data and make a map</p></li>
+<li><p>Run all cells to generate image</p></li>
+<li><p>Close and shutdown notebooks when done for the day (cleanup)</p></li>
+</ol>
+<p>Note: You may have multiple PlotObs() if you want to layer different
+things on the same map before adding them to a panel and a figure.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weather_technology"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>vector_plot_units</strong>       The desired units to plot the vector field in.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#title-fontsize-an-integer-or-string-value-for-the-font-size-of-the-title-of-the-figure"><strong>title_fontsize</strong>       An integer or string value for the font size of the title of the figure.</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kevin Goebbert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
