@@ -112,6 +112,19 @@ parts:
           - file: weather_technology/metpy_calculations/relative_vorticity_info.md
           - file: weather_technology/metpy_calculations/gridded_calculation_vorticity.ipynb
           - file: weather_technology/metpy_calculations/calculation_practice_tasks.md
+      - file: weather_technology/skewt/skewt_intro.md
+        sections:
+          - file: weather_technology/skewt/stability_review.md
+          - file: weather_technology/skewt/skewt_diagram.md
+          - file: weather_technology/skewt/skewt_attributes.md
+          - file: weather_technology/skewt/skewt_practice_tasks.md
+          - file: weather_technology/skewt/metpy_skewt_intro.md
+          - file: weather_technology/skewt/basic_skewt.ipynb
+          - file: weather_technology/skewt/metpy_skewt_practice.md
+          - file: weather_technology/skewt/skewt_parcel_path.md
+          - file: weather_technology/skewt/skewt_stability_indices.md
+          - file: weather_technology/skewt/advanced_skewt.ipynb
+          - file: weather_technology/skewt/metpy_skewt_calc_practice.md
 
   - caption: Appendix
     chapters:
