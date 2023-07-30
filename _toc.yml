@@ -6,8 +6,16 @@ root: intro
 parts:
   - caption: Introduction
     chapters:
+      - file: introduction/introduction
       - file: introduction/whypython
       - file: introduction/jlab_environ
+  - caption: Python Basics
+    chapters:
+      - file: python_basics/python_intro.md
+        sections:
+          - file: python_basics/basics1.ipynb
+          - file: python_basics/basics2.ipynb
+          - file: python_basics/basics3.ipynb
   - caption: Meteorological Concepts, Data Analysis, and Visualization using MetPy
     chapters:
       - file: weather_technology/metpy_intro
