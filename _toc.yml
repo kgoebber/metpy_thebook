@@ -16,6 +16,8 @@ parts:
           - file: python_basics/basics1.ipynb
           - file: python_basics/basics2.ipynb
           - file: python_basics/basics3.ipynb
+          - file: python_basics/datetime_intro.md
+          - file: python_basics/datetime_timedelta_time.ipynb
   - caption: Meteorological Concepts, Data Analysis, and Visualization using MetPy
     chapters:
       - file: weather_technology/metpy_intro
