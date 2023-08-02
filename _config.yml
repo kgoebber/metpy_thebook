@@ -9,6 +9,8 @@ logo: metpy_thebook_graphic.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  timeout: 100
+  stderr_output: 'remove-warn'
 
 #######################################################################################
 # Parse and render settings
@@ -27,6 +29,7 @@ parse:
 
 # Define the name of the latex output file for PDF builds
 latex:
+  use_jupyterbook_latex: false
   latex_documents:
     targetname: book.tex
 
