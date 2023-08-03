@@ -26,6 +26,7 @@ parts:
         - file: introduction/vi_intro.md
         - file: introduction/basic_html.md
         - file: introduction/python_script_from_notebook.md
+        - file: introduction/create_looping_gifs.md
   - caption: Python Syntax
     numbered: 2
     chapters:
