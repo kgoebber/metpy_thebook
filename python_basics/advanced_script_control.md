@@ -22,8 +22,9 @@ response. The `input()` function contains the text that is printed
 to the screen variable and will ingest the value submitted from the command
 line that you type in and hit enter, finally setting the value of the variable
 to the left of the equal sign to whatever value was input. Create and run
-the script below and plug in your first name, for the first input, and your
-last name, for the second input to test how interactive scripting can work.
+the script (name it `ex_interactive.py`) below and plug in your first name,
+for the first input, and your last name, for the second input to test how
+interactive scripting can work.
 
 ```python
 # Ask for input and store in variable
@@ -35,7 +36,11 @@ secondline = input('Go ahead (2nd time): ')
 print(f'You next entered: {secondline}\n')
 ```
 
-Example Output:
+Run the script from the Linux command prompt:
+
+`kgoebber@bergeron:~> python ex_interactive.py`
+
+Example Input/Output:
 ```
 Go ahead: Kevin
 You entered: Kevin
@@ -77,20 +82,24 @@ which is part of the base Python language. The way in which the arguments
 are parsed are by separating the inputs via spaces.
 :::
 
-Create a script using the code written above. Then to run the code you will
-need to supply one argument (a number) to allow the script to complete
-its work. Otherwise you will get an error. Try a couple of different
-numbers to see how the running of the program changes depending one the
-value used for the argument.
+Create a script using the code written above and call it `ex_while_argv.py`.
+Then to run the code you will need to supply one argument (a number) to
+allow the script to complete its work. Otherwise you will get an error.
+Try a couple of different numbers to see how the running of the program
+changes depending one the value used for the argument.
 
-```
-bergeron.valpo.edu> python ex_while_argv.py 15
-```
+Run the script from the Linux command prompt:
+
+`kgoebber@bergeron:~> python ex_while_argv.py 15`
 
 You can also have more than one argument. The second argument would be
 the variable `sys.argv[2]` and the third argument `sys.argv[3]`, and so
 on. Essentially, you are accessing the contents of a list that contains
-everything that comes after the initial `python` call. A practical situation
-for using an argument with a script for making weather maps would be to use them
-in conjunction with if-then statements to allow runtime control to choose
-different settings for a chosen upper-air maps level (e.g., 850, 500, 300 hPa).
+everything that comes after the initial `python` call. So in the example
+running the `ex_while_argv.py` file above, the system argument list would be
+`['ex_while_argv.py', '15']`. Recall that list addresses begin with zero, so
+that the first "usable" argument will be at address one (i.e., `sys.argv[1]`).
+A practical situation for using an argument with a script for making weather
+maps would be to use them in conjunction with if-then statements to allow
+runtime control to choose different settings for a chosen upper-air maps
+level (e.g., 850, 500, 300 hPa).
