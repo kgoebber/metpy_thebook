@@ -11,6 +11,7 @@ parts:
         sections:
         - file: introduction/whypython
         - file: introduction/jlab_environ
+        - file: python_basics/python_script_from_notebook.md
   - caption: Python Syntax
     numbered: 2
     chapters:
@@ -19,12 +20,12 @@ parts:
           - file: python_basics/basics1.ipynb
           - file: python_basics/basics2.ipynb
           - file: python_basics/basics3.ipynb
+          - file: python_basics/program_control_ifthen.ipynb
+          - file: python_basics/program_control_looping.ipynb
           - file: python_basics/datetime_intro.md
           - file: python_basics/datetime_timedelta_time.ipynb
           - file: python_basics/python_scripting.md
-          - file: python_basics/python_script_from_notebook.md
-          - file: python_basics/program_control_ifthen.ipynb
-          - file: python_basics/program_control_looping.ipynb
+          - file: python_basics/advanced_script_control.md
   - caption: Meteorological Concepts, Data Analysis, and Visualization using MetPy
     numbered: 2
     chapters:
