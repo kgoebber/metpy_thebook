@@ -5,9 +5,18 @@ start a script instead of writing one all from scratch.
 
 Open the Jupyter Lab environment and open a notebook that contains some
 Python code. Once the notebook is open navigate to the *File \> Save and Export As \>
-Executable Script* in the Lab environment. This will either bring up a
-dialog box asking where you want to save the script or automatically
-save it to a download folder (e.g., `/home/<username>/Downloads`)
+Executable Script* in the Lab environment ({numref}`Fig. %s <notebooktoscript>`).
+This will either bring up a dialog box asking where you want to save the
+script or automatically save it to a download folder (e.g., `/home/<username>/Downloads`)
+
+```{figure} ../images/notebook_to_script.png
+:alt: converting a notebook to a script
+:width: 700px
+:align: center
+:name: notebooktoscript
+
+ An illustration of the clicks to save a Jupyter Notebook to an executable script file.
+```
 
 Once you have saved the file, make sure you move it to your working
 directory (if it saved to your Downloads directory you'll want to use

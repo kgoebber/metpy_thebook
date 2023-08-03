@@ -24,7 +24,7 @@ used by the Linux operating system are stored.
 :name: directorystructure
 
  An example of a directory tree structure of a fictional Linux
-machine.
+ machine.
 ```
 
 From the example in Figure {numref}`%s <directorystructure>`, here are
