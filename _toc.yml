@@ -5,12 +5,25 @@ format: jb-book
 root: intro
 parts:
   - caption: Introduction
-    numbered: True
+    numbered: 2
     chapters:
       - file: introduction/introduction
         sections:
         - file: introduction/whypython
         - file: introduction/jlab_environ
+        - file: introduction/linux_intro.md
+          sections:
+          - file: introduction/linux_paths.md
+          - file: introduction/linux_pwd.md
+          - file: introduction/linux_list.md
+          - file: introduction/linux_manual.md
+          - file: introduction/linux_create_directory.md
+          - file: introduction/linux_change_directory.md
+          - file: introduction/linux_copy.md
+          - file: introduction/linux_rename.md
+          - file: introduction/linux_remove.md
+          - file: introduction/linux_cat_less_more.md
+          - file: introduction/vi_intro.md
         - file: introduction/python_script_from_notebook.md
   - caption: Python Syntax
     numbered: 2

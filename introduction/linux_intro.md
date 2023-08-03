@@ -10,7 +10,7 @@ scientific tool. Therefore, we will start the process by introducing you
 to the Linux operating system (OS).
 
 You can access a Linux terminal through the Jupyter Lab environment through
-the "Launcher" page (accessible via the big blue box with a plus sign).
+the "Launcher" page ({numref}`Fig. %s <launchterminal>`).
 The Linux (Unix) operation environment has come a long way over the years.
 Historically the Linux OS (or its predecessors) was a text-based only
 environment, which means that there was no 'Desktop', folder icons, etc.
@@ -22,12 +22,15 @@ the computer and do the work you needed to do. This terminology lives on
 today with the terminal. This chapter will introduce you to the commands
 to work within this text-based environment.
 
-A terminal window is a text only window in a graphical user interface
-(GUI) that emulates a console. What does this mean? A terminal is
-basically the Linux and Macintosh equivalents of a Windows "DOS prompt".
-On our computers the Terminal icon should appear on the desktop. If it
-is not there, it can be accessed through the drop-down menu at the top
-of the screen (on the left-hand side).
+```{figure} ../images/launch_terminal_window.png
+:alt: Launch terminal window
+:width: 750px
+:align: center
+:name: launchterminal
+
+An annotated image illustrating what to click to launch a terminal window
+through th Jupyter Lab environment.
+```
 
 While the terminal is the "window" you will be working in, the language
 of the terminal is known as the **SHELL**. A shell is a command
