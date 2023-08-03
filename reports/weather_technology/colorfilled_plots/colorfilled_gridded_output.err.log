@@ -1,0 +1,157 @@
+Traceback (most recent call last):
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Set the date/time of the model run
+date = datetime(2017, 2, 24, 12)
+
+# Remote access to the dataset from the NCAR RDA site
+ds = xr.open_dataset('https://rda.ucar.edu/thredds/dodsC/files/g/ds083.3/'
+                     f'{date:%Y}/{date:%Y%m}/gdas1.fnl0p25.{date:%Y%m%d%H}.f00.grib2')
+
+# Subset data to be just over the U.S. for plotting purposes
+ds = ds.sel(lat=slice(70,10), lon=slice(360-140, 360-60))
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/file_manager.py:210[0m, in [0;36mCachingFileManager._acquire_with_cache_info[0;34m(self, needs_lock)[0m
+[1;32m    209[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 210[0m     file [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_cache[49m[43m[[49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_key[49m[43m][49m
+[1;32m    211[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/lru_cache.py:56[0m, in [0;36mLRUCache.__getitem__[0;34m(self, key)[0m
+[1;32m     55[0m [38;5;28;01mwith[39;00m [38;5;28mself[39m[38;5;241m.[39m_lock:
+[0;32m---> 56[0m     value [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_cache[49m[43m[[49m[43mkey[49m[43m][49m
+[1;32m     57[0m     [38;5;28mself[39m[38;5;241m.[39m_cache[38;5;241m.[39mmove_to_end(key)
+
+[0;31mKeyError[0m: [<class 'netCDF4._netCDF4.Dataset'>, ('https://rda.ucar.edu/thredds/dodsC/files/g/ds083.3/2017/201702/gdas1.fnl0p25.2017022412.f00.grib2',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), 'd49d01dc-6be9-4480-8716-81a81350f5f4']
+
+During handling of the above exception, another exception occurred:
+
+[0;31mOSError[0m                                   Traceback (most recent call last)
+Cell [0;32mIn[2], line 5[0m
+[1;32m      2[0m date [38;5;241m=[39m datetime([38;5;241m2017[39m, [38;5;241m2[39m, [38;5;241m24[39m, [38;5;241m12[39m)
+[1;32m      4[0m [38;5;66;03m# Remote access to the dataset from the NCAR RDA site[39;00m
+[0;32m----> 5[0m ds [38;5;241m=[39m [43mxr[49m[38;5;241;43m.[39;49m[43mopen_dataset[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mhttps://rda.ucar.edu/thredds/dodsC/files/g/ds083.3/[39;49m[38;5;124;43m'[39;49m
+[1;32m      6[0m [43m                     [49m[38;5;124;43mf[39;49m[38;5;124;43m'[39;49m[38;5;132;43;01m{[39;49;00m[43mdate[49m[38;5;132;43;01m:[39;49;00m[38;5;124;43m%Y[39;49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m/[39;49m[38;5;132;43;01m{[39;49;00m[43mdate[49m[38;5;132;43;01m:[39;49;00m[38;5;124;43m%Y%m[39;49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m/gdas1.fnl0p25.[39;49m[38;5;132;43;01m{[39;49;00m[43mdate[49m[38;5;132;43;01m:[39;49;00m[38;5;124;43m%Y%m%d%H[39;49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m.f00.grib2[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      8[0m [38;5;66;03m# Subset data to be just over the U.S. for plotting purposes[39;00m
+[1;32m      9[0m ds [38;5;241m=[39m ds[38;5;241m.[39msel(lat[38;5;241m=[39m[38;5;28mslice[39m([38;5;241m70[39m,[38;5;241m10[39m), lon[38;5;241m=[39m[38;5;28mslice[39m([38;5;241m360[39m[38;5;241m-[39m[38;5;241m140[39m, [38;5;241m360[39m[38;5;241m-[39m[38;5;241m60[39m))
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/api.py:566[0m, in [0;36mopen_dataset[0;34m(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, chunked_array_type, from_array_kwargs, backend_kwargs, **kwargs)[0m
+[1;32m    554[0m decoders [38;5;241m=[39m _resolve_decoders_kwargs(
+[1;32m    555[0m     decode_cf,
+[1;32m    556[0m     open_backend_dataset_parameters[38;5;241m=[39mbackend[38;5;241m.[39mopen_dataset_parameters,
+[0;32m   (...)[0m
+[1;32m    562[0m     decode_coords[38;5;241m=[39mdecode_coords,
+[1;32m    563[0m )
+[1;32m    565[0m overwrite_encoded_chunks [38;5;241m=[39m kwargs[38;5;241m.[39mpop([38;5;124m"[39m[38;5;124moverwrite_encoded_chunks[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m)
+[0;32m--> 566[0m backend_ds [38;5;241m=[39m [43mbackend[49m[38;5;241;43m.[39;49m[43mopen_dataset[49m[43m([49m
+[1;32m    567[0m [43m    [49m[43mfilename_or_obj[49m[43m,[49m
+[1;32m    568[0m [43m    [49m[43mdrop_variables[49m[38;5;241;43m=[39;49m[43mdrop_variables[49m[43m,[49m
+[1;32m    569[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mdecoders[49m[43m,[49m
+[1;32m    570[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
+[1;32m    571[0m [43m[49m[43m)[49m
+[1;32m    572[0m ds [38;5;241m=[39m _dataset_from_backend_dataset(
+[1;32m    573[0m     backend_ds,
+[1;32m    574[0m     filename_or_obj,
+[0;32m   (...)[0m
+[1;32m    584[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs,
+[1;32m    585[0m )
+[1;32m    586[0m [38;5;28;01mreturn[39;00m ds
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:588[0m, in [0;36mNetCDF4BackendEntrypoint.open_dataset[0;34m(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)[0m
+[1;32m    567[0m [38;5;28;01mdef[39;00m [38;5;21mopen_dataset[39m(  [38;5;66;03m# type: ignore[override]  # allow LSP violation, not supporting **kwargs[39;00m
+[1;32m    568[0m     [38;5;28mself[39m,
+[1;32m    569[0m     filename_or_obj: [38;5;28mstr[39m [38;5;241m|[39m os[38;5;241m.[39mPathLike[Any] [38;5;241m|[39m BufferedIOBase [38;5;241m|[39m AbstractDataStore,
+[0;32m   (...)[0m
+[1;32m    585[0m     autoclose[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m    586[0m ) [38;5;241m-[39m[38;5;241m>[39m Dataset:
+[1;32m    587[0m     filename_or_obj [38;5;241m=[39m _normalize_path(filename_or_obj)
+[0;32m--> 588[0m     store [38;5;241m=[39m [43mNetCDF4DataStore[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m
+[1;32m    589[0m [43m        [49m[43mfilename_or_obj[49m[43m,[49m
+[1;32m    590[0m [43m        [49m[43mmode[49m[38;5;241;43m=[39;49m[43mmode[49m[43m,[49m
+[1;32m    591[0m [43m        [49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[38;5;28;43mformat[39;49m[43m,[49m
+[1;32m    592[0m [43m        [49m[43mgroup[49m[38;5;241;43m=[39;49m[43mgroup[49m[43m,[49m
+[1;32m    593[0m [43m        [49m[43mclobber[49m[38;5;241;43m=[39;49m[43mclobber[49m[43m,[49m
+[1;32m    594[0m [43m        [49m[43mdiskless[49m[38;5;241;43m=[39;49m[43mdiskless[49m[43m,[49m
+[1;32m    595[0m [43m        [49m[43mpersist[49m[38;5;241;43m=[39;49m[43mpersist[49m[43m,[49m
+[1;32m    596[0m [43m        [49m[43mlock[49m[38;5;241;43m=[39;49m[43mlock[49m[43m,[49m
+[1;32m    597[0m [43m        [49m[43mautoclose[49m[38;5;241;43m=[39;49m[43mautoclose[49m[43m,[49m
+[1;32m    598[0m [43m    [49m[43m)[49m
+[1;32m    600[0m     store_entrypoint [38;5;241m=[39m StoreBackendEntrypoint()
+[1;32m    601[0m     [38;5;28;01mwith[39;00m close_on_error(store):
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:389[0m, in [0;36mNetCDF4DataStore.open[0;34m(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)[0m
+[1;32m    383[0m kwargs [38;5;241m=[39m [38;5;28mdict[39m(
+[1;32m    384[0m     clobber[38;5;241m=[39mclobber, diskless[38;5;241m=[39mdiskless, persist[38;5;241m=[39mpersist, [38;5;28mformat[39m[38;5;241m=[39m[38;5;28mformat[39m
+[1;32m    385[0m )
+[1;32m    386[0m manager [38;5;241m=[39m CachingFileManager(
+[1;32m    387[0m     netCDF4[38;5;241m.[39mDataset, filename, mode[38;5;241m=[39mmode, kwargs[38;5;241m=[39mkwargs
+[1;32m    388[0m )
+[0;32m--> 389[0m [38;5;28;01mreturn[39;00m [38;5;28;43mcls[39;49m[43m([49m[43mmanager[49m[43m,[49m[43m [49m[43mgroup[49m[38;5;241;43m=[39;49m[43mgroup[49m[43m,[49m[43m [49m[43mmode[49m[38;5;241;43m=[39;49m[43mmode[49m[43m,[49m[43m [49m[43mlock[49m[38;5;241;43m=[39;49m[43mlock[49m[43m,[49m[43m [49m[43mautoclose[49m[38;5;241;43m=[39;49m[43mautoclose[49m[43m)[49m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:336[0m, in [0;36mNetCDF4DataStore.__init__[0;34m(self, manager, group, mode, lock, autoclose)[0m
+[1;32m    334[0m [38;5;28mself[39m[38;5;241m.[39m_group [38;5;241m=[39m group
+[1;32m    335[0m [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m=[39m mode
+[0;32m--> 336[0m [38;5;28mself[39m[38;5;241m.[39mformat [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mds[49m[38;5;241m.[39mdata_model
+[1;32m    337[0m [38;5;28mself[39m[38;5;241m.[39m_filename [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mds[38;5;241m.[39mfilepath()
+[1;32m    338[0m [38;5;28mself[39m[38;5;241m.[39mis_remote [38;5;241m=[39m is_remote_uri([38;5;28mself[39m[38;5;241m.[39m_filename)
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:398[0m, in [0;36mNetCDF4DataStore.ds[0;34m(self)[0m
+[1;32m    396[0m [38;5;129m@property[39m
+[1;32m    397[0m [38;5;28;01mdef[39;00m [38;5;21mds[39m([38;5;28mself[39m):
+[0;32m--> 398[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_acquire[49m[43m([49m[43m)[49m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:392[0m, in [0;36mNetCDF4DataStore._acquire[0;34m(self, needs_lock)[0m
+[1;32m    391[0m [38;5;28;01mdef[39;00m [38;5;21m_acquire[39m([38;5;28mself[39m, needs_lock[38;5;241m=[39m[38;5;28;01mTrue[39;00m):
+[0;32m--> 392[0m [43m    [49m[38;5;28;43;01mwith[39;49;00m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_manager[49m[38;5;241;43m.[39;49m[43macquire_context[49m[43m([49m[43mneeds_lock[49m[43m)[49m[43m [49m[38;5;28;43;01mas[39;49;00m[43m [49m[43mroot[49m[43m:[49m
+[1;32m    393[0m [43m        [49m[43mds[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43m_nc4_require_group[49m[43m([49m[43mroot[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_group[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_mode[49m[43m)[49m
+[1;32m    394[0m     [38;5;28;01mreturn[39;00m ds
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/contextlib.py:137[0m, in [0;36m_GeneratorContextManager.__enter__[0;34m(self)[0m
+[1;32m    135[0m [38;5;28;01mdel[39;00m [38;5;28mself[39m[38;5;241m.[39margs, [38;5;28mself[39m[38;5;241m.[39mkwds, [38;5;28mself[39m[38;5;241m.[39mfunc
+[1;32m    136[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 137[0m     [38;5;28;01mreturn[39;00m [38;5;28mnext[39m([38;5;28mself[39m[38;5;241m.[39mgen)
+[1;32m    138[0m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m:
+[1;32m    139[0m     [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([38;5;124m"[39m[38;5;124mgenerator didn[39m[38;5;124m'[39m[38;5;124mt yield[39m[38;5;124m"[39m) [38;5;28;01mfrom[39;00m [38;5;28;01mNone[39;00m
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/file_manager.py:198[0m, in [0;36mCachingFileManager.acquire_context[0;34m(self, needs_lock)[0m
+[1;32m    195[0m [38;5;129m@contextlib[39m[38;5;241m.[39mcontextmanager
+[1;32m    196[0m [38;5;28;01mdef[39;00m [38;5;21macquire_context[39m([38;5;28mself[39m, needs_lock[38;5;241m=[39m[38;5;28;01mTrue[39;00m):
+[1;32m    197[0m [38;5;250m    [39m[38;5;124;03m"""Context manager for acquiring a file."""[39;00m
+[0;32m--> 198[0m     file, cached [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_acquire_with_cache_info[49m[43m([49m[43mneeds_lock[49m[43m)[49m
+[1;32m    199[0m     [38;5;28;01mtry[39;00m:
+[1;32m    200[0m         [38;5;28;01myield[39;00m file
+
+File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/file_manager.py:216[0m, in [0;36mCachingFileManager._acquire_with_cache_info[0;34m(self, needs_lock)[0m
+[1;32m    214[0m     kwargs [38;5;241m=[39m kwargs[38;5;241m.[39mcopy()
+[1;32m    215[0m     kwargs[[38;5;124m"[39m[38;5;124mmode[39m[38;5;124m"[39m] [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_mode
+[0;32m--> 216[0m file [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_opener[49m[43m([49m[38;5;241;43m*[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_args[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    217[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m==[39m [38;5;124m"[39m[38;5;124mw[39m[38;5;124m"[39m:
+[1;32m    218[0m     [38;5;66;03m# ensure file doesn't get overridden when opened again[39;00m
+[1;32m    219[0m     [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m=[39m [38;5;124m"[39m[38;5;124ma[39m[38;5;124m"[39m
+
+File [0;32msrc/netCDF4/_netCDF4.pyx:2449[0m, in [0;36mnetCDF4._netCDF4.Dataset.__init__[0;34m()[0m
+
+File [0;32msrc/netCDF4/_netCDF4.pyx:2012[0m, in [0;36mnetCDF4._netCDF4._ensure_nc_success[0;34m()[0m
+
+[0;31mOSError[0m: [Errno -90] NetCDF: file not found: 'https://rda.ucar.edu/thredds/dodsC/files/g/ds083.3/2017/201702/gdas1.fnl0p25.2017022412.f00.grib2'
+

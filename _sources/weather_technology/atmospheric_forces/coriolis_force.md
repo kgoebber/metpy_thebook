@@ -11,7 +11,7 @@ can quantify the Coriolis parameter, $f$, as follows,
 
 $$f = 2 \Omega sin(\phi)$$
 
-where *φ* is the latitude and Ω is the Coriolis constant, which is
+where $\phi$ is the latitude and Ω is the Coriolis constant, which is
 $7.292 \cdot 10^{-5} s^{-1}$. The strength of the Coriolis parameter
 increases with increasing latitude ({numref}`Fig. %s <coriolis>`) and is
 maximized at the poles (not shown).
