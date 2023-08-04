@@ -641,7 +641,182 @@ elements of each element are given below.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8ef669e5be8eb0b29e2049c7612a59027d03161b7dcc94919385f9bddaac4145.png" src="../../_images/8ef669e5be8eb0b29e2049c7612a59027d03161b7dcc94919385f9bddaac4145.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:3652,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3651</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3652</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:549,</span> in <span class="ni">pandas._libs.index.DatetimeEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:578,</span> in <span class="ni">pandas._libs.index.DatetimeEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:214,</span> in <span class="ni">pandas._libs.index.IndexEngine._get_loc_duplicates</span><span class="nt">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:222,</span> in <span class="ni">pandas._libs.index.IndexEngine._maybe_get_bool_indexer</span><span class="nt">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/_libs/index.pyx:114,</span> in <span class="ni">pandas._libs.index._unpack_bool_indexer</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: 1691173469906209000
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py:584,</span> in <span class="ni">DatetimeIndex.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">584</span>     <span class="k">return</span> <span class="n">Index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:3654,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3653</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3654</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3655</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3656</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  the TypeError.</span>
+
+<span class="ne">KeyError</span>: Timestamp(&#39;2023-08-04 18:24:29.906209&#39;)
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">pc</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">pc</span><span class="o">.</span><span class="n">panels</span> <span class="o">=</span> <span class="p">[</span><span class="n">panel</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:179,</span> in <span class="ni">PanelContainer.show</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">178</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Show the constructed graphic on the screen.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:166,</span> in <span class="ni">PanelContainer.draw</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="k">for</span> <span class="n">panel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">panels</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">with</span> <span class="n">panel</span><span class="o">.</span><span class="n">hold_trait_notifications</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">166</span>         <span class="n">panel</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:461,</span> in <span class="ni">MapPanel.draw</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">459</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plots</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span>     <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">hold_trait_notifications</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">461</span>         <span class="n">p</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="c1"># Add all of the maps</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers_edgecolor</span><span class="p">):</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1551,</span> in <span class="ni">PlotObs.draw</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1549</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_need_redraw</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1550</span>     <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;handle&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1551</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_need_redraw</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1563,</span> in <span class="ni">PlotObs._build</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1561</span> <span class="k">def</span> <span class="nf">_build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1562</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Build the plot by calling needed plotting methods as necessary.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1563</span>     <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotdata</span>
+<span class="g g-Whitespace">   </span><span class="mi">1565</span>     <span class="c1"># Use the cartopy map projection to transform station locations to the map and</span>
+<span class="g g-Whitespace">   </span><span class="mi">1566</span>     <span class="c1"># then refine the number of stations plotted by setting a radius</span>
+<span class="g g-Whitespace">   </span><span class="mi">1567</span>     <span class="n">scale</span> <span class="o">=</span> <span class="mf">1.</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">_proj_obj</span> <span class="o">==</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span> <span class="k">else</span> <span class="mf">100000.</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1538,</span> in <span class="ni">PlotObs.plotdata</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1532</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return the data for plotting.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1533</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1534</span><span class="sd"> The data arrays, x coordinates, and y coordinates.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1535</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1536</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1537</span> <span class="n">plot_data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">-&gt; </span><span class="mi">1538</span> <span class="k">for</span> <span class="n">dim_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obsdata</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1539</span>     <span class="k">if</span> <span class="n">dim_name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1540</span>         <span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obsdata</span><span class="p">[</span><span class="n">dim_name</span><span class="p">]</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:1514,</span> in <span class="ni">PlotObs.obsdata</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1510</span>     <span class="c1"># Indexes need to be properly sorted for the slicing below to work; the</span>
+<span class="g g-Whitespace">   </span><span class="mi">1511</span>     <span class="c1"># error you get if that&#39;s not the case really convoluted, which is why</span>
+<span class="g g-Whitespace">   </span><span class="mi">1512</span>     <span class="c1"># we don&#39;t rely on users doing it.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1513</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1514</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">-</span> <span class="n">window</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">+</span> <span class="n">window</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1516</span> <span class="c1"># Look for the station column</span>
+<span class="g g-Whitespace">   </span><span class="mi">1517</span> <span class="n">stn_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;station&#39;</span><span class="p">,</span> <span class="s1">&#39;stn&#39;</span><span class="p">,</span> <span class="s1">&#39;station_id&#39;</span><span class="p">,</span> <span class="s1">&#39;stid&#39;</span><span class="p">]</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/frame.py:3735,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3733</span> <span class="c1"># Do we have a slicer (on rows)?</span>
+<span class="g g-Whitespace">   </span><span class="mi">3734</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">3735</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">_convert_slice_indexer</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;getitem&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3736</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">indexer</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3737</span>         <span class="c1"># reachable with DatetimeIndex</span>
+<span class="g g-Whitespace">   </span><span class="mi">3738</span>         <span class="n">indexer</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">maybe_indices_to_slice</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3739</span>             <span class="n">indexer</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3740</span>         <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:4131,</span> in <span class="ni">Index._convert_slice_indexer</span><span class="nt">(self, key, kind)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4129</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="n">key</span>
+<span class="g g-Whitespace">   </span><span class="mi">4130</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">4131</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slice_indexer</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4133</span> <span class="k">return</span> <span class="n">indexer</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py:636,</span> in <span class="ni">DatetimeIndex.slice_indexer</span><span class="nt">(self, start, end, step)</span>
+<span class="g g-Whitespace">    </span><span class="mi">628</span> <span class="c1"># GH#33146 if start and end are combinations of str and None and Index is not</span>
+<span class="g g-Whitespace">    </span><span class="mi">629</span> <span class="c1"># monotonic, we can not use Index.slice_indexer because it does not honor the</span>
+<span class="g g-Whitespace">    </span><span class="mi">630</span> <span class="c1"># actual elements, is only searching for start and end</span>
+<span class="g g-Whitespace">    </span><span class="mi">631</span> <span class="k">if</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">632</span>     <span class="n">check_str_or_none</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">633</span>     <span class="ow">or</span> <span class="n">check_str_or_none</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">634</span>     <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_monotonic_increasing</span>
+<span class="g g-Whitespace">    </span><span class="mi">635</span> <span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">636</span>     <span class="k">return</span> <span class="n">Index</span><span class="o">.</span><span class="n">slice_indexer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">638</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">639</span> <span class="n">raise_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6341,</span> in <span class="ni">Index.slice_indexer</span><span class="nt">(self, start, end, step)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6297</span> <span class="k">def</span> <span class="nf">slice_indexer</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">6298</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">6299</span>     <span class="n">start</span><span class="p">:</span> <span class="n">Hashable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">6300</span>     <span class="n">end</span><span class="p">:</span> <span class="n">Hashable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">6301</span>     <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">6302</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">slice</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6303</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">6304</span><span class="sd">     Compute the slice indexer for input labels and step.</span>
+<span class="g g-Whitespace">   </span><span class="mi">6305</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6339</span><span class="sd">     slice(1, 3, None)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6340</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">6341</span>     <span class="n">start_slice</span><span class="p">,</span> <span class="n">end_slice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slice_locs</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6343</span>     <span class="c1"># return a slice</span>
+<span class="g g-Whitespace">   </span><span class="mi">6344</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">start_slice</span><span class="p">):</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6534,</span> in <span class="ni">Index.slice_locs</span><span class="nt">(self, start, end, step)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6532</span> <span class="n">start_slice</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">6533</span> <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">6534</span>     <span class="n">start_slice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_slice_bound</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6535</span> <span class="k">if</span> <span class="n">start_slice</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6536</span>     <span class="n">start_slice</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6459,</span> in <span class="ni">Index.get_slice_bound</span><span class="nt">(self, label, side)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6456</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_searchsorted_monotonic</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">side</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6457</span>     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6458</span>         <span class="c1"># raise the original KeyError</span>
+<span class="ne">-&gt; </span><span class="mi">6459</span>         <span class="k">raise</span> <span class="n">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">6461</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">slc</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">6462</span>     <span class="c1"># get_loc may return a boolean array, which</span>
+<span class="g g-Whitespace">   </span><span class="mi">6463</span>     <span class="c1"># is OK as long as they are representable by a slice.</span>
+<span class="g g-Whitespace">   </span><span class="mi">6464</span>     <span class="k">assert</span> <span class="n">is_bool_dtype</span><span class="p">(</span><span class="n">slc</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/base.py:6453,</span> in <span class="ni">Index.get_slice_bound</span><span class="nt">(self, label, side)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6451</span> <span class="c1"># we need to look up the label</span>
+<span class="g g-Whitespace">   </span><span class="mi">6452</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">6453</span>     <span class="n">slc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6454</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6455</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py:586,</span> in <span class="ni">DatetimeIndex.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="k">return</span> <span class="n">Index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">orig_key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+
+<span class="ne">KeyError</span>: Timestamp(&#39;2023-08-04 18:24:29.906209&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/450429d91476617398ff968ca91723b2b07cbeff94077da5af1f4e0553851a60.png" src="../../_images/450429d91476617398ff968ca91723b2b07cbeff94077da5af1f4e0553851a60.png" />
 </div>
 </div>
 </section>
