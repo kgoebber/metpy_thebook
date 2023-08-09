@@ -6,7 +6,7 @@
 #
 
 # Create Full Jupyter Book as HTML
-jupyter-book build --all .
+jupyter-book build --all ../metpy_thebook
 
 # Publish Webpage via ghp
 ghp-import -n -p -f _build/html
