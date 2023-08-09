@@ -14,5 +14,5 @@ to read the content of a file are `cat`, `less`, and `more`.
 Go ahead and cat a file in your directory to see what is contained within it.
 
 :::{note} 
-To get out of less or more hit 'q'.
+To get out of less or more hit `q`.
 :::

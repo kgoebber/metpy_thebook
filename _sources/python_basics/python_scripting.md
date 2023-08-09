@@ -36,7 +36,7 @@ Once you are back at the terminal prompt we now want to run our script.
 To run a python script we want to run our file through the Python
 interpreter which we can do by typing the following in the terminal:
 
-kgoebber\@bergeron:\~\> python script1.py
+`kgoebber@bergeron:~> python script1.py`
 
 The output should be:
 
