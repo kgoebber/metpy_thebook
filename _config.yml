@@ -8,9 +8,9 @@ logo: metpy_thebook_graphic.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache
   timeout: 100
-  stderr_output: 'remove-warn'
+  stderr_output: 'warn'
 
 #######################################################################################
 # Parse and render settings
