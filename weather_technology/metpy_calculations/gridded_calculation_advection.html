@@ -614,8 +614,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-a0c0da3d-4626-4e2b-a696-52b6fa6eed40">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-a0c0da3d-4626-4e2b-a696-52b6fa6eed40" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dcef4d26-743e-47b5-8b3b-fe2c55d4a113">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-dcef4d26-743e-47b5-8b3b-fe2c55d4a113" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Advection} = -u \frac{\Delta T}{\Delta x} - v \frac{\Delta T}{\Delta y}
 \end{align}\]</div>
 <p>The minus signs are by convention, which means cold air advection will be negative values and warm air advection will be positive values.</p>
@@ -634,10 +634,6 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/fp/_l45s1m93s5009vb713pyg580000gn/T/ipykernel_17047/1951136978.py:8: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
-  ds[&#39;temperature_advection&#39;] = mpcalc.advection(tmpk, uwind, vwind)
-</pre></div>
-</div>
 </div>
 </div>
 <section id="plot-temperatue-advection">
@@ -711,14 +707,6 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/shapely/constructive.py:181: RuntimeWarning: invalid value encountered in buffer
-  return lib.buffer(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/kgoebber/miniconda3/envs/metpy_book/lib/python3.11/site-packages/shapely/predicates.py:798: RuntimeWarning: invalid value encountered in intersects
-  return lib.intersects(a, b, **kwargs)
-</pre></div>
-</div>
 <img alt="../../_images/b26c6f151d6ed96eea363f540c7faed1ff65d8233367e5dd3c842761400c71bb.png" src="../../_images/b26c6f151d6ed96eea363f540c7faed1ff65d8233367e5dd3c842761400c71bb.png" />
 </div>
 </div>
