@@ -1,4 +1,4 @@
-# Cold Front Precipitation
+# Cold Front
 
 The abrupt nose of the cold air in the lowest levels of the atmosphere
 can act to forcibly lift portions of the warm sector airstreams
