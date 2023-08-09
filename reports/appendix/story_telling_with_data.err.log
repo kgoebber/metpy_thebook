@@ -46,7 +46,7 @@ File [0;32m~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/bac
 [0;32m---> 56[0m     value [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_cache[49m[43m[[49m[43mkey[49m[43m][49m
 [1;32m     57[0m     [38;5;28mself[39m[38;5;241m.[39m_cache[38;5;241m.[39mmove_to_end(key)
 
-[0;31mKeyError[0m: [<class 'netCDF4._netCDF4.Dataset'>, ('https://rda.ucar.edu/thredds/dodsC/files/g/ds084.1/2023/20230311/gfs.0p25.2023031112.f000.grib2',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '963459c2-87e7-479c-b7f4-75b64ca8908b']
+[0;31mKeyError[0m: [<class 'netCDF4._netCDF4.Dataset'>, ('https://rda.ucar.edu/thredds/dodsC/files/g/ds084.1/2023/20230311/gfs.0p25.2023031112.f000.grib2',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '5aa09a61-7880-4649-9ec4-b71e34b347cb']
 
 During handling of the above exception, another exception occurred:
 
