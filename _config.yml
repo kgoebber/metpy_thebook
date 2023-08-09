@@ -38,6 +38,8 @@ bibtex_bibfiles:
   - references.bib
 
 sphinx:
+  extra_extensions:
+    - sphinx_multitoc_numbering
   config:
     bibtex_reference_style: author_year
 
@@ -52,3 +54,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_multitoc_numbering: true
