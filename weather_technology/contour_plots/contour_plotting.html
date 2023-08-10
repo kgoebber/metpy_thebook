@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="12.4. Contour Plotting with Wind Barbs" href="add_wind_barbs.html" />
     <link rel="prev" title="12.2. Model Output Contents" href="model_file_info.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -562,13 +563,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="contour-plotting">
-<h1><span class="section-number">12.3. </span>Contour Plotting<a class="headerlink" href="#contour-plotting" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">12.3. </span>Contour Plotting<a class="headerlink" href="#contour-plotting" title="Permalink to this heading">#</a></h1>
 <p>This notebook demonstrates reading and plotting gridded data including model output.
 The following code will contour around every grid point and does this without
 “thinking”. So, don’t worry if not all contours are as smooth as you
 would like. We’ll discuss how to smooth the data in future chapters.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <p>Here we bring in the needed Python modules to be able to plot contours using the computer. Note that there are fewer needed for this particular plotting scenario.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -583,7 +584,7 @@ would like. We’ll discuss how to smooth the data in future chapters.</p>
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <p>Here we are using current data to demonstrate contour plotting. If you have a different data source you would like to use, simply change out the call to remote data in the <code class="docutils literal notranslate"><span class="pre">open_dataset</span></code> function to be appropriate for the local or remote data you would like to access. Future chapters will demonstrate different data sources that can be commonly used. Here we’ll use the GFS data from the Unidata THREDDS server.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -604,7 +605,7 @@ would like. We’ll discuss how to smooth the data in future chapters.</p>
 </div>
 </div>
 <section id="plot-data">
-<h3>Plot Data<a class="headerlink" href="#plot-data" title="Permalink to this headline">#</a></h3>
+<h3>Plot Data<a class="headerlink" href="#plot-data" title="Permalink to this heading">#</a></h3>
 <p>Here we demonstrate the use of <a class="reference internal" href="../../appendix/metpy_declarative_contourplot.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></span></a> for having the computer draw contours of a variable. Only a small subset of atttributes are used in this example, but your plot can be further customized using a host of different attributes, which you can read about in the MetPy documentation.</p>
 <p>MetPy <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code> Documentation: <a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html">https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html</a></p>
 <div class="cell docutils container">
@@ -642,7 +643,7 @@ would like. We’ll discuss how to smooth the data in future chapters.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f533e3c98dd6d0a5f7e97bb861f1d2ff82f8d764a00dff6503ded6d8ec98c01c.png" src="../../_images/f533e3c98dd6d0a5f7e97bb861f1d2ff82f8d764a00dff6503ded6d8ec98c01c.png" />
+<img alt="../../_images/437546fd28bb9101ce6b00c51af12e180c9c7f29782fdce885e4a67b2c1dab63.png" src="../../_images/437546fd28bb9101ce6b00c51af12e180c9c7f29782fdce885e4a67b2c1dab63.png" />
 </div>
 </div>
 </section>
@@ -744,7 +745,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

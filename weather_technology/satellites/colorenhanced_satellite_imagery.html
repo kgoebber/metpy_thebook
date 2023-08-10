@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="MetPy Declarative Syntax" href="../../appendix/metpy_declarative_details.html" />
     <link rel="prev" title="21.4. Satellite Feature Identification" href="satellite_features.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -560,11 +561,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="color-enhanced-satellite-imagery">
-<h1><span class="section-number">21.5. </span>Color-Enhanced Satellite Imagery<a class="headerlink" href="#color-enhanced-satellite-imagery" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">21.5. </span>Color-Enhanced Satellite Imagery<a class="headerlink" href="#color-enhanced-satellite-imagery" title="Permalink to this heading">#</a></h1>
 <p>To plot satellite imagery we can use data that we bring in through our local data feed or remote access from UCAR. Satellite data are stored in <code class="docutils literal notranslate"><span class="pre">/data/ldmdata/satellite</span></code> for both GOES-16 and GOES-17 or at <code class="docutils literal notranslate"><span class="pre">https://thredds.ucar.edu/thredds/idd/satellite.html</span></code>. We’ll be using the remote data source in this notebook. There are a couple of different sectors that we can view the data from, but the most common for synoptic-dynamic purposes would be the CONUS projection. Data are available every 5 min.</p>
 <p>For this plotting we are doing to use the declarative plotting syntax using Python and the MetPy module.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -581,7 +582,7 @@ document.write(`
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
@@ -620,7 +621,7 @@ document.write(`
 </div>
 </section>
 <section id="plot-imagery">
-<h2>Plot Imagery<a class="headerlink" href="#plot-imagery" title="Permalink to this headline">#</a></h2>
+<h2>Plot Imagery<a class="headerlink" href="#plot-imagery" title="Permalink to this heading">#</a></h2>
 <p>Color enhancement colormaps are available from MetPy and can be found at: <a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ctables.html">https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ctables.html</a></p>
 <p>Water Vapor Colormaps:</p>
 <ul class="simple">
@@ -666,7 +667,7 @@ Depending on the data you may have to switch between reveresed and non-reveresed
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/be31524fa21ada9f4a5ffc1eb14676ce5e5ee48d98fa3090c4ae8ce251ca629d.png" src="../../_images/be31524fa21ada9f4a5ffc1eb14676ce5e5ee48d98fa3090c4ae8ce251ca629d.png" />
+<img alt="../../_images/9b36b41a07b7af43a06e7d3dde9898c1417819ec9deed5b775041b68024cc95b.png" src="../../_images/9b36b41a07b7af43a06e7d3dde9898c1417819ec9deed5b775041b68024cc95b.png" />
 </div>
 </div>
 </section>
@@ -765,7 +766,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

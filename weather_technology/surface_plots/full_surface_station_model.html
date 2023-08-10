@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="8.8. Saving Images" href="saving_images.html" />
     <link rel="prev" title="8.6. Station Model Location Details" href="observation_locations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -560,9 +561,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="full-surface-station-model-plotting">
-<h1><span class="section-number">8.7. </span>Full Surface Station Model Plotting<a class="headerlink" href="#full-surface-station-model-plotting" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">8.7. </span>Full Surface Station Model Plotting<a class="headerlink" href="#full-surface-station-model-plotting" title="Permalink to this heading">#</a></h1>
 <section id="import">
-<h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">#</a></h2>
+<h2>Import<a class="headerlink" href="#import" title="Permalink to this heading">#</a></h2>
 <p>Import the needed modules</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -580,7 +581,7 @@ document.write(`
 </div>
 </section>
 <section id="read-data">
-<h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this headline">#</a></h2>
+<h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this heading">#</a></h2>
 <p>Here we gain access to surface data from the Iowa State Archive. To do so we construct the appropriate <code class="docutils literal notranslate"><span class="pre">data_url</span></code> that requires a start and end date. To create that we utilize the time we desire and add/subtract time from there to create a time window. From there we use the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/index.html">Pandas</a> module method <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html"><code class="docutils literal notranslate"><span class="pre">read_csv()</span></code></a> to read in all of the data, then parse the METAR observations using MetPy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,7 +612,7 @@ document.write(`
 </div>
 </section>
 <section id="plot-data">
-<h2>Plot Data<a class="headerlink" href="#plot-data" title="Permalink to this headline">#</a></h2>
+<h2>Plot Data<a class="headerlink" href="#plot-data" title="Permalink to this heading">#</a></h2>
 <p>Here we exploit the full range of observations to plot around our station model to get a “full” surface station plot. In order to plot cloud cover and the current weather, we must use the formats to specify the “font” to use, which is part of MetPy. We could go further and change colors, fontsize, etc., but that is left as an excercise for the reader.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -648,7 +649,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2240539e627dc7ebc84f4ffb9ecb6ec40e7524115129892b7759f791576c584b.png" src="../../_images/2240539e627dc7ebc84f4ffb9ecb6ec40e7524115129892b7759f791576c584b.png" />
+<img alt="../../_images/a801e94d297bb87ed0cd34494ed949079009470457309ceab86ab044aa47e61e.png" src="../../_images/a801e94d297bb87ed0cd34494ed949079009470457309ceab86ab044aa47e61e.png" />
 </div>
 </div>
 </section>
@@ -747,7 +748,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

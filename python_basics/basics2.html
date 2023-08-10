@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.3. Python Syntax - Basics #3" href="basics3.html" />
     <link rel="prev" title="2.1. Python Syntax - Basics #1" href="basics1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -565,10 +566,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-syntax-basics-2">
-<h1><span class="section-number">2.2. </span>Python Syntax - Basics #2<a class="headerlink" href="#python-syntax-basics-2" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.2. </span>Python Syntax - Basics #2<a class="headerlink" href="#python-syntax-basics-2" title="Permalink to this heading">#</a></h1>
 <p>In this section we’ll cover setting a variable types, mathematical operations and calculations, and subsetting strings. A good resource for additional information about the Python programming language in the atmospheric sciences is “Python Programming and Visualization for Scientists, 2nd Ed.” by Alex DeCaria.</p>
 <section id="variable-types">
-<h2>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this headline">#</a></h2>
+<h2>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this heading">#</a></h2>
 <p>Since Python is a dynamically typed language, each variable will assume a type based on what the variable is assigned.</p>
 <ul>
 <li><p>integer</p>
@@ -609,9 +610,9 @@ document.write(`
 </div>
 </section>
 <section id="mathematical-calculations">
-<h2>Mathematical Calculations<a class="headerlink" href="#mathematical-calculations" title="Permalink to this headline">#</a></h2>
+<h2>Mathematical Calculations<a class="headerlink" href="#mathematical-calculations" title="Permalink to this heading">#</a></h2>
 <section id="operators">
-<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">#</a></h3>
+<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Addition (+)</p></li>
 <li><p>Subtraction (-)</p></li>
@@ -647,7 +648,7 @@ In Python, integer division will yield a real in return</p>
 </section>
 </section>
 <section id="converting-types">
-<h2>Converting Types<a class="headerlink" href="#converting-types" title="Permalink to this headline">#</a></h2>
+<h2>Converting Types<a class="headerlink" href="#converting-types" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>If you read something from a file it will be input as a string</p></li>
 <li><p>May need to convert to integers and floats (real)</p></li>
@@ -689,7 +690,7 @@ In Python, integer division will yield a real in return</p>
 </div>
 </section>
 <section id="variables-and-math">
-<h2>Variables and Math<a class="headerlink" href="#variables-and-math" title="Permalink to this headline">#</a></h2>
+<h2>Variables and Math<a class="headerlink" href="#variables-and-math" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TMPC</span> <span class="o">=</span> <span class="mi">24</span>
 <span class="n">TMPF</span> <span class="o">=</span> <span class="p">(</span><span class="mf">9.</span><span class="o">/</span><span class="mf">5.</span><span class="p">)</span><span class="o">*</span><span class="n">TMPC</span> <span class="o">+</span> <span class="mi">32</span>
 
@@ -716,7 +717,7 @@ We can also format the variable (TMPF) that we are printing out. Formats go afte
 </div>
 </section>
 <section id="subsetting-strings">
-<h2>Subsetting Strings<a class="headerlink" href="#subsetting-strings" title="Permalink to this headline">#</a></h2>
+<h2>Subsetting Strings<a class="headerlink" href="#subsetting-strings" title="Permalink to this heading">#</a></h2>
 <p>Each character within a string (including spaces) are one position. You can subset a string for a single or set of characters (positions) via its index value (address). One very important note is that Python uses a zero-based indexing scheme, so the first index value is zero (0), the second is one (1), and do on. You can also index from the end going backwards using negative numbers starting with -1, which will give you the last character.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dept</span> <span class="o">=</span> <span class="s1">&#39;Geography&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dept</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -853,7 +854,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

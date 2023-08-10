@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="19.10. Relative Vorticity" href="relative_vorticity_info.html" />
     <link rel="prev" title="19.8. Advection" href="advection_info.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -565,10 +566,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="advection-calculation">
-<h1><span class="section-number">19.9. </span>Advection Calculation<a class="headerlink" href="#advection-calculation" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">19.9. </span>Advection Calculation<a class="headerlink" href="#advection-calculation" title="Permalink to this heading">#</a></h1>
 <p>This notebook demonstrates computing a temperature advection and relative vorticity, then plotting it using color-filled contours.</p>
 <section id="import-needed-packages">
-<h2>Import Needed Packages<a class="headerlink" href="#import-needed-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Needed Packages<a class="headerlink" href="#import-needed-packages" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">time</span>
@@ -583,7 +584,7 @@ document.write(`
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the date/time of the model run</span>
@@ -603,7 +604,7 @@ document.write(`
 </div>
 </section>
 <section id="calculation">
-<h2>Calculation<a class="headerlink" href="#calculation" title="Permalink to this headline">#</a></h2>
+<h2>Calculation<a class="headerlink" href="#calculation" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Pull out necessary variables from dataset.</p></li>
 <li><p>Do the calculation using MetPy (not too hard).</p></li>
@@ -614,8 +615,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-dcef4d26-743e-47b5-8b3b-fe2c55d4a113">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-dcef4d26-743e-47b5-8b3b-fe2c55d4a113" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8c936a0f-a4e5-49f3-b339-308ef9fd29e4">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-8c936a0f-a4e5-49f3-b339-308ef9fd29e4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Advection} = -u \frac{\Delta T}{\Delta x} - v \frac{\Delta T}{\Delta y}
 \end{align}\]</div>
 <p>The minus signs are by convention, which means cold air advection will be negative values and warm air advection will be positive values.</p>
@@ -637,7 +638,7 @@ document.write(`
 </div>
 </div>
 <section id="plot-temperatue-advection">
-<h3>Plot Temperatue Advection<a class="headerlink" href="#plot-temperatue-advection" title="Permalink to this headline">#</a></h3>
+<h3>Plot Temperatue Advection<a class="headerlink" href="#plot-temperatue-advection" title="Permalink to this heading">#</a></h3>
 <p>Here we plot temperature advection and we want to scale our advection to be in Celsius per 3 hours. We need to change two attributes to get there, first <code class="docutils literal notranslate"><span class="pre">plot_units</span></code> we can set to <code class="docutils literal notranslate"><span class="pre">degC/hour</span></code>, then we set the <code class="docutils literal notranslate"><span class="pre">scale</span></code> attribute to <code class="docutils literal notranslate"><span class="pre">3</span></code> to get our value over a three hour period.</p>
 <p>We’ll also use the <code class="docutils literal notranslate"><span class="pre">smooth_contour</span></code> attribute to smooth the Geopotential Heights and Temperature variables.</p>
 <div class="cell docutils container">
@@ -707,7 +708,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b26c6f151d6ed96eea363f540c7faed1ff65d8233367e5dd3c842761400c71bb.png" src="../../_images/b26c6f151d6ed96eea363f540c7faed1ff65d8233367e5dd3c842761400c71bb.png" />
+<img alt="../../_images/715a6d79a34756754ff708fdb30ac70061ee6d5b4a2ebf5fb9c24a6ee76679e1.png" src="../../_images/715a6d79a34756754ff708fdb30ac70061ee6d5b4a2ebf5fb9c24a6ee76679e1.png" />
 </div>
 </div>
 </section>
@@ -810,7 +811,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

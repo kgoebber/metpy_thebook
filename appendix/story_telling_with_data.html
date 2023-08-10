@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -64,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -557,7 +558,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-influence-of-sst-on-midlatitude-cyclones">
-<h1>The Influence of SST on Midlatitude Cyclones<a class="headerlink" href="#the-influence-of-sst-on-midlatitude-cyclones" title="Permalink to this headline">#</a></h1>
+<h1>The Influence of SST on Midlatitude Cyclones<a class="headerlink" href="#the-influence-of-sst-on-midlatitude-cyclones" title="Permalink to this heading">#</a></h1>
 <p>There are many factors that can influence the the life cycle of a midlatitude cyclone. For cyclones that form and track along coastal regions of the southern and eastern US, sea surface temperatures (SSTs) can have a profound impact on the strength and speed of intensification of a given cyclone. In order to begin to understand the relationship we’ll want to look at data that represent both the atmospheric strength of a cyclone with some information about ocean conditions. Where we have warmer SSTs there is greater capacity for moisture just above the ocean surface, which in turn can lead to greater latent heat release. It’s the latent heat release that can strongly modify the environment to amplify atmospheric processes and thus produce a deeper (stronger) midlatitude cyclone in a very short amount of time.</p>
 <p>Let’s investigate a case to determine whether SSTs appear to play a major role in the life cycle of a midlatitude cyclone.</p>
 <p>Case: March 2023 Nor’Easter
@@ -566,7 +567,7 @@ Dates: 11-15 March 2023</p>
 <p>States Impacted: New York, Massechusettes</p>
 <p>Background Resource Information: <a class="reference external" href="https://abcnews.go.com/US/noreaster-bring-multiple-days-rain-snow-95-corridor/story?id=97830976">https://abcnews.go.com/US/noreaster-bring-multiple-days-rain-snow-95-corridor/story?id=97830976</a></p>
 <section id="atmospheric-data">
-<h2>Atmospheric Data<a class="headerlink" href="#atmospheric-data" title="Permalink to this headline">#</a></h2>
+<h2>Atmospheric Data<a class="headerlink" href="#atmospheric-data" title="Permalink to this heading">#</a></h2>
 <p>There are any number of different datasets that can be used to</p>
 <p>Data Source: <a class="reference external" href="https://rda.ucar.edu/thredds/catalog/catalog_ds084.1.html">https://rda.ucar.edu/thredds/catalog/catalog_ds084.1.html</a></p>
 <div class="cell docutils container">
@@ -600,7 +601,7 @@ Dates: 11-15 March 2023</p>
 <span class="ne">---&gt; </span><span class="mi">56</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
-<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://rda.ucar.edu/thredds/dodsC/files/g/ds084.1/2023/20230311/gfs.0p25.2023031112.f000.grib2&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;13b1fdb8-9df3-4fa5-949f-f1cbc75cb58b&#39;]
+<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://rda.ucar.edu/thredds/dodsC/files/g/ds084.1/2023/20230311/gfs.0p25.2023031112.f000.grib2&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;c1826631-6c19-44f5-a34a-e0fe23214e5c&#39;]
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -718,7 +719,7 @@ Dates: 11-15 March 2023</p>
 </div>
 </section>
 <section id="ocean-data">
-<h2>Ocean Data<a class="headerlink" href="#ocean-data" title="Permalink to this headline">#</a></h2>
+<h2>Ocean Data<a class="headerlink" href="#ocean-data" title="Permalink to this heading">#</a></h2>
 <p>Data Source: <a class="reference external" href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg.html">https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -883,7 +884,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

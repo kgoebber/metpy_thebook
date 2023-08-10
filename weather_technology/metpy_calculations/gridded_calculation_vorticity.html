@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="19.12. Practice Tasks - MetPy Calculations" href="calculation_practice_tasks.html" />
     <link rel="prev" title="19.10. Relative Vorticity" href="relative_vorticity_info.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -563,10 +564,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="relative-vorticity-calculation">
-<h1><span class="section-number">19.11. </span>Relative Vorticity Calculation<a class="headerlink" href="#relative-vorticity-calculation" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">19.11. </span>Relative Vorticity Calculation<a class="headerlink" href="#relative-vorticity-calculation" title="Permalink to this heading">#</a></h1>
 <p>This notebook demonstrates computing a temperature advection and relative vorticity, then plotting it using color-filled contours.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">time</span>
@@ -581,7 +582,7 @@ document.write(`
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the date/time of the model run</span>
@@ -601,7 +602,7 @@ document.write(`
 </div>
 </section>
 <section id="calculation">
-<h2>Calculation<a class="headerlink" href="#calculation" title="Permalink to this headline">#</a></h2>
+<h2>Calculation<a class="headerlink" href="#calculation" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Pull out necessary variables from dataset.</p></li>
 <li><p>Do the calculation using MetPy (not too hard).</p></li>
@@ -612,8 +613,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-dff206ac-61a0-414b-ac79-b67a074f1326">
-<span class="eqno">(19.2)<a class="headerlink" href="#equation-dff206ac-61a0-414b-ac79-b67a074f1326" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f06cce6b-f862-41ce-b168-0649d2a88a03">
+<span class="eqno">(19.2)<a class="headerlink" href="#equation-f06cce6b-f862-41ce-b168-0649d2a88a03" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Relative Vorticity} = \zeta &amp; = \frac{\Delta V}{\Delta x} - \frac{\Delta U}{\Delta y} \\
 \end{align}\]</div>
 <p>MetPy Relative Vorticity Calculation: <a class="reference external" href="https://unidata.github.io/MetPy/v1.0/api/generated/metpy.calc.vorticity.html#metpy.calc.vorticity">https://unidata.github.io/MetPy/v1.0/api/generated/metpy.calc.vorticity.html#metpy.calc.vorticity</a></p>
@@ -632,7 +633,7 @@ document.write(`
 </div>
 </section>
 <section id="plot-relative-vorticity">
-<h2>Plot Relative Vorticity<a class="headerlink" href="#plot-relative-vorticity" title="Permalink to this headline">#</a></h2>
+<h2>Plot Relative Vorticity<a class="headerlink" href="#plot-relative-vorticity" title="Permalink to this heading">#</a></h2>
 <p>In addition to plotting our newly calculated relative vorticity variable, we’ll smooth the Geopotential Hieghts using the <code class="docutils literal notranslate"><span class="pre">smooth_field</span></code> attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -687,7 +688,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/78b0800d8b761335bc88c1f2a621e6167bf96af4c8e12f7f2a5c24a606fc91e4.png" src="../../_images/78b0800d8b761335bc88c1f2a621e6167bf96af4c8e12f7f2a5c24a606fc91e4.png" />
+<img alt="../../_images/78374137a779b5776295768a71719fbcf5995246d98d0847b95550380a4acc78.png" src="../../_images/78374137a779b5776295768a71719fbcf5995246d98d0847b95550380a4acc78.png" />
 </div>
 </div>
 </section>
@@ -787,7 +788,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

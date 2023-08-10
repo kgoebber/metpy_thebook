@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -68,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="13.3. Gradient Balance" href="gradient_balance.html" />
     <link rel="prev" title="13.1. Hydrostatic Balance" href="hydrostatic_balance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -564,7 +565,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geostrophic-balance">
-<h1><span class="section-number">13.2. </span>Geostrophic Balance<a class="headerlink" href="#geostrophic-balance" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">13.2. </span>Geostrophic Balance<a class="headerlink" href="#geostrophic-balance" title="Permalink to this heading">#</a></h1>
 <p>One very common horizontal force balance is the geostrophic balance.
 Flows in the atmosphere are often over large enough temporal and spatial
 scales that bring the Coriolis force into play. In the upper-levels
@@ -600,7 +601,7 @@ balance diagram and annotated figure elements.</span><a class="headerlink" href=
 </figcaption>
 </figure>
 <section id="example-geostrophic-wind-calculation">
-<h2>Example Geostrophic Wind Calculation<a class="headerlink" href="#example-geostrophic-wind-calculation" title="Permalink to this headline">#</a></h2>
+<h2>Example Geostrophic Wind Calculation<a class="headerlink" href="#example-geostrophic-wind-calculation" title="Permalink to this heading">#</a></h2>
 <p>Having these equations are great, but what can we do with them? We can use them to
 calculate the values of the wind components by using the geopotential height gradient,
 the Coriolis parameter, and the value of gravity. We’ll use the values from the illustration
@@ -612,7 +613,7 @@ in the same way. If you don’t, then you can end up with a sign error (e.g., a 
 when you should be getting a positive).</p>
 </div>
 <section id="u-g-calculation">
-<h3><span class="math notranslate nohighlight">\(u_g\)</span> Calculation<a class="headerlink" href="#u-g-calculation" title="Permalink to this headline">#</a></h3>
+<h3><span class="math notranslate nohighlight">\(u_g\)</span> Calculation<a class="headerlink" href="#u-g-calculation" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\Delta z\ (\text{y-direction})\  = \ 8880\ m\  - \ 9240\ m\  = \  - 360\ m\]</div>
 <div class="math notranslate nohighlight">
@@ -623,7 +624,7 @@ when you should be getting a positive).</p>
 \[u_{g} = - \frac{9.81\ m\ s^{- 2}}{10^{- 4}\ s^{- 1}}\frac{- 360\ m}{500000\ m} = 70.6\ m\ s^{- 1}\]</div>
 </section>
 <section id="v-g-calculation">
-<h3><span class="math notranslate nohighlight">\(v_g\)</span> Calculation<a class="headerlink" href="#v-g-calculation" title="Permalink to this headline">#</a></h3>
+<h3><span class="math notranslate nohighlight">\(v_g\)</span> Calculation<a class="headerlink" href="#v-g-calculation" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\Delta z\ (\text{x-direction})\  = \ 9000\ m\  - \ 9000\ m\  = \ 0\ m\]</div>
 <div class="math notranslate nohighlight">
@@ -729,7 +730,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

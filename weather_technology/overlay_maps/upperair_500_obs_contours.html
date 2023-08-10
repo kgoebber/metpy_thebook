@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="17. Numerical Weather Prediction" href="../nwp/nwp_intro.html" />
     <link rel="prev" title="16. Overlay Observations and Contours" href="overlay_maps_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -561,10 +562,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="overlay-observations-and-contours">
-<h1><span class="section-number">16.1. </span>Overlay Observations and Contours<a class="headerlink" href="#overlay-observations-and-contours" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">16.1. </span>Overlay Observations and Contours<a class="headerlink" href="#overlay-observations-and-contours" title="Permalink to this heading">#</a></h1>
 <p>Using the declarative syntax to plot upperair observations and overlay contours.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <p>Here we’ll need to import all of the packages to read both observation
 data and some form of gridded data. Here we’ll plot some upperair maps,
 so we’ll read current observations from Iowa State archive with current
@@ -586,7 +587,7 @@ GFS model output to have the computer draw contours.</p>
 </div>
 </section>
 <section id="get-observations-data">
-<h2>Get Observations Data<a class="headerlink" href="#get-observations-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Observations Data<a class="headerlink" href="#get-observations-data" title="Permalink to this heading">#</a></h2>
 <p>Here we’ll get the observation data from the Iowa State archive,
 add some latitude/longitude data to those observations and remove an
 errant data point that got tagged as ‘KVER’.</p>
@@ -609,7 +610,7 @@ errant data point that got tagged as ‘KVER’.</p>
 </div>
 </section>
 <section id="get-gridded-data">
-<h2>Get Gridded Data<a class="headerlink" href="#get-gridded-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Gridded Data<a class="headerlink" href="#get-gridded-data" title="Permalink to this heading">#</a></h2>
 <p>Here we’ll get the associated gridded output to be able to draw contours
 from Unidata. Here we use the one degree GFS output.= and subset to being over
 the CONUS.</p>
@@ -627,7 +628,7 @@ the CONUS.</p>
 </div>
 </section>
 <section id="plot-obs-and-contours">
-<h2>Plot Obs and Contours<a class="headerlink" href="#plot-obs-and-contours" title="Permalink to this headline">#</a></h2>
+<h2>Plot Obs and Contours<a class="headerlink" href="#plot-obs-and-contours" title="Permalink to this heading">#</a></h2>
 <p>To plot our overlay all we need to do is set up both our attributes for plotting
 the observations and for drawing contours, then add both pieces and put it on a
 map figure.</p>
@@ -674,7 +675,7 @@ map figure.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2b2aa7a03832607ec6cfd1b728b78c43b151f88179f7adc0acb6e05334f997fe.png" src="../../_images/2b2aa7a03832607ec6cfd1b728b78c43b151f88179f7adc0acb6e05334f997fe.png" />
+<img alt="../../_images/62b906e69bc5c28d08f486a1567186834668de0f2b54ea739168c9d14589bcd3.png" src="../../_images/62b906e69bc5c28d08f486a1567186834668de0f2b54ea739168c9d14589bcd3.png" />
 </div>
 </div>
 </section>
@@ -774,7 +775,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

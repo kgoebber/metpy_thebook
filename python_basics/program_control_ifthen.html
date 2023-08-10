@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3.2. Looping for Repetitive Tasks" href="program_control_looping.html" />
     <link rel="prev" title="3. Python Program Control Flow" href="python_control_flow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -564,7 +565,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="if-then-statements">
-<h1><span class="section-number">3.1. </span>If-Then Statements<a class="headerlink" href="#if-then-statements" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.1. </span>If-Then Statements<a class="headerlink" href="#if-then-statements" title="Permalink to this heading">#</a></h1>
 <p>There will be times when we only want to do things only when certain conditions are met.
 In order to facilitate this within a programming language we need a way for the program
 to know the “truthiness” of a statement.</p>
@@ -574,7 +575,7 @@ of outcomes from running that same code.</p>
 <p>The manner in which these statements work is by testing a truth value of a statment.
 If the statement is true, then the code within the if statement will be executed.</p>
 <section id="logical-operators">
-<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">#</a></h2>
+<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h2>
 <p>In order test values we need a set of operators that can help the computer determine the “truthiness”. Here are the list of the most common logical operators used in Python.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -636,7 +637,7 @@ If the statement is true, then the code within the if statement will be executed
 </div>
 </section>
 <section id="if-else-if-else-statements">
-<h2>If, Else If, Else Statements<a class="headerlink" href="#if-else-if-else-statements" title="Permalink to this headline">#</a></h2>
+<h2>If, Else If, Else Statements<a class="headerlink" href="#if-else-if-else-statements" title="Permalink to this heading">#</a></h2>
 <p>At a minimum you must include a single <code class="docutils literal notranslate"><span class="pre">if</span></code> call, but can then include any number of <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements to check other possibilities, and then a single concluding <code class="docutils literal notranslate"><span class="pre">else</span></code> statement can be used as a catch-all for the if statement (with no need to have any <code class="docutils literal notranslate"><span class="pre">elif</span></code>s to have an <code class="docutils literal notranslate"><span class="pre">else</span></code>). Here is a full example of using <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> in a single if statement. Notice that at the end of each line contain a part of the if construct there is a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), that is the important character for the Python interpreter to know it has reached the end of the logical statment and it should be evaluted to determine its truithiness. Also note that the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement does not contain any logical condition as it only gets executed if each test before it results in a <code class="docutils literal notranslate"><span class="pre">False</span></code> designation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
@@ -655,7 +656,7 @@ If the statement is true, then the code within the if statement will be executed
 </div>
 <p><strong>NOTE:</strong> Another key element of Python is that is is an indented language, so everything within the <code class="docutils literal notranslate"><span class="pre">if</span></code> statment and any <code class="docutils literal notranslate"><span class="pre">elif</span></code> or <code class="docutils literal notranslate"><span class="pre">else</span></code> statments must be indented the same amount. The standard indent is four spaces long.</p>
 <section id="if-statment-construct-stand-alone">
-<h3>if statment construct - stand alone<a class="headerlink" href="#if-statment-construct-stand-alone" title="Permalink to this headline">#</a></h3>
+<h3>if statment construct - stand alone<a class="headerlink" href="#if-statment-construct-stand-alone" title="Permalink to this heading">#</a></h3>
 <p>Here is the construct of a simple if statment where you are looking to test
 a single conditional element (e.g., 5 &lt; 10) to then choose to take a specific
 action (whatever is in the code block indented with the if statement) if it
@@ -681,15 +682,15 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original Time: 2023-08-09 15:29:52.297812
-Time after If-Statement: 2023-08-09 15:29:52.297812
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original Time: 2023-08-10 17:33:33.000599
+Time after If-Statement: 2023-08-10 17:33:33.000599
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="if-else-construct">
-<h3>if-else construct<a class="headerlink" href="#if-else-construct" title="Permalink to this headline">#</a></h3>
+<h3>if-else construct<a class="headerlink" href="#if-else-construct" title="Permalink to this heading">#</a></h3>
 <p>If you want to test one conditional, but if it is <code class="docutils literal notranslate"><span class="pre">False</span></code>, always do something else,
 then the <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> construct is for you! Note that in the <code class="docutils literal notranslate"><span class="pre">else</span></code> there is no
 conditional statement as it is a catch-all and will always be executed if the
@@ -702,7 +703,7 @@ initial conditional is <code class="docutils literal notranslate"><span class="p
 </div>
 </section>
 <section id="if-elif-else-construct">
-<h3>if-elif-else construct<a class="headerlink" href="#if-elif-else-construct" title="Permalink to this headline">#</a></h3>
+<h3>if-elif-else construct<a class="headerlink" href="#if-elif-else-construct" title="Permalink to this heading">#</a></h3>
 <p>The full complement of an if statement can contain one <code class="docutils literal notranslate"><span class="pre">if</span></code>, any number of <code class="docutils literal notranslate"><span class="pre">elif</span></code>s,
 and an <code class="docutils literal notranslate"><span class="pre">else</span></code> statment. Again, once a <code class="docutils literal notranslate"><span class="pre">True</span></code> condition is found it will run the
 code block associated with that condition and then move on in the program after
@@ -839,7 +840,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

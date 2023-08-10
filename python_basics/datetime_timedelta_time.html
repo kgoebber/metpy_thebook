@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5. Python Script" href="python_scripting.html" />
     <link rel="prev" title="4. Datetime Module" href="datetime_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -563,7 +564,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="datetime-functionality">
-<h1><span class="section-number">4.1. </span>Datetime Functionality<a class="headerlink" href="#datetime-functionality" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4.1. </span>Datetime Functionality<a class="headerlink" href="#datetime-functionality" title="Permalink to this heading">#</a></h1>
 <p>The datetime module is fully described in the Python online
 documentation that you can access at
 <a class="reference external" href="https://docs.python.org/3/library/datetime.html">https://docs.python.org/3/library/datetime.html</a> . We’ll begin by importing
@@ -577,7 +578,7 @@ at various points throughout the book, <code class="docutils literal notranslate
 </div>
 </div>
 <section id="datetime-objects">
-<h2>datetime objects<a class="headerlink" href="#datetime-objects" title="Permalink to this headline">#</a></h2>
+<h2>datetime objects<a class="headerlink" href="#datetime-objects" title="Permalink to this heading">#</a></h2>
 <p>Now let’s learn about and use the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime-objects">datetime objects</a>
 from the datetime module. In meteorology we can’t concern
 ourselves with every local time zone, especially when various locations
@@ -593,7 +594,7 @@ UTC</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-09 15:29:51.392063
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-10 17:33:32.097653
 </pre></div>
 </div>
 </div>
@@ -632,7 +633,7 @@ our datetime object:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-09 15:29:51.397315
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-10 17:33:32.102212
 2023
 </pre></div>
 </div>
@@ -664,7 +665,7 @@ continuous string (<code class="docutils literal notranslate"><span class="pre">
 name to be used anywhere within your program. We’ll continue to come
 back to aspects of the datetime objects throughout the semester.</p>
 <section id="set-your-own-time">
-<h3>Set your own time<a class="headerlink" href="#set-your-own-time" title="Permalink to this headline">#</a></h3>
+<h3>Set your own time<a class="headerlink" href="#set-your-own-time" title="Permalink to this heading">#</a></h3>
 <p>We are not beholden to only using the current date/time – we can set any date/time we want. For example, let’s set a date of May 23, 2018 at 12 UTC, we can use the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module again by setting the the year, month, day, hour, minute, second.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -687,7 +688,7 @@ back to aspects of the datetime objects throughout the semester.</p>
 </section>
 </section>
 <section id="timedelta-objects">
-<h2>timedelta objects<a class="headerlink" href="#timedelta-objects" title="Permalink to this headline">#</a></h2>
+<h2>timedelta objects<a class="headerlink" href="#timedelta-objects" title="Permalink to this heading">#</a></h2>
 <p>There will be moments where you’ll want to do some math with the date (e.g., what time is 6 hours from now?)
 and <a class="reference external" href="https://docs.python.org/3/library/datetime.html#timedelta-objects">timedelta objects</a> makes that arithmatic
 very easy. Using the <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> functionality we can add or substract
@@ -701,7 +702,7 @@ days, seconds, microseconds, milliseconds, minutes, hours, or weeks.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-09 03:29:51.397315
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-10 05:33:32.102212
 </pre></div>
 </div>
 </div>
@@ -715,7 +716,7 @@ days, seconds, microseconds, milliseconds, minutes, hours, or weeks.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-23 15:29:51.397315
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-24 17:33:32.102212
 </pre></div>
 </div>
 </div>
@@ -723,7 +724,7 @@ days, seconds, microseconds, milliseconds, minutes, hours, or weeks.</p>
 <p>Here we saved our time calculation to a new variable, <code class="docutils literal notranslate"><span class="pre">future_time</span></code>, and printed it out. Again, we let the computer do the hard work for us.</p>
 </section>
 <section id="time-objects">
-<h2>time objects<a class="headerlink" href="#time-objects" title="Permalink to this headline">#</a></h2>
+<h2>time objects<a class="headerlink" href="#time-objects" title="Permalink to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://docs.python.org/3/library/datetime.html#time-objects">time objects</a> deal with only the local
 time (hours, minutes, seconds, etc.) and are a subset of the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> objects. We can use this to help
 us set a datetime object more efficiently when we may want to get a relatively current date, but set the
@@ -746,9 +747,9 @@ hour to a specific time.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-08 15:29:51.426450
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-09 17:33:32.123357
 12:00:00
-2023-08-08 12:00:00
+2023-08-09 12:00:00
 </pre></div>
 </div>
 </div>
@@ -852,7 +853,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

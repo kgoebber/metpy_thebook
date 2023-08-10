@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="MetPy - ContourPlot()" href="metpy_declarative_contourplot.html" />
     <link rel="prev" title="MetPy Declarative Syntax" href="metpy_declarative_details.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -577,13 +578,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="metpy-plotobs">
-<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code><a class="headerlink" href="#metpy-plotobs" title="Permalink to this headline">#</a></h1>
+<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code><a class="headerlink" href="#metpy-plotobs" title="Permalink to this heading">#</a></h1>
 <p>To make a plot of observations requires the use of the <code class="docutils literal notranslate"><span class="pre">PlotObs</span></code> module from the MetPy declarative
 syntax. This is a Class of the declarative syntax and note that Classes contain MiXeD case names. This class
 contains a number of attributes that can be set to specify what and how to plot the data in a figure. The descriptions of some of the basic
 elements of each element are given below.</p>
 <section id="plotobs">
-<h2><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs"><code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a><a class="headerlink" href="#plotobs" title="Permalink to this headline">#</a></h2>
+<h2><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs"><code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a><a class="headerlink" href="#plotobs" title="Permalink to this heading">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
@@ -640,28 +641,28 @@ elements of each element are given below.</p>
 </table>
 </section>
 <section id="attribute-descriptions">
-<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this headline">#</a></h2>
+<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this heading">#</a></h2>
 <section id="data">
-<h3><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this headline">#</a></h3>
+<h3><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute needs to be set to the DataFrame variable containing the fields that you desire to plot.</p></li>
 </ul>
 </section>
 <section id="fields">
-<h3><strong>fields</strong><a class="headerlink" href="#fields" title="Permalink to this headline">#</a></h3>
+<h3><strong>fields</strong><a class="headerlink" href="#fields" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute is a list of variable names from your DataFrame that you
 desire to plot at the given locations around the station model.</p></li>
 </ul>
 </section>
 <section id="level">
-<h3><strong>level</strong><a class="headerlink" href="#level" title="Permalink to this headline">#</a></h3>
+<h3><strong>level</strong><a class="headerlink" href="#level" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>For a surface plot this needs to be set to None.</p></li>
 </ul>
 </section>
 <section id="time">
-<h3><strong>time</strong><a class="headerlink" href="#time" title="Permalink to this headline">#</a></h3>
+<h3><strong>time</strong><a class="headerlink" href="#time" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute needs to be set to subset your data attribute for the
 time of the observations to be plotted. This needs to be a datetime
@@ -669,14 +670,14 @@ object.</p></li>
 </ul>
 </section>
 <section id="locations-optional">
-<h3><strong>locations (optional)</strong><a class="headerlink" href="#locations-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>locations (optional)</strong><a class="headerlink" href="#locations-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets the location of the fields to be plotted around the
 surface station model. The default location is center (‘C’)</p></li>
 </ul>
 </section>
 <section id="time-range-optional">
-<h3><strong>time_range (optional)</strong><a class="headerlink" href="#time-range-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>time_range (optional)</strong><a class="headerlink" href="#time-range-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute allows you to define a window for valid observations
 (e.g., 15 minutes on either side of the datetime object setting. This
@@ -687,7 +688,7 @@ purposes.</p></li>
 </ul>
 </section>
 <section id="formats-optional">
-<h3><strong>formats (optional)</strong><a class="headerlink" href="#formats-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>formats (optional)</strong><a class="headerlink" href="#formats-optional" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>This attribute sets a formatter for text or plotting symbols around
 the station model. For example, plotting mean sea-level pressure is
@@ -701,7 +702,7 @@ mid_clouds, high_clouds, and pressure_tendency.</p>
 </ul>
 </section>
 <section id="colors-optional">
-<h3><strong>colors (optional)</strong><a class="headerlink" href="#colors-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>colors (optional)</strong><a class="headerlink" href="#colors-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute can change the color of the plotted observation.
 Default is ‘black’. Acceptable colors are those available through
@@ -710,47 +711,47 @@ Matplotlib:
 </ul>
 </section>
 <section id="plot-units-optional">
-<h3><strong>plot_units (optional)</strong><a class="headerlink" href="#plot-units-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>plot_units (optional)</strong><a class="headerlink" href="#plot-units-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>A list of the desired units to plot the fields in. Will only work if
 data have units attached.</p></li>
 </ul>
 </section>
 <section id="vector-field-optional">
-<h3><strong>vector_field (optional)</strong><a class="headerlink" href="#vector-field-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>vector_field (optional)</strong><a class="headerlink" href="#vector-field-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute can be set to a list of wind component values for
 plotting (e.g., [‘uwind’, ‘vwind’])</p></li>
 </ul>
 </section>
 <section id="vector-field-color-optional">
-<h3><strong>vector_field_color (optional)</strong><a class="headerlink" href="#vector-field-color-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>vector_field_color (optional)</strong><a class="headerlink" href="#vector-field-color-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Same as colors except only controls the color of the wind barbs.
 Default is ‘black’.</p></li>
 </ul>
 </section>
 <section id="vector-field-length-optional">
-<h3><strong>vector_field_length (optional)</strong><a class="headerlink" href="#vector-field-length-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>vector_field_length (optional)</strong><a class="headerlink" href="#vector-field-length-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Set an integer value for the length of the plotted vector. Default is 6.</p></li>
 </ul>
 </section>
 <section id="vector-plot-units-optional">
-<h3><strong>vector_plot_units (optional)</strong><a class="headerlink" href="#vector-plot-units-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>vector_plot_units (optional)</strong><a class="headerlink" href="#vector-plot-units-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The desired units you want the vector field plotted in. Will only work
 if data have units attached.</p></li>
 </ul>
 </section>
 <section id="fontsize-optional">
-<h3><strong>fontsize (optional)</strong><a class="headerlink" href="#fontsize-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>fontsize (optional)</strong><a class="headerlink" href="#fontsize-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>An integer value to set the font size of station plots. Default is 10 pt.</p></li>
 </ul>
 </section>
 <section id="reduce-points-optional">
-<h3><strong>reduce_points (optional)</strong><a class="headerlink" href="#reduce-points-optional" title="Permalink to this headline">#</a></h3>
+<h3><strong>reduce_points (optional)</strong><a class="headerlink" href="#reduce-points-optional" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute can be set to a real number to reduce the number of
 stations that are plotted. Default value is zero (e.g., no points are
@@ -758,7 +759,7 @@ removed from the plot).</p></li>
 </ul>
 </section>
 <section id="id1">
-<h3><strong>fontsize (optional)</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3><strong>fontsize (optional)</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute can be set to an integer value to set the font size of
 station plots. Default is 10 pt.</p></li>
@@ -877,7 +878,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

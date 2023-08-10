@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="21.4. Satellite Feature Identification" href="satellite_features.html" />
     <link rel="prev" title="21.2. Satellite Channels" href="satellite_channels.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -560,14 +561,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="satellite-imagery">
-<h1><span class="section-number">21.3. </span>Satellite Imagery<a class="headerlink" href="#satellite-imagery" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">21.3. </span>Satellite Imagery<a class="headerlink" href="#satellite-imagery" title="Permalink to this heading">#</a></h1>
 <p>To plot satellite imagery, we can use the same plotting techniques we
 have been using all semester to plot gridded data. Satellite data is
 similar to model output in that each pixel of the image is evenly spaced
 and can be plotted using the <code class="docutils literal notranslate"><span class="pre">ImagePlot()</span></code> class from the declarative
 syntax in MetPy.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <p>Similar to accessing the Iowa State/Wyoming Upperair archive we can use the
 Python module Siphon to help gain access to the satellite data.</p>
 <div class="cell docutils container">
@@ -585,7 +586,7 @@ Python module Siphon to help gain access to the satellite data.</p>
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <p>We use a set of variables to help construct the web URL including,
 region, channel, and satellite. This will help us when we simply want to
 view a slightly different satellite product. After constructing the
@@ -633,7 +634,7 @@ through all of our model output.</p>
 </div>
 </section>
 <section id="plot-imagery">
-<h2>Plot Imagery<a class="headerlink" href="#plot-imagery" title="Permalink to this headline">#</a></h2>
+<h2>Plot Imagery<a class="headerlink" href="#plot-imagery" title="Permalink to this heading">#</a></h2>
 <p>From here, plotting becomes relatively routine, expect we’ll want to use
 the <code class="docutils literal notranslate"><span class="pre">ImagePlot()</span></code> class since we are plotting a satellite <em>image</em>. We are
 going to use the time form the actual file for plotting purposes since
@@ -668,7 +669,7 @@ grey scale image.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/abbbece0577ae5e5e52e1ccf6117145ce9975a765b82803d126d6804b37b2be9.png" src="../../_images/abbbece0577ae5e5e52e1ccf6117145ce9975a765b82803d126d6804b37b2be9.png" />
+<img alt="../../_images/1ab02caede2adf0fcd7077141a3e98fbd3536389d76f7f26daf9b3751fafe7ad.png" src="../../_images/1ab02caede2adf0fcd7077141a3e98fbd3536389d76f7f26daf9b3751fafe7ad.png" />
 </div>
 </div>
 </section>
@@ -767,7 +768,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

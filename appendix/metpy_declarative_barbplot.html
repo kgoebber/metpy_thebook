@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="MetPy - MapPanel()" href="metpy_declarative_mappanel.html" />
     <link rel="prev" title="MetPy - FilledContourPlot()" href="metpy_declarative_filledcontourplot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -569,11 +570,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="metpy-barbplot">
-<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code><a class="headerlink" href="#metpy-barbplot" title="Permalink to this headline">#</a></h1>
+<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code><a class="headerlink" href="#metpy-barbplot" title="Permalink to this heading">#</a></h1>
 <p>This class is designed to plot wind barbs from gridded data, most commonly
 model output from the GFS, NAM, or RAP.</p>
 <section id="barbplot">
-<h2><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html"><code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a><a class="headerlink" href="#barbplot" title="Permalink to this headline">#</a></h2>
+<h2><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html"><code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a><a class="headerlink" href="#barbplot" title="Permalink to this heading">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
@@ -618,16 +619,16 @@ model output from the GFS, NAM, or RAP.</p>
 </table>
 </section>
 <section id="attribute-descriptions">
-<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this headline">#</a></h2>
+<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this heading">#</a></h2>
 <section id="data">
-<h3><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this headline">#</a></h3>
+<h3><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute must be set to the variable that contains the vector
 components to be plotted.</p></li>
 </ul>
 </section>
 <section id="field">
-<h3><strong>field</strong><a class="headerlink" href="#field" title="Permalink to this headline">#</a></h3>
+<h3><strong>field</strong><a class="headerlink" href="#field" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute is a list of the vector components to be plotted. For the
 typical meteorological case it would be the [‘u-component’,
@@ -635,42 +636,42 @@ typical meteorological case it would be the [‘u-component’,
 </ul>
 </section>
 <section id="time">
-<h3><strong>time</strong><a class="headerlink" href="#time" title="Permalink to this headline">#</a></h3>
+<h3><strong>time</strong><a class="headerlink" href="#time" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute should be set to a datetime object, the same as for all
 other declarative classes.</p></li>
 </ul>
 </section>
 <section id="skip">
-<h3><strong>skip</strong><a class="headerlink" href="#skip" title="Permalink to this headline">#</a></h3>
+<h3><strong>skip</strong><a class="headerlink" href="#skip" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Set this to an integer value to skip the plotting of wind barbs in the x
 and y directions to thin the number of wind barbs plotted.</p></li>
 </ul>
 </section>
 <section id="barblength">
-<h3><strong>barblength</strong><a class="headerlink" href="#barblength" title="Permalink to this headline">#</a></h3>
+<h3><strong>barblength</strong><a class="headerlink" href="#barblength" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets the length of the wind barbs. The default value is
 based on the font size.</p></li>
 </ul>
 </section>
 <section id="color">
-<h3><strong>color</strong><a class="headerlink" href="#color" title="Permalink to this headline">#</a></h3>
+<h3><strong>color</strong><a class="headerlink" href="#color" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets the color of the wind barbs, which can be any
 Matplotlib color. Default color is ‘black’.</p></li>
 </ul>
 </section>
 <section id="earth-relative">
-<h3><strong>earth_relative</strong><a class="headerlink" href="#earth-relative" title="Permalink to this headline">#</a></h3>
+<h3><strong>earth_relative</strong><a class="headerlink" href="#earth-relative" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute can be set to False if the vector components are grid
 relative (e.g., for NAM or NARR output)</p></li>
 </ul>
 </section>
 <section id="pivot">
-<h3><strong>pivot</strong><a class="headerlink" href="#pivot" title="Permalink to this headline">#</a></h3>
+<h3><strong>pivot</strong><a class="headerlink" href="#pivot" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute can be set to a string value about where the wind barb
 will pivot relative to the grid point. Possible values include ‘tip’ or
@@ -782,7 +783,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

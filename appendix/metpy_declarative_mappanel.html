@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="MetPy - PanelContainer()" href="metpy_declarative_panelcontainer.html" />
     <link rel="prev" title="MetPy - BarbPlot()" href="metpy_declarative_barbplot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -571,9 +572,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="metpy-mappanel">
-<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code><a class="headerlink" href="#metpy-mappanel" title="Permalink to this headline">#</a></h1>
+<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code><a class="headerlink" href="#metpy-mappanel" title="Permalink to this heading">#</a></h1>
 <section id="mappanel">
-<h2><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel"><code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a><a class="headerlink" href="#mappanel" title="Permalink to this headline">#</a></h2>
+<h2><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel"><code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a><a class="headerlink" href="#mappanel" title="Permalink to this heading">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
@@ -615,23 +616,23 @@ document.write(`
 </table>
 </section>
 <section id="attribute-descriptions">
-<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this headline">#</a></h2>
+<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this heading">#</a></h2>
 <section id="layout">
-<h3><strong>layout</strong><a class="headerlink" href="#layout" title="Permalink to this headline">#</a></h3>
+<h3><strong>layout</strong><a class="headerlink" href="#layout" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The Matplotlib layout of the figure. For a single panel figure the
 setting should be (1, 1, 1)</p></li>
 </ul>
 </section>
 <section id="projection">
-<h3><strong>projection</strong><a class="headerlink" href="#projection" title="Permalink to this headline">#</a></h3>
+<h3><strong>projection</strong><a class="headerlink" href="#projection" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The projection can be set with the name of a default projection (‘lcc’, ‘mer’, or ‘ps’)
 or it can be set to a Cartopy projection.</p></li>
 </ul>
 </section>
 <section id="layers">
-<h3><strong>layers</strong><a class="headerlink" href="#layers" title="Permalink to this headline">#</a></h3>
+<h3><strong>layers</strong><a class="headerlink" href="#layers" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute will add map layers to identify boundaries or features to
 plot on the map. Valid layers are borders, coastline, states, lakes,
@@ -639,7 +640,7 @@ land, ocean, rivers, counties.</p></li>
 </ul>
 </section>
 <section id="layers-edgecolor">
-<h3><strong>layers_edgecolor</strong><a class="headerlink" href="#layers-edgecolor" title="Permalink to this headline">#</a></h3>
+<h3><strong>layers_edgecolor</strong><a class="headerlink" href="#layers-edgecolor" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute will set the edgecolor for those values listed in the map
 layers attribute. Valid colors correspond to valid Matplotlib named
@@ -647,14 +648,14 @@ colors.</p></li>
 </ul>
 </section>
 <section id="layers-linewidth">
-<h3><strong>layers_linewidth</strong><a class="headerlink" href="#layers-linewidth" title="Permalink to this headline">#</a></h3>
+<h3><strong>layers_linewidth</strong><a class="headerlink" href="#layers-linewidth" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute will set the linewidth (as a float) for those values
 listed in the map layers attribute.</p></li>
 </ul>
 </section>
 <section id="area">
-<h3><strong>area</strong><a class="headerlink" href="#area" title="Permalink to this headline">#</a></h3>
+<h3><strong>area</strong><a class="headerlink" href="#area" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets the geographical area of the panel. This can be set
 with a predefined name of an area including all US state postal
@@ -666,25 +667,25 @@ a box from the lower-left to the upper-right corner.</p></li>
 </ul>
 </section>
 <section id="title">
-<h3><strong>title</strong><a class="headerlink" href="#title" title="Permalink to this headline">#</a></h3>
+<h3><strong>title</strong><a class="headerlink" href="#title" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets a title for the panel in the center of the figure.</p></li>
 </ul>
 </section>
 <section id="left-title">
-<h3><strong>left_title</strong><a class="headerlink" href="#left-title" title="Permalink to this headline">#</a></h3>
+<h3><strong>left_title</strong><a class="headerlink" href="#left-title" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets a title for the panel at the left edge of the figure.</p></li>
 </ul>
 </section>
 <section id="right-title">
-<h3><strong>right_title</strong><a class="headerlink" href="#right-title" title="Permalink to this headline">#</a></h3>
+<h3><strong>right_title</strong><a class="headerlink" href="#right-title" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute sets a title for the panel at the right edge of the figure.</p></li>
 </ul>
 </section>
 <section id="plots">
-<h3><strong>plots</strong><a class="headerlink" href="#plots" title="Permalink to this headline">#</a></h3>
+<h3><strong>plots</strong><a class="headerlink" href="#plots" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>A list collecting the observations to be plotted in the panel.</p></li>
 </ul>
@@ -796,7 +797,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

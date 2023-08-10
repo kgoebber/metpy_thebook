@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="8.5. Practice Tasks - Surface Observation" href="practice_tasks_surface.html" />
     <link rel="prev" title="8.3. Common Notebook Structure" href="typical_notebook_structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -560,7 +561,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="surface-data-and-plotting-using-metpy">
-<h1><span class="section-number">8.4. </span>Surface Data and Plotting using MetPy<a class="headerlink" href="#surface-data-and-plotting-using-metpy" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">8.4. </span>Surface Data and Plotting using MetPy<a class="headerlink" href="#surface-data-and-plotting-using-metpy" title="Permalink to this heading">#</a></h1>
 <p>This notebook demonstrates reading surface data and plotting it using MetPy’s declarative syntax.</p>
 <p>To make a plot of surface observations requires three elements</p>
 <ul class="simple">
@@ -573,7 +574,7 @@ Classes and note that they contain MiXeD case names. These classes contain a num
 be set to specify what and how to plot the data in a figure. The descriptions of some of the basic
 elements of each element are given below.</p>
 <section id="import-modules">
-<h2>Import Modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">#</a></h2>
+<h2>Import Modules<a class="headerlink" href="#import-modules" title="Permalink to this heading">#</a></h2>
 <p>Here we’ll import those modules that are needed to produce read in remote surface METAR observation data, process those observations, and plot the values on a map.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -591,7 +592,7 @@ elements of each element are given below.</p>
 </div>
 </section>
 <section id="read-data">
-<h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this headline">#</a></h2>
+<h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this heading">#</a></h2>
 <p>The surface data are in METAR format and store the data files at this location for approximately two weeks.</p>
 <p>The format of the filenames are <code class="docutils literal notranslate"><span class="pre">YYYYMMDDHH_sao.wmo</span></code> where <code class="docutils literal notranslate"><span class="pre">YYYY</span></code> is the year, <code class="docutils literal notranslate"><span class="pre">MM</span></code> is the month, <code class="docutils literal notranslate"><span class="pre">DD</span></code> is the day, and <code class="docutils literal notranslate"><span class="pre">HH</span></code> is the hour.</p>
 <div class="cell docutils container">
@@ -622,7 +623,7 @@ elements of each element are given below.</p>
 </div>
 </section>
 <section id="plot-data">
-<h2>Plot Data<a class="headerlink" href="#plot-data" title="Permalink to this headline">#</a></h2>
+<h2>Plot Data<a class="headerlink" href="#plot-data" title="Permalink to this heading">#</a></h2>
 <p>Here we seek to use the data that were just read in to plot the <code class="docutils literal notranslate"><span class="pre">air_temperature</span></code> variable in units of Fahrenheit. Since surface observations can be associated with a range of times, we can set the <code class="docutils literal notranslate"><span class="pre">time_window</span></code> attribute to look over a range of times. These temperatures will be plotted on a map over a small geographic location and a title is added to the map.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -653,7 +654,7 @@ elements of each element are given below.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4e6537104e329d75f588c961a1bf5c31d5708943e1ff7be7b6b4b1c204144265.png" src="../../_images/4e6537104e329d75f588c961a1bf5c31d5708943e1ff7be7b6b4b1c204144265.png" />
+<img alt="../../_images/14f76c2493e8aadfcc8141ca1d5cfa28c46fed290be4539ba35881e3de659548.png" src="../../_images/14f76c2493e8aadfcc8141ca1d5cfa28c46fed290be4539ba35881e3de659548.png" />
 </div>
 </div>
 </section>
@@ -752,7 +753,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

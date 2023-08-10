@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="17.2. Operational NWP Models" href="operational_models.html" />
     <link rel="prev" title="17. Numerical Weather Prediction" href="nwp_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -560,7 +561,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="nwp-overview">
-<h1><span class="section-number">17.1. </span>NWP Overview<a class="headerlink" href="#nwp-overview" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">17.1. </span>NWP Overview<a class="headerlink" href="#nwp-overview" title="Permalink to this heading">#</a></h1>
 <p>There are different ways to set up a model, we’ll describe some of the basics of numerical
 weather prediction using grid cells (<a class="reference internal" href="#modelschematic"><span class="std std-numref">Fig. 17.1</span></a>). In the figure
 below, a global model representation depicts a a three-dimensional grid that carves up the
@@ -574,7 +575,7 @@ Annotated version of image from <a class="reference external" href="https://en.w
 </figcaption>
 </figure>
 <section id="model-resolution">
-<h2>Model Resolution<a class="headerlink" href="#model-resolution" title="Permalink to this headline">#</a></h2>
+<h2>Model Resolution<a class="headerlink" href="#model-resolution" title="Permalink to this heading">#</a></h2>
 <p>The size of the model grid cubes plays a large role in what weather phenomenon will be
 well represented. Something becomes resolved in a model when the size of the feature
 is at least eight times bigger than the grid spacing. For example, if the spacing between
@@ -586,7 +587,7 @@ any feasible forecasting model. The main aspect that is represented on our grid 
 are advections and fluxes.</p>
 </section>
 <section id="parameterization">
-<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this headline">#</a></h2>
+<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this heading">#</a></h2>
 <p>For those elements that would be too small to be represented on a grid, those elements are
 said to be parameterized. Things like incoming solar radiation, outgoing longwave radiation,
 cloud microphysics, precipitation, convection (in some instances), turbulence, surface-land
@@ -594,7 +595,7 @@ interactions, etc. These are still represented mathematically in order to obtain
 accurate representation of the current and future state of the atmosphere.</p>
 </section>
 <section id="convection-allowing-models-cams">
-<h2>Convection Allowing Models (CAMs)<a class="headerlink" href="#convection-allowing-models-cams" title="Permalink to this headline">#</a></h2>
+<h2>Convection Allowing Models (CAMs)<a class="headerlink" href="#convection-allowing-models-cams" title="Permalink to this heading">#</a></h2>
 <p>There are a current suite of mesoscale models that have small enough grid spacings that at least
 some convection can be resolved on the grid (grid spacings &lt;= 4 km&gt;). In these instances, convection
 is NOT parameterized, or at least not fully parameterize. Generally, these kinds of models give
@@ -702,7 +703,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

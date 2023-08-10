@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="9.7. Practice Tasks - Using Projections" href="projection_practice.html" />
     <link rel="prev" title="9.5. Setting the Plot Area" href="plot_areas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -569,7 +570,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="upperair-observation-plotting">
-<h1><span class="section-number">9.6. </span>Upperair Observation Plotting<a class="headerlink" href="#upperair-observation-plotting" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">9.6. </span>Upperair Observation Plotting<a class="headerlink" href="#upperair-observation-plotting" title="Permalink to this heading">#</a></h1>
 <p>This notebook demonstrates reading surface data and plotting it using MetPy’s declarative syntax.</p>
 <p>To make a plot of surface observations requires three elements</p>
 <ul class="simple">
@@ -580,7 +581,7 @@ document.write(`
 <p>So we are using the same method to plot upperair observations that we used to plot surface observations: <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code>. If you need a refresher on how to set up the parameters for <code class="docutils literal notranslate"><span class="pre">PlotObs</span></code>, please refer to detailed description <a class="reference internal" href="../../appendix/metpy_declarative_plotobs.html"><span class="doc std std-doc">here</span></a>.</p>
 <p>One of the main differences will be that we’ll need a different data source.</p>
 <section id="import-modules">
-<h2>Import Modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">#</a></h2>
+<h2>Import Modules<a class="headerlink" href="#import-modules" title="Permalink to this heading">#</a></h2>
 <p>Here we import two new pieces to help us read and process upperair observation data. A new function to help get us latitude and longitude points for each upperair observation station. This helper function comes from the I/O module in metpy and is named <code class="docutils literal notranslate"><span class="pre">add_station_lat_lon</span></code>. We’ll also use a new library, <a class="reference external" href="https://unidata.github.io/siphon/latest/">Siphon</a>, to be able to access and read remote upperair observation data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -596,7 +597,7 @@ document.write(`
 </div>
 </section>
 <section id="read-data">
-<h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this headline">#</a></h2>
+<h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this heading">#</a></h2>
 <p>There is an easy way to access upperair data from Iowa State that has data from 1974 to yesterday that is easily accessible in a Python framework. This requires a different Python module called Siphon (also developed by Unidata). With the use of functionality from Siphon, all we need to provide is the date and time (in UTC) for the observations we wish to obtain. So we can use our favoriate <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module to specifically specify the year, month, day, and hour of our observations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -644,7 +645,7 @@ document.write(`
 <code class="docutils literal notranslate"><span class="pre">{'pressure':</span> <span class="pre">'hPa',</span>&#160; <span class="pre">'height':</span> <span class="pre">'meter',</span>&#160; <span class="pre">'temperature':</span> <span class="pre">'degC',</span>&#160; <span class="pre">'dewpoint':</span> <span class="pre">'degC',</span>&#160; <span class="pre">'direction':</span> <span class="pre">'degrees',</span>&#160; <span class="pre">'speed':</span> <span class="pre">'knot',</span>&#160; <span class="pre">'u_wind':</span> <span class="pre">'knot',</span>&#160; <span class="pre">'v_wind':</span> <span class="pre">'knot',</span>&#160; <span class="pre">'station':</span> <span class="pre">None,</span>&#160; <span class="pre">'time':</span> <span class="pre">None}</span></code></p>
 </div>
 <section id="calculate-dewpoint-depression">
-<h3>Calculate Dewpoint Depression<a class="headerlink" href="#calculate-dewpoint-depression" title="Permalink to this headline">#</a></h3>
+<h3>Calculate Dewpoint Depression<a class="headerlink" href="#calculate-dewpoint-depression" title="Permalink to this heading">#</a></h3>
 <p>Dewpoint depression (DD) is a quantity that needs to be calculated from the temperature and dewpoint at each observation point. The calculation is simple,</p>
 <p>DD = Temperature - Dewpoint</p>
 <p>and then we just need to save the difference to a new variable name and store within our DataFrame.</p>
@@ -658,11 +659,11 @@ document.write(`
 </section>
 </section>
 <section id="plot-upperair-map">
-<h2>Plot Upperair Map<a class="headerlink" href="#plot-upperair-map" title="Permalink to this headline">#</a></h2>
+<h2>Plot Upperair Map<a class="headerlink" href="#plot-upperair-map" title="Permalink to this heading">#</a></h2>
 <p>Now that we have our data, we are ready to go about plotting it on a map.</p>
 <p>Here we demonstrate our use of the Lambert Conic Conformal projection that has been incorporated into the declarative syntax, <code class="docutils literal notranslate"><span class="pre">'lcc'</span></code>. Additionally, we’ll use a <code class="docutils literal notranslate"><span class="pre">lambda</span></code> to format the heights into the appropriate three-digit format and set an appropriate extent in the for the map we are desiring to plot.</p>
 <section id="formatting-heights">
-<h3>Formatting Heights<a class="headerlink" href="#formatting-heights" title="Permalink to this headline">#</a></h3>
+<h3>Formatting Heights<a class="headerlink" href="#formatting-heights" title="Permalink to this heading">#</a></h3>
 <p>As you learned earlier in this packet, upperair geopotential height observations are plotted in a particular format that changes depending on what level is being plotted. To plot the height value in the appropriate format you’ll need to specify a format. Here are the code snippets for each common level:</p>
 <p>925, 850, or 700 hPa: <code class="docutils literal notranslate"><span class="pre">hght_format</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">v:</span> <span class="pre">format(v,</span> <span class="pre">'03.0f')[1:]</span></code></p>
 <p>500 or 300 hPa: <code class="docutils literal notranslate"><span class="pre">hght_format</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">v:</span> <span class="pre">format(v,</span> <span class="pre">'03.0f')[:-1]</span></code></p>
@@ -673,7 +674,7 @@ document.write(`
 </div>
 </section>
 <section id="filtering-observations">
-<h3>Filtering Observations<a class="headerlink" href="#filtering-observations" title="Permalink to this headline">#</a></h3>
+<h3>Filtering Observations<a class="headerlink" href="#filtering-observations" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">reduce_points</span></code> parameter is used to thin the data out, so that you can read the observations that are plotted without interference from other observations. Setting filter to a positive value will reduce the number of overlapping observations, with higher numbers produce less chance of an overlap to occur. By default, the attribute is set to zero, which will cause no filtering of observations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -681,11 +682,11 @@ document.write(`
 </div>
 </section>
 <section id="setting-titles">
-<h3>Setting Titles<a class="headerlink" href="#setting-titles" title="Permalink to this headline">#</a></h3>
+<h3>Setting Titles<a class="headerlink" href="#setting-titles" title="Permalink to this heading">#</a></h3>
 <p>Setting some sort of title is a very important to creating a good, self-describing plot. By setting the title you specify to others what and who plotted this map. Any of the three options can be set with a string (or formatted string). A generic title will be generated if this attribute is not set. The three options allow you to place titles in up to three different locations (center, left, and right). Below contains a demonstration of using a combination of <code class="docutils literal notranslate"><span class="pre">right_title</span></code> and <code class="docutils literal notranslate"><span class="pre">left_title</span></code> to make a more readable set of titles for the map.</p>
 </section>
 <section id="the-payoff-plot">
-<h3>The Payoff Plot<a class="headerlink" href="#the-payoff-plot" title="Permalink to this headline">#</a></h3>
+<h3>The Payoff Plot<a class="headerlink" href="#the-payoff-plot" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set a format specifier for the geoptential height</span>
@@ -729,7 +730,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e1684d16abc1536a54dae4a93a7747d048f706e1be5606076b70c62ec5b311d4.png" src="../../_images/e1684d16abc1536a54dae4a93a7747d048f706e1be5606076b70c62ec5b311d4.png" />
+<img alt="../../_images/3f35ef0ba8cf0ca4b94ca7402b0352e7112103a9f5cba9c5186ca13f03dd814a.png" src="../../_images/3f35ef0ba8cf0ca4b94ca7402b0352e7112103a9f5cba9c5186ca13f03dd814a.png" />
 </div>
 </div>
 </section>
@@ -838,7 +839,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

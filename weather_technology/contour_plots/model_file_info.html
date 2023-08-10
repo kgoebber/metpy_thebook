@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="12.3. Contour Plotting" href="contour_plotting.html" />
     <link rel="prev" title="12.1. Gridded Data Files" href="gridded_data_location.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -559,7 +560,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="model-output-contents">
-<h1><span class="section-number">12.2. </span>Model Output Contents<a class="headerlink" href="#model-output-contents" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">12.2. </span>Model Output Contents<a class="headerlink" href="#model-output-contents" title="Permalink to this heading">#</a></h1>
 <p>On surface maps we plotted temperature, dewpoint temperature, mean
 sea-level pressure, wind speed and direction, and current weather
 symbols, which are all typical values recorded by Automated Surface
@@ -592,7 +593,7 @@ all of which can be completed in a standard Jupyter Notebook.</p>
 </div>
 </div>
 <section id="list-file-contents">
-<h2>List File Contents<a class="headerlink" href="#list-file-contents" title="Permalink to this headline">#</a></h2>
+<h2>List File Contents<a class="headerlink" href="#list-file-contents" title="Permalink to this heading">#</a></h2>
 <p>We can quickly and easily list the variable names that are contained within our model output files. This listing will contain both dimension variables (e.g., time, latitude, and longitude) as well as the variables that we might wish to plot (e.g., Temperature_isobaric). Non-dimension variables are capitalized if accessing data through a THREDDS server (a very common way for accessing these data).</p>
 <div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
@@ -630,8 +631,8 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;hybrid&#39;,
  &#39;hybrid1&#39;,
  &#39;LatLon_Projection&#39;,
+ &#39;time_bounds&#39;,
  &#39;time2_bounds&#39;,
- &#39;time3_bounds&#39;,
  &#39;pressure_difference_layer_bounds&#39;,
  &#39;height_above_ground_layer_bounds&#39;,
  &#39;height_above_ground_layer1_bounds&#39;,
@@ -645,16 +646,16 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Cloud_mixing_ratio_isobaric&#39;,
  &#39;Cloud_mixing_ratio_hybrid&#39;,
  &#39;Cloud_water_entire_atmosphere_single_layer&#39;,
- &#39;Convective_available_potential_energy_surface&#39;,
  &#39;Convective_available_potential_energy_pressure_difference_layer&#39;,
- &#39;Convective_inhibition_surface&#39;,
+ &#39;Convective_available_potential_energy_surface&#39;,
  &#39;Convective_inhibition_pressure_difference_layer&#39;,
+ &#39;Convective_inhibition_surface&#39;,
  &#39;Convective_precipitation_surface_Mixed_intervals_Accumulation&#39;,
  &#39;Convective_precipitation_rate_surface&#39;,
  &#39;Dewpoint_temperature_height_above_ground&#39;,
  &#39;Geopotential_height_surface&#39;,
- &#39;Geopotential_height_cloud_ceiling&#39;,
  &#39;Geopotential_height_highest_tropospheric_freezing&#39;,
+ &#39;Geopotential_height_cloud_ceiling&#39;,
  &#39;Geopotential_height_isobaric&#39;,
  &#39;Geopotential_height_zeroDegC_isotherm&#39;,
  &#39;Geopotential_height_maximum_wind&#39;,
@@ -689,11 +690,11 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Precipitation_rate_surface&#39;,
  &#39;Precipitation_rate_surface_Mixed_intervals_Average&#39;,
  &#39;Pressure_surface&#39;,
- &#39;Pressure_high_cloud_bottom_Mixed_intervals_Average&#39;,
- &#39;Pressure_high_cloud_top_Mixed_intervals_Average&#39;,
- &#39;Pressure_middle_cloud_top_Mixed_intervals_Average&#39;,
- &#39;Pressure_low_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Pressure_low_cloud_bottom_Mixed_intervals_Average&#39;,
+ &#39;Pressure_middle_cloud_top_Mixed_intervals_Average&#39;,
+ &#39;Pressure_high_cloud_bottom_Mixed_intervals_Average&#39;,
+ &#39;Pressure_low_cloud_top_Mixed_intervals_Average&#39;,
+ &#39;Pressure_high_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Pressure_middle_cloud_bottom_Mixed_intervals_Average&#39;,
  &#39;Pressure_maximum_wind&#39;,
  &#39;Pressure_tropopause&#39;,
@@ -723,11 +724,11 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Specific_humidity_height_above_ground&#39;,
  &#39;Storm_relative_helicity_height_above_ground_layer&#39;,
  &#39;Surface_roughness_surface&#39;,
+ &#39;Temperature_middle_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Temperature_high_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Temperature_low_cloud_top_Mixed_intervals_Average&#39;,
- &#39;Temperature_middle_cloud_top_Mixed_intervals_Average&#39;,
- &#39;Temperature_surface&#39;,
  &#39;Temperature_pressure_difference_layer&#39;,
+ &#39;Temperature_surface&#39;,
  &#39;Temperature_isobaric&#39;,
  &#39;Temperature_altitude_above_msl&#39;,
  &#39;Temperature_maximum_wind&#39;,
@@ -756,8 +757,8 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Reflectivity_hybrid&#39;,
  &#39;Reflectivity_height_above_ground&#39;,
  &#39;Composite_reflectivity_entire_atmosphere&#39;,
- &#39;Vertical_Speed_Shear_tropopause&#39;,
  &#39;Vertical_Speed_Shear_potential_vorticity_surface&#39;,
+ &#39;Vertical_Speed_Shear_tropopause&#39;,
  &#39;U-Component_Storm_Motion_height_above_ground_layer&#39;,
  &#39;V-Component_Storm_Motion_height_above_ground_layer&#39;,
  &#39;Frictional_Velocity_surface&#39;,
@@ -768,8 +769,8 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Planetary_Boundary_Layer_Height_surface&#39;,
  &#39;Pressure_of_level_from_which_parcel_was_lifted_pressure_difference_layer&#39;,
  &#39;Downward_Short-Wave_Radiation_Flux_surface_Mixed_intervals_Average&#39;,
- &#39;Upward_Short-Wave_Radiation_Flux_surface_Mixed_intervals_Average&#39;,
  &#39;Upward_Short-Wave_Radiation_Flux_atmosphere_top_Mixed_intervals_Average&#39;,
+ &#39;Upward_Short-Wave_Radiation_Flux_surface_Mixed_intervals_Average&#39;,
  &#39;Downward_Long-Wave_Radp_Flux_surface_Mixed_intervals_Average&#39;,
  &#39;Upward_Long-Wave_Radp_Flux_surface_Mixed_intervals_Average&#39;,
  &#39;Upward_Long-Wave_Radp_Flux_atmosphere_top_Mixed_intervals_Average&#39;,
@@ -793,8 +794,8 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Wind_speed_gust_surface&#39;,
  &#39;u-component_of_wind_pressure_difference_layer&#39;,
  &#39;u-component_of_wind_isobaric&#39;,
- &#39;u-component_of_wind_maximum_wind&#39;,
  &#39;u-component_of_wind_altitude_above_msl&#39;,
+ &#39;u-component_of_wind_maximum_wind&#39;,
  &#39;u-component_of_wind_height_above_ground&#39;,
  &#39;u-component_of_wind_tropopause&#39;,
  &#39;u-component_of_wind_sigma&#39;,
@@ -816,7 +817,7 @@ all of which can be completed in a standard Jupyter Notebook.</p>
 <p>What did you find?<br><br><br><br></p>
 </section>
 <section id="access-variable-specifics">
-<h2>Access Variable Specifics<a class="headerlink" href="#access-variable-specifics" title="Permalink to this headline">#</a></h2>
+<h2>Access Variable Specifics<a class="headerlink" href="#access-variable-specifics" title="Permalink to this heading">#</a></h2>
 <p>Let’s look at a single variable: Geopotential_height_isobaric, which is
 the variable for heights of pressure surfaces (i.e., what we typically
 plot on maps). Type the following into a new cell and run it.</p>
@@ -1217,7 +1218,7 @@ Coordinates:
   * lat       (lat) float32 90.0 89.0 88.0 87.0 86.0 ... -87.0 -88.0 -89.0 -90.0
   * lon       (lon) float32 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
     reftime   datetime64[ns] ...
-  * time1     (time1) datetime64[ns] 2023-08-08 ... 2023-08-24
+  * time1     (time1) datetime64[ns] 2023-08-09 ... 2023-08-25
   * isobaric  (isobaric) float32 1.0 2.0 4.0 7.0 ... 9.5e+04 9.75e+04 1e+05
 Attributes: (12/13)
     long_name:                       Geopotential height @ Isobaric surface
@@ -1232,7 +1233,7 @@ Attributes: (12/13)
     Grib2_Level_Type:                100
     Grib2_Level_Desc:                Isobaric surface
     Grib2_Generating_Process_Type:   Forecast
-    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'Geopotential_height_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time1</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-17c05569-5c2d-47a1-89c8-b32850ec9701' class='xr-array-in' type='checkbox' checked><label for='section-17c05569-5c2d-47a1-89c8-b32850ec9701' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-deb7bac3-d7d1-4fc9-88b4-23f97d7bab39' class='xr-section-summary-in' type='checkbox'  checked><label for='section-deb7bac3-d7d1-4fc9-88b4-23f97d7bab39' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-bcbf0f5e-d9df-4cab-b495-ad80ced16897' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-bcbf0f5e-d9df-4cab-b495-ad80ced16897' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-06f1e7f1-1a93-4e2a-9b1d-f156a2f6f22e' class='xr-var-data-in' type='checkbox'><label for='data-06f1e7f1-1a93-4e2a-9b1d-f156a2f6f22e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
+    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'Geopotential_height_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time1</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-3264c970-5bd5-4e36-a02b-5b0ecf9a3e77' class='xr-array-in' type='checkbox' checked><label for='section-3264c970-5bd5-4e36-a02b-5b0ecf9a3e77' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-1f95ff4c-3eee-4bcd-8770-26ba5816f779' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1f95ff4c-3eee-4bcd-8770-26ba5816f779' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-5b94f741-48fb-47b3-abef-5b2578c71d32' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5b94f741-48fb-47b3-abef-5b2578c71d32' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-12ebf780-f1dc-43a7-b3d6-9b0b8768b8d3' class='xr-var-data-in' type='checkbox'><label for='data-12ebf780-f1dc-43a7-b3d6-9b0b8768b8d3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
         78.,  77.,  76.,  75.,  74.,  73.,  72.,  71.,  70.,  69.,  68.,  67.,
         66.,  65.,  64.,  63.,  62.,  61.,  60.,  59.,  58.,  57.,  56.,  55.,
         54.,  53.,  52.,  51.,  50.,  49.,  48.,  47.,  46.,  45.,  44.,  43.,
@@ -1247,11 +1248,7 @@ Attributes: (12/13)
        -54., -55., -56., -57., -58., -59., -60., -61., -62., -63., -64., -65.,
        -66., -67., -68., -69., -70., -71., -72., -73., -74., -75., -76., -77.,
        -78., -79., -80., -81., -82., -83., -84., -85., -86., -87., -88., -89.,
-       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-5f43b19a-1a0f-4fa6-b427-8734105451ee' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5f43b19a-1a0f-4fa6-b427-8734105451ee' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6e20a983-da69-45cb-bc8b-3ac61efcf64a' class='xr-var-data-in' type='checkbox'><label for='data-6e20a983-da69-45cb-bc8b-3ac61efcf64a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-92762d5c-8185-4486-a9f8-3e7c357d86d3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-92762d5c-8185-4486-a9f8-3e7c357d86d3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7c59d0d0-c69e-41cc-971f-bc30ff4430d7' class='xr-var-data-in' type='checkbox'><label for='data-7c59d0d0-c69e-41cc-971f-bc30ff4430d7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time1</span></div><div class='xr-var-dims'>(time1)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2023-08-08 ... 2023-08-24</div><input id='attrs-172a1a2a-83fa-4f52-bd37-c9689f9d4e94' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-172a1a2a-83fa-4f52-bd37-c9689f9d4e94' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-213255e1-73d9-4709-b810-cac452b583b4' class='xr-var-data-in' type='checkbox'><label for='data-213255e1-73d9-4709-b810-cac452b583b4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2023-08-08T00:00:00.000000000&#x27;, &#x27;2023-08-08T03:00:00.000000000&#x27;,
-       &#x27;2023-08-08T06:00:00.000000000&#x27;, &#x27;2023-08-08T09:00:00.000000000&#x27;,
-       &#x27;2023-08-08T12:00:00.000000000&#x27;, &#x27;2023-08-08T15:00:00.000000000&#x27;,
-       &#x27;2023-08-08T18:00:00.000000000&#x27;, &#x27;2023-08-08T21:00:00.000000000&#x27;,
-       &#x27;2023-08-09T00:00:00.000000000&#x27;, &#x27;2023-08-09T03:00:00.000000000&#x27;,
+       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-2052b2d4-5c24-43a2-8174-5d5fd68a7e2d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2052b2d4-5c24-43a2-8174-5d5fd68a7e2d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-10c70e73-a3bb-4414-b65d-149990b335cb' class='xr-var-data-in' type='checkbox'><label for='data-10c70e73-a3bb-4414-b65d-149990b335cb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-59efdda5-6508-4258-99e1-8793fda4a6e3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-59efdda5-6508-4258-99e1-8793fda4a6e3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-963ee5e9-4489-4834-8e20-1c42b8cb47db' class='xr-var-data-in' type='checkbox'><label for='data-963ee5e9-4489-4834-8e20-1c42b8cb47db' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time1</span></div><div class='xr-var-dims'>(time1)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2023-08-09 ... 2023-08-25</div><input id='attrs-1d0e3148-011b-4719-9cfc-78ca7d90a6db' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1d0e3148-011b-4719-9cfc-78ca7d90a6db' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b75fec0e-b7cf-4d8f-ac29-1b9dc758d6c6' class='xr-var-data-in' type='checkbox'><label for='data-b75fec0e-b7cf-4d8f-ac29-1b9dc758d6c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2023-08-09T00:00:00.000000000&#x27;, &#x27;2023-08-09T03:00:00.000000000&#x27;,
        &#x27;2023-08-09T06:00:00.000000000&#x27;, &#x27;2023-08-09T09:00:00.000000000&#x27;,
        &#x27;2023-08-09T12:00:00.000000000&#x27;, &#x27;2023-08-09T15:00:00.000000000&#x27;,
        &#x27;2023-08-09T18:00:00.000000000&#x27;, &#x27;2023-08-09T21:00:00.000000000&#x27;,
@@ -1311,36 +1308,40 @@ Attributes: (12/13)
        &#x27;2023-08-23T06:00:00.000000000&#x27;, &#x27;2023-08-23T09:00:00.000000000&#x27;,
        &#x27;2023-08-23T12:00:00.000000000&#x27;, &#x27;2023-08-23T15:00:00.000000000&#x27;,
        &#x27;2023-08-23T18:00:00.000000000&#x27;, &#x27;2023-08-23T21:00:00.000000000&#x27;,
-       &#x27;2023-08-24T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-0ced2a8a-8921-48c7-ad56-cde448851739' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0ced2a8a-8921-48c7-ad56-cde448851739' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f58c10b6-c838-49aa-9c3d-ef144c76cf98' class='xr-var-data-in' type='checkbox'><label for='data-f58c10b6-c838-49aa-9c3d-ef144c76cf98' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
+       &#x27;2023-08-24T00:00:00.000000000&#x27;, &#x27;2023-08-24T03:00:00.000000000&#x27;,
+       &#x27;2023-08-24T06:00:00.000000000&#x27;, &#x27;2023-08-24T09:00:00.000000000&#x27;,
+       &#x27;2023-08-24T12:00:00.000000000&#x27;, &#x27;2023-08-24T15:00:00.000000000&#x27;,
+       &#x27;2023-08-24T18:00:00.000000000&#x27;, &#x27;2023-08-24T21:00:00.000000000&#x27;,
+       &#x27;2023-08-25T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-b9048fde-2b84-4899-bd9e-c9b755eccae8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b9048fde-2b84-4899-bd9e-c9b755eccae8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bc9ae0a7-9645-4535-a4bb-37a1be35524b' class='xr-var-data-in' type='checkbox'><label for='data-bc9ae0a7-9645-4535-a4bb-37a1be35524b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
        7.00e+01, 1.00e+02, 2.00e+02, 3.00e+02, 5.00e+02, 7.00e+02, 1.00e+03,
        1.50e+03, 2.00e+03, 3.00e+03, 4.00e+03, 5.00e+03, 7.00e+03, 1.00e+04,
        1.50e+04, 2.00e+04, 2.50e+04, 3.00e+04, 3.50e+04, 4.00e+04, 4.50e+04,
        5.00e+04, 5.50e+04, 6.00e+04, 6.50e+04, 7.00e+04, 7.50e+04, 8.00e+04,
        8.50e+04, 9.00e+04, 9.25e+04, 9.50e+04, 9.75e+04, 1.00e+05],
-      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ec1267ed-c82f-4e2d-86f1-9d3c4bb97434' class='xr-section-summary-in' type='checkbox'  ><label for='section-ec1267ed-c82f-4e2d-86f1-9d3c4bb97434' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-fc52ab4e-7163-4378-b68d-09b0f26bbadd' class='xr-index-data-in' type='checkbox'/><label for='index-fc52ab4e-7163-4378-b68d-09b0f26bbadd' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
+      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c9b74b47-90b0-442a-b004-1e2efd2278c5' class='xr-section-summary-in' type='checkbox'  ><label for='section-c9b74b47-90b0-442a-b004-1e2efd2278c5' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-1f6feb43-5608-4c41-a654-33176b967879' class='xr-index-data-in' type='checkbox'/><label for='index-1f6feb43-5608-4c41-a654-33176b967879' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
        ...
        -81.0, -82.0, -83.0, -84.0, -85.0, -86.0, -87.0, -88.0, -89.0, -90.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-e7f643b4-69d5-458d-8f57-34256e2b9e2c' class='xr-index-data-in' type='checkbox'/><label for='index-e7f643b4-69d5-458d-8f57-34256e2b9e2c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-f4c6164a-ed93-4352-955c-a38e05d63234' class='xr-index-data-in' type='checkbox'/><label for='index-f4c6164a-ed93-4352-955c-a38e05d63234' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
        ...
        350.0, 351.0, 352.0, 353.0, 354.0, 355.0, 356.0, 357.0, 358.0, 359.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time1</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-ba8dff1b-92eb-42f5-8900-a2e5d8f0f9f7' class='xr-index-data-in' type='checkbox'/><label for='index-ba8dff1b-92eb-42f5-8900-a2e5d8f0f9f7' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2023-08-08 00:00:00&#x27;, &#x27;2023-08-08 03:00:00&#x27;,
-               &#x27;2023-08-08 06:00:00&#x27;, &#x27;2023-08-08 09:00:00&#x27;,
-               &#x27;2023-08-08 12:00:00&#x27;, &#x27;2023-08-08 15:00:00&#x27;,
-               &#x27;2023-08-08 18:00:00&#x27;, &#x27;2023-08-08 21:00:00&#x27;,
-               &#x27;2023-08-09 00:00:00&#x27;, &#x27;2023-08-09 03:00:00&#x27;,
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time1</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-7249a0b8-a38d-4481-b54b-7f113476af3a' class='xr-index-data-in' type='checkbox'/><label for='index-7249a0b8-a38d-4481-b54b-7f113476af3a' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2023-08-09 00:00:00&#x27;, &#x27;2023-08-09 03:00:00&#x27;,
+               &#x27;2023-08-09 06:00:00&#x27;, &#x27;2023-08-09 09:00:00&#x27;,
+               &#x27;2023-08-09 12:00:00&#x27;, &#x27;2023-08-09 15:00:00&#x27;,
+               &#x27;2023-08-09 18:00:00&#x27;, &#x27;2023-08-09 21:00:00&#x27;,
+               &#x27;2023-08-10 00:00:00&#x27;, &#x27;2023-08-10 03:00:00&#x27;,
                ...
-               &#x27;2023-08-22 21:00:00&#x27;, &#x27;2023-08-23 00:00:00&#x27;,
-               &#x27;2023-08-23 03:00:00&#x27;, &#x27;2023-08-23 06:00:00&#x27;,
-               &#x27;2023-08-23 09:00:00&#x27;, &#x27;2023-08-23 12:00:00&#x27;,
-               &#x27;2023-08-23 15:00:00&#x27;, &#x27;2023-08-23 18:00:00&#x27;,
-               &#x27;2023-08-23 21:00:00&#x27;, &#x27;2023-08-24 00:00:00&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time1&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-65845cf9-3591-4687-ac34-cfc5febec0ed' class='xr-index-data-in' type='checkbox'/><label for='index-65845cf9-3591-4687-ac34-cfc5febec0ed' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
+               &#x27;2023-08-23 21:00:00&#x27;, &#x27;2023-08-24 00:00:00&#x27;,
+               &#x27;2023-08-24 03:00:00&#x27;, &#x27;2023-08-24 06:00:00&#x27;,
+               &#x27;2023-08-24 09:00:00&#x27;, &#x27;2023-08-24 12:00:00&#x27;,
+               &#x27;2023-08-24 15:00:00&#x27;, &#x27;2023-08-24 18:00:00&#x27;,
+               &#x27;2023-08-24 21:00:00&#x27;, &#x27;2023-08-25 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time1&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a7d8b178-c133-40e0-b7fc-fed343793e80' class='xr-index-data-in' type='checkbox'/><label for='index-a7d8b178-c133-40e0-b7fc-fed343793e80' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
            70.0,    100.0,    200.0,    300.0,    500.0,    700.0,   1000.0,
          1500.0,   2000.0,   3000.0,   4000.0,   5000.0,   7000.0,  10000.0,
         15000.0,  20000.0,  25000.0,  30000.0,  35000.0,  40000.0,  45000.0,
         50000.0,  55000.0,  60000.0,  65000.0,  70000.0,  75000.0,  80000.0,
         85000.0,  90000.0,  92500.0,  95000.0,  97500.0, 100000.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3edf46d7-e118-48b0-be2a-e3fe9d8d4582' class='xr-section-summary-in' type='checkbox'  ><label for='section-3edf46d7-e118-48b0-be2a-e3fe9d8d4582' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Geopotential height @ Isobaric surface</dd><dt><span>units :</span></dt><dd>gpm</dd><dt><span>abbreviation :</span></dt><dd>HGT</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-3-5_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 3 5]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Mass</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>Geopotential height</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8bcf38c5-bb6e-4329-bb61-070a3ffe9a60' class='xr-section-summary-in' type='checkbox'  ><label for='section-8bcf38c5-bb6e-4329-bb61-070a3ffe9a60' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Geopotential height @ Isobaric surface</dd><dt><span>units :</span></dt><dd>gpm</dd><dt><span>abbreviation :</span></dt><dd>HGT</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-3-5_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 3 5]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Mass</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>Geopotential height</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>What units of Geopotential Height?<br><br><br><br></p>
 <p>How many available forecast hours are there?<br><br><br><br></p>
@@ -1725,7 +1726,7 @@ Coordinates:
   * lat       (lat) float32 90.0 89.0 88.0 87.0 86.0 ... -87.0 -88.0 -89.0 -90.0
   * lon       (lon) float32 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
     reftime   datetime64[ns] ...
-  * time1     (time1) datetime64[ns] 2023-08-08 ... 2023-08-24
+  * time1     (time1) datetime64[ns] 2023-08-09 ... 2023-08-25
   * isobaric  (isobaric) float32 1.0 2.0 4.0 7.0 ... 9.5e+04 9.75e+04 1e+05
 Attributes: (12/13)
     long_name:                       u-component of wind @ Isobaric surface
@@ -1740,7 +1741,7 @@ Attributes: (12/13)
     Grib2_Level_Type:                100
     Grib2_Level_Desc:                Isobaric surface
     Grib2_Generating_Process_Type:   Forecast
-    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'u-component_of_wind_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time1</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-ce823256-6b0b-4a6a-b9a2-84d7dee58c18' class='xr-array-in' type='checkbox' checked><label for='section-ce823256-6b0b-4a6a-b9a2-84d7dee58c18' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-7a5a3531-e22c-4a98-b471-557ff9055908' class='xr-section-summary-in' type='checkbox'  checked><label for='section-7a5a3531-e22c-4a98-b471-557ff9055908' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-287bb597-7656-4364-a8e2-8e80e36ec6bb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-287bb597-7656-4364-a8e2-8e80e36ec6bb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ff511b24-781e-48d1-b9e5-2215efebc60f' class='xr-var-data-in' type='checkbox'><label for='data-ff511b24-781e-48d1-b9e5-2215efebc60f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
+    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'u-component_of_wind_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time1</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-d4a3af4c-da74-4a4b-b5a2-5484fac0905d' class='xr-array-in' type='checkbox' checked><label for='section-d4a3af4c-da74-4a4b-b5a2-5484fac0905d' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-c930e72c-3ef1-4d50-b78f-cfb23ca6a355' class='xr-section-summary-in' type='checkbox'  checked><label for='section-c930e72c-3ef1-4d50-b78f-cfb23ca6a355' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-c96f5a5b-8d7a-44d8-811e-ca488c5964b0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c96f5a5b-8d7a-44d8-811e-ca488c5964b0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2ecd6d6e-eca0-433c-a031-7fcd8b677ccc' class='xr-var-data-in' type='checkbox'><label for='data-2ecd6d6e-eca0-433c-a031-7fcd8b677ccc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
         78.,  77.,  76.,  75.,  74.,  73.,  72.,  71.,  70.,  69.,  68.,  67.,
         66.,  65.,  64.,  63.,  62.,  61.,  60.,  59.,  58.,  57.,  56.,  55.,
         54.,  53.,  52.,  51.,  50.,  49.,  48.,  47.,  46.,  45.,  44.,  43.,
@@ -1755,11 +1756,7 @@ Attributes: (12/13)
        -54., -55., -56., -57., -58., -59., -60., -61., -62., -63., -64., -65.,
        -66., -67., -68., -69., -70., -71., -72., -73., -74., -75., -76., -77.,
        -78., -79., -80., -81., -82., -83., -84., -85., -86., -87., -88., -89.,
-       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-e69f06f2-5e05-4f27-af1a-e5d03ad8b23a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e69f06f2-5e05-4f27-af1a-e5d03ad8b23a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-28b424cc-c3a1-4df0-b535-247dbdc692d0' class='xr-var-data-in' type='checkbox'><label for='data-28b424cc-c3a1-4df0-b535-247dbdc692d0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-27fabd44-d292-4f25-8a0d-d09f1336396a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-27fabd44-d292-4f25-8a0d-d09f1336396a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-07a273d7-796d-4ae5-875f-abc059e1de15' class='xr-var-data-in' type='checkbox'><label for='data-07a273d7-796d-4ae5-875f-abc059e1de15' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time1</span></div><div class='xr-var-dims'>(time1)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2023-08-08 ... 2023-08-24</div><input id='attrs-d5e31226-b287-4900-9029-a635e0efa6ac' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d5e31226-b287-4900-9029-a635e0efa6ac' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f97eb44b-6026-448c-90e7-a16b11cdfbc5' class='xr-var-data-in' type='checkbox'><label for='data-f97eb44b-6026-448c-90e7-a16b11cdfbc5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2023-08-08T00:00:00.000000000&#x27;, &#x27;2023-08-08T03:00:00.000000000&#x27;,
-       &#x27;2023-08-08T06:00:00.000000000&#x27;, &#x27;2023-08-08T09:00:00.000000000&#x27;,
-       &#x27;2023-08-08T12:00:00.000000000&#x27;, &#x27;2023-08-08T15:00:00.000000000&#x27;,
-       &#x27;2023-08-08T18:00:00.000000000&#x27;, &#x27;2023-08-08T21:00:00.000000000&#x27;,
-       &#x27;2023-08-09T00:00:00.000000000&#x27;, &#x27;2023-08-09T03:00:00.000000000&#x27;,
+       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-8a3ae6ba-0cd3-4e70-9681-caa08d2f9771' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8a3ae6ba-0cd3-4e70-9681-caa08d2f9771' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-65280f8c-a828-4988-a724-88b6608c0455' class='xr-var-data-in' type='checkbox'><label for='data-65280f8c-a828-4988-a724-88b6608c0455' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ccfd17f5-efb0-4c33-b73e-bf46fa8caf5b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ccfd17f5-efb0-4c33-b73e-bf46fa8caf5b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3dba1d4e-1ed1-4ca2-b1d5-82f75a236ddb' class='xr-var-data-in' type='checkbox'><label for='data-3dba1d4e-1ed1-4ca2-b1d5-82f75a236ddb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time1</span></div><div class='xr-var-dims'>(time1)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2023-08-09 ... 2023-08-25</div><input id='attrs-c6f146c2-23f6-4656-b594-024307ff4fff' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c6f146c2-23f6-4656-b594-024307ff4fff' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d54c6d94-ecdf-4d6d-a76f-a163529cee17' class='xr-var-data-in' type='checkbox'><label for='data-d54c6d94-ecdf-4d6d-a76f-a163529cee17' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2023-08-09T00:00:00.000000000&#x27;, &#x27;2023-08-09T03:00:00.000000000&#x27;,
        &#x27;2023-08-09T06:00:00.000000000&#x27;, &#x27;2023-08-09T09:00:00.000000000&#x27;,
        &#x27;2023-08-09T12:00:00.000000000&#x27;, &#x27;2023-08-09T15:00:00.000000000&#x27;,
        &#x27;2023-08-09T18:00:00.000000000&#x27;, &#x27;2023-08-09T21:00:00.000000000&#x27;,
@@ -1819,36 +1816,40 @@ Attributes: (12/13)
        &#x27;2023-08-23T06:00:00.000000000&#x27;, &#x27;2023-08-23T09:00:00.000000000&#x27;,
        &#x27;2023-08-23T12:00:00.000000000&#x27;, &#x27;2023-08-23T15:00:00.000000000&#x27;,
        &#x27;2023-08-23T18:00:00.000000000&#x27;, &#x27;2023-08-23T21:00:00.000000000&#x27;,
-       &#x27;2023-08-24T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-ea934210-45fa-45fd-9427-e904399e5f88' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ea934210-45fa-45fd-9427-e904399e5f88' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5064aeae-a7f8-4589-8d7c-a5b7282b48ba' class='xr-var-data-in' type='checkbox'><label for='data-5064aeae-a7f8-4589-8d7c-a5b7282b48ba' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
+       &#x27;2023-08-24T00:00:00.000000000&#x27;, &#x27;2023-08-24T03:00:00.000000000&#x27;,
+       &#x27;2023-08-24T06:00:00.000000000&#x27;, &#x27;2023-08-24T09:00:00.000000000&#x27;,
+       &#x27;2023-08-24T12:00:00.000000000&#x27;, &#x27;2023-08-24T15:00:00.000000000&#x27;,
+       &#x27;2023-08-24T18:00:00.000000000&#x27;, &#x27;2023-08-24T21:00:00.000000000&#x27;,
+       &#x27;2023-08-25T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-4f16b921-7c70-43b6-9168-db08dcc6fd8f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4f16b921-7c70-43b6-9168-db08dcc6fd8f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-df1db1d1-4c04-4dc9-b732-d5c410b7306a' class='xr-var-data-in' type='checkbox'><label for='data-df1db1d1-4c04-4dc9-b732-d5c410b7306a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
        7.00e+01, 1.00e+02, 2.00e+02, 3.00e+02, 5.00e+02, 7.00e+02, 1.00e+03,
        1.50e+03, 2.00e+03, 3.00e+03, 4.00e+03, 5.00e+03, 7.00e+03, 1.00e+04,
        1.50e+04, 2.00e+04, 2.50e+04, 3.00e+04, 3.50e+04, 4.00e+04, 4.50e+04,
        5.00e+04, 5.50e+04, 6.00e+04, 6.50e+04, 7.00e+04, 7.50e+04, 8.00e+04,
        8.50e+04, 9.00e+04, 9.25e+04, 9.50e+04, 9.75e+04, 1.00e+05],
-      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-54daab9b-f5f9-4b8e-b710-348b796e0b03' class='xr-section-summary-in' type='checkbox'  ><label for='section-54daab9b-f5f9-4b8e-b710-348b796e0b03' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-12397c1b-6a63-4ff0-8bf0-0d20d4757959' class='xr-index-data-in' type='checkbox'/><label for='index-12397c1b-6a63-4ff0-8bf0-0d20d4757959' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
+      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3e16ac34-4226-42fc-9929-4d4322895a49' class='xr-section-summary-in' type='checkbox'  ><label for='section-3e16ac34-4226-42fc-9929-4d4322895a49' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-07ca2220-9444-45a1-9cb1-c4f4e719b4c8' class='xr-index-data-in' type='checkbox'/><label for='index-07ca2220-9444-45a1-9cb1-c4f4e719b4c8' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
        ...
        -81.0, -82.0, -83.0, -84.0, -85.0, -86.0, -87.0, -88.0, -89.0, -90.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-6d525d8b-ef5b-49eb-bb96-69daa9f79315' class='xr-index-data-in' type='checkbox'/><label for='index-6d525d8b-ef5b-49eb-bb96-69daa9f79315' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b80a544e-a1d1-4940-82a6-3c53ab32c774' class='xr-index-data-in' type='checkbox'/><label for='index-b80a544e-a1d1-4940-82a6-3c53ab32c774' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
        ...
        350.0, 351.0, 352.0, 353.0, 354.0, 355.0, 356.0, 357.0, 358.0, 359.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time1</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b42029d8-e261-479c-a5e1-fbbab0401bbd' class='xr-index-data-in' type='checkbox'/><label for='index-b42029d8-e261-479c-a5e1-fbbab0401bbd' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2023-08-08 00:00:00&#x27;, &#x27;2023-08-08 03:00:00&#x27;,
-               &#x27;2023-08-08 06:00:00&#x27;, &#x27;2023-08-08 09:00:00&#x27;,
-               &#x27;2023-08-08 12:00:00&#x27;, &#x27;2023-08-08 15:00:00&#x27;,
-               &#x27;2023-08-08 18:00:00&#x27;, &#x27;2023-08-08 21:00:00&#x27;,
-               &#x27;2023-08-09 00:00:00&#x27;, &#x27;2023-08-09 03:00:00&#x27;,
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time1</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c6d80137-83e0-4805-bd77-db5a2d6b1537' class='xr-index-data-in' type='checkbox'/><label for='index-c6d80137-83e0-4805-bd77-db5a2d6b1537' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2023-08-09 00:00:00&#x27;, &#x27;2023-08-09 03:00:00&#x27;,
+               &#x27;2023-08-09 06:00:00&#x27;, &#x27;2023-08-09 09:00:00&#x27;,
+               &#x27;2023-08-09 12:00:00&#x27;, &#x27;2023-08-09 15:00:00&#x27;,
+               &#x27;2023-08-09 18:00:00&#x27;, &#x27;2023-08-09 21:00:00&#x27;,
+               &#x27;2023-08-10 00:00:00&#x27;, &#x27;2023-08-10 03:00:00&#x27;,
                ...
-               &#x27;2023-08-22 21:00:00&#x27;, &#x27;2023-08-23 00:00:00&#x27;,
-               &#x27;2023-08-23 03:00:00&#x27;, &#x27;2023-08-23 06:00:00&#x27;,
-               &#x27;2023-08-23 09:00:00&#x27;, &#x27;2023-08-23 12:00:00&#x27;,
-               &#x27;2023-08-23 15:00:00&#x27;, &#x27;2023-08-23 18:00:00&#x27;,
-               &#x27;2023-08-23 21:00:00&#x27;, &#x27;2023-08-24 00:00:00&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time1&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-ed29b6d7-d478-4ec1-a1a3-a707367fdf3c' class='xr-index-data-in' type='checkbox'/><label for='index-ed29b6d7-d478-4ec1-a1a3-a707367fdf3c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
+               &#x27;2023-08-23 21:00:00&#x27;, &#x27;2023-08-24 00:00:00&#x27;,
+               &#x27;2023-08-24 03:00:00&#x27;, &#x27;2023-08-24 06:00:00&#x27;,
+               &#x27;2023-08-24 09:00:00&#x27;, &#x27;2023-08-24 12:00:00&#x27;,
+               &#x27;2023-08-24 15:00:00&#x27;, &#x27;2023-08-24 18:00:00&#x27;,
+               &#x27;2023-08-24 21:00:00&#x27;, &#x27;2023-08-25 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time1&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-146c7b2c-f67f-40ca-b5f6-5ea04bee063c' class='xr-index-data-in' type='checkbox'/><label for='index-146c7b2c-f67f-40ca-b5f6-5ea04bee063c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
            70.0,    100.0,    200.0,    300.0,    500.0,    700.0,   1000.0,
          1500.0,   2000.0,   3000.0,   4000.0,   5000.0,   7000.0,  10000.0,
         15000.0,  20000.0,  25000.0,  30000.0,  35000.0,  40000.0,  45000.0,
         50000.0,  55000.0,  60000.0,  65000.0,  70000.0,  75000.0,  80000.0,
         85000.0,  90000.0,  92500.0,  95000.0,  97500.0, 100000.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-75646904-ed9e-4898-abe4-a1f39db5d0b2' class='xr-section-summary-in' type='checkbox'  ><label for='section-75646904-ed9e-4898-abe4-a1f39db5d0b2' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>u-component of wind @ Isobaric surface</dd><dt><span>units :</span></dt><dd>m/s</dd><dt><span>abbreviation :</span></dt><dd>UGRD</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-2-2_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 2 2]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Momentum</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>u-component of wind</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-26aabab6-31f3-4395-a078-ead1127c0c7f' class='xr-section-summary-in' type='checkbox'  ><label for='section-26aabab6-31f3-4395-a078-ead1127c0c7f' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>u-component of wind @ Isobaric surface</dd><dt><span>units :</span></dt><dd>m/s</dd><dt><span>abbreviation :</span></dt><dd>UGRD</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-2-2_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 2 2]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Momentum</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>u-component of wind</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>You will ALWAYS want to check the gridded file to know what different
 variables are called and know some of the basic information about the
@@ -1949,7 +1950,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

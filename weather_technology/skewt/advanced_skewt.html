@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="20.12. Practice Tasks - MetPy Sounding Calculations" href="metpy_skewt_calc_practice.html" />
     <link rel="prev" title="20.9. Stability Indices" href="skewt_stability_indices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -574,10 +575,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="advanced-skew-t-calculations-and-plotting">
-<h1><span class="section-number">20.10. </span>Advanced Skew-T Calculations and Plotting<a class="headerlink" href="#advanced-skew-t-calculations-and-plotting" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">20.10. </span>Advanced Skew-T Calculations and Plotting<a class="headerlink" href="#advanced-skew-t-calculations-and-plotting" title="Permalink to this heading">#</a></h1>
 <p>This notebook demonstrates calculating a number of common sounding parameters and plotting some of them on a skew-T diagram.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -594,7 +595,7 @@ document.write(`
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set date that you want</span>
@@ -614,7 +615,7 @@ document.write(`
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="subsetting-data">
-<h1><span class="section-number">20.11. </span>Subsetting Data<a class="headerlink" href="#subsetting-data" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">20.11. </span>Subsetting Data<a class="headerlink" href="#subsetting-data" title="Permalink to this heading">#</a></h1>
 <p>When performing calculations on radiosonde data it is best to subset the
 data to only use the data needed, which is typically pressures &gt;= 100
 hPa. This can be accomplished via code by creating a Boolean
@@ -642,10 +643,10 @@ subset all of the variable arrays.</p>
 </div>
 </div>
 <section id="calculation-of-sounding-parameters">
-<h2>Calculation of Sounding Parameters<a class="headerlink" href="#calculation-of-sounding-parameters" title="Permalink to this headline">#</a></h2>
+<h2>Calculation of Sounding Parameters<a class="headerlink" href="#calculation-of-sounding-parameters" title="Permalink to this heading">#</a></h2>
 <p>Once we have our data, we can calculate any of the skew-T variables we desire, such as LCL using the functions available in MetPy (<a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings">https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings</a>).</p>
 <section id="lifting-condensation-level">
-<h3>Lifting Condensation Level<a class="headerlink" href="#lifting-condensation-level" title="Permalink to this headline">#</a></h3>
+<h3>Lifting Condensation Level<a class="headerlink" href="#lifting-condensation-level" title="Permalink to this heading">#</a></h3>
 <p>This is the level at which a lifted parcel will become saturated (e.g.,
 have 100% RH). The function in MetPy is called lcl and takes inputs of
 pressure, temperature, and dewpoint.</p>
@@ -671,7 +672,7 @@ the LCL and the second is the temperature of the LCL.</p>
 </div>
 </section>
 <section id="parcel-profile">
-<h3>Parcel Profile<a class="headerlink" href="#parcel-profile" title="Permalink to this headline">#</a></h3>
+<h3>Parcel Profile<a class="headerlink" href="#parcel-profile" title="Permalink to this heading">#</a></h3>
 <p>The parcel path is essential the temperature that a parcel would have if
 lifted from a given level. This is an essential component to determining
 the stability of the atmosphere (a la introduction to meteorology) and determining the
@@ -691,7 +692,7 @@ a surface parcel.</p>
 </div>
 </section>
 <section id="cape-cin">
-<h3>CAPE/CIN<a class="headerlink" href="#cape-cin" title="Permalink to this headline">#</a></h3>
+<h3>CAPE/CIN<a class="headerlink" href="#cape-cin" title="Permalink to this heading">#</a></h3>
 <p>Often, we want to know how much energy might be available for use in the
 generation of thunderstorms, so we want the ability to calculate CAPE.
 This is actually not a trivial calculation due to any number of details
@@ -725,7 +726,7 @@ CIN: -126.51 joule / kilogram
 </div>
 </section>
 <section id="lifted-index">
-<h3>Lifted Index<a class="headerlink" href="#lifted-index" title="Permalink to this headline">#</a></h3>
+<h3>Lifted Index<a class="headerlink" href="#lifted-index" title="Permalink to this heading">#</a></h3>
 <p>The LI is the difference between the parcel temperature and
 environmental temperature at 500 hPa. If you have calculated the parcel
 profile, then this becomes a simple difference of two values once you
@@ -749,7 +750,7 @@ have found both values at 500 hPa.</p>
 </section>
 </section>
 <section id="plot-skew-t-with-parcel-path">
-<h2>Plot Skew-T with Parcel Path<a class="headerlink" href="#plot-skew-t-with-parcel-path" title="Permalink to this headline">#</a></h2>
+<h2>Plot Skew-T with Parcel Path<a class="headerlink" href="#plot-skew-t-with-parcel-path" title="Permalink to this heading">#</a></h2>
 <p>A common thing to plot on a skew-T image is the parcel path, this allows
 a meteorologist to visually estimate the amount of CAPE and CIN since
 the area on a skew-T is directly proportional to energy. The key area
@@ -919,7 +920,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3. Python Program Control Flow" href="python_control_flow.html" />
     <link rel="prev" title="2.2. Python Syntax - Basics #2" href="basics2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -571,10 +572,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-syntax-basics-3">
-<h1><span class="section-number">2.3. </span>Python Syntax - Basics #3<a class="headerlink" href="#python-syntax-basics-3" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.3. </span>Python Syntax - Basics #3<a class="headerlink" href="#python-syntax-basics-3" title="Permalink to this heading">#</a></h1>
 <p>In this section we’ll look at a couple of different Python objects that are commonly used. We’ll cover a lists, tuples, and dictionaries.</p>
 <section id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h2>
 <p>There are times when we want to be able to group together items and store them together. Python’s most versitile construct for holding multiple items together is known as a list. Lists are mutable, meaning you can change the value of a item within the list. Lists can contain a single type of item (e.g., integers, floats, strings) or a mixed grouping.</p>
 <p>There are two ways to define a list, 1) using square brackets or 2) using the list function <code class="docutils literal notranslate"><span class="pre">list()</span></code>. For example the following two are equivalent,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -594,7 +595,7 @@ document.write(`
 </div>
 </section>
 <section id="lists-vs-tuple">
-<h2>Lists vs. Tuple<a class="headerlink" href="#lists-vs-tuple" title="Permalink to this headline">#</a></h2>
+<h2>Lists vs. Tuple<a class="headerlink" href="#lists-vs-tuple" title="Permalink to this heading">#</a></h2>
 <p>Python doesn’t have a true array object. The closest thing to an array is a Python List (which are sometimes called array-like objects). Many of their properties are the same, but there are some notable differences depending on what you are trying to do. There are two ways to define a list, 1) using square brackets or 2) using the list function <code class="docutils literal notranslate"><span class="pre">list()</span></code>. For example the following two are equivalent,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
@@ -660,9 +661,9 @@ document.write(`
 <p>Both lists and tuples can contain different data types in the same variable. This can be adventageous at times.</p>
 </section>
 <section id="list-and-tuple-methods">
-<h2>List and Tuple Methods<a class="headerlink" href="#list-and-tuple-methods" title="Permalink to this headline">#</a></h2>
+<h2>List and Tuple Methods<a class="headerlink" href="#list-and-tuple-methods" title="Permalink to this heading">#</a></h2>
 <section id="list-object">
-<h3>List Object<a class="headerlink" href="#list-object" title="Permalink to this headline">#</a></h3>
+<h3>List Object<a class="headerlink" href="#list-object" title="Permalink to this heading">#</a></h3>
 <p>There are a number of methods that are available for list objects including: <code class="docutils literal notranslate"><span class="pre">append(),</span> <span class="pre">copy(),</span> <span class="pre">count(),</span> <span class="pre">index()</span></code>.</p>
 <p><a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">https://docs.python.org/3/tutorial/datastructures.html#more-on-lists</a></p>
 <div class="cell docutils container">
@@ -681,7 +682,7 @@ document.write(`
 </div>
 </section>
 <section id="tuple-object">
-<h3>Tuple Object<a class="headerlink" href="#tuple-object" title="Permalink to this headline">#</a></h3>
+<h3>Tuple Object<a class="headerlink" href="#tuple-object" title="Permalink to this heading">#</a></h3>
 <p>There are only two methods available for the tuple object: <code class="docutils literal notranslate"><span class="pre">count(),</span> <span class="pre">index()</span></code></p>
 <p><a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences</a></p>
 <div class="cell docutils container">
@@ -700,7 +701,7 @@ document.write(`
 </div>
 </section>
 <section id="beware-of-math-with-lists-and-tuples">
-<h3>Beware of Math with Lists and Tuples<a class="headerlink" href="#beware-of-math-with-lists-and-tuples" title="Permalink to this headline">#</a></h3>
+<h3>Beware of Math with Lists and Tuples<a class="headerlink" href="#beware-of-math-with-lists-and-tuples" title="Permalink to this heading">#</a></h3>
 <p>Math works VERY differently! A multiplication creates that number of copies within the list or tuple and concatenates them to the object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -718,7 +719,7 @@ document.write(`
 </section>
 </section>
 <section id="dictionaries">
-<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">#</a></h2>
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this heading">#</a></h2>
 <p>Python has the ability to create a mappable data structure, which is called a dictionary. The main way you’ll encounter them is through many different data read methods. The great thing about a dictionary is that you are able to reference data with a string (or key) as opposed to just an index value. This is very powerful for keeping track of a number of different arrays within a “dataset”.</p>
 <p>A dictionary is defined in one of two ways, 1) with curly brackets or 2) the <code class="docutils literal notranslate"><span class="pre">dict()</span></code> function where you link a value (or list of values) to a key (name).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hours</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">))</span>
@@ -755,11 +756,11 @@ document.write(`
 </div>
 </section>
 <section id="numpy-arrays">
-<h2>Numpy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">#</a></h2>
+<h2>Numpy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this heading">#</a></h2>
 <p>A data object that is very import to scientists using computers is to have a true array, meaning one that we can do math on and have it automatically calculate element by element. Unfortunately, lists won’t work as we have seen, so we need to bring in a third-party package (module) that contains this type of data object. Through the course of the semester we will interact with many more data objects that will be useful for our work in Earth Systems Science.</p>
 <p>The Numpy module is a powerful package that includes not only a true array object, but a number of important calculations that can operate on these arrays in a time efficient manner. We’ll dig deeper into all that Numpy as to offer in the next unit, but for now we want to introduce importing a third-party package and the development of a Numpy array.</p>
 <section id="importing-a-module">
-<h3>Importing a Module<a class="headerlink" href="#importing-a-module" title="Permalink to this headline">#</a></h3>
+<h3>Importing a Module<a class="headerlink" href="#importing-a-module" title="Permalink to this heading">#</a></h3>
 <p>There are many, many, many packages that have been developed to work off of the main Python syntax core, which is relatively small in and of itself. To gain access to those packages, they need to be imported to attach the methods contained within to your notebook/script. There are some common ways to import many packages and we’ll use the most common methods over the course of this semester.</p>
 <p>The main function for bringing in a package is <code class="docutils literal notranslate"><span class="pre">import</span></code>. There are variations on how to bring in a module or just a particular function, which we’ll highlight as we go through the semester.</p>
 <p>To import Numpy we’ll use the import function and then give it an alias, or shorthand name, that we’ll use to reference the particular components of that module. By doing so we’ll protect ourselves against having two functions with the same name with one silently “overwriting” the other.</p>
@@ -776,7 +777,7 @@ document.write(`
 </div>
 </section>
 <section id="create-simple-array">
-<h3>Create simple array<a class="headerlink" href="#create-simple-array" title="Permalink to this headline">#</a></h3>
+<h3>Create simple array<a class="headerlink" href="#create-simple-array" title="Permalink to this heading">#</a></h3>
 <p>The function <code class="docutils literal notranslate"><span class="pre">array</span></code> can take a Python list that contains all of the same type (e.g., integers, floats, strings). To access the function we’ll need to use the alias that we created when importing the module <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -912,7 +913,7 @@ By Kevin Goebbert
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
