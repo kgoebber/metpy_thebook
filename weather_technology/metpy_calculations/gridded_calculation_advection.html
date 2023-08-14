@@ -581,19 +581,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">time</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">declarative</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;metpy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="get-data">
@@ -628,8 +615,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-166c5984-d9bc-43db-9804-66f5be93b154">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-166c5984-d9bc-43db-9804-66f5be93b154" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-188c9795-8017-4b48-a4e0-45ce041e1441">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-188c9795-8017-4b48-a4e0-45ce041e1441" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Advection} = -u \frac{\Delta T}{\Delta x} - v \frac{\Delta T}{\Delta y}
 \end{align}\]</div>
 <p>The minus signs are by convention, which means cold air advection will be negative values and warm air advection will be positive values.</p>
@@ -646,6 +633,8 @@ document.write(`
 <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;temperature_advection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">advection</span><span class="p">(</span><span class="n">tmpk</span><span class="p">,</span> <span class="n">uwind</span><span class="p">,</span> <span class="n">vwind</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
 </div>
 </div>
 <section id="plot-temperatue-advection">
@@ -717,6 +706,9 @@ document.write(`
 <span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b231010ea06354aec6844cd66a46dc62dec15992662903ffcf84fc12370a32ab.png" src="../../_images/b231010ea06354aec6844cd66a46dc62dec15992662903ffcf84fc12370a32ab.png" />
 </div>
 </div>
 </section>

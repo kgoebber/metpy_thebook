@@ -594,19 +594,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">metpy.io</span> <span class="kn">import</span> <span class="n">add_station_lat_lon</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">declarative</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;metpy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="read-data">
@@ -643,6 +630,11 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the list of variables available from the dataset.</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;pressure&#39;, &#39;height&#39;, &#39;temperature&#39;, &#39;dewpoint&#39;, &#39;direction&#39;, &#39;speed&#39;, &#39;station&#39;, &#39;time&#39;, &#39;u_wind&#39;, &#39;v_wind&#39;, &#39;latitude&#39;, &#39;longitude&#39;]
 </pre></div>
 </div>
 </div>
@@ -736,6 +728,9 @@ document.write(`
 <span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/abe9d9cc42827a71233022aa6f4b517fc1ce82929a0bee1b9b926548d3c5a2c9.png" src="../../_images/abe9d9cc42827a71233022aa6f4b517fc1ce82929a0bee1b9b926548d3c5a2c9.png" />
 </div>
 </div>
 </section>
