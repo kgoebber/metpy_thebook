@@ -584,6 +584,19 @@ GFS model output to have the computer draw contours.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">time</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">metpy.io</span> <span class="kn">import</span> <span class="n">add_station_lat_lon</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">declarative</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;cartopy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="get-observations-data">
@@ -606,8 +619,6 @@ errant data point that got tagged as ‘KVER’.</p>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">station</span> <span class="o">!=</span> <span class="s1">&#39;KVER&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
 </div>
 </div>
 </section>
@@ -675,9 +686,6 @@ map figure.</p>
 <span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/f70a005b860f2ba7657e87faff5123af47c22bf3af852f823e5451710828083a.png" src="../../_images/f70a005b860f2ba7657e87faff5123af47c22bf3af852f823e5451710828083a.png" />
 </div>
 </div>
 </section>

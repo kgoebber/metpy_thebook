@@ -592,6 +592,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">SkewT</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span><span class="p">,</span> <span class="n">pandas_dataframe_to_unit_arrays</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;metpy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="get-data">
@@ -664,11 +678,6 @@ the LCL and the second is the temperature of the LCL.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LCL: 849.75 hectopascal
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="parcel-profile">
@@ -717,12 +726,6 @@ points corresponding to all of the pressure levels given in the dataset.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CAPE: 2032.69 joule / kilogram
-CIN: -126.51 joule / kilogram
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="lifted-index">
@@ -738,11 +741,6 @@ have found both values at 500 hPa.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute LI and print result</span>
 <span class="n">LI</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">lifted_index</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">prof</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;LI: </span><span class="si">{</span><span class="n">LI</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">m</span><span class="si">:</span><span class="s1">.02f</span><span class="si">}</span><span class="s1"> C&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LI: -6.18 C
 </pre></div>
 </div>
 </div>
@@ -805,9 +803,6 @@ at which our parcel becomes saturated.</p>
 <span class="c1">#plt.savefig(&#39;advanced_skewt_image.png&#39;, bbox_inches=&#39;tight&#39;, dpi=150)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/cc439206aa4eab22c63c50c396a09293258ecb0de3b5475cfd2bda29668feec9.png" src="../../_images/cc439206aa4eab22c63c50c396a09293258ecb0de3b5475cfd2bda29668feec9.png" />
 </div>
 </div>
 </section>

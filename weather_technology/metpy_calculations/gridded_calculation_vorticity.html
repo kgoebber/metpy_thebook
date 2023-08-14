@@ -579,6 +579,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">time</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">declarative</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;metpy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="get-data">
@@ -613,8 +626,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-5ee09bf8-6ed8-40e3-95f5-6d6f7b05dcf2">
-<span class="eqno">(19.2)<a class="headerlink" href="#equation-5ee09bf8-6ed8-40e3-95f5-6d6f7b05dcf2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b65182d-69d8-4c3d-b871-724fba185bba">
+<span class="eqno">(19.2)<a class="headerlink" href="#equation-7b65182d-69d8-4c3d-b871-724fba185bba" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Relative Vorticity} = \zeta &amp; = \frac{\Delta V}{\Delta x} - \frac{\Delta U}{\Delta y} \\
 \end{align}\]</div>
 <p>MetPy Relative Vorticity Calculation: <a class="reference external" href="https://unidata.github.io/MetPy/v1.0/api/generated/metpy.calc.vorticity.html#metpy.calc.vorticity">https://unidata.github.io/MetPy/v1.0/api/generated/metpy.calc.vorticity.html#metpy.calc.vorticity</a></p>
@@ -686,9 +699,6 @@ document.write(`
 <span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/3baf04cce541528bede55f6769ad863741032fa24d47958d72971e6852d45f8f.png" src="../../_images/3baf04cce541528bede55f6769ad863741032fa24d47958d72971e6852d45f8f.png" />
 </div>
 </div>
 </section>
