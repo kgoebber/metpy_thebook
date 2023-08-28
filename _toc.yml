@@ -178,8 +178,11 @@ parts:
           - file: appendix/metpy_declarative_plotobs
           - file: appendix/metpy_declarative_contourplot
           - file: appendix/metpy_declarative_filledcontourplot
+          - file: appendix/metpy_declarative_rasterplot
           - file: appendix/metpy_declarative_barbplot
+          - file: appendix/metpy_declarative_arrowplot
           - file: appendix/metpy_declarative_mappanel
           - file: appendix/metpy_declarative_panelcontainer
+      - file: appendix/overcomming_errors.md
       - file: appendix/surface_data_access
     
