@@ -77,7 +77,7 @@ elements of each element are given below.
 
 ### **vector_field (optional)**
   * This attribute can be set to a list of wind component values for
-    plotting (e.g., \['uwind', 'vwind'\])
+    plotting (e.g., ['uwind', 'vwind'])
 
 ### **vector_field_color (optional)**
   * Same as colors except only controls the color of the wind barbs.

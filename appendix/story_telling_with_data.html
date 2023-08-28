@@ -345,11 +345,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_rasterplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_arrowplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="overcomming_errors.html">Common Errors and Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="surface_data_access.html">Accessing Surface Data</a></li>
 </ul>
 
@@ -601,7 +605,7 @@ Dates: 11-15 March 2023</p>
 <span class="ne">---&gt; </span><span class="mi">56</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
-<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://rda.ucar.edu/thredds/dodsC/files/g/ds084.1/2023/20230311/gfs.0p25.2023031112.f000.grib2&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;a73cae49-be96-4486-9fdd-3a2954208d29&#39;]
+<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://rda.ucar.edu/thredds/dodsC/files/g/ds084.1/2023/20230311/gfs.0p25.2023031112.f000.grib2&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;0aa93ccd-7e5a-45b1-9122-d4e6211a6619&#39;]
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 

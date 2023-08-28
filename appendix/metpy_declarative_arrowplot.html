@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>How do I rename and/or move something? &#8212; Introduction to Weather Technology using MetPy</title>
+    <title>MetPy - ArrowPlot() &#8212; Introduction to Weather Technology using MetPy</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/linux_rename';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/metpy_declarative_arrowplot';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How do I remove a file?" href="linux_remove.html" />
-    <link rel="prev" title="How do I make a copy of something?" href="linux_copy.html" />
+    <link rel="next" title="MetPy - MapPanel()" href="metpy_declarative_mappanel.html" />
+    <link rel="prev" title="MetPy - BarbPlot()" href="metpy_declarative_barbplot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,27 +157,27 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Introduction</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="whypython.html">1.1. Why Python?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jlab_environ.html">1.2. Jupyter Lab Environment</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="linux_intro.html">1.3. Linux Introduction</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="linux_paths.html">Linux Paths</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_pwd.html">Where am I?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_list.html">What do I have here?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_manual.html">Where’s the manual for this thing?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_create_directory.html">How do I create/remove a directory?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_change_directory.html">How do I move to another directory?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_copy.html">How do I make a copy of something?</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">How do I rename and/or move something?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_remove.html">How do I remove a file?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_cat_less_more.html">What’s in a file?</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/whypython.html">1.1. Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/jlab_environ.html">1.2. Jupyter Lab Environment</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../introduction/linux_intro.html">1.3. Linux Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_paths.html">Linux Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_pwd.html">Where am I?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_list.html">What do I have here?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_manual.html">Where’s the manual for this thing?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_create_directory.html">How do I create/remove a directory?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_change_directory.html">How do I move to another directory?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_copy.html">How do I make a copy of something?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_rename.html">How do I rename and/or move something?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_remove.html">How do I remove a file?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_cat_less_more.html">What’s in a file?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="vi_intro.html">1.4. Editing Files in Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_html.html">1.5. Hypertext Markup Language (HTML)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python_script_from_notebook.html">1.6. Python Script from a Notebook File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_looping_gifs.html">1.7. Create Looping GIFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/vi_intro.html">1.4. Editing Files in Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/basic_html.html">1.5. Hypertext Markup Language (HTML)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/python_script_from_notebook.html">1.6. Python Script from a Notebook File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/create_looping_gifs.html">1.7. Create Looping GIFs</a></li>
 </ul>
 </li>
 </ul>
@@ -342,21 +342,21 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_rasterplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_arrowplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="metpy_declarative_details.html">MetPy Declarative Syntax</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_rasterplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/overcomming_errors.html">Common Errors and Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/surface_data_access.html">Accessing Surface Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overcomming_errors.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surface_data_access.html">Accessing Surface Data</a></li>
 </ul>
 
     </div>
@@ -428,7 +428,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintroduction/linux_rename.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fappendix/metpy_declarative_arrowplot.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -458,7 +458,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/introduction/linux_rename.md" target="_blank"
+      <li><a href="../_sources/appendix/metpy_declarative_arrowplot.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -527,7 +527,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -538,11 +540,38 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How do I rename and/or move something?</h1>
+    <h1>MetPy - ArrowPlot()</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrowplot"><code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-descriptions">Attribute Descriptions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arrowkey"><strong>arrowkey</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arrowscale"><strong>arrowscale</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color"><strong>color</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data"><strong>data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-relative"><strong>earth_relative</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field"><strong>field</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level"><strong>level</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot"><strong>pivot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-units"><strong>plot_units</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scale"><strong>scale</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skip"><strong>skip</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time"><strong>time</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -552,19 +581,179 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-do-i-rename-and-or-move-something">
-<h1>How do I rename and/or move something?<a class="headerlink" href="#how-do-i-rename-and-or-move-something" title="Permalink to this heading">#</a></h1>
-<p>When you copy something, what was once one are now two. Say instead of
-having two instances of a file you just wanted to rename the file.
-Without the window view we can’t click on an icon and change the name,
-we need a program. In Linux this is called a move, such that we are
-moving one filename to another filename, the command is <code class="docutils literal notranslate"><span class="pre">mv</span></code>. The <code class="docutils literal notranslate"><span class="pre">mv</span></code>
-command requires two pieces of information. For example,</p>
-<p><code class="docutils literal notranslate"><span class="pre">kgoebber&#64;bergeron:~&gt;</span> <span class="pre">mv</span> <span class="pre">&lt;current</span> <span class="pre">filename&gt;</span> <span class="pre">&lt;new</span> <span class="pre">filename&gt;</span></code></p>
-<p>If you rename a file there will still be only one file, just with a
-different name. If you move a file within your directory and you list
-the contents of your directory there will no longer be a
-file with the old filename, but there will be file new filename.</p>
+  <section id="metpy-arrowplot">
+<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code><a class="headerlink" href="#metpy-arrowplot" title="Permalink to this heading">#</a></h1>
+<p>Make plots of wind barbs on a map with traits to refine the look of plotted elements.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="arrowplot">
+<h1><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html"><code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a><a class="headerlink" href="#arrowplot" title="Permalink to this heading">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.arrowkey"><code class="docutils literal notranslate"><span class="pre">arrowkey</span></code></a></p></td>
+<td><p>Set the characteristics of an arrow key using a tuple of values representing (value, xloc, yloc, position, string).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.arrowscale"><code class="docutils literal notranslate"><span class="pre">arrowscale</span></code></a></p></td>
+<td><p>Number of data units per arrow length unit, e.g., m/s per plot width; a smaller scale parameter makes the arrow longer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.color"><code class="docutils literal notranslate"><span class="pre">color</span></code></a></p></td>
+<td><p>A string value that controls the color of the vectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.data"><code class="docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
+<td><p>Xarray dataset that contains the field to be plotted.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.earth_relative"><code class="docutils literal notranslate"><span class="pre">earth_relative</span></code></a></p></td>
+<td><p>A boolean value to indicate whether the vector to be plotted is earth- or grid-relative.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.field"><code class="docutils literal notranslate"><span class="pre">field</span></code></a></p></td>
+<td><p>A tuple containing the two components of the vector field from the dataset in the form (east-west component, north-south component).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.level"><code class="docutils literal notranslate"><span class="pre">level</span></code></a></p></td>
+<td><p>The level of the field to be plotted.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.pivot"><code class="docutils literal notranslate"><span class="pre">pivot</span></code></a></p></td>
+<td><p>A string setting the pivot point of the vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.plot_units"><code class="docutils literal notranslate"><span class="pre">plot_units</span></code></a></p></td>
+<td><p>The desired units to plot the field in.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.plotdata"><code class="docutils literal notranslate"><span class="pre">plotdata</span></code></a></p></td>
+<td><p>Return the data for plotting.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.scale"><code class="docutils literal notranslate"><span class="pre">scale</span></code></a></p></td>
+<td><p>Scale the field to be plotted by the value given.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.skip"><code class="docutils literal notranslate"><span class="pre">skip</span></code></a></p></td>
+<td><p>A tuple of integers to indicate the number of grid points to skip between plotting vectors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.time"><code class="docutils literal notranslate"><span class="pre">time</span></code></a></p></td>
+<td><p>Set the valid time to be plotted as a datetime object.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="attribute-descriptions">
+<h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this heading">#</a></h2>
+<section id="arrowkey">
+<h3><strong>arrowkey</strong><a class="headerlink" href="#arrowkey" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Set the characteristics of an arrow key using a tuple of values representing (value, xloc, yloc, position, string).
+Default is <em>None</em>.</p>
+<p>If <em>None</em>, no vector key will be plotted.</p>
+<p>value default is 100 xloc default is 0.85 yloc default is 1.02 position default is ‘E’
+(options are ‘N’, ‘S’, ‘E’, ‘W’) label default is an empty string</p>
+<p>If you wish to change a characteristic of the arrowkey you’ll need to have a tuple of five elements,
+fill in the full tuple using <em>None</em> for those characteristics you wish to use the default value and
+put in the new values for the other elements. This trait corresponds to the keyword length in
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiverkey.html#matplotlib.pyplot.quiverkey"><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.quiverkey</span></code></a>.</p>
+</li>
+</ul>
+</section>
+<section id="arrowscale">
+<h3><strong>arrowscale</strong><a class="headerlink" href="#arrowscale" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Number of data units per arrow length unit, e.g., m/s per plot width; a smaller scale parameter makes
+the arrow longer. Default is <em>None</em>.</p>
+<p>If <em>None</em>, a simple autoscaling algorithm is used, based on the average vector length and the number of
+vectors. The arrow length unit is given by the <em>key_length</em> attribute.</p>
+<p>This trait corresponds to the keyword length in
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver"><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.quiver</span></code></a>.</p>
+</li>
+</ul>
+</section>
+<section id="color">
+<h3><strong>color</strong><a class="headerlink" href="#color" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>A string value that controls the color of the vectors. Default value is black.</p>
+<p>This trait can be set to any named color from <em>Matplotlibs Colors</em></p>
+</li>
+</ul>
+</section>
+<section id="data">
+<h3><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Xarray dataset that contains the field to be plotted.</p></li>
+</ul>
+</section>
+<section id="earth-relative">
+<h3><strong>earth_relative</strong><a class="headerlink" href="#earth-relative" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A boolean value to indicate whether the vector to be plotted is earth- or grid-relative.
+Default value is <em>True</em>, indicating that vectors are earth-relative.</p></li>
+</ul>
+<p>Common gridded meteorological datasets including GFS and NARR output contain wind components
+that are earth-relative. The primary exception is NAM output with wind components that are grid-relative.
+For any grid-relative vectors set this trait to <em>False</em>. This value is ignored for 2D vector fields not
+in the plane of the plot (e.g., cross sections).</p>
+</section>
+<section id="field">
+<h3><strong>field</strong><a class="headerlink" href="#field" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>A tuple containing the two components of the vector field from the dataset in the form (east-west component, north-south component).</p>
+<p>For a wind barb plot each component of the wind must be specified and should be of the form (u-wind, v-wind).</p>
+</li>
+</ul>
+</section>
+<section id="level">
+<h3><strong>level</strong><a class="headerlink" href="#level" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>The level of the field to be plotted.</p>
+<p>This is a value with units to choose a desired plot level. For example, selecting the
+850-hPa level, set this parameter to <code class="docutils literal notranslate"><span class="pre">850 * units.hPa</span></code>. Note that this requires your
+data to have a vertical dimension coordinate.</p>
+</li>
+</ul>
+</section>
+<section id="pivot">
+<h3><strong>pivot</strong><a class="headerlink" href="#pivot" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>A string setting the pivot point of the vector. Default value is ‘middle’.</p>
+<p>This trait takes the values of the keyword argument from <em>matplotlin.pyplot.barbs</em>: ‘tip’ or ‘middle’.</p>
+</li>
+</ul>
+</section>
+<section id="plot-units">
+<h3><strong>plot_units</strong><a class="headerlink" href="#plot-units" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>The desired units to plot the field in.</p>
+<p>Setting this attribute will convert the units of the field variable to the given units for plotting using the MetPy Units module.</p>
+</li>
+</ul>
+</section>
+<section id="scale">
+<h3><strong>scale</strong><a class="headerlink" href="#scale" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Scale the field to be plotted by the value given.</p>
+<p>This attribute will scale the field by multiplying by the scale. For example, to scale
+vorticity to be whole values for contouring you could set the scale to 1e5, such that
+the data values will be multiplied by 10^5.</p>
+</li>
+</ul>
+</section>
+<section id="skip">
+<h3><strong>skip</strong><a class="headerlink" href="#skip" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>A tuple of integers to indicate the number of grid points to skip between plotting vectors. Default is (1, 1).</p>
+<p>This trait is to be used to reduce the number of vectors plotted in the (east-west, north-south)
+components. The two values can be set to the same or different integer values depending on what is desired.</p>
+</li>
+</ul>
+</section>
+<section id="time">
+<h3><strong>time</strong><a class="headerlink" href="#time" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Set the valid time to be plotted as a datetime object.</p>
+<p>If a forecast hour is to be plotted the time should be set to the valid future time, which can be done using the
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> and
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta"><code class="docutils literal notranslate"><span class="pre">timedelta</span></code></a>
+objects from the Python standard library. Note that this requires your data to have a time dimension coordinate.</p>
+</li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -580,7 +769,7 @@ file with the old filename, but there will be file new filename.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./introduction"
+            path: "./appendix"
         },
         predefinedOutput: true
     }
@@ -599,20 +788,20 @@ file with the old filename, but there will be file new filename.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="linux_copy.html"
+       href="metpy_declarative_barbplot.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">How do I make a copy of something?</p>
+        <p class="prev-next-title">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></p>
       </div>
     </a>
     <a class="right-next"
-       href="linux_remove.html"
+       href="metpy_declarative_mappanel.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How do I remove a file?</p>
+        <p class="prev-next-title">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -625,6 +814,39 @@ file with the old filename, but there will be file new filename.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrowplot"><code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-descriptions">Attribute Descriptions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arrowkey"><strong>arrowkey</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arrowscale"><strong>arrowscale</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color"><strong>color</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data"><strong>data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-relative"><strong>earth_relative</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field"><strong>field</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level"><strong>level</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot"><strong>pivot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-units"><strong>plot_units</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scale"><strong>scale</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skip"><strong>skip</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time"><strong>time</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
