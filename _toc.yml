@@ -80,99 +80,104 @@ parts:
           - file: weather_technology/hand_analysis/surface_analysis_contour_parameters
           - file: weather_technology/hand_analysis/drawing_fronts
           - file: weather_technology/hand_analysis/practice_surface_analysis
-      - file: weather_technology/atmospheric_forces/forces_intro.md
+      - file: weather_technology/atmospheric_forces/forces_intro
         sections:
-          - file: weather_technology/atmospheric_forces/pressure_gradient_force.md
-          - file: weather_technology/atmospheric_forces/coriolis_force.md
-          - file: weather_technology/atmospheric_forces/centrifugal_force.md
-          - file: weather_technology/atmospheric_forces/friction_force.md
-          - file: weather_technology/atmospheric_forces/gravity.md
-          - file: weather_technology/atmospheric_forces/forces_practice_tasks.md
-      - file: weather_technology/contour_plots/gridded_data_intro.md
+          - file: weather_technology/atmospheric_forces/pressure_gradient_force
+          - file: weather_technology/atmospheric_forces/coriolis_force
+          - file: weather_technology/atmospheric_forces/centrifugal_force
+          - file: weather_technology/atmospheric_forces/friction_force
+          - file: weather_technology/atmospheric_forces/gravity
+          - file: weather_technology/atmospheric_forces/forces_practice_tasks
+      - file: weather_technology/contour_plots/gridded_data_intro
         sections:
-          - file: weather_technology/contour_plots/gridded_data_location.md
-          - file: weather_technology/contour_plots/model_file_info.ipynb
-          - file: weather_technology/contour_plots/contour_plotting.ipynb
-          - file: weather_technology/contour_plots/add_wind_barbs.ipynb
-          - file: weather_technology/contour_plots/overlay_contours.md
-          - file: weather_technology/contour_plots/multiple_contours.ipynb
-          - file: weather_technology/contour_plots/contour_plot_practice_tasks.md
-      - file: weather_technology/force_balances/force_balances_intro.md
+          - file: weather_technology/contour_plots/gridded_data_location
+          - file: weather_technology/contour_plots/model_file_info
+          - file: weather_technology/contour_plots/contour_plotting
+          - file: weather_technology/contour_plots/add_wind_barbs
+          - file: weather_technology/contour_plots/overlay_contours
+          - file: weather_technology/contour_plots/multiple_contours
+          - file: weather_technology/contour_plots/contour_plot_practice_tasks
+      - file: weather_technology/force_balances/force_balances_intro
         sections:
-          - file: weather_technology/force_balances/hydrostatic_balance.md
-          - file: weather_technology/force_balances/geostrophic_balance.md
-          - file: weather_technology/force_balances/gradient_balance.md
-          - file: weather_technology/force_balances/surface_balance.md
-          - file: weather_technology/force_balances/thermal_wind_balance.md
-      - file: weather_technology/colorfilled_plots/colorfilled_intro.md
+          - file: weather_technology/force_balances/hydrostatic_balance
+          - file: weather_technology/force_balances/geostrophic_balance
+          - file: weather_technology/force_balances/gradient_balance
+          - file: weather_technology/force_balances/surface_balance
+          - file: weather_technology/force_balances/thermal_wind_balance
+      - file: weather_technology/colorfilled_plots/colorfilled_intro
         sections:
-          - file: weather_technology/colorfilled_plots/colorfilled_gridded_output.ipynb
-          - file: weather_technology/colorfilled_plots/smoothing_data.md
-          - file: weather_technology/colorfilled_plots/smooth_field.md
-          - file: weather_technology/colorfilled_plots/smooth_contour.md
-          - file: weather_technology/colorfilled_plots/colorfilled_practice_tasks.md
-      - file: weather_technology/midlat_cyclone/midlatitude_cyclone_intro.md
+          - file: weather_technology/colorfilled_plots/colorfilled_gridded_output
+          - file: weather_technology/colorfilled_plots/smoothing_data
+          - file: weather_technology/colorfilled_plots/smooth_field
+          - file: weather_technology/colorfilled_plots/smooth_contour
+          - file: weather_technology/colorfilled_plots/colorfilled_practice_tasks
+      - file: weather_technology/midlat_cyclone/midlatitude_cyclone_intro
         sections:
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_pre_environment.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_cyclogenesis.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_mature.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_occlusion.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_precipitation.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warmfront.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_coldfront.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warm_sector.md
-          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_tracks.md
-      - file: weather_technology/overlay_maps/overlay_maps_intro.md
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_pre_environment
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_cyclogenesis
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_mature
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_occlusion
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_precipitation
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warmfront
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_coldfront
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_warm_sector
+          - file: weather_technology/midlat_cyclone/midlatitude_cyclone_tracks
+      - file: weather_technology/overlay_maps/overlay_maps_intro
         sections:
-          - file: weather_technology/overlay_maps/upperair_500_obs_contours.ipynb
-      - file: weather_technology/nwp/nwp_intro.md
+          - file: weather_technology/overlay_maps/upperair_500_obs_contours
+      - file: weather_technology/nwp/nwp_intro
         sections:
-          - file: weather_technology/nwp/nwp_overview.md
-          - file: weather_technology/nwp/operational_models.md
-      - file: weather_technology/derived_parameters/derived_intro.md
+          - file: weather_technology/nwp/nwp_overview
+          - file: weather_technology/nwp/operational_models
+      - file: weather_technology/derived_parameters/derived_intro
         sections:
-          - file: weather_technology/derived_parameters/thickness.md
-          - file: weather_technology/derived_parameters/vorticity.md
-          - file: weather_technology/derived_parameters/advection.md
-          - file: weather_technology/derived_parameters/derived_parameters_practice_tasks.md
-      - file: weather_technology/metpy_calculations/calc_intro.md
+          - file: weather_technology/derived_parameters/thickness
+          - file: weather_technology/derived_parameters/vorticity
+          - file: weather_technology/derived_parameters/advection
+          - file: weather_technology/derived_parameters/derived_parameters_practice_tasks
+      - file: weather_technology/metpy_calculations/calc_intro
         sections:
-          - file: weather_technology/metpy_calculations/simple_calcs.md
-          - file: weather_technology/metpy_calculations/gridded_calculation_thickness.ipynb
-          - file: weather_technology/metpy_calculations/scaling_values.md
-          - file: weather_technology/metpy_calculations/scaling_example.ipynb
-          - file: weather_technology/metpy_calculations/simple_calc_practice_tasks.md
-          - file: weather_technology/metpy_calculations/wind_speed.md
-          - file: weather_technology/metpy_calculations/gridded_calculation_wind_speed.ipynb
-          - file: weather_technology/metpy_calculations/advection_info.md
-          - file: weather_technology/metpy_calculations/gridded_calculation_advection.ipynb
-          - file: weather_technology/metpy_calculations/relative_vorticity_info.md
-          - file: weather_technology/metpy_calculations/gridded_calculation_vorticity.ipynb
-          - file: weather_technology/metpy_calculations/calculation_practice_tasks.md
-      - file: weather_technology/skewt/skewt_intro.md
+          - file: weather_technology/metpy_calculations/simple_calcs
+          - file: weather_technology/metpy_calculations/gridded_calculation_thickness
+          - file: weather_technology/metpy_calculations/scaling_values
+          - file: weather_technology/metpy_calculations/scaling_example
+          - file: weather_technology/metpy_calculations/simple_calc_practice_tasks
+          - file: weather_technology/metpy_calculations/wind_speed
+          - file: weather_technology/metpy_calculations/gridded_calculation_wind_speed
+          - file: weather_technology/metpy_calculations/advection_info
+          - file: weather_technology/metpy_calculations/gridded_calculation_advection
+          - file: weather_technology/metpy_calculations/relative_vorticity_info
+          - file: weather_technology/metpy_calculations/gridded_calculation_vorticity
+          - file: weather_technology/metpy_calculations/calculation_practice_tasks
+      - file: weather_technology/skewt/skewt_intro
         sections:
-          - file: weather_technology/skewt/stability_review.md
-          - file: weather_technology/skewt/skewt_diagram.md
-          - file: weather_technology/skewt/skewt_attributes.md
-          - file: weather_technology/skewt/skewt_practice_tasks.md
-          - file: weather_technology/skewt/metpy_skewt_intro.md
-          - file: weather_technology/skewt/basic_skewt.ipynb
-          - file: weather_technology/skewt/metpy_skewt_practice.md
-          - file: weather_technology/skewt/skewt_parcel_path.md
-          - file: weather_technology/skewt/skewt_stability_indices.md
-          - file: weather_technology/skewt/advanced_skewt.ipynb
-          - file: weather_technology/skewt/metpy_skewt_calc_practice.md
-      - file: weather_technology/satellites/satellite_intro.md
+          - file: weather_technology/skewt/stability_review
+          - file: weather_technology/skewt/skewt_diagram
+          - file: weather_technology/skewt/skewt_attributes
+          - file: weather_technology/skewt/skewt_practice_tasks
+          - file: weather_technology/skewt/metpy_skewt_intro
+          - file: weather_technology/skewt/basic_skewt
+          - file: weather_technology/skewt/metpy_skewt_practice
+          - file: weather_technology/skewt/skewt_parcel_path
+          - file: weather_technology/skewt/skewt_stability_indices
+          - file: weather_technology/skewt/advanced_skewt
+          - file: weather_technology/skewt/metpy_skewt_calc_practice
+      - file: weather_technology/satellites/satellite_intro
         sections:
-          - file: weather_technology/satellites/satellite_types.md
-          - file: weather_technology/satellites/satellite_channels.md
-          - file: weather_technology/satellites/satellite_imagery.ipynb
-          - file: weather_technology/satellites/satellite_features.md
-          - file: weather_technology/satellites/colorenhanced_satellite_imagery.ipynb
+          - file: weather_technology/satellites/satellite_types
+          - file: weather_technology/satellites/satellite_channels
+          - file: weather_technology/satellites/satellite_imagery
+          - file: weather_technology/satellites/satellite_features
+          - file: weather_technology/satellites/colorenhanced_satellite_imagery
 
   - caption: Appendix
     numbered: false
     chapters:
+      - file: appendix/overcomming_errors
+      - file: appendix/surface_data_access
+      - file: appendix/upperair_data_access
+      - file: appendix/gridded_archive_data_access
+      - file: appendix/story_telling_with_data
       - file: appendix/metpy_declarative_details
         sections:
           - file: appendix/metpy_declarative_plotobs
@@ -183,6 +188,3 @@ parts:
           - file: appendix/metpy_declarative_arrowplot
           - file: appendix/metpy_declarative_mappanel
           - file: appendix/metpy_declarative_panelcontainer
-      - file: appendix/overcomming_errors.md
-      - file: appendix/surface_data_access
-    

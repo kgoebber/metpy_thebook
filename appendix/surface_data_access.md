@@ -1,9 +1,14 @@
 # Accessing Surface Data
 
-If you can't find the data file in the location for the current data
+There are a number of different methods for accessing current (and archived)
+surface observations. The first first access point is only accessible within
+the Valparaiso University domain. The second two are accessible to anyone
+on the web.
 
 ## Valpo Local Data Access
 Local Access Current Data: `/data/ldmdata/surface/sao`
+
+The current data are roughly the past two weeks worth of surface data.
 
 ```python
 from metpy.io import metar
@@ -15,7 +20,9 @@ df = metar.parse_metar_file(data, year=2021, month=1)
 
 
 ## Valpo Remote Data Access
-Remote Access Current Data (Valpo: http://bergeron.valpo.edu/current_surface_data):
+Remote Access Current Data (Valpo: http://bergeron.valpo.edu/current_surface_data)
+
+The current data are roughly the past two weeks worth of surface data.
 
 ```python
 from io import StringIO
@@ -29,8 +36,8 @@ data = StringIO(urlopen('http://bergeron.valpo.edu/current_surface_data/'
 df = metar.parse_metar_file(data, year=2020, month=12)
 ```
 
-## Iowa State Archive Remote Data Access
-Remote Access Archived Data (Iowa State Archive: 1950-current):
+## Iowa State Current and Archive Remote Data Access
+Remote Access Current and Archived Data (Iowa State Archive: 1950-current):
 
 ```python
 from io import StringIO

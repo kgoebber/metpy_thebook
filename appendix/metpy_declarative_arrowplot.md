@@ -1,4 +1,4 @@
-## MetPy - `ArrowPlot()`
+# MetPy - `ArrowPlot()`
 
 Make plots of wind barbs on a map with traits to refine the look of plotted elements.
 
