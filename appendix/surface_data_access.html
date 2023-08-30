@@ -64,6 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/surface_data_access';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Accessing Upperair Data" href="upperair_data_access.html" />
     <link rel="prev" title="Common Errors and Solutions" href="overcomming_errors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -342,6 +343,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overcomming_errors.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Accessing Surface Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upperair_data_access.html">Accessing Upperair Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story_telling_with_data.html">The Influence of SST on Midlatitude Cyclones</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
@@ -354,8 +360,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="overcomming_errors.html">Common Errors and Solutions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Accessing Surface Data</a></li>
 </ul>
 
     </div>
@@ -551,7 +555,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valpo-local-data-access">Valpo Local Data Access</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valpo-remote-data-access">Valpo Remote Data Access</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iowa-state-archive-remote-data-access">Iowa State Archive Remote Data Access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iowa-state-current-and-archive-remote-data-access">Iowa State Current and Archive Remote Data Access</a></li>
 </ul>
             </nav>
         </div>
@@ -565,10 +569,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="accessing-surface-data">
 <h1>Accessing Surface Data<a class="headerlink" href="#accessing-surface-data" title="Permalink to this heading">#</a></h1>
-<p>If you can’t find the data file in the location for the current data</p>
+<p>There are a number of different methods for accessing current (and archived)
+surface observations. The first first access point is only accessible within
+the Valparaiso University domain. The second two are accessible to anyone
+on the web.</p>
 <section id="valpo-local-data-access">
 <h2>Valpo Local Data Access<a class="headerlink" href="#valpo-local-data-access" title="Permalink to this heading">#</a></h2>
 <p>Local Access Current Data: <code class="docutils literal notranslate"><span class="pre">/data/ldmdata/surface/sao</span></code></p>
+<p>The current data are roughly the past two weeks worth of surface data.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">metpy.io</span> <span class="kn">import</span> <span class="n">metar</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;/data/ldmdata/surface/sao/20220114_sao.wmo&#39;</span>
@@ -579,7 +587,8 @@ document.write(`
 </section>
 <section id="valpo-remote-data-access">
 <h2>Valpo Remote Data Access<a class="headerlink" href="#valpo-remote-data-access" title="Permalink to this heading">#</a></h2>
-<p>Remote Access Current Data (Valpo: <a class="reference external" href="http://bergeron.valpo.edu/current_surface_data">http://bergeron.valpo.edu/current_surface_data</a>):</p>
+<p>Remote Access Current Data (Valpo: <a class="reference external" href="http://bergeron.valpo.edu/current_surface_data">http://bergeron.valpo.edu/current_surface_data</a>)</p>
+<p>The current data are roughly the past two weeks worth of surface data.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
 <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
 
@@ -592,9 +601,9 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="iowa-state-archive-remote-data-access">
-<h2>Iowa State Archive Remote Data Access<a class="headerlink" href="#iowa-state-archive-remote-data-access" title="Permalink to this heading">#</a></h2>
-<p>Remote Access Archived Data (Iowa State Archive: 1950-current):</p>
+<section id="iowa-state-current-and-archive-remote-data-access">
+<h2>Iowa State Current and Archive Remote Data Access<a class="headerlink" href="#iowa-state-current-and-archive-remote-data-access" title="Permalink to this heading">#</a></h2>
+<p>Remote Access Current and Archived Data (Iowa State Archive: 1950-current):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
 <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
 
@@ -672,6 +681,15 @@ document.write(`
         <p class="prev-next-title">Common Errors and Solutions</p>
       </div>
     </a>
+    <a class="right-next"
+       href="upperair_data_access.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Accessing Upperair Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -692,7 +710,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valpo-local-data-access">Valpo Local Data Access</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valpo-remote-data-access">Valpo Remote Data Access</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iowa-state-archive-remote-data-access">Iowa State Archive Remote Data Access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iowa-state-current-and-archive-remote-data-access">Iowa State Current and Archive Remote Data Access</a></li>
 </ul>
   </nav></div>
 
