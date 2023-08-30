@@ -34,7 +34,7 @@ hand analysis.
 * Good eraser
 * Lots of patience
 
-## General
+## General Tip
 
 The most important thing to remember when analyzing maps is that it
 requires **<u>time</u>** to do a good job. You are contouring values in
