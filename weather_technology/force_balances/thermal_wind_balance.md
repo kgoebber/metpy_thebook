@@ -11,12 +11,14 @@ to a given pressure level. This results in strong pressure gradients aloft,
 which is in association with the strong jet stream winds observed in the upper
 troposphere.
 
-```{figure} ../../images/thermal_wind_balance.jpg
+```{figure} ../../images/thermal_wind_schematic.png
 :alt: Thermal Wind Balance
 :width: 750px
 :align: center
 :name: thermalwind
 
-Visualization of thermal wind balance from
-<https://www.ux1.eiu.edu/~cfjps/1400/pressure_wind.html>.
+Visualization of thermal wind balance where in the colder air pressure
+decreases more reapidly that in warmer air creating a strong pressure
+gradient force that increases with height and is maximuzed near the top
+of the troposphere (near 300 hPa).
 ```
