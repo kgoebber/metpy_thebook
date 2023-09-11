@@ -7,12 +7,13 @@ convective precipitation, which is typically intense. However, due
 to the generally rapid movement of the front, the
 heavy precipitation will move through quickly.
 
-```{figure} ../../images/cfront_xsect.jpg
+```{figure} ../../images/cold_front_xsect.jpg
 :alt: Cold front precipitation
 :width: 650px
 :align: center
 :name: cfront
 
 Illustration of a cold front cross-section demonstrating precipitation
-that could occur along its leading edge. Copyright 2005 Thompson Brooks/Cole
+that could occur along its leading edge.
+Source: https://commons.wikimedia.org/wiki/File:Cross_section_through_a_cold_front_and_warm_front.jpg
 ```

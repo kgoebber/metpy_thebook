@@ -8,7 +8,7 @@ precipitation is possible ({numref}`Fig. %s <cfront>`).
 These characteristics hold for any area north
 of the track of the cyclone.
 
-```{figure} ../../images/wfront_xsect.jpg
+```{figure} ../../images/warm_front_xsect.jpg
 :alt: Warm front precipitation
 :width: 650px
 :align: center
@@ -16,5 +16,5 @@ of the track of the cyclone.
 
 Illustration of a warm front cross-section demonstrating precipitation and
 cloud structure that could occur poleward its leading edge at the surface.
-Copyright 2005 Thompson Brooks/Cole
+Source: https://commons.wikimedia.org/wiki/File:Cross_section_through_a_cold_front_and_warm_front.jpg
 ```
