@@ -22,4 +22,13 @@ There are four main force balances that we will consider plus a 'balance
 of balances'. The force balances presented here are: hydrostatic,
 geostrophic, gradient, Guldberg-Mohn, and the thermal wind balance.
 Between these balances we can describe most of the flows that occur in
-the atmosphere.
+the atmosphere, especially the horizontal wind that dominates most
+atmospheric motion.
+
+:::{note}
+When talking about vectors, whether a force vector or a wind vector, it is
+important to remember that they have both a magnitude and direction. This
+is especially useful when thinking about explaining how the wind will blow.
+Any vector can be broken down into its components from which the magnitude
+(e.g., speed of the wind) and direction can be calculated.
+:::
