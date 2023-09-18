@@ -13,7 +13,7 @@ stability would be defined as neutral.
 
 ```{figure} ../../images/stability.jpg
 :alt: Stability types - stable, unstable, neutral
-:width: 400px
+:width: 300px
 :align: center
 :name: stability
 
