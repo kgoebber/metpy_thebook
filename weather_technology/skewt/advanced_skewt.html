@@ -651,13 +651,13 @@ subset all of the variable arrays.</p>
 </div>
 <section id="calculation-of-sounding-parameters">
 <h2>Calculation of Sounding Parameters<a class="headerlink" href="#calculation-of-sounding-parameters" title="Permalink to this heading">#</a></h2>
-<p>Once we have our data, we can calculate any of the skew-T variables we desire, such as LCL using the functions available in MetPy (<a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings">https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings</a>).</p>
+<p>Once we have our data, we can calculate any of the skew-T variables we desire, such as LCL using the functions available in MetPy (<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings" target="_blank">https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html#soundings</a>).</p>
 <section id="lifting-condensation-level">
 <h3>Lifting Condensation Level<a class="headerlink" href="#lifting-condensation-level" title="Permalink to this heading">#</a></h3>
 <p>This is the level at which a lifted parcel will become saturated (e.g.,
 have 100% RH). The function in MetPy is called lcl and takes inputs of
 pressure, temperature, and dewpoint.</p>
-<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.lcl.html#metpy.calc.lcl">MetPy LCL Documentation</a></p>
+<p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.lcl.html#metpy.calc.lcl" target="_blank">MetPy LCL Documentation</a></p>
 <p>This function will output two values, the first is the pressure level of
 the LCL and the second is the temperature of the LCL.</p>
 <div class="cell docutils container">
@@ -684,7 +684,7 @@ the LCL and the second is the temperature of the LCL.</p>
 lifted from a given level. This is an essential component to determining
 the stability of the atmosphere (a la introduction to meteorology) and determining the
 available energy for thunderstorm production.</p>
-<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.parcel_profile.html">MetPy Parcel Profile Documentation</a></p>
+<p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.parcel_profile.html" target="_blank">MetPy Parcel Profile Documentation</a></p>
 <p>The input would be all of the pressures from the sounding and the
 starting temperature and dewpoint values for where the parcel is being
 lifted from. Typically, this is the zeroth element since we want to lift
@@ -710,7 +710,7 @@ energy we need to be able to realize any CAPE that might be present in a
 profile. MetPy has a function that computes both of these values using a
 trapezoid integration scheme (and you thought you would never hear about
 estimating an integral outside of calculus!?!).</p>
-<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.cape_cin.html">MetPy CAPE/CIN Documentation</a></p>
+<p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.cape_cin.html" target="_blank">MetPy CAPE/CIN Documentation</a></p>
 <p>Here our inputs expand to four items, pressure, temperature, dewpoint,
 and the parcel profile. Each variable must contain the same number of
 points corresponding to all of the pressure levels given in the dataset.</p>
@@ -738,7 +738,7 @@ CIN: -126.51 joule / kilogram
 environmental temperature at 500 hPa. If you have calculated the parcel
 profile, then this becomes a simple difference of two values once you
 have found both values at 500 hPa.</p>
-<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.lifted_index.html">MetPy Lifted Index Documentation</a></p>
+<p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.lifted_index.html" target="_blank">MetPy Lifted Index Documentation</a></p>
 <p>Here we need to feed the function the pressure, temperature, and parcel profile temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

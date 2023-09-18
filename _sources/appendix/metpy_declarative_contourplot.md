@@ -3,26 +3,26 @@
 This class is designed to plot contours of gridded data, most commonly
 model output from the GFS, NAM, or RAP.
 
-## [`ContourPlot()`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html)
+## <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html" target="_blank">`ContourPlot()`</a>
   | Attribute | Description |
   | - | - |
-  | [**clabels**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.clabels) | A boolean (True/False) on whether to plot contour labels. |
-  | [**contours**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.contours) | A list of values to contour or an integer number of contour levels. |
-  | [**data**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.data) | Xarray dataset that contains the field to be plotted. |
-  | [**field**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.field) | Name of the field to be plotted. |
-  | [**label_fontsize**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.label_fontsize) | An integer, float, or string value to set the font size of labels for contours. |
-  | [**latitude**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.latitude) | The latitude coordinate of the field to be plotted. |
-  | [**level**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.level) | The level of the field to be plotted. |
-  | [**linecolor**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.linecolor) | A string value to set the color of plotted contours; default is black. |
-  | [**linestyle**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.linestyle) | A string value to set the linestyle (e.g., dashed), or *None*; default is *None*, which, when using monochrome line colors, uses solid lines for positive values and dashed lines for negative values. |
-  | [**linewidth**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.linewidth) | An integer value to set the width of plotted contours; default value is 2. |
-  | [**longitude**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.longitude) | The longitude coordinate of the field to be plotted. |
-  | [**name**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.name) | Generate a name for the plot. |
-  | [**plot_units**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.plot_units) | The desired units to plot the field in. |
-  | [**scale**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.scale) | Scale the field to be plotted by the value given. |
-  | [**smooth_contour**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.smooth_contour) | Spline interpolation to smooth contours. |
-  | [**smooth_field**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.smooth_field) | Number of smoothing passes using 9-pt smoother. |
-  | [**time**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.time) | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.clabels" target="_blank">**clabels**</a> | A boolean (True/False) on whether to plot contour labels. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.contours" target="_blank">**contours**</a> | A list of values to contour or an integer number of contour levels. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.data" target="_blank">**data**</a> | Xarray dataset that contains the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.field" target="_blank">**field**</a> | Name of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.label_fontsize" target="_blank">**label_fontsize**</a> | An integer, float, or string value to set the font size of labels for contours. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.latitude" target="_blank">**latitude**</a> | The latitude coordinate of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.level" target="_blank">**level**</a> | The level of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.linecolor" target="_blank">**linecolor**</a> | A string value to set the color of plotted contours; default is black. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.linestyle" target="_blank">**linestyle**</a> | A string value to set the linestyle (e.g., dashed), or *None*; default is *None*, which, when using monochrome line colors, uses solid lines for positive values and dashed lines for negative values. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.linewidth" target="_blank">**linewidth**</a> | An integer value to set the width of plotted contours; default value is 2. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.longitude" target="_blank">**longitude**</a> | The longitude coordinate of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.name" target="_blank">**name**</a> | Generate a name for the plot. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.plot_units" target="_blank">**plot_units**</a> | The desired units to plot the field in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.scale" target="_blank">**scale**</a> | Scale the field to be plotted by the value given. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.smooth_contour" target="_blank">**smooth_contour**</a> | Spline interpolation to smooth contours. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.smooth_field" target="_blank">**smooth_field**</a> | Number of smoothing passes using 9-pt smoother. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
 
 ## Attribute Descriptions
 
@@ -74,8 +74,8 @@ model output from the GFS, NAM, or RAP.
 
 ### **linecolor**
 * This attribute sets the color of the contour lines. Default is 'black'.
-  All colors from matplotlib are valid:
-  <https://matplotlib.org/stable/_images/sphx_glr_named_colors_003.png>
+  All <a href="https://matplotlib.org/stable/_images/sphx_glr_named_colors_003.png" target="_blank">colors</a>
+  from matplotlib are valid.
 
 ### **plot_units**
 * If you want to change the units for plotting purposes, add the string

@@ -582,7 +582,7 @@ document.write(`
 Dates: 11-15 March 2023</p>
 <p>Main Impacts: Heavy Snowfall, High Winds, Blizzard Conditions</p>
 <p>States Impacted: New York, Massechusettes</p>
-<p>Background Resource Information: <a class="reference external" href="https://abcnews.go.com/US/noreaster-bring-multiple-days-rain-snow-95-corridor/story?id=97830976">https://abcnews.go.com/US/noreaster-bring-multiple-days-rain-snow-95-corridor/story?id=97830976</a></p>
+<p><a href="https://abcnews.go.com/US/noreaster-bring-multiple-days-rain-snow-95-corridor/story?id=97830976" target="_blank">Background Resource Information</a></p>
 <section id="atmospheric-data">
 <h2>Atmospheric Data<a class="headerlink" href="#atmospheric-data" title="Permalink to this heading">#</a></h2>
 <p>There are any number of different datasets that can be used to access atmospheric
@@ -590,7 +590,7 @@ data. Here we are going to access the National Oceanic and Atmospheric Administr
 National Center for Environmental Information (NCEI) THREDDS server to gather Global
 Forecast System analysis output to capture the strength of the midlatitude cyclone using
 the variable that gives the MSLP.</p>
-<p>Data Source: <a class="reference external" href="https://www.ncei.noaa.gov/thredds/">https://www.ncei.noaa.gov/thredds/</a> GFS 0.5 Degree Analysis Files</p>
+<p>Data Source: <a href="https://www.ncei.noaa.gov/thredds/" target="_blank">GFS 0.5 Degree Analysis Files</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -619,7 +619,7 @@ about the sea surface temperatures (SSTs) of the ocean and large freshwater bodi
 (e.g., the Great Lakes). Here access to a THREDDS-like server will allow us to
 gather Optimal Interpolation (OI) SST that contains both the actual SST values as well
 as the anaomalies from long term means already computed.</p>
-<p>Data Source: <a class="reference external" href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg.html">https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg.html</a></p>
+<p>Data Source: <a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg.html" target="_blank">https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg&#39;</span><span class="p">)</span>

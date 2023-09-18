@@ -10,7 +10,7 @@ is a simple multiplication problem.
 
 To scale the absolute vorticity appropriately we would need to multiply
 by 1e5 (which is equivalent to $1*10^5$). You can use the
-[scale parameter](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.scale)
+<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.scale" target="_blank">scale parameter</a>
 to accomplish this task.
 
 Using the scale parameter will allow you to plot common values of

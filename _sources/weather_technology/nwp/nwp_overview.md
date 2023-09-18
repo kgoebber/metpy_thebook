@@ -13,7 +13,7 @@ of that model, instead of the full globe.
 :name: modelschematic
 
 This annotated schematic illustrates different components to a global model.
-Annotated version of image from https://en.wikipedia.org/wiki/Climate_model#/media/File:Global_Climate_Model.png
+Annotated version of image from <a href="https://en.wikipedia.org/wiki/Climate_model#/media/File:Global_Climate_Model.png" target="blank">https://en.wikipedia.org/wiki/Climate_model#/media/File:Global_Climate_Model.png</a>
 ```
 ## Model Resolution
 The size of the model grid cubes plays a large role in what weather phenomenon will be

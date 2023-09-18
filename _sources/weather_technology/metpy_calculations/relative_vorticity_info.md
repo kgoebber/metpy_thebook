@@ -14,7 +14,7 @@ vwnd = ds['v-component_of_wind_isobaric'].metpy.sel(vertical=level, time=plot_ti
 ds['relative_vorticity'] = mpcalc.vorticity(uwnd, vwnd)
 ```
 
-[Relative Vorticity Calculation](https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.vorticity.html)
+<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.vorticity.html" target="_blank">Relative Vorticity Calculation</a>
 
 Relative vorticity should be scaled in the same manner as the absolute
 vorticity, so using the scale parameter to multiply by `1e5` would

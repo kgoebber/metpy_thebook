@@ -5,24 +5,24 @@ syntax. This is a Class of the declarative syntax and note that Classes contain 
 contains a number of attributes that can be set to specify what and how to plot the data in a figure. The descriptions of some of the basic
 elements of each element are given below.
 
-## [`PlotObs()`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs)
+## <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs" target="_blank">`PlotObs()`</a>
   | Attribute | Description |
   | - | - |
-  | [**colors**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.colors) | List of the scalar and symbol field colors. |
-  | [**data**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.data) | Pandas DataFrame that contains the fields to be plotted. |
-  | [**fields**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.fields) | Name of the scalar or symbol fields to be plotted. |
-  | [**fontsize**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.fontsize) | An integer value to set the font size of station plots. |
-  | [**formats**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.formats) | List of the scalar, symbol, and text field data formats. |
-  | [**level**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.level) | The level of the field to be plotted. |
-  | [**locations**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.locations) | List of strings for scalar or symbol field plotting locations. |
-  | [**plot_units**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.plot_units) | A list of the desired units to plot the fields in. |
-  | [**reduce_points**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.reduce_points) | Float to reduce number of points plotted. |
-  | [**time**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.time) | Set the valid time to be plotted as a datetime object. |
-  | [**time_window**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.time_window) | Set a range to look for data to plot as a timedelta object. |
-  | [**vector_field**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field) | List of the vector field to be plotted. |
-  | [**vector_field_color**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_color) | String color name to plot the vector. |
-  | [**vector_field_length**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_length) | Integer value to set the length of the plotted vector. |
-  | [**vector_plot_units**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_plot_units) | The desired units to plot the vector field in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.colors" target="_blank">**colors**</a> | List of the scalar and symbol field colors. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.data" target="_blank">**data**</a> | Pandas DataFrame that contains the fields to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.fields" target="_blank">**fields**</a> | Name of the scalar or symbol fields to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.fontsize" target="_blank">**fontsize**</a> | An integer value to set the font size of station plots. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.formats" target="_blank">**formats**</a> | List of the scalar, symbol, and text field data formats. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.level" target="_blank">**level**</a> | The level of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.locations" target="_blank">**locations**</a> | List of strings for scalar or symbol field plotting locations. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.plot_units" target="_blank">**plot_units**</a> | A list of the desired units to plot the fields in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.reduce_points" target="_blank">**reduce_points**</a> | Float to reduce number of points plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.time_window" target="_blank">**time_window**</a> | Set a range to look for data to plot as a timedelta object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field" target="_blank">**vector_field**</a> | List of the vector field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_color" target="_blank">**vector_field_color**</a> | String color name to plot the vector. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_length" target="_blank">**vector_field_length**</a> | Integer value to set the length of the plotted vector. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_plot_units" target="_blank">**vector_plot_units**</a> | The desired units to plot the vector field in. |
 
 ## Attribute Descriptions
 
@@ -47,7 +47,7 @@ elements of each element are given below.
 
 ### **time_range (optional)**
   * This attribute allows you to define a window for valid observations
-    (e.g., 15 minutes on either side of the datetime object setting. This
+    (e.g., 15 minutes on either side of the datetime object setting). This
     is important for surface data since actual observed times are not all
     exactly on the hour. If multiple observations exist in the defined
     window, the most recent observations is retained for plotting

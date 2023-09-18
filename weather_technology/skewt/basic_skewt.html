@@ -569,8 +569,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="visulalizing-and-calculating-parameters-on-a-skew-t">
 <h1><span class="section-number">20.6. </span>Visulalizing and Calculating Parameters on a Skew-T<a class="headerlink" href="#visulalizing-and-calculating-parameters-on-a-skew-t" title="Permalink to this heading">#</a></h1>
-<p>A powerful tool is being developed that will have the same functionality as GEMPAK, but be done in the Python programming langauage. One example of this is the ability to plot Skew-Ts using the Python module <a class="reference external" href="https://unidata.github.io/MetPy/latest/index.html">MetPy</a>. However, there is greatly functionality than that contained in GEMPAK, as you can use MetPy to calculate a whole host of variables from the data plotted on the Skew-T (e.g., CAPE, CIN, LCL, LFC, EL). This notebook is a brief introduction to how that can be done.</p>
-<p>To plot a skew-T, you need to specify the date and time (in UTC) and choose an upper-air station location. The locations of current sounding sites can be found at <a class="reference external" href="http://weather.rap.ucar.edu/upper">http://weather.rap.ucar.edu/upper</a></p>
+<p>A powerful tool is being developed that will have the same functionality as GEMPAK, but be done in the Python programming langauage. One example of this is the ability to plot Skew-Ts using the Python module <a href="https://unidata.github.io/MetPy/latest/index.html" target="_blank">MetPy()</a>. However, there is greatly functionality than that contained in GEMPAK, as you can use MetPy to calculate a whole host of variables from the data plotted on the Skew-T (e.g., CAPE, CIN, LCL, LFC, EL). This notebook is a brief introduction to how that can be done.</p>
+<p>To plot a skew-T, you need to specify the date and time (in UTC) and choose an upper-air station location. The locations of current sounding sites can be found at <a href="http://weather.rap.ucar.edu/upper" target="_blank">http://weather.rap.ucar.edu/upper</a></p>
 <section id="import-packages">
 <h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <p>Here we have a slightly different set of imports to be able to generate a skewT in Python. Here we bring in the <code class="docutils literal notranslate"><span class="pre">SkewT</span></code> class, a unit helper function and Siphon for reading data from the Wyoming archive.</p>
@@ -591,7 +591,7 @@ document.write(`
 <section id="get-data">
 <h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <p>Here we will obtain data for a single time for a single station from the Wyoming sounding archive.</p>
-<p><a class="reference external" href="https://weather.uwyo.edu/upperair/sounding.html">https://weather.uwyo.edu/upperair/sounding.html</a></p>
+<p><a href="https://weather.uwyo.edu/upperair/sounding.html" target="_blank">https://weather.uwyo.edu/upperair/sounding.html</a></p>
 <p>This dataset is prefered over the Iowa State archive due to how the data come in more ideal for plotting a profile.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -640,7 +640,7 @@ this point; however, what I hope is that it is pretty simple to
 understand. First, we create out figure instance, second set up our plot
 axis (<code class="docutils literal notranslate"><span class="pre">skew</span></code>), and then we plot on that axis (<code class="docutils literal notranslate"><span class="pre">skew.plot</span></code> and
 <code class="docutils literal notranslate"><span class="pre">skew.plot_barbs</span></code>).</p>
-<p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.SkewT.html">MetPy Skew-T Documentation</a></p>
+<p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.SkewT.html" target="_blank">MetPy Skew-T Documentation</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot a skew-T image</span>

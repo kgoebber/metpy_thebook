@@ -20,7 +20,7 @@ graphical output type.
 Additionally, you can set other parameters about how the image will
 save. We'll highlight two of them here, but for all of the available
 options go the Matplotlib help pages for 
-[savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html)
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html" target="_blank">savefig</a>
 
 ## Common (Good) Options
 
