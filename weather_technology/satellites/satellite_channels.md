@@ -6,7 +6,7 @@ of satellites currently residing over the United States. Here we'll cover
 the most commonly used channels for basic atmospheric analysis, red
 channel visible, clear IR, and midlevel water vapor. For more detail
 and information about all available channels can be found
-[here](https://www.noaa.gov/jetstream/goes_east).
+<a href="https://www.noaa.gov/jetstream/goes_east" target="_blank">here</a>.
 
 ## Visible Imagery
 

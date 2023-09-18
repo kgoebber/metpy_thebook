@@ -23,4 +23,4 @@ vwnd = ds['v-component_of_wind_isobaric']
 ds['wind_speed'] = mpcalc.wind_speed(uwnd, vwnd)
 ```
 
-[MetPy wind_speed Documentation](https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.wind_speed.html)
+<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.wind_speed.html" target="_blank">MetPy `wind_speed` Documentation</a>

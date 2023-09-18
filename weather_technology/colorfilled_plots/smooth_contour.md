@@ -4,7 +4,7 @@ The attribute is best used to smooth contours when contouring a
 sparse grid (e.g., when your data has a large grid spacing). This will
 use a spline interpolation.
 
-[MetPy `smooth_contour` Documentation](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_contour)
+<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_contour" target="_blank">MetPy `smooth_contour` Documentation</a>
 
 Here is an example ({numref}`Fig. %s <smoothcontour>`) of using `smooth_contour`,
 notice how the black contours,

@@ -29,9 +29,9 @@ stations.
 
 ## What stations?
 
-You can visit <http://www.rap.ucar.edu/weather/upper/> to locate the
-current available station IDs across the U.S. If you are looking for
+You can visit <a href="http://www.rap.ucar.edu/weather/upper/" target="_blank">http://www.rap.ucar.edu/weather/upper/</a>
+to locate the current available station IDs across the U.S. If you are looking for
 older datasets, visiting the Wyoming Sounding archive
-(<http://weather.uwyo.edu/upperair/sounding.html>) webpage will allow
-you to determine which sounding sites are available during whatever time
+(<a href="http://weather.uwyo.edu/upperair/sounding.html" target="_blank">http://weather.uwyo.edu/upperair/sounding.html</a>)
+webpage will allow you to determine which sounding sites are available during whatever time
 period you specify.

@@ -6,8 +6,9 @@ period of time. There are a number of online tools that can help you
 make an animated GIF to have a "loop" of image for a presentation or
 website.
 
-Any easy site to use is [ezgif.com](https://ezgif.com/maker) and here is the direct link:
-<https://ezgif.com/maker>
+Any easy site to use is <a href="https://ezgif.com/maker" target="_blank">ezgif.com</a>
+and here is the direct link:
+<a href="https://ezgif.com/maker" target="_blank">https://ezgif.com/maker</a>
 
 Simply browse for the series of images on your local machine, the click
 "Upload and make a gif". Once your images have uploaded, you'll be taken

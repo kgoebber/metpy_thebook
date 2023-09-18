@@ -2,24 +2,24 @@
 
 Make color-filled contours plots by defining appropriate traits.
 
-## [`FilledContourPlot()`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html)
+## <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html" target="_blank">`FilledContourPlot()`</a>
   | Attribute | Description |
   | - | - |
-  | [**clabels**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.clabels) | A boolean (True/False) on whether to plot contour labels. |
-  | [**colorbar**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.colorbar) | A string (horizontal/vertical) on whether to add a colorbar to the plot. |
-  | [**colorbar_fontsize**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.colorbar_fontsize) | An integer, float, or string value to set the font size of labels for the colorbar. |
-  | [**colormap**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.colormap) | The string name for a Matplotlib or MetPy colormap. |
-  | [**contours**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.contours) | A list of values to contour or an integer number of contour levels. |
-  | [**data**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.data) | Xarray dataset that contains the field to be plotted. |
-  | [**field**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.field) | Name of the field to be plotted. |
-  | [**image_range**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.image_range) | A tuple of min and max values that represent the range of values to color the rasterized image. |
-  | [**label_fontsize**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.label_fontsize) | An integer, float, or string value to set the font size of labels for contours. |
-  | [**level**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.level) | The level of the field to be plotted. |
-  | [**plot_units**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.plot_units) | The desired units to plot the field in. |
-  | [**scale**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.scale) | Scale the field to be plotted by the value given. |
-  | [**smooth_contour**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_contour) | Spline interpolation to smooth contours. |
-  | [**smooth_field**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_field) | Number of smoothing passes using 9-pt smoother. |
-  | [**time**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.time) | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.clabels" target="_blank">**clabels**</a> | A boolean (True/False) on whether to plot contour labels. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.colorbar" target="_blank">**colorbar**</a> | A string (horizontal/vertical) on whether to add a colorbar to the plot. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.colorbar_fontsize" target="_blank">**colorbar_fontsize**</a> | An integer, float, or string value to set the font size of labels for the colorbar. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.colormap" target="_blank">**colormap**</a> | The string name for a Matplotlib or MetPy colormap. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.contours" target="_blank">**contours**</a> | A list of values to contour or an integer number of contour levels. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.data" target="_blank">**data**</a> | Xarray dataset that contains the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.field" target="_blank">**field**</a> | Name of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.image_range" target="_blank">**image_range**</a> | A tuple of min and max values that represent the range of values to color the rasterized image. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.label_fontsize" target="_blank">**label_fontsize**</a> | An integer, float, or string value to set the font size of labels for contours. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.level" target="_blank">**level**</a> | The level of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.plot_units" target="_blank">**plot_units**</a> | The desired units to plot the field in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.scale" target="_blank">**scale**</a> | Scale the field to be plotted by the value given. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_contour" target="_blank">**smooth_contour**</a> | Spline interpolation to smooth contours. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_field" target="_blank">**smooth_field**</a> | Number of smoothing passes using 9-pt smoother. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
 
 ## Attribute Descriptions
 
@@ -59,11 +59,9 @@ Make color-filled contours plots by defining appropriate traits.
 * This attribute is used to set a valid colormap from either Matplotlib or
  MetPy:
 
- Matplotlib Colormaps:
- <https://matplotlib.org/stable/gallery/color/colormap_reference.html>
+  <a href="https://matplotlib.org/stable/gallery/color/colormap_reference.html" target="_blank">Matplotlib Colormaps</a>
 
- MetPy Colormaps:
- <https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ctables.html#module-metpy.plots.ctables>
+  <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ctables.html#module-metpy.plots.ctables" target="_blank">MetPy Colormaps</a>
 
 ### **colorbar**
 * This attribute can be set to 'vertical' or 'horizontal', which is the

@@ -6,7 +6,7 @@ produce smoothed geopotential heights for all levels available in the
 DataArray using the nine-point smoother twice or the number of iterations
 given as an integer.
 
-[MetPy `smooth_field` Documentation](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.smooth_field)
+<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.smooth_field" target="_blank">MetPy `smooth_field` Documentation</a>
 
 Here is an example ({numref}`Fig. %s <smoothfield>`) of using `smooth_field`,
 notice how the black contours,

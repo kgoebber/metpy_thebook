@@ -1,10 +1,10 @@
 # MetPy - `PanelContainer()`
 
-## [`PanelContainer()`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer)
+## <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer" target="_blank">`PanelContainer()`</a>
   | Attribute | Description |
   | - | - |
-  | [**panels**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer.panels) | A list of panels to plot on the figure. |
-  | [**size**](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer.size) | This trait takes a tuple of (width, height) to set the size of the figure. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer.panels" target="_blank">**panels**</a> | A list of panels to plot on the figure. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PanelContainer.html#metpy.plots.PanelContainer.size" target="_blank">**size**</a> | This trait takes a tuple of (width, height) to set the size of the figure. |
 
 ## Attribute Descriptions
 

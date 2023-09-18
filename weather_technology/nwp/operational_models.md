@@ -15,7 +15,7 @@ summarized below.
 | Runs | Every hour | 00, 06, 12, 18 UTC | 00, 06, 12, 18 UTC |
 
 For more information on these and other models run by governments across the world
-check out the [Operational Models Encyclopedia](https://sites.google.com/ucar.edu/operational-models-encyclo/home).
+check out the <a href="https://sites.google.com/ucar.edu/operational-models-encyclo/home" target="_blank">Operational Models Encyclopedia</a>.
 
 To access forecast hours from a model file you would simply input how
 many hours into the future you desire into a timedelta function and add

@@ -94,7 +94,7 @@ schematic image in {numref}`Figure %s <wvjetstream>` and {numref}`%s <wvcyclone>
 
 Enhanced water vapor imagery with 250 hPa wind speed analyzed in (kts).
 Image courtesy of CIMSS at
-http://cimss.ssec.wisc.edu/goes/blog/wp-content/uploads/2007/09/us_water_vapor_20070914_1200.png
+<a href="http://cimss.ssec.wisc.edu/goes/blog/wp-content/uploads/2007/09/us_water_vapor_20070914_1200.png" target="_blank">http://cimss.ssec.wisc.edu/goes/blog/wp-content/uploads/2007/09/us_water_vapor_20070914_1200.png</a>
 ```
 
 Additionally, a mature mid-latitude cyclone will exhibit the shape of a

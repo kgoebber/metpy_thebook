@@ -54,4 +54,4 @@ right pane.
 To learn more about about the Jupyter Lab web interface, visit the
 following website:
 
-<https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b?#0992>
+<a href="https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b?#0992" target="_blank">Jupyter Lab Overview</a>

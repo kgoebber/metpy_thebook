@@ -24,5 +24,5 @@ them straightforward to use, you'll just need to know what data to feed into
 the function. That is where looking and reading the documentation for a
 given function will be important.
 
-Available [MetPy Calculation Functions](https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html)
+Available <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.html" target="_blank">MetPy Calculation Functions</a>
 

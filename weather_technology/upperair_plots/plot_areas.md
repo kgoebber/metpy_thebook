@@ -19,4 +19,4 @@ southern latitude, northern latitude. For example, to plot over the continental 
 
 A full list of valid areas is contained within the MetPy documentation. You can see that
 list and a basic visualization of the area using the default projection for that area
-at: https://unidata.github.io/MetPy/latest/api/areas.html
+at: <a href="https://unidata.github.io/MetPy/latest/api/areas.html" target="_blank">https://unidata.github.io/MetPy/latest/api/areas.html</a>

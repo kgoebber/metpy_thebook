@@ -2,22 +2,22 @@
 
 Make plots of wind barbs on a map with traits to refine the look of plotted elements.
 
-# [`ArrowPlot()`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html)
+# <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html" target="_blank">`ArrowPlot()`</a>
   | Attribute | Description |
   | - | - |
-  | [`arrowkey`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.arrowkey) | Set the characteristics of an arrow key using a tuple of values representing (value, xloc, yloc, position, string). |
-  | [`arrowscale`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.arrowscale) | Number of data units per arrow length unit, e.g., m/s per plot width; a smaller scale parameter makes the arrow longer. |
-  | [`color`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.color) | A string value that controls the color of the vectors. |
-  | [`data`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.data) | Xarray dataset that contains the field to be plotted. |
-  | [`earth_relative`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.earth_relative) | A boolean value to indicate whether the vector to be plotted is earth- or grid-relative. |
-  | [`field`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.field) | A tuple containing the two components of the vector field from the dataset in the form (east-west component, north-south component). |
-  | [`level`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.level) | The level of the field to be plotted. |
-  | [`pivot`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.pivot) | A string setting the pivot point of the vector. |
-  | [`plot_units`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.plot_units) | The desired units to plot the field in. |
-  | [`plotdata`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.plotdata) | Return the data for plotting. |
-  | [`scale`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.scale) | Scale the field to be plotted by the value given. |
-  | [`skip`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.skip) | A tuple of integers to indicate the number of grid points to skip between plotting vectors. |
-  | [`time`](https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.time) | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.arrowkey" target="_blank">**arrowkey**</a> | Set the characteristics of an arrow key using a tuple of values representing (value, xloc, yloc, position, string). |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.arrowscale" target="_blank">**arrowscale**</a> | Number of data units per arrow length unit, e.g., m/s per plot width; a smaller scale parameter makes the arrow longer. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.color" target="_blank">**color**</a> | A string value that controls the color of the vectors. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.data" target="_blank">**data**</a> | Xarray dataset that contains the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.earth_relative" target="_blank">**earth_relative**</a> | A boolean value to indicate whether the vector to be plotted is earth- or grid-relative. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.field" target="_blank">**field**</a> | A tuple containing the two components of the vector field from the dataset in the form (east-west component, north-south component). |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.level" target="_blank">**level**</a> | The level of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.pivot" target="_blank">**pivot**</a> | A string setting the pivot point of the vector. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.plot_units" target="_blank">**plot_units**</a> | The desired units to plot the field in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.plotdata" target="_blank">**plotdata**</a> | Return the data for plotting. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.scale" target="_blank">**scale**</a> | Scale the field to be plotted by the value given. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.skip" target="_blank">**skip**</a> | A tuple of integers to indicate the number of grid points to skip between plotting vectors. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ArrowPlot.html#metpy.plots.ArrowPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
 
 ## Attribute Descriptions
 
@@ -33,7 +33,7 @@ Make plots of wind barbs on a map with traits to refine the look of plotted elem
     If you wish to change a characteristic of the arrowkey you'll need to have a tuple of five elements,
     fill in the full tuple using *None* for those characteristics you wish to use the default value and
     put in the new values for the other elements. This trait corresponds to the keyword length in
-    [`matplotlib.pyplot.quiverkey`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiverkey.html#matplotlib.pyplot.quiverkey "(in Matplotlib v3.7.2)").
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiverkey.html#matplotlib.pyplot.quiverkey " target="_blank">`matplotlib.pyplot.quiverkey`</a>.
 
 ### **arrowscale**
   * Number of data units per arrow length unit, e.g., m/s per plot width; a smaller scale parameter makes
@@ -43,7 +43,7 @@ Make plots of wind barbs on a map with traits to refine the look of plotted elem
     vectors. The arrow length unit is given by the *key_length* attribute.
 
     This trait corresponds to the keyword length in
-    [`matplotlib.pyplot.quiver`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver "(in Matplotlib v3.7.2)").
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver " target="_blank">`matplotlib.pyplot.quiver`</a>.
 
 ### **color**
   * A string value that controls the color of the vectors. Default value is black.
@@ -101,6 +101,6 @@ Make plots of wind barbs on a map with traits to refine the look of plotted elem
   * Set the valid time to be plotted as a datetime object.
 
     If a forecast hour is to be plotted the time should be set to the valid future time, which can be done using the
-    [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime "(in Python v3.11)") and
-    [`timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta "(in Python v3.11)")
+    <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" target="_blank">`datetime`</a> and
+    <a href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" target="_blank">`timedelta`</a>
     objects from the Python standard library. Note that this requires your data to have a time dimension coordinate.

@@ -10,4 +10,4 @@
     (EL) and plot on a skew-T.
 
 3.  Shade CAPE and CIN areas; see the example from MetPy for help
-    <https://unidata.github.io/MetPy/latest/examples/Advanced_Sounding.html#sphx-glr-examples-advanced-sounding-py>
+    <a href="https://unidata.github.io/MetPy/latest/examples/Advanced_Sounding.html#sphx-glr-examples-advanced-sounding-py" target="_blank">https://unidata.github.io/MetPy/latest/examples/Advanced_Sounding.html#sphx-glr-examples-advanced-sounding-py</a>

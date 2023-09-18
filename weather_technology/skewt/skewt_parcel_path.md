@@ -29,7 +29,10 @@ until they intersect.
 :name: findingLCL
 
 This is a diagram to illustrate the finding of the Lifiting Condensation
-Level (LCL). Source: http://www.erh.noaa.gov/rah/education/eduit.html
+Level (LCL).
+
+Source: _The Use of The Skew T, Log P Diagram in Analysis and Forecasting_
+AWS/TR-79/006
 ```
 
 Once the LCL is determined, then the parcel path can be drawn. Starting
@@ -47,6 +50,9 @@ path.)
 
 This is a diagram to illustrate of plotting the parcel path using the
 lifting condentation level (LCL).
+
+Source: _The Use of The Skew T, Log P Diagram in Analysis and Forecasting_
+AWS/TR-79/006
 ```
 
 As the result of drawing in the parcel path two other important levels

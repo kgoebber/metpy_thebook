@@ -21,7 +21,7 @@ vwind = ds['v-component_of_wind_isobaric'].metpy.sel(vertical=level, time=plot_t
 ds['temperature_advection'] = mpcalc.advection(tmpk, uwind, vwind)
 ```
 
-[Advection Calculation Documentation](https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.advection.html)
+<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.advection.html" target="_blank">Advection Calculation Documentation</a>
 
 Advection can be scaled a couple of different ways, but generally we
 want to put it in terms of temperature per 3 hours. So, scaling by 10^4^

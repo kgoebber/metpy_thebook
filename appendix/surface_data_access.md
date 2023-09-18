@@ -20,7 +20,7 @@ df = metar.parse_metar_file(data, year=2021, month=1)
 
 
 ## Valpo Remote Data Access
-Remote Access Current Data (Valpo: http://bergeron.valpo.edu/current_surface_data)
+Remote Access Current Data (Valpo: <a href="http://bergeron.valpo.edu/current_surface_data" target="_blank">http://bergeron.valpo.edu/current_surface_data</a>)
 
 The current data are roughly the past two weeks worth of surface data.
 

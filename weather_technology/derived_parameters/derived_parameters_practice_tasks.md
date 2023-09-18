@@ -7,9 +7,9 @@
     cyclones. What relationships do you see in real-time forecast
     models?
 
-    a.  <https://weather.cod.edu/forecast/>
+    a.  <a href="https://weather.cod.edu/forecast/" target="_blank">https://weather.cod.edu/forecast/</a>
 
-    b.  <https://www.pivotalweather.com/model.php>
+    b.  <a href="https://www.pivotalweather.com/model.php" target="_blank">https://www.pivotalweather.com/model.php</a>
 
 2.  Use a map of 500 mb vorticity from the most recent NAM forecast
     model to practice analyzing areas of *cyclonic* vorticity advection

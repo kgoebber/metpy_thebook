@@ -16,7 +16,7 @@ heavy precipitation will move through quickly.
 Illustration of a cold front cross-section demonstrating precipitation
 that could occur along its leading edge.
 
-The [cross section through a cold front and warm front](https://commons.wikimedia.org/wiki/File:Cross_section_through_a_cold_front_and_warm_front.jpg)
+The <a href="https://commons.wikimedia.org/wiki/File:Cross_section_through_a_cold_front_and_warm_front.jpg" target="_blank">cross section through a cold front and warm front</a>
 image was created by Kh1604 and is licensed under the
-["Creative Commons Attribution-Share Alike 4.0 International"](https://creativecommons.org/licenses/by-sa/4.0/deed.en) 
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">"Creative Commons Attribution-Share Alike 4.0 International"</a> 
 ```

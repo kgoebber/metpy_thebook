@@ -19,7 +19,7 @@ input error (an i-d-10-t error, as they say).
 
 *Important Notes (before we get started):*
 
-MetPy Website: <https://unidata.github.io/MetPy/latest/index.html>
+MetPy Website: <a href="https://unidata.github.io/MetPy/latest/index.html" target="_blank">https://unidata.github.io/MetPy/latest/index.html</a>
 
 This website has all the documentation for the current version of MetPy.
 You will only be introduced to what small bits of MetPy can do here
