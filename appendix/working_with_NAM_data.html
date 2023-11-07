@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Introduction &#8212; Introduction to Weather Technology using MetPy</title>
+    <title>Working with NAM Data &#8212; Introduction to Weather Technology using MetPy</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/introduction';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/working_with_NAM_data';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.1. Why Python?" href="whypython.html" />
-    <link rel="prev" title="Introduction to Weather Technology using MetPy" href="../intro.html" />
+    <link rel="next" title="The Influence of SST on Midlatitude Cyclones" href="story_telling_with_data.html" />
+    <link rel="prev" title="Access Gridded Archive Data" href="gridded_archive_data_access.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,27 +157,27 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Introduction</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="whypython.html">1.1. Why Python?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jlab_environ.html">1.2. Jupyter Lab Environment</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="linux_intro.html">1.3. Linux Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="linux_paths.html">Linux Paths</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_pwd.html">Where am I?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_list.html">What do I have here?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_manual.html">Where’s the manual for this thing?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_create_directory.html">How do I create/remove a directory?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_change_directory.html">How do I move to another directory?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_copy.html">How do I make a copy of something?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_rename.html">How do I rename and/or move something?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_remove.html">How do I remove a file?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linux_cat_less_more.html">What’s in a file?</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/whypython.html">1.1. Why Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/jlab_environ.html">1.2. Jupyter Lab Environment</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../introduction/linux_intro.html">1.3. Linux Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_paths.html">Linux Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_pwd.html">Where am I?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_list.html">What do I have here?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_manual.html">Where’s the manual for this thing?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_create_directory.html">How do I create/remove a directory?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_change_directory.html">How do I move to another directory?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_copy.html">How do I make a copy of something?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_rename.html">How do I rename and/or move something?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_remove.html">How do I remove a file?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/linux_cat_less_more.html">What’s in a file?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="vi_intro.html">1.4. Editing Files in Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_html.html">1.5. Hypertext Markup Language (HTML)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python_script_from_notebook.html">1.6. Python Script from a Notebook File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_looping_gifs.html">1.7. Create Looping GIFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/vi_intro.html">1.4. Editing Files in Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/basic_html.html">1.5. Hypertext Markup Language (HTML)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/python_script_from_notebook.html">1.6. Python Script from a Notebook File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/create_looping_gifs.html">1.7. Create Looping GIFs</a></li>
 </ul>
 </li>
 </ul>
@@ -342,23 +342,23 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/overcomming_errors.html">Common Errors and Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/surface_data_access.html">Accessing Surface Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/upperair_data_access.html">Accessing Upperair Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/working_with_NAM_data.html">Working with NAM Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/story_telling_with_data.html">The Influence of SST on Midlatitude Cyclones</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_rasterplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_arrowplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overcomming_errors.html">Common Errors and Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surface_data_access.html">Accessing Surface Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upperair_data_access.html">Accessing Upperair Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Working with NAM Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story_telling_with_data.html">The Influence of SST on Midlatitude Cyclones</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_rasterplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_arrowplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../appendix/metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -432,7 +432,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintroduction/introduction.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fappendix/working_with_NAM_data.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -462,7 +462,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/introduction/introduction.md" target="_blank"
+      <li><a href="../_sources/appendix/working_with_NAM_data.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -472,7 +472,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -531,7 +531,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,11 +544,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction</h1>
+    <h1>Working with NAM Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-plot">Initial Plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sanity-check">Sanity Check</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corrected-nam-winds">Corrected NAM Winds</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -556,27 +571,163 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
-<p>This textbook serves as an introduction to using scientific computing
-in Python to analyze and visualize atmospheric data commonly used
-in synoptic meteorology. The book is organized into three main sections:</p>
-<ol class="arabic simple">
-<li><p>a brief introduction with material covering why we currently use
-Python, how to run Jupyter Notebooks, and how to get started using
-Python on your own machines.</p></li>
-<li><p>an introduction to basic use of Python
-including variables, lists, dictionaries, and slicing as well as how to
-run Python scripts, program control elements, and the datetime module;</p></li>
-<li><p>a comprehensive introduction to the declarative syntax that is part
-of the MetPy module with the context of introductory meteorological
-concepts.</p></li>
-</ol>
-<p>Incorporated throughout the text there are links to additional resources
-to continue to expand your knowledge of and use of Python in analyzing
-and visualizing meteorological data.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="working-with-nam-data">
+<h1>Working with NAM Data<a class="headerlink" href="#working-with-nam-data" title="Permalink to this heading">#</a></h1>
+<p>This notebook demonstrates plotting gridded NAM data, which has the complication
+of having winds that are in grid relative coordinates and NOT earth relative.
+This will entail the need to use some MetPy functionality to easy the plotting
+of NAM winds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">time</span>
+
+<span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">declarative</span>
+<span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+</pre></div>
 </div>
+</div>
+</div>
+<section id="get-data">
+<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
+<p>Here we are using current data to demonstrate contour plotting with wind barbs. If you have a different data source you would like to use, simply change out the call to remote data in the <code class="docutils literal notranslate"><span class="pre">open_dataset</span></code> function to be appropriate for the local or remote data you would like to access. Future chapters will demonstrate different data sources that can be commonly used. Here we’ll use the NAM data from the Unidata THREDDS server.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the date/time of the model run</span>
+<span class="c1"># The following code will get you yesterday at 12 UTC</span>
+<span class="n">yesterday</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">model_run_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">yesterday</span><span class="p">,</span> <span class="n">time</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+
+<span class="c1"># Remote access to the dataset from the UCAR site</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.ucar.edu/thredds/dodsC/grib&#39;</span>
+                     <span class="s1">&#39;/NCEP/NAM/CONUS_12km/NAM_CONUS_12km_&#39;</span>
+                     <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_run_date</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">model_run_date</span><span class="si">:</span><span class="s1">%H%M</span><span class="si">}</span><span class="s1">.grib2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">parse_cf</span><span class="p">()</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">assign_latitude_longitude</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="initial-plot">
+<h2>Initial Plot<a class="headerlink" href="#initial-plot" title="Permalink to this heading">#</a></h2>
+<p>Here let’s plot the data that we get from the NAM. Pay particular attention to the winds barbs relationship to the geopotential height contours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the plot time with forecast hours</span>
+<span class="n">plot_time</span> <span class="o">=</span> <span class="n">model_run_date</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Set attributes for plotting contours</span>
+<span class="n">cntr</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">ContourPlot</span><span class="p">()</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;Geopotential_height_isobaric&#39;</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">plot_time</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">contours</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">clabels</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Add wind barbds</span>
+<span class="n">barbs</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">BarbPlot</span><span class="p">()</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">plot_time</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">skip</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">plot_units</span> <span class="o">=</span> <span class="s1">&#39;knot&#39;</span>
+
+<span class="c1"># Set the attributes for the map</span>
+<span class="c1"># and put the contours on the map</span>
+<span class="n">panel</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">MapPanel</span><span class="p">()</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="s1">&#39;awips&#39;</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;states&#39;</span><span class="p">,</span> <span class="s1">&#39;coastline&#39;</span><span class="p">,</span> <span class="s1">&#39;borders&#39;</span><span class="p">]</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;300-hPa Geopotential Heights at </span><span class="si">{</span><span class="n">plot_time</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">plots</span> <span class="o">=</span> <span class="p">[</span><span class="n">cntr</span><span class="p">,</span> <span class="n">barbs</span><span class="p">]</span>
+
+<span class="c1"># Set the attributes for the panel</span>
+<span class="c1"># and put the panel in the figure</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">PanelContainer</span><span class="p">()</span>
+<span class="n">pc</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">pc</span><span class="o">.</span><span class="n">panels</span> <span class="o">=</span> <span class="p">[</span><span class="n">panel</span><span class="p">]</span>
+
+<span class="c1"># Show the figure</span>
+<span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/dbb5440af0fbd3e5cab8c7ef0c94be2649cd2900c2e02ebbbfa32105004e5006.png" src="../_images/dbb5440af0fbd3e5cab8c7ef0c94be2649cd2900c2e02ebbbfa32105004e5006.png" />
+</div>
+</div>
+<section id="sanity-check">
+<h3>Sanity Check<a class="headerlink" href="#sanity-check" title="Permalink to this heading">#</a></h3>
+<p>Here we are plotting 300-hPa geopotential heights and winds. At that level, the winds should be geostrophic, meaning that the winds barbs should be parallel to the contours of geopotential height. When we look toward the edge of the map this is where we see that the wind barbs are not clearly conforming to geostrophic balance. The winds are crossing the geopotential height contours at an angle that they shouldn’t be. This behaviour is due to the curvature of the projection not aligning with the assumptions made to plot the wind barbs.</p>
+<p>Luckily we have an easy solution built in to the MetPy declarative syntax to convert the stored grid relative winds and make them earth relative for plotting. The attribute to set as part of the <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code> class is <code class="docutils literal notranslate"><span class="pre">earth_relative</span></code>. We need to tell MetPy that our winds are NOT earth relative. This is a boolean setting, such that for our NAM winds <code class="docutils literal notranslate"><span class="pre">earth_relative</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</section>
+</section>
+<section id="corrected-nam-winds">
+<h2>Corrected NAM Winds<a class="headerlink" href="#corrected-nam-winds" title="Permalink to this heading">#</a></h2>
+<p>Let’s try it out and compare the NAM wind barbs that are grid-relative to our recomputed earth relative wind barbs using the MetPy attribute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the plot time with forecast hours</span>
+<span class="n">plot_time</span> <span class="o">=</span> <span class="n">model_run_date</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Set attributes for plotting contours</span>
+<span class="n">cntr</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">ContourPlot</span><span class="p">()</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;Geopotential_height_isobaric&#39;</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">plot_time</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">contours</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">cntr</span><span class="o">.</span><span class="n">clabels</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Add wind barbds</span>
+<span class="n">barbs</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">BarbPlot</span><span class="p">()</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">plot_time</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">skip</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">barbs</span><span class="o">.</span><span class="n">plot_units</span> <span class="o">=</span> <span class="s1">&#39;knot&#39;</span>
+
+<span class="c1"># Add wind barbds</span>
+<span class="n">barbs2</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">BarbPlot</span><span class="p">()</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">plot_time</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">skip</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">plot_units</span> <span class="o">=</span> <span class="s1">&#39;knot&#39;</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:red&#39;</span>
+<span class="n">barbs2</span><span class="o">.</span><span class="n">earth_relative</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Set the attributes for the map</span>
+<span class="c1"># and put the contours on the map</span>
+<span class="n">panel</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">MapPanel</span><span class="p">()</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="s1">&#39;awips&#39;</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;states&#39;</span><span class="p">,</span> <span class="s1">&#39;coastline&#39;</span><span class="p">,</span> <span class="s1">&#39;borders&#39;</span><span class="p">]</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;300-hPa Geopotential Heights at </span><span class="si">{</span><span class="n">plot_time</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;grid-relative wind barbs (black) and earth-relative wind barbs (red)&#39;</span><span class="p">)</span>
+<span class="n">panel</span><span class="o">.</span><span class="n">plots</span> <span class="o">=</span> <span class="p">[</span><span class="n">cntr</span><span class="p">,</span> <span class="n">barbs</span><span class="p">,</span> <span class="n">barbs2</span><span class="p">]</span>
+
+<span class="c1"># Set the attributes for the panel</span>
+<span class="c1"># and put the panel in the figure</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">declarative</span><span class="o">.</span><span class="n">PanelContainer</span><span class="p">()</span>
+<span class="n">pc</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">pc</span><span class="o">.</span><span class="n">panels</span> <span class="o">=</span> <span class="p">[</span><span class="n">panel</span><span class="p">]</span>
+
+<span class="c1"># Show the figure</span>
+<span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2abad2ee5655f0c2985104f3c364c0db8a9803ad54a255ce67e36b558d9784aa.png" src="../_images/2abad2ee5655f0c2985104f3c364c0db8a9803ad54a255ce67e36b558d9784aa.png" />
+</div>
+</div>
+<p>In the above graphic we can observe the corrected winds (in red) and notice that the largest differences are noted on the edges of the map where the curvature of the projection is notably different between the projection of the winds and the projection of the plot. The only change that was needed to get the winds in the correct orientation was to set the attribute <code class="docutils literal notranslate"><span class="pre">earth_relative</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code> since the NAM output stores wind components in a grid-relative format.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -592,7 +743,7 @@ and visualizing meteorological data.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./introduction"
+            path: "./appendix"
         },
         predefinedOutput: true
     }
@@ -611,20 +762,20 @@ and visualizing meteorological data.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="gridded_archive_data_access.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to Weather Technology using MetPy</p>
+        <p class="prev-next-title">Access Gridded Archive Data</p>
       </div>
     </a>
     <a class="right-next"
-       href="whypython.html"
+       href="story_telling_with_data.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.1. </span>Why Python?</p>
+        <p class="prev-next-title">The Influence of SST on Midlatitude Cyclones</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -637,6 +788,25 @@ and visualizing meteorological data.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-plot">Initial Plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sanity-check">Sanity Check</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corrected-nam-winds">Corrected NAM Winds</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
