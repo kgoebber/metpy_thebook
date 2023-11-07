@@ -177,6 +177,7 @@ parts:
       - file: appendix/surface_data_access
       - file: appendix/upperair_data_access
       - file: appendix/gridded_archive_data_access
+      - file: appendix/working_with_NAM_data
       - file: appendix/story_telling_with_data
       - file: appendix/metpy_declarative_details
         sections:
