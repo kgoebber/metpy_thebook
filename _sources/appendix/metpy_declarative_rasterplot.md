@@ -17,6 +17,7 @@ Make raster plots by defining relevant traits.
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.smooth_contour" target="_blank">**smooth_contour**</a> | Spline interpolation to smooth contours. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.smooth_field" target="_blank">**smooth_field**</a> | Number of smoothing passes using 9-pt smoother. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.mpl_args" target="_blank">**mpl_args**</a> | Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn. |
 
 ## Attribute Descriptions
 
@@ -102,3 +103,9 @@ Make raster plots by defining relevant traits.
     <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" target="_blank">`datetime`</a> and
     <a href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" target="_blank">`timedelta`</a>
     objects from the Python standard library. Note that this requires your data to have a time dimension coordinate.
+  
+  ### **mpl_args**
+* This attribute can be set to a dictionary containing keyword arguments (kwarg)
+  valid for the various Matplotlib plotting functions to enhance how a plot is
+  created. For example, you can use this attribute to set the `zorder` kwarg to
+  alter what aspects of the your plot are on top of one another.

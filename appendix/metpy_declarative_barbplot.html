@@ -564,6 +564,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color"><strong>color</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-relative"><strong>earth_relative</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot"><strong>pivot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -622,6 +623,9 @@ model output from the GFS, NAM, or RAP.</p>
 </tr>
 <tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html#metpy.plots.BarbPlot.time" target="_blank"><strong>time</strong></a></p></td>
 <td><p>Set the valid time to be plotted as a datetime object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html#metpy.plots.BarbPlot.mpl_args" target="_blank"><strong>mpl_args</strong></a></p></td>
+<td><p>Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn.</p></td>
 </tr>
 </tbody>
 </table>
@@ -684,6 +688,15 @@ relative (e.g., for NAM or NARR output)</p></li>
 <li><p>This attribute can be set to a string value about where the wind barb
 will pivot relative to the grid point. Possible values include ‘tip’ or
 ‘middle’. Default is ‘middle’.</p></li>
+</ul>
+</section>
+<section id="mpl-args">
+<h3><strong>mpl_args</strong><a class="headerlink" href="#mpl-args" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute can be set to a dictionary containing keyword arguments (kwarg)
+valid for the various Matplotlib plotting functions to enhance how a plot is
+created. For example, you can use this attribute to set the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> kwarg to
+alter what aspects of the your plot are on top of one another.</p></li>
 </ul>
 </section>
 </section>
@@ -766,6 +779,7 @@ will pivot relative to the grid point. Possible values include ‘tip’ or
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color"><strong>color</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-relative"><strong>earth_relative</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivot"><strong>pivot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 </ul>
 </li>
 </ul>

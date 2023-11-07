@@ -20,6 +20,7 @@ Make color-filled contours plots by defining appropriate traits.
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_contour" target="_blank">**smooth_contour**</a> | Spline interpolation to smooth contours. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.smooth_field" target="_blank">**smooth_field**</a> | Number of smoothing passes using 9-pt smoother. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot.mpl_args" target="_blank">**mpl_args**</a> | Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn. |
 
 ## Attribute Descriptions
 
@@ -87,3 +88,9 @@ Make color-filled contours plots by defining appropriate traits.
 * This attribute is best used to smooth contours when contouring a
   higher resolution (smaller grid spacing with lots of grid points) field.
   This will produce a smoothed field using the nine-point smoother twice.
+
+### **mpl_args**
+* This attribute can be set to a dictionary containing keyword arguments (kwarg)
+  valid for the various Matplotlib plotting functions to enhance how a plot is
+  created. For example, you can use this attribute to set the `zorder` kwarg to
+  alter what aspects of the your plot are on top of one another.

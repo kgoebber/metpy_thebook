@@ -572,6 +572,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fontsize-optional"><strong>fontsize (optional)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce-points-optional"><strong>reduce_points (optional)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>fontsize (optional)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -644,6 +645,9 @@ elements of each element are given below.</p>
 </tr>
 <tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_plot_units" target="_blank"><strong>vector_plot_units</strong></a></p></td>
 <td><p>The desired units to plot the vector field in.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.mpl_args" target="_blank"><strong>mpl_args</strong></a></p></td>
+<td><p>Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn.</p></td>
 </tr>
 </tbody>
 </table>
@@ -773,6 +777,15 @@ removed from the plot).</p></li>
 station plots. Default is 10 pt.</p></li>
 </ul>
 </section>
+<section id="mpl-args">
+<h3><strong>mpl_args</strong><a class="headerlink" href="#mpl-args" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute can be set to a dictionary containing keyword arguments (kwarg)
+valid for the various Matplotlib plotting functions to enhance how a plot is
+created. For example, you can use this attribute to set the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> kwarg to
+alter what aspects of the your plot are on top of one another.</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -861,6 +874,7 @@ station plots. Default is 10 pt.</p></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fontsize-optional"><strong>fontsize (optional)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce-points-optional"><strong>reduce_points (optional)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>fontsize (optional)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 </ul>
 </li>
 </ul>

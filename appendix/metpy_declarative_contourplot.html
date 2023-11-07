@@ -568,6 +568,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-units"><strong>plot_units</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-contour"><strong>smooth_contour</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-field"><strong>smooth_field</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -644,6 +645,9 @@ model output from the GFS, NAM, or RAP.</p>
 </tr>
 <tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.time" target="_blank"><strong>time</strong></a></p></td>
 <td><p>Set the valid time to be plotted as a datetime object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot.mpl_args" target="_blank"><strong>mpl_args</strong></a></p></td>
+<td><p>Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn.</p></td>
 </tr>
 </tbody>
 </table>
@@ -753,6 +757,15 @@ higher resolution (smaller grid spacing with lots of grid points) field.
 This will produce a smoothed field using the nine-point smoother twice.</p></li>
 </ul>
 </section>
+<section id="mpl-args">
+<h3><strong>mpl_args</strong><a class="headerlink" href="#mpl-args" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute can be set to a dictionary containing keyword arguments (kwarg)
+valid for the various Matplotlib plotting functions to enhance how a plot is
+created. For example, you can use this attribute to set the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> kwarg to
+alter what aspects of the your plot are on top of one another.</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -837,6 +850,7 @@ This will produce a smoothed field using the nine-point smoother twice.</p></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-units"><strong>plot_units</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-contour"><strong>smooth_contour</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-field"><strong>smooth_field</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 </ul>
 </li>
 </ul>

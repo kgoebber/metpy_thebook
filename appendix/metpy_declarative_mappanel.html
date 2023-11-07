@@ -559,9 +559,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout"><strong>layout</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projection"><strong>projection</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers"><strong>layers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-alpha"><strong>layers_alpha</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-edgecolor"><strong>layers_edgecolor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-linestyle"><strong>layers_linestyle</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-linewidth"><strong>layers_linewidth</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-zorder"><strong>layers_zorder</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area"><strong>area</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#title"><strong>title</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#left-title"><strong>left_title</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#right-title"><strong>right_title</strong></a></li>
@@ -593,32 +597,44 @@ document.write(`
 <tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers" target="_blank"><strong>layers</strong></a></p></td>
 <td><p>A list of strings for a pre-defined feature layer or a Cartopy Feature object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_edgecolor" target="_blank"><strong>layers_edgecolor</strong></a></p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_alpha" target="_blank"><strong>layers_alpha</strong></a></p></td>
+<td><p>A list of values defining the alpha for a layer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_edgecolor" target="_blank"><strong>layers_edgecolor</strong></a></p></td>
 <td><p>A list of strings for a pre-defined edgecolor for a layer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_linestyle" target="_blank"><strong>layers_linestyle</strong></a></p></td>
+<td><p>A list of string values defining the linestyle for a layer or None.</p></td>
 </tr>
 <tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_linewidth" target="_blank"><strong>layers_linewidth</strong></a></p></td>
 <td><p>A list of values defining the linewidth for a layer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layout" target="_blank"><strong>layout</strong></a></p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layers_zorder" target="_blank"><strong>layers_zorder</strong></a></p></td>
+<td><p>A list of values defining the zorder for a layer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.layout" target="_blank"><strong>layout</strong></a></p></td>
 <td><p>A tuple that contains the description (nrows, ncols, index) of the panel position; default value is (1, 1, 1).</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.left_title" target="_blank"><strong>left_title</strong></a></p></td>
-<td><p>A string to set a title for the figure with the location on the top left of the figure.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.plots" target="_blank"><strong>plots</strong></a></p></td>
-<td><p>A list of handles that represent the plots (e.g., <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.PlotObs" target="_blank"><strong>PlotObs</strong></a>, <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot" target="_blank"><strong>ContourPlot</strong></a>, <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot" target="_blank"><strong>FilledContourPlot</strong></a>, <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot" target="_blank"><strong>ImagePlot</strong></a>) to put on a given panel.</p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.mpl_args" target="_blank"><strong>mpl_args</strong></a></p></td>
+<td><p>Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn.</p></td>
 </tr>
 <tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.projection" target="_blank"><strong>projection</strong></a></p></td>
 <td><p>A string for a pre-defined projection or a Cartopy projection object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.right_title" target="_blank"><strong>right_title</strong></a></p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.left_title" target="_blank"><strong>left_title</strong></a></p></td>
+<td><p>A string to set a title for the figure with the location on the top left of the figure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.right_title" target="_blank"><strong>right_title</strong></a></p></td>
 <td><p>A string to set a title for the figure with the location on the top right of the figure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.title" target="_blank"><strong>title</strong></a></p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.title" target="_blank"><strong>title</strong></a></p></td>
 <td><p>A string to set a title for the figure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.title_fontsize" target="_blank"><strong>title_fontsize</strong></a></p></td>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.title_fontsize" target="_blank"><strong>title_fontsize</strong></a></p></td>
 <td><p>An integer or string value for the font size of the title of the figure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.MapPanel.html#metpy.plots.MapPanel.plots" target="_blank"><strong>plots</strong></a></p></td>
+<td><p>A list of handles that represent the plots (e.g., <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.PlotObs" target="_blank"><strong>PlotObs</strong></a>, <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ContourPlot.html#metpy.plots.ContourPlot" target="_blank"><strong>ContourPlot</strong></a>, <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.FilledContourPlot.html#metpy.plots.FilledContourPlot" target="_blank"><strong>FilledContourPlot</strong></a>, <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot" target="_blank"><strong>ImagePlot</strong></a>) to put on a given panel.</p></td>
 </tr>
 </tbody>
 </table>
@@ -647,19 +663,42 @@ plot on the map. Valid layers are borders, coastline, states, lakes,
 land, ocean, rivers, counties.</p></li>
 </ul>
 </section>
+<section id="layers-alpha">
+<h3><strong>layers_alpha</strong><a class="headerlink" href="#layers-alpha" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute will set the alpha setting for those values listed in the
+layers attribute. Values should be given as floats between 0 and 1.</p></li>
+</ul>
+</section>
 <section id="layers-edgecolor">
 <h3><strong>layers_edgecolor</strong><a class="headerlink" href="#layers-edgecolor" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>This attribute will set the edgecolor for those values listed in the map
+<li><p>This attribute will set the edgecolor for those values listed in the
 layers attribute. Valid colors correspond to valid Matplotlib named
 colors.</p></li>
+</ul>
+</section>
+<section id="layers-linestyle">
+<h3><strong>layers_linestyle</strong><a class="headerlink" href="#layers-linestyle" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute will set the linestyle for those values listed in the
+layers attribute. The valid values are those from Matplotlib and
+include ‘dashed’, ‘dash-dot’, ‘dotted’, or ‘solid’.</p></li>
 </ul>
 </section>
 <section id="layers-linewidth">
 <h3><strong>layers_linewidth</strong><a class="headerlink" href="#layers-linewidth" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>This attribute will set the linewidth (as a float) for those values
-listed in the map layers attribute.</p></li>
+listed in the layers attribute.</p></li>
+</ul>
+</section>
+<section id="layers-zorder">
+<h3><strong>layers_zorder</strong><a class="headerlink" href="#layers-zorder" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute will set the zorder (as a float) for those values
+listed in the layers attribute and can be used to raise or lower
+layer features.</p></li>
 </ul>
 </section>
 <section id="area">
@@ -672,6 +711,15 @@ tuple value that corresponds to longitude/latitude box based on the
 projection of the map with the format (west-most longitude, east-most
 longitude, south-most latitude, north-most latitude). This tuple defines
 a box from the lower-left to the upper-right corner.</p></li>
+</ul>
+</section>
+<section id="mpl-args">
+<h3><strong>mpl_args</strong><a class="headerlink" href="#mpl-args" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This attribute can be set to a dictionary containing keyword arguments (kwarg)
+valid for the various Matplotlib plotting functions to enhance how a plot is
+created. For example, you can use this attribute to set the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> kwarg to
+alter what aspects of the your plot are on top of one another.</p></li>
 </ul>
 </section>
 <section id="title">
@@ -773,9 +821,13 @@ a box from the lower-left to the upper-right corner.</p></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout"><strong>layout</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projection"><strong>projection</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers"><strong>layers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-alpha"><strong>layers_alpha</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-edgecolor"><strong>layers_edgecolor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-linestyle"><strong>layers_linestyle</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-linewidth"><strong>layers_linewidth</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-zorder"><strong>layers_zorder</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area"><strong>area</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#title"><strong>title</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#left-title"><strong>left_title</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#right-title"><strong>right_title</strong></a></li>
