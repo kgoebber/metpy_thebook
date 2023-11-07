@@ -602,7 +602,6 @@ of NAM winds.</p>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.ucar.edu/thredds/dodsC/grib&#39;</span>
                      <span class="s1">&#39;/NCEP/NAM/CONUS_12km/NAM_CONUS_12km_&#39;</span>
                      <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_run_date</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">model_run_date</span><span class="si">:</span><span class="s1">%H%M</span><span class="si">}</span><span class="s1">.grib2&#39;</span><span class="p">)</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">parse_cf</span><span class="p">()</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">assign_latitude_longitude</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
