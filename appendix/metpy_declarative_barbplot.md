@@ -17,6 +17,7 @@ model output from the GFS, NAM, or RAP.
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html#metpy.plots.BarbPlot.scale" target="_blank">**scale**</a> | Scale the field to be plotted by the value given. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html#metpy.plots.BarbPlot.skip" target="_blank">**skip**</a> | A tuple of integers to indicate the number of grid points to skip between plotting vectors. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html#metpy.plots.BarbPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.BarbPlot.html#metpy.plots.BarbPlot.mpl_args" target="_blank">**mpl_args**</a> | Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn. |
 
 ## Attribute Descriptions
 
@@ -53,3 +54,9 @@ model output from the GFS, NAM, or RAP.
 * This attribute can be set to a string value about where the wind barb
   will pivot relative to the grid point. Possible values include 'tip' or
   'middle'. Default is 'middle'.
+
+### **mpl_args**
+* This attribute can be set to a dictionary containing keyword arguments (kwarg)
+  valid for the various Matplotlib plotting functions to enhance how a plot is
+  created. For example, you can use this attribute to set the `zorder` kwarg to
+  alter what aspects of the your plot are on top of one another.

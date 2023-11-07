@@ -23,6 +23,7 @@ elements of each element are given below.
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_color" target="_blank">**vector_field_color**</a> | String color name to plot the vector. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_field_length" target="_blank">**vector_field_length**</a> | Integer value to set the length of the plotted vector. |
   | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.vector_plot_units" target="_blank">**vector_plot_units**</a> | The desired units to plot the vector field in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotObs.html#metpy.plots.PlotObs.mpl_args" target="_blank">**mpl_args**</a> | Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn. |
 
 ## Attribute Descriptions
 
@@ -101,3 +102,9 @@ elements of each element are given below.
 ### **fontsize (optional)**
   * This attribute can be set to an integer value to set the font size of
     station plots. Default is 10 pt.
+
+### **mpl_args**
+* This attribute can be set to a dictionary containing keyword arguments (kwarg)
+  valid for the various Matplotlib plotting functions to enhance how a plot is
+  created. For example, you can use this attribute to set the `zorder` kwarg to
+  alter what aspects of the your plot are on top of one another.
