@@ -1,23 +1,23 @@
-# MetPy - `RasterPlot()`
+# MetPy - `ImagePlot()`
 
-Make raster plots by defining relevant traits.
+Make image plots by defining relevant traits.
 
-## <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html" target="_blank">`RasterPlot()`</a>
+## <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html" target="_blank">`ImagePlot()`</a>
   | Attribute | Description |
   | - | - |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.colorbar" target="_blank">**colorbar**</a> | A string (horizontal/vertical) on whether to add a colorbar to the plot. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.colorbar_fontsize" target="_blank">**colorbar_fontsize**</a> | An integer, float, or string value to set the font size of labels for the colorbar. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.colormap" target="_blank">**colormap**</a> | The string name for a Matplotlib or MetPy colormap. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.data" target="_blank">**data**</a> | Xarray dataset that contains the field to be plotted. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.field" target="_blank">**field**</a> | Name of the field to be plotted. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.image_range" target="_blank">**image_range**</a> | A tuple of min and max values that represent the range of values to color the rasterized image. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.level" target="_blank">**level**</a> | The level of the field to be plotted. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.plot_units" target="_blank">**plot_units**</a> | The desired units to plot the field in. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.scale" target="_blank">**scale**</a> | Scale the field to be plotted by the value given. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.smooth_contour" target="_blank">**smooth_contour**</a> | Spline interpolation to smooth contours. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.smooth_field" target="_blank">**smooth_field**</a> | Number of smoothing passes using 9-pt smoother. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
-  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.mpl_args" target="_blank">**mpl_args**</a> | Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.colorbar" target="_blank">**colorbar**</a> | A string (horizontal/vertical) on whether to add a colorbar to the plot. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.colorbar_fontsize" target="_blank">**colorbar_fontsize**</a> | An integer, float, or string value to set the font size of labels for the colorbar. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.colormap" target="_blank">**colormap**</a> | The string name for a Matplotlib or MetPy colormap. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.data" target="_blank">**data**</a> | Xarray dataset that contains the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.field" target="_blank">**field**</a> | Name of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.image_range" target="_blank">**image_range**</a> | A tuple of min and max values that represent the range of values to color the rasterized image. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.level" target="_blank">**level**</a> | The level of the field to be plotted. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.plot_units" target="_blank">**plot_units**</a> | The desired units to plot the field in. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.scale" target="_blank">**scale**</a> | Scale the field to be plotted by the value given. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.smooth_contour" target="_blank">**smooth_contour**</a> | Spline interpolation to smooth contours. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.smooth_field" target="_blank">**smooth_field**</a> | Number of smoothing passes using 9-pt smoother. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.time" target="_blank">**time**</a> | Set the valid time to be plotted as a datetime object. |
+  | <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ImagePlot.html#metpy.plots.ImagePlot.mpl_args" target="_blank">**mpl_args**</a> | Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn. |
 
 ## Attribute Descriptions
 
@@ -104,10 +104,10 @@ Make raster plots by defining relevant traits.
     <a href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" target="_blank">`timedelta`</a>
     objects from the Python standard library. Note that this requires your data to have a time dimension coordinate.
   
-### **mpl_args**
-  * This attribute can be set to a dictionary containing keyword arguments (kwarg)
-    valid for the various Matplotlib plotting functions to enhance how a plot is
-    created. For example, you can use this attribute to set the `zorder` kwarg to
-    alter what aspects of the your plot are on top of one another. NOTE: Setting
-    the mpl_args trait will override any other trait that corresponds to a specific
-    kwarg for the particular plot type (e.g., linecolor, linewidth).
+  ### **mpl_args**
+* This attribute can be set to a dictionary containing keyword arguments (kwarg)
+  valid for the various Matplotlib plotting functions to enhance how a plot is
+  created. For example, you can use this attribute to set the `zorder` kwarg to
+  alter what aspects of the your plot are on top of one another. NOTE: Setting
+  the mpl_args trait will override any other trait that corresponds to a specific
+  kwarg for the particular plot type (e.g., linecolor, linewidth).
