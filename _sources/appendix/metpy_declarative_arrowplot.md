@@ -107,7 +107,9 @@ Make plots of wind barbs on a map with traits to refine the look of plotted elem
     objects from the Python standard library. Note that this requires your data to have a time dimension coordinate.
 
 ### **mpl_args**
-* This attribute can be set to a dictionary containing keyword arguments (kwarg)
-  valid for the various Matplotlib plotting functions to enhance how a plot is
-  created. For example, you can use this attribute to set the `zorder` kwarg to
-  alter what aspects of the your plot are on top of one another.
+  * This attribute can be set to a dictionary containing keyword arguments (kwarg)
+    valid for the various Matplotlib plotting functions to enhance how a plot is
+    created. For example, you can use this attribute to set the `zorder` kwarg to
+    alter what aspects of the your plot are on top of one another. NOTE: Setting
+    the mpl_args trait will override any other trait that corresponds to a specific
+    kwarg for the particular plot type (e.g., linecolor, linewidth).

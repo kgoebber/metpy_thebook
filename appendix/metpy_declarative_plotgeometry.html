@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>MetPy - RasterPlot() &#8212; Introduction to Weather Technology using MetPy</title>
+    <title>MetPy - PlotGeometry() &#8212; Introduction to Weather Technology using MetPy</title>
   
   
   
@@ -61,11 +61,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/metpy_declarative_rasterplot';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/metpy_declarative_plotgeometry';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MetPy - BarbPlot()" href="metpy_declarative_barbplot.html" />
-    <link rel="prev" title="MetPy - FilledContourPlot()" href="metpy_declarative_filledcontourplot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -342,18 +340,18 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="overcomming_errors.html">Common Errors and Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="surface_data_access.html">Accessing Surface Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="upperair_data_access.html">Accessing Upperair Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="working_with_NAM_data.html">Working with NAM Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="story_telling_with_data.html">The Influence of SST on Midlatitude Cyclones</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="metpy_declarative_details.html">MetPy Declarative Syntax</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="metpy_declarative_rasterplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_barbplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="metpy_declarative_arrowplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ArrowPlot()</span></code></a></li>
 
@@ -432,7 +430,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fappendix/metpy_declarative_rasterplot.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fappendix/metpy_declarative_plotgeometry.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -462,7 +460,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/appendix/metpy_declarative_rasterplot.md" target="_blank"
+      <li><a href="../_sources/appendix/metpy_declarative_plotgeometry.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -544,7 +542,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>MetPy - RasterPlot()</h1>
+    <h1>MetPy - PlotGeometry()</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -554,21 +552,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-rasterplot-html-target-blank-rasterplot-a"><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html" target="_blank"><code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-plotgeometry-html-target-blank-plotgeometry-a"><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html" target="_blank"><code class="docutils literal notranslate"><span class="pre">PlotGeometry()</span></code></a></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-descriptions">Attribute Descriptions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colorbar"><strong>colorbar</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colorbar-fontsize"><strong>colorbar_fontsize</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colormap"><strong>colormap</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data"><strong>data</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field"><strong>field</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-range"><strong>image_range</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level"><strong>level</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-units"><strong>plot_units</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scale"><strong>scale</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-contour"><strong>smooth_contour</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-field"><strong>smooth_field</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time"><strong>time</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fill"><strong>fill</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry"><strong>geometry</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-edgecolor"><strong>label_edgecolor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-fontcolor"><strong>label_fontcolor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-fontsize"><strong>label_fontsize</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels"><strong>labels</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marker"><strong>marker</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stroke"><strong>stroke</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stroke-width"><strong>stroke_width</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -582,11 +577,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="metpy-rasterplot">
-<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code><a class="headerlink" href="#metpy-rasterplot" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="metpy-plotgeometry">
+<h1>MetPy - <code class="docutils literal notranslate"><span class="pre">PlotGeometry()</span></code><a class="headerlink" href="#metpy-plotgeometry" title="Permalink to this heading">#</a></h1>
 <p>Make raster plots by defining relevant traits.</p>
-<section id="a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-rasterplot-html-target-blank-rasterplot-a">
-<h2><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html" target="_blank"><code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a><a class="headerlink" href="#a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-rasterplot-html-target-blank-rasterplot-a" title="Permalink to this heading">#</a></h2>
+<section id="a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-plotgeometry-html-target-blank-plotgeometry-a">
+<h2><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html" target="_blank"><code class="docutils literal notranslate"><span class="pre">PlotGeometry()</span></code></a><a class="headerlink" href="#a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-plotgeometry-html-target-blank-plotgeometry-a" title="Permalink to this heading">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
@@ -594,165 +589,111 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.colorbar" target="_blank"><strong>colorbar</strong></a></p></td>
-<td><p>A string (horizontal/vertical) on whether to add a colorbar to the plot.</p></td>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.fill" target="_blank"><strong>fill</strong></a></p></td>
+<td><p>Fill color(s) for polygons and points.Fill color(s) for polygons and points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.colorbar_fontsize" target="_blank"><strong>colorbar_fontsize</strong></a></p></td>
-<td><p>An integer, float, or string value to set the font size of labels for the colorbar.</p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.geometry" target="_blank"><strong>geometry</strong></a></p></td>
+<td><p>A collection of Shapely objects to plot.</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.colormap" target="_blank"><strong>colormap</strong></a></p></td>
-<td><p>The string name for a Matplotlib or MetPy colormap.</p></td>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.label_edgecolor" target="_blank"><strong>label_edgecolor</strong></a></p></td>
+<td><p>Outline color(s) for labels.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.data" target="_blank"><strong>data</strong></a></p></td>
-<td><p>Xarray dataset that contains the field to be plotted.</p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.label_facecolor" target="_blank"><strong>label_facecolor</strong></a></p></td>
+<td><p>Font color(s) for labels.</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.field" target="_blank"><strong>field</strong></a></p></td>
-<td><p>Name of the field to be plotted.</p></td>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.label_fontsize" target="_blank"><strong>label_fontsize</strong></a></p></td>
+<td><p>An integer or string value for the font size of labels.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.image_range" target="_blank"><strong>image_range</strong></a></p></td>
-<td><p>A tuple of min and max values that represent the range of values to color the rasterized image.</p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.labels" target="_blank"><strong>labels</strong></a></p></td>
+<td><p>A collection of labels corresponding to plotted geometry.</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.level" target="_blank"><strong>level</strong></a></p></td>
-<td><p>The level of the field to be plotted.</p></td>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.marker" target="_blank"><strong>marker</strong></a></p></td>
+<td><p>Symbol used to denote points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.plot_units" target="_blank"><strong>plot_units</strong></a></p></td>
-<td><p>The desired units to plot the field in.</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.scale" target="_blank"><strong>scale</strong></a></p></td>
-<td><p>Scale the field to be plotted by the value given.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.smooth_contour" target="_blank"><strong>smooth_contour</strong></a></p></td>
-<td><p>Spline interpolation to smooth contours.</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.smooth_field" target="_blank"><strong>smooth_field</strong></a></p></td>
-<td><p>Number of smoothing passes using 9-pt smoother.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.time" target="_blank"><strong>time</strong></a></p></td>
-<td><p>Set the valid time to be plotted as a datetime object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html#metpy.plots.RasterPlot.mpl_args" target="_blank"><strong>mpl_args</strong></a></p></td>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.mpl_args" target="_blank"><strong>level</strong></a></p></td>
 <td><p>Supply a dictionary of valid Matplotlib keyword arguments to modify how the plot variable is drawn.</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.stroke" target="_blank"><strong>stroke</strong></a></p></td>
+<td><p>Stroke color(s) for polygons and line color(s) for lines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html#metpy.plots.PlotGeometry.stroke_width" target="_blank"><strong>stroke_width</strong></a></p></td>
+<td><p>Stroke width(s) for polygons and lines.</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="attribute-descriptions">
 <h2>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this heading">#</a></h2>
-<section id="colorbar">
-<h3><strong>colorbar</strong><a class="headerlink" href="#colorbar" title="Permalink to this heading">#</a></h3>
+<section id="fill">
+<h3><strong>fill</strong><a class="headerlink" href="#fill" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>A string (horizontal/vertical) on whether to add a colorbar to the plot.</p>
-<p>To add a colorbar associated with the plot, set the trait to <code class="docutils literal notranslate"><span class="pre">horizontal</span></code> or <code class="docutils literal notranslate"><span class="pre">vertical</span></code>,
-specifying the orientation of the produced colorbar. The default value is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<li><p>Fill color(s) for polygons and points.</p>
+<p>A single string (color name or hex code) or collection of strings with which to fill polygons and
+points. If a collection, the first color corresponds to the first Shapely object in <code class="docutils literal notranslate"><span class="pre">geometry</span></code>, the
+second color corresponds to the second Shapely object, and so on. If <code class="docutils literal notranslate"><span class="pre">fill</span></code> is shorter than
+<code class="docutils literal notranslate"><span class="pre">geometry</span></code>, <code class="docutils literal notranslate"><span class="pre">fill</span></code> cycles back to the beginning, repeating the sequence of colors as needed. Default
+value is lightgray.</p>
 </li>
 </ul>
 </section>
-<section id="colorbar-fontsize">
-<h3><strong>colorbar_fontsize</strong><a class="headerlink" href="#colorbar-fontsize" title="Permalink to this heading">#</a></h3>
+<section id="geometry">
+<h3><strong>geometry</strong><a class="headerlink" href="#geometry" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>An integer, float, or string value to set the font size of labels for the colorbar.</p>
-<p>This trait sets the font size of labels for the colorbar. Accepts size in points or relative size.
-Allowed relative sizes are those of Matplotlib: ‘xx-small’, ‘x-small’, ‘small’, ‘medium’, ‘large’, ‘x-large’, ‘xx-large’.</p>
+<li><p>A collection of Shapely objects to plot.</p>
+<p>A collection of Shapely objects, such as the ‘geometry’ column from a <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code>.
+Acceptable Shapely objects are <code class="docutils literal notranslate"><span class="pre">shapely.MultiPolygon</span></code>, <code class="docutils literal notranslate"><span class="pre">shapely.Polygon</span></code>, <code class="docutils literal notranslate"><span class="pre">shapely.MultiLineString</span></code>,
+<code class="docutils literal notranslate"><span class="pre">shapely.LineString</span></code>, <code class="docutils literal notranslate"><span class="pre">shapely.MultiPoint</span></code>, and <code class="docutils literal notranslate"><span class="pre">shapely.Point</span></code>.</p>
 </li>
 </ul>
 </section>
-<section id="colormap">
-<h3><strong>colormap</strong><a class="headerlink" href="#colormap" title="Permalink to this heading">#</a></h3>
+<section id="label-edgecolor">
+<h3><strong>label_edgecolor</strong><a class="headerlink" href="#label-edgecolor" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>The string name for a Matplotlib or MetPy colormap.</p>
-<p>For example, the Blue-Purple colormap from Matplotlib can be accessed using ‘BuPu’.</p>
+<li><p>Outline color(s) for labels.</p>
+<p>A single string (color name or hex code) or collection of strings for the outline color of labels.
+If a collection, the first color corresponds to the label of the first Shapely object in <code class="docutils literal notranslate"><span class="pre">geometry</span></code>,
+the second color corresponds to the label of the second Shapely object, and so on. Default value is
+<code class="docutils literal notranslate"><span class="pre">fill</span></code>.</p>
 </li>
 </ul>
 </section>
-<section id="data">
-<h3><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Xarray dataset that contains the field to be plotted.</p></li>
-</ul>
-</section>
-<section id="field">
-<h3><strong>field</strong><a class="headerlink" href="#field" title="Permalink to this heading">#</a></h3>
+<section id="label-fontcolor">
+<h3><strong>label_fontcolor</strong><a class="headerlink" href="#label-fontcolor" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>Name of the field to be plotted.</p>
-<p>This is the name of the variable from the dataset that is to be plotted. An example,
-from a model grid file that uses the THREDDS convention for naming would be
-<em>Geopotential_height_isobaric</em> or <em>Temperature_isobaric</em>. For GOES-16/17 satellite data
-it might be <em>Sectorized_CMI</em>. To check for the variables available within a dataset, list
-the variables with the following command assuming the dataset was read using xarray as <em>ds</em>, <em>list(ds)</em></p>
+<li><p>Font color(s) for labels.</p>
+<p>A single string (color name or hex code) or collection of strings for the font color of labels.
+If a collection, the first color corresponds to the label of the first Shapely object in <code class="docutils literal notranslate"><span class="pre">geometry</span></code>,
+the second color corresponds to the label of the second Shapely object, and so on. Default value is
+<code class="docutils literal notranslate"><span class="pre">fill</span></code>.</p>
 </li>
 </ul>
 </section>
-<section id="image-range">
-<h3><strong>image_range</strong><a class="headerlink" href="#image-range" title="Permalink to this heading">#</a></h3>
+<section id="label-fontsize">
+<h3><strong>label_fontsize</strong><a class="headerlink" href="#label-fontsize" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>A tuple of min and max values that represent the range of values to color the rasterized image.</p>
-<p>The min and max values entered as a tuple will be converted to a <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Normalize.html#matplotlib.colors.Normalize " target="_blank"><code class="docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></a>instance for plotting.</p>
+<li><p>An integer or string value for the font size of labels.</p>
+<p>Accepts size in points or relative size. Allowed relative sizes are those of Matplotlib:
+‘xx-small’, ‘x-small’, ‘small’, ‘medium’, ‘large’, ‘x-large’, ‘xx-large’.</p>
 </li>
 </ul>
 </section>
-<section id="level">
-<h3><strong>level</strong><a class="headerlink" href="#level" title="Permalink to this heading">#</a></h3>
+<section id="labels">
+<h3><strong>labels</strong><a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>The level of the field to be plotted.</p>
-<p>This is a value with units to choose a desired plot level. For example,
-selecting the 850-hPa level, set this parameter to <code class="docutils literal notranslate"><span class="pre">850 * units.hPa</span></code>.
-Note that this requires your data to have a vertical dimension coordinate.</p>
+<li><p>A collection of labels corresponding to plotted geometry.</p>
+<p>A collection of strings to use as labels for geometry, such as a column from a
+<code class="docutils literal notranslate"><span class="pre">Geopandas.GeoDataFrame</span></code>. The first label corresponds to the first Shapely object in <code class="docutils literal notranslate"><span class="pre">geometry</span></code>,
+the second label corresponds to the second Shapely object, and so on. The length of <code class="docutils literal notranslate"><span class="pre">labels</span></code> must
+be equal to the length of <code class="docutils literal notranslate"><span class="pre">geometry</span></code>. Labels are positioned along the edge of polygons, and below
+lines and points. No labels are plotted if this attribute is left undefined, or set equal to None.</p>
 </li>
 </ul>
 </section>
-<section id="plot-units">
-<h3><strong>plot_units</strong><a class="headerlink" href="#plot-units" title="Permalink to this heading">#</a></h3>
+<section id="marker">
+<h3><strong>marker</strong><a class="headerlink" href="#marker" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>The desired units to plot the field in.</p>
-<p>Setting this attribute will convert the units of the field variable to the
-given units for plotting using the MetPy Units module.</p>
-</li>
-</ul>
-</section>
-<section id="scale">
-<h3><strong>scale</strong><a class="headerlink" href="#scale" title="Permalink to this heading">#</a></h3>
-<ul>
-<li><p>Scale the field to be plotted by the value given.</p>
-<p>This attribute will scale the field by multiplying by the scale. For example,
-to scale vorticity to be whole values for contouring you could set the scale to <code class="docutils literal notranslate"><span class="pre">1e5</span></code>,
-such that the data values will be multiplied by 10^5.</p>
-</li>
-</ul>
-</section>
-<section id="smooth-contour">
-<h3><strong>smooth_contour</strong><a class="headerlink" href="#smooth-contour" title="Permalink to this heading">#</a></h3>
-<ul>
-<li><p>Spline interpolation to smooth contours.</p>
-<p>This attribute requires settings for the
-<a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.zoom_xarray.html#metpy.calc.zoom_xarray " target="_blank"><code class="docutils literal notranslate"><span class="pre">metpy.calc.zoom_xarray</span></code></a>
-function, which will produce a spline interpolation given an integer zoom factor.
-Either a single integer specifying the zoom factor (e.g., 4) or a tuple containing
-two integers for the zoom factor and the spline interpolation order can be used.
-The default spline interpolation order is 3.</p>
-<p>This is best used to smooth contours when contouring a sparse grid (e.g., when your data has a large grid spacing).</p>
-</li>
-</ul>
-</section>
-<section id="smooth-field">
-<h3><strong>smooth_field</strong><a class="headerlink" href="#smooth-field" title="Permalink to this heading">#</a></h3>
-<ul>
-<li><p>Number of smoothing passes using 9-pt smoother.</p>
-<p>By setting this parameter with an integer value it will call the MetPy 9-pt
-smoother and provide a smoothed field for plotting. It is best to use this
-smoothing for data with finer resolutions (e.g., smaller grid spacings with
-a lot of grid points).</p>
-</li>
-</ul>
-</section>
-<section id="time">
-<h3><strong>time</strong><a class="headerlink" href="#time" title="Permalink to this heading">#</a></h3>
-<ul>
-<li><p>Set the valid time to be plotted as a datetime object.</p>
-<p>If a forecast hour is to be plotted the time should be set to the valid future time,
-which can be done using the
-<a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" target="_blank"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> and
-<a href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" target="_blank"><code class="docutils literal notranslate"><span class="pre">timedelta</span></code></a>
-objects from the Python standard library. Note that this requires your data to have a time dimension coordinate.</p>
+<li><p>Symbol used to denote points.</p>
+<p>Accepts any matplotlib marker. Default value is ‘.’, which plots a dot at each point.</p>
 </li>
 </ul>
 </section>
@@ -765,6 +706,30 @@ created. For example, you can use this attribute to set the <code class="docutil
 alter what aspects of the your plot are on top of one another. NOTE: Setting
 the mpl_args trait will override any other trait that corresponds to a specific
 kwarg for the particular plot type (e.g., linecolor, linewidth).</p></li>
+</ul>
+</section>
+<section id="stroke">
+<h3><strong>stroke</strong><a class="headerlink" href="#stroke" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Stroke color(s) for polygons and line color(s) for lines.</p>
+<p>A single string (color name or hex code) or collection of strings with which to outline polygons and
+color lines. If a collection, the first color corresponds to the first Shapely object in <code class="docutils literal notranslate"><span class="pre">geometry</span></code>,
+the second color corresponds to the second Shapely object, and so on. If <code class="docutils literal notranslate"><span class="pre">stroke</span></code> is shorter than
+<code class="docutils literal notranslate"><span class="pre">geometry</span></code>, <code class="docutils literal notranslate"><span class="pre">stroke</span></code> cycles back to the beginning, repeating the sequence of colors as needed.
+Default value is black.</p>
+</li>
+</ul>
+</section>
+<section id="stroke-width">
+<h3><strong>stroke_width</strong><a class="headerlink" href="#stroke-width" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Stroke width(s) for polygons and lines.</p>
+<p>A single integer or floating point value or collection of values representing the size of the stroke
+width. If a collection, the first value corresponds to the first Shapely object in <code class="docutils literal notranslate"><span class="pre">geometry</span></code>, the
+second value corresponds to the second Shapely object, and so on. If <code class="docutils literal notranslate"><span class="pre">stroke_width</span></code> is shorter than
+<code class="docutils literal notranslate"><span class="pre">geometry</span></code>, <code class="docutils literal notranslate"><span class="pre">stroke_width</span></code> cycles back to the beginning, repeating the sequence of values as needed.
+Default value is 1.</p>
+</li>
 </ul>
 </section>
 </section>
@@ -801,24 +766,6 @@ kwarg for the particular plot type (e.g., linecolor, linewidth).</p></li>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="metpy_declarative_filledcontourplot.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="metpy_declarative_barbplot.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MetPy - <code class="docutils literal notranslate"><span class="pre">BarbPlot()</span></code></p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -837,21 +784,18 @@ kwarg for the particular plot type (e.g., linecolor, linewidth).</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-rasterplot-html-target-blank-rasterplot-a"><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.RasterPlot.html" target="_blank"><code class="docutils literal notranslate"><span class="pre">RasterPlot()</span></code></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-href-https-unidata-github-io-metpy-latest-api-generated-metpy-plots-plotgeometry-html-target-blank-plotgeometry-a"><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.PlotGeometry.html" target="_blank"><code class="docutils literal notranslate"><span class="pre">PlotGeometry()</span></code></a></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-descriptions">Attribute Descriptions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colorbar"><strong>colorbar</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colorbar-fontsize"><strong>colorbar_fontsize</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colormap"><strong>colormap</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data"><strong>data</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field"><strong>field</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-range"><strong>image_range</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level"><strong>level</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-units"><strong>plot_units</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scale"><strong>scale</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-contour"><strong>smooth_contour</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smooth-field"><strong>smooth_field</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time"><strong>time</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fill"><strong>fill</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry"><strong>geometry</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-edgecolor"><strong>label_edgecolor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-fontcolor"><strong>label_fontcolor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-fontsize"><strong>label_fontsize</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels"><strong>labels</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marker"><strong>marker</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mpl-args"><strong>mpl_args</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stroke"><strong>stroke</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stroke-width"><strong>stroke_width</strong></a></li>
 </ul>
 </li>
 </ul>

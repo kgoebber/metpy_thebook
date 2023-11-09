@@ -696,7 +696,9 @@ will pivot relative to the grid point. Possible values include ‘tip’ or
 <li><p>This attribute can be set to a dictionary containing keyword arguments (kwarg)
 valid for the various Matplotlib plotting functions to enhance how a plot is
 created. For example, you can use this attribute to set the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> kwarg to
-alter what aspects of the your plot are on top of one another.</p></li>
+alter what aspects of the your plot are on top of one another. NOTE: Setting
+the mpl_args trait will override any other trait that corresponds to a specific
+kwarg for the particular plot type (e.g., linecolor, linewidth).</p></li>
 </ul>
 </section>
 </section>
