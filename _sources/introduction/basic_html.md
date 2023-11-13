@@ -120,7 +120,7 @@ Here is a link to <A HREF="ca5.html">Computer Assignment #5</A>.
 
 This code would look like the following in a web browser:
 
-Here is a link to [Computer Assignment #5](http://fujita.valpo.edu/~kgoebber/ca5.html).
+Here is a link to [Computer Assignment #5](http://bergeron.valpo.edu/~kgoebber/ca5.html).
 
 Notice how the "linked" text to ca5.html was the text surrounded by
 the tags.
@@ -129,7 +129,7 @@ If the link were to a file or webpage not in your web directory (say to
 the NWS homepage), your code would look like this:
 
 ```html
-Here is a link to the <A HREF="http://www.nws.noaa.gov">National Weather Service</A>.
+Here is a link to the <A HREF="http://www.weather.gov">National Weather Service</A>.
 ```
 
 This code would look like the following in a web browser:

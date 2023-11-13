@@ -13,23 +13,32 @@ For current model output, the best remote site is:
 
 Below are the URL filename structures for the most common synoptic models available
 through the Unidata THREDDS server. There are at least two weeks of current model
-output available via this access method.
+output available via this access method. For the links below, replace the end of the
+URL (catalog.html) with the filename using the given format.
 
 -   GFS One Degree (OPeNDAP)
 
-    -   https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/GFS/Global_onedeg/GFS_Global_onedeg_YYYYMMDD_HHMM.grib2
+    -   https://thredds.ucar.edu/thredds/catalog/grib/NCEP/GFS/Global_onedeg/catalog.html  
+        
+        Filename Format: GFS_Global_onedeg_YYYYMMDD_HHMM.grib2
 
 -   GFS Half Degree (OPeNDAP)
 
-    -   https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/GFS/Global_0p5deg/GFS_Global_0p5deg_YYYYMMDD_HHMM.grib2
+    -   https://thredds.ucar.edu/thredds/catalog/grib/NCEP/GFS/Global_0p5deg/catalog.html
+
+        Filename Format: GFS_Global_0p5deg_YYYYMMDD_HHMM.grib2
 
 -   NAM CONUS 12km from CONDUIT (OPeNDAP)
 
-    -   https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/NAM/CONUS_12km/conduit/NAM_CONUS_12km_conduit_YYYYMMDD_HHMM.grib2
+    -   https://thredds.ucar.edu/thredds/catalog/grib/NCEP/NAM/CONUS_12km/conduit/catalog.html
+    
+        Filename Format: NAM_CONUS_12km_conduit_YYYYMMDD_HHMM.grib2
 
 -   Rapid Refresh CONUS 13 km (OPeNDAP)
 
-    -   https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/RAP/CONUS_13km/RR_CONUS_13km_YYYYMMDD_HHMM.grib2
+    -   https://thredds.ucar.edu/thredds/catalog/grib/NCEP/RAP/CONUS_13km/catalog.html
+    
+        Filename Format: RR_CONUS_13km_YYYYMMDD_HHMM.grib2
 
 If you visit the main website above you'll see that there are a whole
 lot of different model output sources, feel free to try and use them to
