@@ -1,4 +1,7 @@
 # Introduction to Weather Technology using MetPy
+
+[![nightly-build](https://github.com/kgoebber/metpy_thebook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/kgoebber/metpy_thebook/actions/workflows/nightly-build.yaml)
+
 This is the source repository for the online educational resource
 for the an introductory weather technology course that covers
 basic Linux skills, Python code, and the MetPy module for
