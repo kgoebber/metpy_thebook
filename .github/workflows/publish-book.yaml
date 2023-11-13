@@ -13,6 +13,6 @@ jobs:
     with:
       environment_name: metpy_book
 
-  deploy:
-    needs: build
-    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
+#  deploy:
+#    needs: build
+#    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
