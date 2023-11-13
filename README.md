@@ -6,4 +6,4 @@ data analysis and visualization.
 
 To view the book, visit https://kgoebber.github.io/metpy_thebook/intro.html
 
-This book is powered by [Jupyter Book](https://jupyterbook.org/intro.html)
+This book is powered by [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
