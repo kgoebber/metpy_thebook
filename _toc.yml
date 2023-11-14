@@ -185,7 +185,9 @@ parts:
           - file: appendix/metpy_declarative_contourplot
           - file: appendix/metpy_declarative_filledcontourplot
           - file: appendix/metpy_declarative_rasterplot
+          - file: appendix/metpy_declarative_imageplot
           - file: appendix/metpy_declarative_barbplot
           - file: appendix/metpy_declarative_arrowplot
+          - file: appendix/metpy_declarative_plotgeometry
           - file: appendix/metpy_declarative_mappanel
           - file: appendix/metpy_declarative_panelcontainer

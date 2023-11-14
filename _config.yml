@@ -11,7 +11,7 @@ copyright: "2023"
 execute:
   execute_notebooks: cache
   timeout: 100
-  stderr_output: 'remove-warn'
+#  stderr_output: 'remove-warn'
 
 #######################################################################################
 # Parse and render settings
