@@ -596,11 +596,12 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the date/time of the model run</span>
 <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 
-<span class="c1"># Remote access to the dataset from the NCAR RDA repository</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/2/TP&#39;</span><span class="p">)</span>
+<span class="c1"># Remote access to the dataset from the NCEI Archive</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://www.ncei.noaa.gov/thredds/dodsC/model-gfs-g3-anl-files-old&#39;</span>
+                     <span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">/gfsanl_3_</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d_%H</span><span class="si">}</span><span class="s1">00_000.grb&#39;</span><span class="p">)</span>
 
 <span class="c1"># Subset data to be just over the U.S. for plotting purposes</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">140</span><span class="p">,</span> <span class="mi">360</span><span class="o">-</span><span class="mi">60</span><span class="p">))</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">140</span><span class="p">,</span> <span class="mi">360</span><span class="o">-</span><span class="mi">60</span><span class="p">))</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">parse_cf</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -666,182 +667,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">50</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">pc</span><span class="o">.</span><span class="n">panels</span> <span class="o">=</span> <span class="p">[</span><span class="n">panel</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="c1"># Show the figure</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:179,</span> in <span class="ni">PanelContainer.show</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Show the constructed graphic on the screen.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:166,</span> in <span class="ni">PanelContainer.draw</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="k">for</span> <span class="n">panel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">panels</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">with</span> <span class="n">panel</span><span class="o">.</span><span class="n">hold_trait_notifications</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">166</span>         <span class="n">panel</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:461,</span> in <span class="ni">MapPanel.draw</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">459</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plots</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">460</span>     <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">hold_trait_notifications</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">461</span>         <span class="n">p</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="c1"># Add all of the maps</span>
-<span class="g g-Whitespace">    </span><span class="mi">464</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers_edgecolor</span><span class="p">):</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:826,</span> in <span class="ni">PlotScalar.draw</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">824</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_need_redraw</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">825</span>     <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;handle&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">826</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_build</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">827</span>     <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;colorbar&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">828</span>         <span class="n">cbar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">829</span>             <span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">colorbar</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:994,</span> in <span class="ni">ContourPlot._build</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">992</span> <span class="k">def</span> <span class="nf">_build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">993</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Build the plot by calling any plotting methods as necessary.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">994</span>     <span class="n">x_like</span><span class="p">,</span> <span class="n">y_like</span><span class="p">,</span> <span class="n">imdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotdata</span>
-<span class="g g-Whitespace">    </span><span class="mi">996</span>     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">plot_kwargs</span><span class="p">(</span><span class="n">imdata</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">998</span>     <span class="bp">self</span><span class="o">.</span><span class="n">handle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">x_like</span><span class="p">,</span> <span class="n">y_like</span><span class="p">,</span> <span class="n">imdata</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">contours</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">999</span>                                          <span class="n">colors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">linecolor</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">linewidth</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1000</span>                                          <span class="n">linestyles</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">linestyle</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:810,</span> in <span class="ni">PlotScalar.plotdata</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return the data for plotting.</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span><span class="sd"> The two dimension coordinates and the data array.</span>
-<span class="g g-Whitespace">    </span><span class="mi">807</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">810</span>     <span class="n">plot_x_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">griddata</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">find_axis_number</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">811</span>     <span class="n">plot_y_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">griddata</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">find_axis_number</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/plots/declarative.py:783,</span> in <span class="ni">PlotScalar.griddata</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">781</span> <span class="c1"># Handle unit conversion (both direct unit specification and scaling)</span>
-<span class="g g-Whitespace">    </span><span class="mi">782</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_units</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">783</span>     <span class="n">data_subset</span> <span class="o">=</span> <span class="n">data_subset</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plot_units</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">785</span> <span class="c1"># Handle smoothing of data</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">smooth_field</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/xarray.py:181,</span> in <span class="ni">MetPyDataArrayAccessor.convert_units</span><span class="nt">(self, units)</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span> <span class="k">def</span> <span class="nf">convert_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">units</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return new DataArray with values converted to different units.</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span><span class="sd">     See Also</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">181</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantify</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">unit_array</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="p">))</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/metpy/xarray.py:231,</span> in <span class="ni">MetPyDataArrayAccessor.quantify</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span> <span class="k">def</span> <span class="nf">quantify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return a new DataArray with the data converted to a `pint.Quantity`.</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="sd">     Notes</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span><span class="sd">     subsetting!</span>
-<span class="g g-Whitespace">    </span><span class="mi">229</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span>     <span class="k">if</span> <span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">231</span>         <span class="ow">not</span> <span class="n">is_quantity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data_array</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span>         <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data_array</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">234</span>         <span class="c1"># Only quantify if not already quantified and is quantifiable</span>
-<span class="g g-Whitespace">    </span><span class="mi">235</span>         <span class="n">quantified_dataarray</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_array</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">unit_array</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="k">if</span> <span class="s1">&#39;units&#39;</span> <span class="ow">in</span> <span class="n">quantified_dataarray</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/dataarray.py:742,</span> in <span class="ni">DataArray.data</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">730</span> <span class="nd">@property</span>
-<span class="g g-Whitespace">    </span><span class="mi">731</span> <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">732</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">733</span><span class="sd">     The DataArray&#39;s data as an array. The underlying array type</span>
-<span class="g g-Whitespace">    </span><span class="mi">734</span><span class="sd">     (e.g. dask, sparse, pint) is preserved.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span><span class="sd">     DataArray.values</span>
-<span class="g g-Whitespace">    </span><span class="mi">741</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">742</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">variable</span><span class="o">.</span><span class="n">data</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/variable.py:427,</span> in <span class="ni">Variable.data</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">425</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
-<span class="g g-Whitespace">    </span><span class="mi">426</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">indexing</span><span class="o">.</span><span class="n">ExplicitlyIndexed</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">427</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">get_duck_array</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">428</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">429</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/indexing.py:696,</span> in <span class="ni">MemoryCachedArray.get_duck_array</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">695</span> <span class="k">def</span> <span class="nf">get_duck_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">696</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_cached</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">697</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">get_duck_array</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/indexing.py:690,</span> in <span class="ni">MemoryCachedArray._ensure_cached</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">689</span> <span class="k">def</span> <span class="nf">_ensure_cached</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">690</span>     <span class="bp">self</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="n">as_indexable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">get_duck_array</span><span class="p">())</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/indexing.py:664,</span> in <span class="ni">CopyOnWriteArray.get_duck_array</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">663</span> <span class="k">def</span> <span class="nf">get_duck_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">664</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">get_duck_array</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/indexing.py:551,</span> in <span class="ni">LazilyIndexedArray.get_duck_array</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">550</span> <span class="k">def</span> <span class="nf">get_duck_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">551</span>     <span class="n">array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">552</span>     <span class="c1"># self.array[self.key] is now a numpy array when</span>
-<span class="g g-Whitespace">    </span><span class="mi">553</span>     <span class="c1"># self.array is a BackendArray subclass</span>
-<span class="g g-Whitespace">    </span><span class="mi">554</span>     <span class="c1"># and self.key is BasicIndexer((slice(None, None, None),))</span>
-<span class="g g-Whitespace">    </span><span class="mi">555</span>     <span class="c1"># so we need the explicit check for ExplicitlyIndexed</span>
-<span class="g g-Whitespace">    </span><span class="mi">556</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">ExplicitlyIndexed</span><span class="p">):</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:100,</span> in <span class="ni">NetCDF4ArrayWrapper.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span> <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">100</span>     <span class="k">return</span> <span class="n">indexing</span><span class="o">.</span><span class="n">explicit_indexing_adapter</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>         <span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">indexing</span><span class="o">.</span><span class="n">IndexingSupport</span><span class="o">.</span><span class="n">OUTER</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/core/indexing.py:858,</span> in <span class="ni">explicit_indexing_adapter</span><span class="nt">(key, shape, indexing_support, raw_indexing_method)</span>
-<span class="g g-Whitespace">    </span><span class="mi">836</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Support explicit indexing by delegating to a raw indexing method.</span>
-<span class="g g-Whitespace">    </span><span class="mi">837</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">838</span><span class="sd"> Outer and/or vectorized indexers are supported by indexing a second time</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span><span class="sd"> Indexing result, in the form of a duck numpy-array.</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span> <span class="n">raw_key</span><span class="p">,</span> <span class="n">numpy_indices</span> <span class="o">=</span> <span class="n">decompose_indexer</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">indexing_support</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">858</span> <span class="n">result</span> <span class="o">=</span> <span class="n">raw_indexing_method</span><span class="p">(</span><span class="n">raw_key</span><span class="o">.</span><span class="n">tuple</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span> <span class="k">if</span> <span class="n">numpy_indices</span><span class="o">.</span><span class="n">tuple</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>     <span class="c1"># index the loaded np.ndarray</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">NumpyIndexingAdapter</span><span class="p">(</span><span class="n">result</span><span class="p">)[</span><span class="n">numpy_indices</span><span class="p">]</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/netCDF4_.py:113,</span> in <span class="ni">NetCDF4ArrayWrapper._getitem</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">datastore</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span>         <span class="n">original_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="n">needs_lock</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">113</span>         <span class="n">array</span> <span class="o">=</span> <span class="n">getitem</span><span class="p">(</span><span class="n">original_array</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span> <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span>     <span class="c1"># Catch IndexError in netCDF4 and return a more informative</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span>     <span class="c1"># error message.  This is most often called when an unsorted</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="c1"># indexer is used before the data is loaded from disk.</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span>     <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span>         <span class="s2">&quot;The indexing operation you are attempting to perform &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">120</span>         <span class="s2">&quot;is not valid on netCDF4.Variable object. Try loading &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span>         <span class="s2">&quot;your data into memory first by calling .load().&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/metpy_book/lib/python3.11/site-packages/xarray/backends/common.py:151,</span> in <span class="ni">robust_getitem</span><span class="nt">(array, key, catch, max_retries, initial_delay)</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_retries</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">151</span>         <span class="k">return</span> <span class="n">array</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="k">except</span> <span class="n">catch</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span>         <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">max_retries</span><span class="p">:</span>
-
-<span class="nn">File src/netCDF4/_netCDF4.pyx:4958,</span> in <span class="ni">netCDF4._netCDF4.Variable.__getitem__</span><span class="nt">()</span>
-
-<span class="nn">File src/netCDF4/_netCDF4.pyx:5916,</span> in <span class="ni">netCDF4._netCDF4.Variable._get</span><span class="nt">()</span>
-
-<span class="nn">File src/netCDF4/_netCDF4.pyx:2029,</span> in <span class="ni">netCDF4._netCDF4._ensure_nc_success</span><span class="nt">()</span>
-
-<span class="ne">RuntimeError</span>: NetCDF: DAP failure
-</pre></div>
-</div>
-<img alt="../../_images/1f2ca059cf49485dd38f676ef3add9028090df8b89d4426186f4f74c91d5b82d.png" src="../../_images/1f2ca059cf49485dd38f676ef3add9028090df8b89d4426186f4f74c91d5b82d.png" />
+<img alt="../../_images/b324f0e02c202d05e660a180294247eb10995a704a03cf06f1a0c5b7fc83f421.png" src="../../_images/b324f0e02c202d05e660a180294247eb10995a704a03cf06f1a0c5b7fc83f421.png" />
 </div>
 </div>
 </section>
