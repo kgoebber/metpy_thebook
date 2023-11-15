@@ -588,7 +588,7 @@ elements of each element are given below.</p>
 <p>Here we’ll import those modules that are needed to produce read in remote surface METAR observation data, process those observations, and plot the values on a map.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">timezone</span>
 <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
 <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
 
@@ -630,20 +630,6 @@ elements of each element are given below.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;sfstns.tbl&#39; from &#39;https://github.com/Unidata/MetPy/raw/v1.5.1/staticdata/sfstns.tbl&#39; to &#39;/Users/kgoebber/Library/Caches/metpy/v1.5.1&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;master.txt&#39; from &#39;https://github.com/Unidata/MetPy/raw/v1.5.1/staticdata/master.txt&#39; to &#39;/Users/kgoebber/Library/Caches/metpy/v1.5.1&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;stations.txt&#39; from &#39;https://github.com/Unidata/MetPy/raw/v1.5.1/staticdata/stations.txt&#39; to &#39;/Users/kgoebber/Library/Caches/metpy/v1.5.1&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;airport-codes.csv&#39; from &#39;https://github.com/Unidata/MetPy/raw/v1.5.1/staticdata/airport-codes.csv&#39; to &#39;/Users/kgoebber/Library/Caches/metpy/v1.5.1&#39;.
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="plot-data">
@@ -678,7 +664,7 @@ elements of each element are given below.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1a690f6027661b897db8c031d0e21e2ecf5ab5f37e8175b7d952e3c6380901fb.png" src="../../_images/1a690f6027661b897db8c031d0e21e2ecf5ab5f37e8175b7d952e3c6380901fb.png" />
+<img alt="../../_images/5de0e10d3551b5e9776e95e0638a05a988c72c58e03873caebc82578f6895396.png" src="../../_images/5de0e10d3551b5e9776e95e0638a05a988c72c58e03873caebc82578f6895396.png" />
 </div>
 </div>
 <div class="admonition note">

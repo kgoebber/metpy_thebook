@@ -596,8 +596,9 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the date/time of the model run</span>
 <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 
-<span class="c1"># Remote access to the dataset from the NCAR RDA site</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/2/TP&#39;</span><span class="p">)</span>
+<span class="c1"># Remote access to the dataset from the NCEI Archive</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://www.ncei.noaa.gov/thredds/dodsC/model-gfs-g3-anl-files-old&#39;</span>
+                     <span class="sa">f</span><span class="s1">&#39;/</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">/gfsanl_3_</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d_%H</span><span class="si">}</span><span class="s1">00_000.grb&#39;</span><span class="p">)</span>
 
 <span class="c1"># Subset data to be just over the U.S. for plotting purposes</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">140</span><span class="p">,</span> <span class="mi">360</span><span class="o">-</span><span class="mi">60</span><span class="p">))</span>
@@ -673,7 +674,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/25c5b7f447f9e8211708aeb79b037af16c7310cc9068f9af96b72bb0aa08af12.png" src="../../_images/25c5b7f447f9e8211708aeb79b037af16c7310cc9068f9af96b72bb0aa08af12.png" />
+<img alt="../../_images/38af292789ad68131bf2840461286c93ef29851cf9e16c5eae10ebe15a704736.png" src="../../_images/38af292789ad68131bf2840461286c93ef29851cf9e16c5eae10ebe15a704736.png" />
 </div>
 </div>
 <div class="admonition note">
