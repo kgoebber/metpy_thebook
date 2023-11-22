@@ -625,27 +625,30 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-60869367-3838-4f4f-ac36-d1ef391f90a2">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-60869367-3838-4f4f-ac36-d1ef391f90a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a6208108-afd8-444c-bec2-cc3cc52a4c42">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-a6208108-afd8-444c-bec2-cc3cc52a4c42" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Advection} = -u \frac{\Delta T}{\Delta x} - v \frac{\Delta T}{\Delta y}
 \end{align}\]</div>
 <p>The minus signs are by convention, which means cold air advection will be negative values and warm air advection will be positive values.</p>
 <p><a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.advection.html" target="_blank">Advection Calculation in MetPy</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">level</span> <span class="o">=</span> <span class="mi">850</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select Level and Time</span>
+<span class="n">level</span> <span class="o">=</span> <span class="mi">850</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
 <span class="n">plot_time</span> <span class="o">=</span> <span class="n">model_run_time</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
+<span class="c1"># Isolate needed variables</span>
 <span class="n">tmpk</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Temperature_isobaric</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">plot_time</span><span class="p">)</span>
 <span class="n">uwind</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">plot_time</span><span class="p">)</span>
 <span class="n">vwind</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">plot_time</span><span class="p">)</span>
 
+<span class="c1"># Copmute advection and store in Dataset</span>
 <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;temperature_advection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">advection</span><span class="p">(</span><span class="n">tmpk</span><span class="p">,</span> <span class="n">uwind</span><span class="p">,</span> <span class="n">vwind</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/fp/_l45s1m93s5009vb713pyg580000gn/T/ipykernel_35056/1951136978.py:8: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/fp/_l45s1m93s5009vb713pyg580000gn/T/ipykernel_91668/3396914952.py:11: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
   ds[&#39;temperature_advection&#39;] = mpcalc.advection(tmpk, uwind, vwind)
 </pre></div>
 </div>
@@ -722,7 +725,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ff9cf5887c8d5280b048efd5ff05aa3bee56635057a597ce2fb47a7a55df15ce.png" src="../../_images/ff9cf5887c8d5280b048efd5ff05aa3bee56635057a597ce2fb47a7a55df15ce.png" />
+<img alt="../../_images/9e8ac97f1d6c1257d818e2582b18c4ac043d24edb33843ad61e5b33797a07dd3.png" src="../../_images/9e8ac97f1d6c1257d818e2582b18c4ac043d24edb33843ad61e5b33797a07dd3.png" />
 </div>
 </div>
 </section>

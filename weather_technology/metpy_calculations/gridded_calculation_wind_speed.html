@@ -625,9 +625,11 @@ document.write(`
 <p>We can add a new variable based on a simialr one, then update the values based on the calculation. This is easy for wind speed as it is a variant on a single component of the wind.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate Wind Speed</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isolate needed variables for calculations</span>
 <span class="n">uwnd</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">plot_time</span><span class="p">)</span>
 <span class="n">vwnd</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">plot_time</span><span class="p">)</span>
+
+<span class="c1"># Calculate Wind Speed, store in Dataset</span>
 <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">wind_speed</span><span class="p">(</span><span class="n">uwnd</span><span class="p">,</span> <span class="n">vwnd</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -680,7 +682,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/12d641f5da0adf517b3d16a496ea66c9a74ba61fc870937dab04fe54b73fd9e2.png" src="../../_images/12d641f5da0adf517b3d16a496ea66c9a74ba61fc870937dab04fe54b73fd9e2.png" />
+<img alt="../../_images/9b57ae5207c5be55c8381cbb1eb11e40c3cf6ac022760405aea61853e426087d.png" src="../../_images/9b57ae5207c5be55c8381cbb1eb11e40c3cf6ac022760405aea61853e426087d.png" />
 </div>
 </div>
 </section>
