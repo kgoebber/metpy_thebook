@@ -18,7 +18,8 @@ stability would be defined as neutral.
 :name: stability
 
 Different conditions of equilibrium related to stability.
-Image from <a href="http://serc.carleton.edu/images/introgeo/models/Stability.jpg" target="_blank">http://serc.carleton.edu/images/introgeo/models/Stability.jpg</a>
+Image from the <a href="https://serc.carleton.edu/introgeo/models/EqStBOT.html" target="_blank">Equilibrium, Stability, and Behavior over time</a>
+ and is licensed under the <a href=http://creativecommons.org/licenses/by-nc-sa/3.0/>Attribution-NonCommercial-ShareAlike 3.0</a>. Image source http://serc.carleton.edu/images/introgeo/models/Stability.jpg
 ```
 
 These conditions can also be applied to the atmosphere. For parcels
