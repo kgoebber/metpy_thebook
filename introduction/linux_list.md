@@ -17,7 +17,7 @@ hidden
 
 `ls -F`: This lists all files and adds a / to the end of all directories
 
-`ls -l`: This lists all files in "long" format.=
+`ls -l`: This lists all files in "long" format.
 
 `ls -ltr`: This lists all files in the long time reversed order (newest last)
 
