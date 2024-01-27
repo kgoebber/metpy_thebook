@@ -45,6 +45,7 @@ sphinx:
     - sphinx_multitoc_numbering
   config:
     bibtex_reference_style: author_year
+    nb_execution_raise_on_error: true 
 
 # Information about where the book exists on the web
 repository:
