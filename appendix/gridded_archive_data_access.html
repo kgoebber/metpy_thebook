@@ -615,7 +615,7 @@ times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data available July 30, 1999 at 18 UTC through December 6, 2007 at 06 UTC</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/1/TP&#39;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/1/TP&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="p">)</span>
 </pre></div>
@@ -656,13 +656,17 @@ Attributes: (12/14)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Available December 6, 2007 at 06 UTC through March 31, 2023 at 18 UTC</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/2/TP&#39;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/2/TP&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>syntax error, unexpected WORD_WORD, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
+context: &lt;!DOCTYPE^ html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;style&gt;html { color-scheme: light dark; }body { width: 35em; margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;An error occurred.&lt;/h1&gt;&lt;p&gt;Sorry, the page you are looking for is currently unavailable.&lt;br/&gt;Please try again later.&lt;/p&gt;&lt;p&gt;If you are the system administrator of this resource then you should checkthe error log for details.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Faithfully yours, nginx.&lt;/em&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time8: 22306, isobaric1: 41,
                                                   lat: 181, lon: 360)&gt;
 [59591817360 values with dtype=float32]
