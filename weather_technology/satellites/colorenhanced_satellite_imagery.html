@@ -348,7 +348,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/upperair_data_access.html">Accessing Upperair Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/working_with_NAM_data.html">Working with NAM Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../appendix/story_telling_with_data.html">The Influence of SST on Midlatitude Cyclones</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
@@ -578,7 +577,7 @@ document.write(`
 <h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">UTC</span>
 
 <span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
 <span class="kn">from</span> <span class="nn">metpy.plots</span> <span class="kn">import</span> <span class="n">declarative</span>
@@ -595,7 +594,7 @@ document.write(`
 <h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">UTC</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
 <span class="c1"># Create variables for URL generation</span>
 <span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;CONUS&#39;</span>
@@ -677,7 +676,7 @@ Depending on the data you may have to switch between reveresed and non-reveresed
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f261ce48e333f041a3d446037e3c8cf8b52515878d01793452cd237eae2d26d4.png" src="../../_images/f261ce48e333f041a3d446037e3c8cf8b52515878d01793452cd237eae2d26d4.png" />
+<img alt="../../_images/56a15c85d9a7574fe07f5dceaeeda596b4257b8a5010e493c5eaa79cb45ff4d8.png" src="../../_images/56a15c85d9a7574fe07f5dceaeeda596b4257b8a5010e493c5eaa79cb45ff4d8.png" />
 </div>
 </div>
 </section>

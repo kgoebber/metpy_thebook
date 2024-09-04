@@ -350,7 +350,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/upperair_data_access.html">Accessing Upperair Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/working_with_NAM_data.html">Working with NAM Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../appendix/story_telling_with_data.html">The Influence of SST on Midlatitude Cyclones</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
@@ -625,8 +624,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Not all calculations work on grids, yet!</p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-984ed2cb-4d9c-48d3-975f-9ccf7c9a28d4">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-984ed2cb-4d9c-48d3-975f-9ccf7c9a28d4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-24c17206-bc67-4224-ae8a-f0b13e4864cb">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-24c17206-bc67-4224-ae8a-f0b13e4864cb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{Advection} = -u \frac{\Delta T}{\Delta x} - v \frac{\Delta T}{\Delta y}
 \end{align}\]</div>
 <p>The minus signs are by convention, which means cold air advection will be negative values and warm air advection will be positive values.</p>
@@ -648,7 +647,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/fp/_l45s1m93s5009vb713pyg580000gn/T/ipykernel_91668/3396914952.py:11: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/fp/_l45s1m93s5009vb713pyg580000gn/T/ipykernel_66126/3396914952.py:11: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
   ds[&#39;temperature_advection&#39;] = mpcalc.advection(tmpk, uwind, vwind)
 </pre></div>
 </div>
@@ -725,7 +724,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9e8ac97f1d6c1257d818e2582b18c4ac043d24edb33843ad61e5b33797a07dd3.png" src="../../_images/9e8ac97f1d6c1257d818e2582b18c4ac043d24edb33843ad61e5b33797a07dd3.png" />
+<img alt="../../_images/10eaf78c402a94520fb3a6df62083625df1299507764ae5604a209a229334430.png" src="../../_images/10eaf78c402a94520fb3a6df62083625df1299507764ae5604a209a229334430.png" />
 </div>
 </div>
 </section>
