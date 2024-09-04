@@ -6,7 +6,7 @@ author: Kevin Goebbert
 logo: metpy_thebook_graphic.png
 copyright: "2023"
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
-exclude_patterns: [README.md]
+exclude_patterns: [README.md, appendix/story_telling_with_data.ipynb]
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
