@@ -134,7 +134,7 @@ Here is a link to the <A HREF="http://www.weather.gov">National Weather Service<
 
 This code would look like the following in a web browser:
 
-Here is a link to the [National Weather Service](http://www.nws.noaa.gov).
+Here is a link to the [National Weather Service](https://www.weather.gov).
 
 Notice how the reference inside the quotation marks is the same as what
 you would type into an address bar of a web browser.

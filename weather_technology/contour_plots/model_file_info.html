@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>12.2. Model Output Contents &#8212; Introduction to Weather Technology using MetPy</title>
   
@@ -15,52 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weather_technology/contour_plots/model_file_info';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -68,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="12.1. Gridded Data Files" href="gridded_data_location.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -75,23 +75,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -99,7 +92,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,16 +99,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -129,9 +130,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
+  
   
   
   
@@ -141,12 +146,19 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-light" alt="Introduction to Weather Technology using MetPy - Home"/>
+    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-dark pst-js-only" alt="Introduction to Weather Technology using MetPy - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -158,10 +170,10 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/introduction.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/whypython.html">1.1. Why Python?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/jlab_environ.html">1.2. Jupyter Lab Environment</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../introduction/linux_intro.html">1.3. Linux Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../introduction/linux_intro.html">1.3. Linux Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_paths.html">Linux Paths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_pwd.html">Where am I?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_list.html">What do I have here?</a></li>
@@ -173,38 +185,38 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_remove.html">How do I remove a file?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_cat_less_more.html">What’s in a file?</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/vi_intro.html">1.4. Editing Files in Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/basic_html.html">1.5. Hypertext Markup Language (HTML)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/python_script_from_notebook.html">1.6. Python Script from a Notebook File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/create_looping_gifs.html">1.7. Create Looping GIFs</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Syntax</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_intro.html">2. Python Basics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_intro.html">2. Python Basics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/basics1.html">2.1. Python Syntax - Basics #1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/basics2.html">2.2. Python Syntax - Basics #2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/basics3.html">2.3. Python Syntax - Basics #3</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_control_flow.html">3. Python Program Control Flow</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_control_flow.html">3. Python Program Control Flow</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/program_control_ifthen.html">3.1. If-Then Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/program_control_looping.html">3.2. Looping for Repetitive Tasks</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/datetime_intro.html">4. Datetime Module</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/datetime_intro.html">4. Datetime Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/datetime_timedelta_time.html">4.1. Datetime Functionality</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_basics/python_scripting.html">5. Python Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_basics/advanced_script_control.html">6. Runtime Control with Scripts</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Meteorological Concepts, Data Analysis, and Visualization using MetPy</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../metpy_intro.html">7. MetPy Introduction</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../surface_plots/surface_obs_intro.html">8. Surface Obs and Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../surface_plots/surface_obs_intro.html">8. Surface Obs and Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/surface_obs.html">8.1. Review of Surface Station Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/surface_charts.html">8.2. Surface Observation Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/typical_notebook_structure.html">8.3. Common Notebook Structure</a></li>
@@ -215,8 +227,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/saving_images.html">8.8. Saving Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/map_making_summary.html">8.9. Map Making Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../upperair_plots/upperair_intro.html">9. Upperair Obs and Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../upperair_plots/upperair_intro.html">9. Upperair Obs and Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_station_model.html">9.1. Upperair Station Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_station_model_decoding_practice.html">9.2. Practice Decoding Upperair Station Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/map_projections.html">9.3. Map Projections</a></li>
@@ -226,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/projection_practice.html">9.7. Practice Tasks - Using Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_practice_tasks.html">9.8. Practice Tasks - Upperair Maps</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_analysis/hand_analysis_intro.html">10. Introduction to Hand Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_analysis/hand_analysis_intro.html">10. Introduction to Hand Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step1.html">10.3. Step 1: Draw Contours In Pencil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step2.html">10.4. Step 2: Meteorological Consistency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step3.html">10.5. Step 3: Labeling contours</a></li>
@@ -238,8 +250,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/drawing_fronts.html">10.10. Drawing Fronts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/practice_surface_analysis.html">10.11. Practice Tasks - Surface Contouring</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../atmospheric_forces/forces_intro.html">11. Atmospheric Forces</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../atmospheric_forces/forces_intro.html">11. Atmospheric Forces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/pressure_gradient_force.html">11.1. Pressure Gradient Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/coriolis_force.html">11.2. Coriolis Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/centrifugal_force.html">11.3. Centrifugal Force</a></li>
@@ -247,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/gravity.html">11.5. Gravity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/forces_practice_tasks.html">11.6. Practice Tasks - Forces</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="gridded_data_intro.html">12. Gridded Data and Contour Plotting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="gridded_data_intro.html">12. Gridded Data and Contour Plotting</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="gridded_data_location.html">12.1. Gridded Data Files</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">12.2. Model Output Contents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contour_plotting.html">12.3. Contour Plotting</a></li>
@@ -257,24 +269,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="multiple_contours.html">12.6. Plotting Multiple Contours</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contour_plot_practice_tasks.html">12.7. Practice Tasks - Contour Plotting</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../force_balances/force_balances_intro.html">13. Atmospheric Force Balances</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../force_balances/force_balances_intro.html">13. Atmospheric Force Balances</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/hydrostatic_balance.html">13.1. Hydrostatic Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/geostrophic_balance.html">13.2. Geostrophic Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/gradient_balance.html">13.3. Gradient Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/surface_balance.html">13.4. Guldberg-Mohn Balance (Surface Balance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/thermal_wind_balance.html">13.5. Thermal Wind Balance</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../colorfilled_plots/colorfilled_intro.html">14. Color-filled Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../colorfilled_plots/colorfilled_intro.html">14. Color-filled Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/colorfilled_gridded_output.html">14.2. Color-filled Contouring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smoothing_data.html">14.3. Smoothing Data Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smooth_field.html">14.4. Smooth Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smooth_contour.html">14.5. Smooth Contour</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/colorfilled_practice_tasks.html">14.6. Practice Tasks - Color-filled Plotting</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_intro.html">15. Life Cycle of Mid-Latitude Cyclones</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_intro.html">15. Life Cycle of Mid-Latitude Cyclones</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_pre_environment.html">15.3. Pre-Environment Stage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_cyclogenesis.html">15.4. Cyclogenesis Stage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_mature.html">15.5. Mature Stage</a></li>
@@ -285,24 +297,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_warm_sector.html">15.10. Warm Sector Rain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_tracks.html">15.11. Cyclone Tracks</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../overlay_maps/overlay_maps_intro.html">16. Overlay Observations and Contours</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../overlay_maps/overlay_maps_intro.html">16. Overlay Observations and Contours</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../overlay_maps/upperair_500_obs_contours.html">16.1. Overlay Observations and Contours</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../nwp/nwp_intro.html">17. Numerical Weather Prediction</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nwp/nwp_intro.html">17. Numerical Weather Prediction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../nwp/nwp_overview.html">17.1. NWP Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../nwp/operational_models.html">17.2. Operational NWP Models</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../derived_parameters/derived_intro.html">18. Derived Atmospheric Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../derived_parameters/derived_intro.html">18. Derived Atmospheric Parameters</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/thickness.html">18.1. Atmospheric Thickness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/vorticity.html">18.2. Vorticity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/advection.html">18.3. Advection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/derived_parameters_practice_tasks.html">18.4. Practice Tasks - Derived Parameters</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../metpy_calculations/calc_intro.html">19. Calculations with MetPy</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../metpy_calculations/calc_intro.html">19. Calculations with MetPy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/simple_calcs.html">19.1. Simple Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_thickness.html">19.2. Thickness Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/scaling_values.html">19.3. Scaling Parameters</a></li>
@@ -316,8 +328,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_vorticity.html">19.11. Relative Vorticity Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/calculation_practice_tasks.html">19.12. Practice Tasks - MetPy Calculations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/skewt_intro.html">20. Skew-T Log-p Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/skewt_intro.html">20. Skew-T Log-p Diagram</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../skewt/stability_review.html">20.1. Atmospheric Stability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skewt/skewt_diagram.html">20.2. Skew-T Log-p Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skewt/skewt_attributes.html">20.3. Sounding attributes</a></li>
@@ -331,15 +343,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../skewt/metpy_skewt_calc_practice.html">20.12. Practice Tasks - MetPy Sounding Calculations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../satellites/satellite_intro.html">21. Satellite Observations</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../satellites/satellite_intro.html">21. Satellite Observations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_types.html">21.1. Types of Satellites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_channels.html">21.2. Satellite Channels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_imagery.html">21.3. Satellite Imagery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../satellites/satellite_features.html">21.4. Satellite Feature Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../satellites/colorenhanced_satellite_imagery.html">21.5. Color-Enhanced Satellite Imagery</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -348,7 +360,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/upperair_data_access.html">Accessing Upperair Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/working_with_NAM_data.html">Working with NAM Data</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
@@ -361,7 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -377,7 +389,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -386,14 +398,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -515,26 +527,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-  </button>
-`);
-</script>
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -566,10 +572,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="model-output-contents">
-<h1><span class="section-number">12.2. </span>Model Output Contents<a class="headerlink" href="#model-output-contents" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">12.2. </span>Model Output Contents<a class="headerlink" href="#model-output-contents" title="Link to this heading">#</a></h1>
 <p>On surface maps we plotted temperature, dewpoint temperature, mean
 sea-level pressure, wind speed and direction, and current weather
 symbols, which are all typical values recorded by Automated Surface
@@ -602,7 +608,7 @@ all of which can be completed in a standard Jupyter Notebook.</p>
 </div>
 </div>
 <section id="list-file-contents">
-<h2>List File Contents<a class="headerlink" href="#list-file-contents" title="Permalink to this heading">#</a></h2>
+<h2>List File Contents<a class="headerlink" href="#list-file-contents" title="Link to this heading">#</a></h2>
 <p>We can quickly and easily list the variable names that are contained within our model output files. This listing will contain both dimension variables (e.g., time, latitude, and longitude) as well as the variables that we might wish to plot (e.g., Temperature_isobaric). Non-dimension variables are capitalized if accessing data through a THREDDS server (a very common way for accessing these data).</p>
 <div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
@@ -640,7 +646,7 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;hybrid&#39;,
  &#39;hybrid1&#39;,
  &#39;LatLon_Projection&#39;,
- &#39;time1_bounds&#39;,
+ &#39;time_bounds&#39;,
  &#39;time3_bounds&#39;,
  &#39;pressure_difference_layer_bounds&#39;,
  &#39;height_above_ground_layer_bounds&#39;,
@@ -657,14 +663,14 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Cloud_water_entire_atmosphere_single_layer&#39;,
  &#39;Convective_available_potential_energy_pressure_difference_layer&#39;,
  &#39;Convective_available_potential_energy_surface&#39;,
- &#39;Convective_inhibition_pressure_difference_layer&#39;,
  &#39;Convective_inhibition_surface&#39;,
+ &#39;Convective_inhibition_pressure_difference_layer&#39;,
  &#39;Convective_precipitation_surface_Mixed_intervals_Accumulation&#39;,
  &#39;Convective_precipitation_rate_surface&#39;,
  &#39;Dewpoint_temperature_height_above_ground&#39;,
  &#39;Geopotential_height_surface&#39;,
- &#39;Geopotential_height_cloud_ceiling&#39;,
  &#39;Geopotential_height_highest_tropospheric_freezing&#39;,
+ &#39;Geopotential_height_cloud_ceiling&#39;,
  &#39;Geopotential_height_isobaric&#39;,
  &#39;Geopotential_height_zeroDegC_isotherm&#39;,
  &#39;Geopotential_height_maximum_wind&#39;,
@@ -699,12 +705,12 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Precipitation_rate_surface&#39;,
  &#39;Precipitation_rate_surface_Mixed_intervals_Average&#39;,
  &#39;Pressure_surface&#39;,
- &#39;Pressure_low_cloud_bottom_Mixed_intervals_Average&#39;,
- &#39;Pressure_middle_cloud_bottom_Mixed_intervals_Average&#39;,
- &#39;Pressure_middle_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Pressure_high_cloud_bottom_Mixed_intervals_Average&#39;,
  &#39;Pressure_low_cloud_top_Mixed_intervals_Average&#39;,
+ &#39;Pressure_middle_cloud_bottom_Mixed_intervals_Average&#39;,
+ &#39;Pressure_middle_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Pressure_high_cloud_top_Mixed_intervals_Average&#39;,
+ &#39;Pressure_low_cloud_bottom_Mixed_intervals_Average&#39;,
  &#39;Pressure_maximum_wind&#39;,
  &#39;Pressure_height_above_ground&#39;,
  &#39;Pressure_tropopause&#39;,
@@ -733,11 +739,11 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Specific_humidity_height_above_ground&#39;,
  &#39;Storm_relative_helicity_height_above_ground_layer&#39;,
  &#39;Surface_roughness_surface&#39;,
- &#39;Temperature_middle_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Temperature_low_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Temperature_high_cloud_top_Mixed_intervals_Average&#39;,
- &#39;Temperature_pressure_difference_layer&#39;,
+ &#39;Temperature_middle_cloud_top_Mixed_intervals_Average&#39;,
  &#39;Temperature_surface&#39;,
+ &#39;Temperature_pressure_difference_layer&#39;,
  &#39;Temperature_isobaric&#39;,
  &#39;Temperature_altitude_above_msl&#39;,
  &#39;Temperature_maximum_wind&#39;,
@@ -763,11 +769,11 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Convective_Precipitation_Rate_surface_Mixed_intervals_Average&#39;,
  &#39;Potential_Evaporation_Rate_surface&#39;,
  &#39;Ozone_Mixing_Ratio_isobaric&#39;,
- &#39;Reflectivity_height_above_ground&#39;,
  &#39;Reflectivity_hybrid&#39;,
+ &#39;Reflectivity_height_above_ground&#39;,
  &#39;Composite_reflectivity_entire_atmosphere&#39;,
- &#39;Vertical_Speed_Shear_tropopause&#39;,
  &#39;Vertical_Speed_Shear_potential_vorticity_surface&#39;,
+ &#39;Vertical_Speed_Shear_tropopause&#39;,
  &#39;U-Component_Storm_Motion_height_above_ground_layer&#39;,
  &#39;V-Component_Storm_Motion_height_above_ground_layer&#39;,
  &#39;Frictional_Velocity_surface&#39;,
@@ -778,11 +784,11 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;Planetary_Boundary_Layer_Height_surface&#39;,
  &#39;Pressure_of_level_from_which_parcel_was_lifted_pressure_difference_layer&#39;,
  &#39;Downward_Short-Wave_Radiation_Flux_surface_Mixed_intervals_Average&#39;,
- &#39;Upward_Short-Wave_Radiation_Flux_atmosphere_top_Mixed_intervals_Average&#39;,
  &#39;Upward_Short-Wave_Radiation_Flux_surface_Mixed_intervals_Average&#39;,
+ &#39;Upward_Short-Wave_Radiation_Flux_atmosphere_top_Mixed_intervals_Average&#39;,
  &#39;Downward_Long-Wave_Radp_Flux_surface_Mixed_intervals_Average&#39;,
- &#39;Upward_Long-Wave_Radp_Flux_atmosphere_top_Mixed_intervals_Average&#39;,
  &#39;Upward_Long-Wave_Radp_Flux_surface_Mixed_intervals_Average&#39;,
+ &#39;Upward_Long-Wave_Radp_Flux_atmosphere_top_Mixed_intervals_Average&#39;,
  &#39;Cloud_Work_Function_entire_atmosphere_single_layer_Mixed_intervals_Average&#39;,
  &#39;Sunshine_Duration_surface&#39;,
  &#39;Surface_Lifted_Index_surface&#39;,
@@ -805,15 +811,15 @@ all of which can be completed in a standard Jupyter Notebook.</p>
  &#39;u-component_of_wind_isobaric&#39;,
  &#39;u-component_of_wind_maximum_wind&#39;,
  &#39;u-component_of_wind_altitude_above_msl&#39;,
- &#39;u-component_of_wind_tropopause&#39;,
  &#39;u-component_of_wind_height_above_ground&#39;,
+ &#39;u-component_of_wind_tropopause&#39;,
  &#39;u-component_of_wind_sigma&#39;,
- &#39;u-component_of_wind_potential_vorticity_surface&#39;,
  &#39;u-component_of_wind_planetary_boundary&#39;,
+ &#39;u-component_of_wind_potential_vorticity_surface&#39;,
  &#39;v-component_of_wind_pressure_difference_layer&#39;,
  &#39;v-component_of_wind_isobaric&#39;,
- &#39;v-component_of_wind_altitude_above_msl&#39;,
  &#39;v-component_of_wind_maximum_wind&#39;,
+ &#39;v-component_of_wind_altitude_above_msl&#39;,
  &#39;v-component_of_wind_height_above_ground&#39;,
  &#39;v-component_of_wind_tropopause&#39;,
  &#39;v-component_of_wind_sigma&#39;,
@@ -826,7 +832,7 @@ all of which can be completed in a standard Jupyter Notebook.</p>
 <p>What did you find?<br><br><br><br></p>
 </section>
 <section id="access-variable-specifics">
-<h2>Access Variable Specifics<a class="headerlink" href="#access-variable-specifics" title="Permalink to this heading">#</a></h2>
+<h2>Access Variable Specifics<a class="headerlink" href="#access-variable-specifics" title="Link to this heading">#</a></h2>
 <p>Let’s look at a single variable: Geopotential_height_isobaric, which is
 the variable for heights of pressure surfaces (i.e., what we typically
 plot on maps). Type the following into a new cell and run it.</p>
@@ -887,13 +893,14 @@ for that variable.</p>
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -938,7 +945,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -946,7 +953,9 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -956,6 +965,10 @@ body.vscode-dark {
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -979,7 +992,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -990,7 +1003,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1062,15 +1075,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1221,14 +1234,14 @@ dl.xr-attrs {
   fill: currentColor;
 }
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;Geopotential_height_isobaric&#x27; (time2: 129, isobaric: 41,
-                                                  lat: 181, lon: 360)&gt;
+                                                  lat: 181, lon: 360)&gt; Size: 1GB
 [344631240 values with dtype=float32]
 Coordinates:
-  * lat       (lat) float32 90.0 89.0 88.0 87.0 86.0 ... -87.0 -88.0 -89.0 -90.0
-  * lon       (lon) float32 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
-    reftime   datetime64[ns] ...
-  * time2     (time2) datetime64[ns] 2024-08-29 ... 2024-09-14
-  * isobaric  (isobaric) float32 1.0 2.0 4.0 7.0 ... 9.5e+04 9.75e+04 1e+05
+  * lat       (lat) float32 724B 90.0 89.0 88.0 87.0 ... -87.0 -88.0 -89.0 -90.0
+  * lon       (lon) float32 1kB 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
+    reftime   datetime64[ns] 8B ...
+  * time2     (time2) datetime64[ns] 1kB 2024-12-03 ... 2024-12-19
+  * isobaric  (isobaric) float32 164B 1.0 2.0 4.0 7.0 ... 9.5e+04 9.75e+04 1e+05
 Attributes: (12/13)
     long_name:                       Geopotential height @ Isobaric surface
     units:                           gpm
@@ -1242,7 +1255,7 @@ Attributes: (12/13)
     Grib2_Level_Type:                100
     Grib2_Level_Desc:                Isobaric surface
     Grib2_Generating_Process_Type:   Forecast
-    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'Geopotential_height_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time2</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-f6972bc6-3929-4452-a9f0-5e80981412af' class='xr-array-in' type='checkbox' checked><label for='section-f6972bc6-3929-4452-a9f0-5e80981412af' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-f7acb23d-4000-472b-84e4-918e5222fb0b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f7acb23d-4000-472b-84e4-918e5222fb0b' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-191a7a12-1d90-4e7b-baf8-726496ff2566' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-191a7a12-1d90-4e7b-baf8-726496ff2566' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c59aa6e4-2c74-49e6-8ec6-3a0351789980' class='xr-var-data-in' type='checkbox'><label for='data-c59aa6e4-2c74-49e6-8ec6-3a0351789980' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
+    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'Geopotential_height_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time2</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-19975a5a-4c88-4410-a506-8739682b06b6' class='xr-array-in' type='checkbox' checked><label for='section-19975a5a-4c88-4410-a506-8739682b06b6' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-580408cc-0c33-4b71-a463-eb441909d0e6' class='xr-section-summary-in' type='checkbox'  checked><label for='section-580408cc-0c33-4b71-a463-eb441909d0e6' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-eab52b62-9dc8-4ed6-b0da-9ba9fa5ba3de' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-eab52b62-9dc8-4ed6-b0da-9ba9fa5ba3de' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4ae8e22f-6470-4492-ba07-66cca4badad4' class='xr-var-data-in' type='checkbox'><label for='data-4ae8e22f-6470-4492-ba07-66cca4badad4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
         78.,  77.,  76.,  75.,  74.,  73.,  72.,  71.,  70.,  69.,  68.,  67.,
         66.,  65.,  64.,  63.,  62.,  61.,  60.,  59.,  58.,  57.,  56.,  55.,
         54.,  53.,  52.,  51.,  50.,  49.,  48.,  47.,  46.,  45.,  44.,  43.,
@@ -1257,100 +1270,100 @@ Attributes: (12/13)
        -54., -55., -56., -57., -58., -59., -60., -61., -62., -63., -64., -65.,
        -66., -67., -68., -69., -70., -71., -72., -73., -74., -75., -76., -77.,
        -78., -79., -80., -81., -82., -83., -84., -85., -86., -87., -88., -89.,
-       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-3083d5e5-b1d6-4833-b9c0-dbaeeed917a2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3083d5e5-b1d6-4833-b9c0-dbaeeed917a2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-aa7fcf8f-a443-4be9-9559-83bfea0e1776' class='xr-var-data-in' type='checkbox'><label for='data-aa7fcf8f-a443-4be9-9559-83bfea0e1776' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-486622c6-f7ea-4fa2-ae78-effb13ad79a4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-486622c6-f7ea-4fa2-ae78-effb13ad79a4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7f0b2d6d-4914-4b79-a04a-9e98d9ccda09' class='xr-var-data-in' type='checkbox'><label for='data-7f0b2d6d-4914-4b79-a04a-9e98d9ccda09' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time2</span></div><div class='xr-var-dims'>(time2)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2024-08-29 ... 2024-09-14</div><input id='attrs-d88286e6-ae8a-4f6e-9790-b6b42ceeba24' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d88286e6-ae8a-4f6e-9790-b6b42ceeba24' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-82e37026-5078-4b86-88a6-894a3cf17f3d' class='xr-var-data-in' type='checkbox'><label for='data-82e37026-5078-4b86-88a6-894a3cf17f3d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2024-08-29T00:00:00.000000000&#x27;, &#x27;2024-08-29T03:00:00.000000000&#x27;,
-       &#x27;2024-08-29T06:00:00.000000000&#x27;, &#x27;2024-08-29T09:00:00.000000000&#x27;,
-       &#x27;2024-08-29T12:00:00.000000000&#x27;, &#x27;2024-08-29T15:00:00.000000000&#x27;,
-       &#x27;2024-08-29T18:00:00.000000000&#x27;, &#x27;2024-08-29T21:00:00.000000000&#x27;,
-       &#x27;2024-08-30T00:00:00.000000000&#x27;, &#x27;2024-08-30T03:00:00.000000000&#x27;,
-       &#x27;2024-08-30T06:00:00.000000000&#x27;, &#x27;2024-08-30T09:00:00.000000000&#x27;,
-       &#x27;2024-08-30T12:00:00.000000000&#x27;, &#x27;2024-08-30T15:00:00.000000000&#x27;,
-       &#x27;2024-08-30T18:00:00.000000000&#x27;, &#x27;2024-08-30T21:00:00.000000000&#x27;,
-       &#x27;2024-08-31T00:00:00.000000000&#x27;, &#x27;2024-08-31T03:00:00.000000000&#x27;,
-       &#x27;2024-08-31T06:00:00.000000000&#x27;, &#x27;2024-08-31T09:00:00.000000000&#x27;,
-       &#x27;2024-08-31T12:00:00.000000000&#x27;, &#x27;2024-08-31T15:00:00.000000000&#x27;,
-       &#x27;2024-08-31T18:00:00.000000000&#x27;, &#x27;2024-08-31T21:00:00.000000000&#x27;,
-       &#x27;2024-09-01T00:00:00.000000000&#x27;, &#x27;2024-09-01T03:00:00.000000000&#x27;,
-       &#x27;2024-09-01T06:00:00.000000000&#x27;, &#x27;2024-09-01T09:00:00.000000000&#x27;,
-       &#x27;2024-09-01T12:00:00.000000000&#x27;, &#x27;2024-09-01T15:00:00.000000000&#x27;,
-       &#x27;2024-09-01T18:00:00.000000000&#x27;, &#x27;2024-09-01T21:00:00.000000000&#x27;,
-       &#x27;2024-09-02T00:00:00.000000000&#x27;, &#x27;2024-09-02T03:00:00.000000000&#x27;,
-       &#x27;2024-09-02T06:00:00.000000000&#x27;, &#x27;2024-09-02T09:00:00.000000000&#x27;,
-       &#x27;2024-09-02T12:00:00.000000000&#x27;, &#x27;2024-09-02T15:00:00.000000000&#x27;,
-       &#x27;2024-09-02T18:00:00.000000000&#x27;, &#x27;2024-09-02T21:00:00.000000000&#x27;,
-       &#x27;2024-09-03T00:00:00.000000000&#x27;, &#x27;2024-09-03T03:00:00.000000000&#x27;,
-       &#x27;2024-09-03T06:00:00.000000000&#x27;, &#x27;2024-09-03T09:00:00.000000000&#x27;,
-       &#x27;2024-09-03T12:00:00.000000000&#x27;, &#x27;2024-09-03T15:00:00.000000000&#x27;,
-       &#x27;2024-09-03T18:00:00.000000000&#x27;, &#x27;2024-09-03T21:00:00.000000000&#x27;,
-       &#x27;2024-09-04T00:00:00.000000000&#x27;, &#x27;2024-09-04T03:00:00.000000000&#x27;,
-       &#x27;2024-09-04T06:00:00.000000000&#x27;, &#x27;2024-09-04T09:00:00.000000000&#x27;,
-       &#x27;2024-09-04T12:00:00.000000000&#x27;, &#x27;2024-09-04T15:00:00.000000000&#x27;,
-       &#x27;2024-09-04T18:00:00.000000000&#x27;, &#x27;2024-09-04T21:00:00.000000000&#x27;,
-       &#x27;2024-09-05T00:00:00.000000000&#x27;, &#x27;2024-09-05T03:00:00.000000000&#x27;,
-       &#x27;2024-09-05T06:00:00.000000000&#x27;, &#x27;2024-09-05T09:00:00.000000000&#x27;,
-       &#x27;2024-09-05T12:00:00.000000000&#x27;, &#x27;2024-09-05T15:00:00.000000000&#x27;,
-       &#x27;2024-09-05T18:00:00.000000000&#x27;, &#x27;2024-09-05T21:00:00.000000000&#x27;,
-       &#x27;2024-09-06T00:00:00.000000000&#x27;, &#x27;2024-09-06T03:00:00.000000000&#x27;,
-       &#x27;2024-09-06T06:00:00.000000000&#x27;, &#x27;2024-09-06T09:00:00.000000000&#x27;,
-       &#x27;2024-09-06T12:00:00.000000000&#x27;, &#x27;2024-09-06T15:00:00.000000000&#x27;,
-       &#x27;2024-09-06T18:00:00.000000000&#x27;, &#x27;2024-09-06T21:00:00.000000000&#x27;,
-       &#x27;2024-09-07T00:00:00.000000000&#x27;, &#x27;2024-09-07T03:00:00.000000000&#x27;,
-       &#x27;2024-09-07T06:00:00.000000000&#x27;, &#x27;2024-09-07T09:00:00.000000000&#x27;,
-       &#x27;2024-09-07T12:00:00.000000000&#x27;, &#x27;2024-09-07T15:00:00.000000000&#x27;,
-       &#x27;2024-09-07T18:00:00.000000000&#x27;, &#x27;2024-09-07T21:00:00.000000000&#x27;,
-       &#x27;2024-09-08T00:00:00.000000000&#x27;, &#x27;2024-09-08T03:00:00.000000000&#x27;,
-       &#x27;2024-09-08T06:00:00.000000000&#x27;, &#x27;2024-09-08T09:00:00.000000000&#x27;,
-       &#x27;2024-09-08T12:00:00.000000000&#x27;, &#x27;2024-09-08T15:00:00.000000000&#x27;,
-       &#x27;2024-09-08T18:00:00.000000000&#x27;, &#x27;2024-09-08T21:00:00.000000000&#x27;,
-       &#x27;2024-09-09T00:00:00.000000000&#x27;, &#x27;2024-09-09T03:00:00.000000000&#x27;,
-       &#x27;2024-09-09T06:00:00.000000000&#x27;, &#x27;2024-09-09T09:00:00.000000000&#x27;,
-       &#x27;2024-09-09T12:00:00.000000000&#x27;, &#x27;2024-09-09T15:00:00.000000000&#x27;,
-       &#x27;2024-09-09T18:00:00.000000000&#x27;, &#x27;2024-09-09T21:00:00.000000000&#x27;,
-       &#x27;2024-09-10T00:00:00.000000000&#x27;, &#x27;2024-09-10T03:00:00.000000000&#x27;,
-       &#x27;2024-09-10T06:00:00.000000000&#x27;, &#x27;2024-09-10T09:00:00.000000000&#x27;,
-       &#x27;2024-09-10T12:00:00.000000000&#x27;, &#x27;2024-09-10T15:00:00.000000000&#x27;,
-       &#x27;2024-09-10T18:00:00.000000000&#x27;, &#x27;2024-09-10T21:00:00.000000000&#x27;,
-       &#x27;2024-09-11T00:00:00.000000000&#x27;, &#x27;2024-09-11T03:00:00.000000000&#x27;,
-       &#x27;2024-09-11T06:00:00.000000000&#x27;, &#x27;2024-09-11T09:00:00.000000000&#x27;,
-       &#x27;2024-09-11T12:00:00.000000000&#x27;, &#x27;2024-09-11T15:00:00.000000000&#x27;,
-       &#x27;2024-09-11T18:00:00.000000000&#x27;, &#x27;2024-09-11T21:00:00.000000000&#x27;,
-       &#x27;2024-09-12T00:00:00.000000000&#x27;, &#x27;2024-09-12T03:00:00.000000000&#x27;,
-       &#x27;2024-09-12T06:00:00.000000000&#x27;, &#x27;2024-09-12T09:00:00.000000000&#x27;,
-       &#x27;2024-09-12T12:00:00.000000000&#x27;, &#x27;2024-09-12T15:00:00.000000000&#x27;,
-       &#x27;2024-09-12T18:00:00.000000000&#x27;, &#x27;2024-09-12T21:00:00.000000000&#x27;,
-       &#x27;2024-09-13T00:00:00.000000000&#x27;, &#x27;2024-09-13T03:00:00.000000000&#x27;,
-       &#x27;2024-09-13T06:00:00.000000000&#x27;, &#x27;2024-09-13T09:00:00.000000000&#x27;,
-       &#x27;2024-09-13T12:00:00.000000000&#x27;, &#x27;2024-09-13T15:00:00.000000000&#x27;,
-       &#x27;2024-09-13T18:00:00.000000000&#x27;, &#x27;2024-09-13T21:00:00.000000000&#x27;,
-       &#x27;2024-09-14T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-5618c839-67fa-4c95-bcee-00bb00fa37f1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5618c839-67fa-4c95-bcee-00bb00fa37f1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-95e8ba28-beba-47d0-b40a-7aa120989e25' class='xr-var-data-in' type='checkbox'><label for='data-95e8ba28-beba-47d0-b40a-7aa120989e25' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
+       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-80ca6a87-626a-4bbd-b1ea-464404743f2a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-80ca6a87-626a-4bbd-b1ea-464404743f2a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-77e0335a-b6dd-416d-9411-c4b7b757bfc5' class='xr-var-data-in' type='checkbox'><label for='data-77e0335a-b6dd-416d-9411-c4b7b757bfc5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3a0c0577-752f-4a5f-bbaa-22d89b39539f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3a0c0577-752f-4a5f-bbaa-22d89b39539f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a641f9d2-e3a5-4b7c-911d-bf884f492cd1' class='xr-var-data-in' type='checkbox'><label for='data-a641f9d2-e3a5-4b7c-911d-bf884f492cd1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time2</span></div><div class='xr-var-dims'>(time2)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2024-12-03 ... 2024-12-19</div><input id='attrs-6432b49b-9779-4951-af4c-8007f7d9fa65' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6432b49b-9779-4951-af4c-8007f7d9fa65' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a8ed71bd-b92f-45b9-9034-0f5038f1c8ce' class='xr-var-data-in' type='checkbox'><label for='data-a8ed71bd-b92f-45b9-9034-0f5038f1c8ce' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2024-12-03T00:00:00.000000000&#x27;, &#x27;2024-12-03T03:00:00.000000000&#x27;,
+       &#x27;2024-12-03T06:00:00.000000000&#x27;, &#x27;2024-12-03T09:00:00.000000000&#x27;,
+       &#x27;2024-12-03T12:00:00.000000000&#x27;, &#x27;2024-12-03T15:00:00.000000000&#x27;,
+       &#x27;2024-12-03T18:00:00.000000000&#x27;, &#x27;2024-12-03T21:00:00.000000000&#x27;,
+       &#x27;2024-12-04T00:00:00.000000000&#x27;, &#x27;2024-12-04T03:00:00.000000000&#x27;,
+       &#x27;2024-12-04T06:00:00.000000000&#x27;, &#x27;2024-12-04T09:00:00.000000000&#x27;,
+       &#x27;2024-12-04T12:00:00.000000000&#x27;, &#x27;2024-12-04T15:00:00.000000000&#x27;,
+       &#x27;2024-12-04T18:00:00.000000000&#x27;, &#x27;2024-12-04T21:00:00.000000000&#x27;,
+       &#x27;2024-12-05T00:00:00.000000000&#x27;, &#x27;2024-12-05T03:00:00.000000000&#x27;,
+       &#x27;2024-12-05T06:00:00.000000000&#x27;, &#x27;2024-12-05T09:00:00.000000000&#x27;,
+       &#x27;2024-12-05T12:00:00.000000000&#x27;, &#x27;2024-12-05T15:00:00.000000000&#x27;,
+       &#x27;2024-12-05T18:00:00.000000000&#x27;, &#x27;2024-12-05T21:00:00.000000000&#x27;,
+       &#x27;2024-12-06T00:00:00.000000000&#x27;, &#x27;2024-12-06T03:00:00.000000000&#x27;,
+       &#x27;2024-12-06T06:00:00.000000000&#x27;, &#x27;2024-12-06T09:00:00.000000000&#x27;,
+       &#x27;2024-12-06T12:00:00.000000000&#x27;, &#x27;2024-12-06T15:00:00.000000000&#x27;,
+       &#x27;2024-12-06T18:00:00.000000000&#x27;, &#x27;2024-12-06T21:00:00.000000000&#x27;,
+       &#x27;2024-12-07T00:00:00.000000000&#x27;, &#x27;2024-12-07T03:00:00.000000000&#x27;,
+       &#x27;2024-12-07T06:00:00.000000000&#x27;, &#x27;2024-12-07T09:00:00.000000000&#x27;,
+       &#x27;2024-12-07T12:00:00.000000000&#x27;, &#x27;2024-12-07T15:00:00.000000000&#x27;,
+       &#x27;2024-12-07T18:00:00.000000000&#x27;, &#x27;2024-12-07T21:00:00.000000000&#x27;,
+       &#x27;2024-12-08T00:00:00.000000000&#x27;, &#x27;2024-12-08T03:00:00.000000000&#x27;,
+       &#x27;2024-12-08T06:00:00.000000000&#x27;, &#x27;2024-12-08T09:00:00.000000000&#x27;,
+       &#x27;2024-12-08T12:00:00.000000000&#x27;, &#x27;2024-12-08T15:00:00.000000000&#x27;,
+       &#x27;2024-12-08T18:00:00.000000000&#x27;, &#x27;2024-12-08T21:00:00.000000000&#x27;,
+       &#x27;2024-12-09T00:00:00.000000000&#x27;, &#x27;2024-12-09T03:00:00.000000000&#x27;,
+       &#x27;2024-12-09T06:00:00.000000000&#x27;, &#x27;2024-12-09T09:00:00.000000000&#x27;,
+       &#x27;2024-12-09T12:00:00.000000000&#x27;, &#x27;2024-12-09T15:00:00.000000000&#x27;,
+       &#x27;2024-12-09T18:00:00.000000000&#x27;, &#x27;2024-12-09T21:00:00.000000000&#x27;,
+       &#x27;2024-12-10T00:00:00.000000000&#x27;, &#x27;2024-12-10T03:00:00.000000000&#x27;,
+       &#x27;2024-12-10T06:00:00.000000000&#x27;, &#x27;2024-12-10T09:00:00.000000000&#x27;,
+       &#x27;2024-12-10T12:00:00.000000000&#x27;, &#x27;2024-12-10T15:00:00.000000000&#x27;,
+       &#x27;2024-12-10T18:00:00.000000000&#x27;, &#x27;2024-12-10T21:00:00.000000000&#x27;,
+       &#x27;2024-12-11T00:00:00.000000000&#x27;, &#x27;2024-12-11T03:00:00.000000000&#x27;,
+       &#x27;2024-12-11T06:00:00.000000000&#x27;, &#x27;2024-12-11T09:00:00.000000000&#x27;,
+       &#x27;2024-12-11T12:00:00.000000000&#x27;, &#x27;2024-12-11T15:00:00.000000000&#x27;,
+       &#x27;2024-12-11T18:00:00.000000000&#x27;, &#x27;2024-12-11T21:00:00.000000000&#x27;,
+       &#x27;2024-12-12T00:00:00.000000000&#x27;, &#x27;2024-12-12T03:00:00.000000000&#x27;,
+       &#x27;2024-12-12T06:00:00.000000000&#x27;, &#x27;2024-12-12T09:00:00.000000000&#x27;,
+       &#x27;2024-12-12T12:00:00.000000000&#x27;, &#x27;2024-12-12T15:00:00.000000000&#x27;,
+       &#x27;2024-12-12T18:00:00.000000000&#x27;, &#x27;2024-12-12T21:00:00.000000000&#x27;,
+       &#x27;2024-12-13T00:00:00.000000000&#x27;, &#x27;2024-12-13T03:00:00.000000000&#x27;,
+       &#x27;2024-12-13T06:00:00.000000000&#x27;, &#x27;2024-12-13T09:00:00.000000000&#x27;,
+       &#x27;2024-12-13T12:00:00.000000000&#x27;, &#x27;2024-12-13T15:00:00.000000000&#x27;,
+       &#x27;2024-12-13T18:00:00.000000000&#x27;, &#x27;2024-12-13T21:00:00.000000000&#x27;,
+       &#x27;2024-12-14T00:00:00.000000000&#x27;, &#x27;2024-12-14T03:00:00.000000000&#x27;,
+       &#x27;2024-12-14T06:00:00.000000000&#x27;, &#x27;2024-12-14T09:00:00.000000000&#x27;,
+       &#x27;2024-12-14T12:00:00.000000000&#x27;, &#x27;2024-12-14T15:00:00.000000000&#x27;,
+       &#x27;2024-12-14T18:00:00.000000000&#x27;, &#x27;2024-12-14T21:00:00.000000000&#x27;,
+       &#x27;2024-12-15T00:00:00.000000000&#x27;, &#x27;2024-12-15T03:00:00.000000000&#x27;,
+       &#x27;2024-12-15T06:00:00.000000000&#x27;, &#x27;2024-12-15T09:00:00.000000000&#x27;,
+       &#x27;2024-12-15T12:00:00.000000000&#x27;, &#x27;2024-12-15T15:00:00.000000000&#x27;,
+       &#x27;2024-12-15T18:00:00.000000000&#x27;, &#x27;2024-12-15T21:00:00.000000000&#x27;,
+       &#x27;2024-12-16T00:00:00.000000000&#x27;, &#x27;2024-12-16T03:00:00.000000000&#x27;,
+       &#x27;2024-12-16T06:00:00.000000000&#x27;, &#x27;2024-12-16T09:00:00.000000000&#x27;,
+       &#x27;2024-12-16T12:00:00.000000000&#x27;, &#x27;2024-12-16T15:00:00.000000000&#x27;,
+       &#x27;2024-12-16T18:00:00.000000000&#x27;, &#x27;2024-12-16T21:00:00.000000000&#x27;,
+       &#x27;2024-12-17T00:00:00.000000000&#x27;, &#x27;2024-12-17T03:00:00.000000000&#x27;,
+       &#x27;2024-12-17T06:00:00.000000000&#x27;, &#x27;2024-12-17T09:00:00.000000000&#x27;,
+       &#x27;2024-12-17T12:00:00.000000000&#x27;, &#x27;2024-12-17T15:00:00.000000000&#x27;,
+       &#x27;2024-12-17T18:00:00.000000000&#x27;, &#x27;2024-12-17T21:00:00.000000000&#x27;,
+       &#x27;2024-12-18T00:00:00.000000000&#x27;, &#x27;2024-12-18T03:00:00.000000000&#x27;,
+       &#x27;2024-12-18T06:00:00.000000000&#x27;, &#x27;2024-12-18T09:00:00.000000000&#x27;,
+       &#x27;2024-12-18T12:00:00.000000000&#x27;, &#x27;2024-12-18T15:00:00.000000000&#x27;,
+       &#x27;2024-12-18T18:00:00.000000000&#x27;, &#x27;2024-12-18T21:00:00.000000000&#x27;,
+       &#x27;2024-12-19T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-b0db19bd-bdd6-4c8d-abcc-63a025e0e3f1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b0db19bd-bdd6-4c8d-abcc-63a025e0e3f1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2091c332-329c-4c35-b273-299d555963e0' class='xr-var-data-in' type='checkbox'><label for='data-2091c332-329c-4c35-b273-299d555963e0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
        7.00e+01, 1.00e+02, 2.00e+02, 3.00e+02, 5.00e+02, 7.00e+02, 1.00e+03,
        1.50e+03, 2.00e+03, 3.00e+03, 4.00e+03, 5.00e+03, 7.00e+03, 1.00e+04,
        1.50e+04, 2.00e+04, 2.50e+04, 3.00e+04, 3.50e+04, 4.00e+04, 4.50e+04,
        5.00e+04, 5.50e+04, 6.00e+04, 6.50e+04, 7.00e+04, 7.50e+04, 8.00e+04,
        8.50e+04, 9.00e+04, 9.25e+04, 9.50e+04, 9.75e+04, 1.00e+05],
-      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-64d5a09a-1c50-4698-a6b7-94494647a2eb' class='xr-section-summary-in' type='checkbox'  ><label for='section-64d5a09a-1c50-4698-a6b7-94494647a2eb' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-006323ff-936d-46a5-a26a-d3a8d89f8c46' class='xr-index-data-in' type='checkbox'/><label for='index-006323ff-936d-46a5-a26a-d3a8d89f8c46' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
+      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-cdc16128-57d5-4e89-84c9-32109a4dd25d' class='xr-section-summary-in' type='checkbox'  ><label for='section-cdc16128-57d5-4e89-84c9-32109a4dd25d' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ac4451ac-faaa-4eed-8490-b3e482e0ec7b' class='xr-index-data-in' type='checkbox'/><label for='index-ac4451ac-faaa-4eed-8490-b3e482e0ec7b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
        ...
        -81.0, -82.0, -83.0, -84.0, -85.0, -86.0, -87.0, -88.0, -89.0, -90.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-8bb076d5-aa34-4b21-a95e-0f7c6391ece2' class='xr-index-data-in' type='checkbox'/><label for='index-8bb076d5-aa34-4b21-a95e-0f7c6391ece2' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-5061929d-d1d6-49a0-9107-2a1b8b71fc49' class='xr-index-data-in' type='checkbox'/><label for='index-5061929d-d1d6-49a0-9107-2a1b8b71fc49' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
        ...
        350.0, 351.0, 352.0, 353.0, 354.0, 355.0, 356.0, 357.0, 358.0, 359.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time2</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b5cbd018-97fc-43cd-8590-15925f15b0bf' class='xr-index-data-in' type='checkbox'/><label for='index-b5cbd018-97fc-43cd-8590-15925f15b0bf' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2024-08-29 00:00:00&#x27;, &#x27;2024-08-29 03:00:00&#x27;,
-               &#x27;2024-08-29 06:00:00&#x27;, &#x27;2024-08-29 09:00:00&#x27;,
-               &#x27;2024-08-29 12:00:00&#x27;, &#x27;2024-08-29 15:00:00&#x27;,
-               &#x27;2024-08-29 18:00:00&#x27;, &#x27;2024-08-29 21:00:00&#x27;,
-               &#x27;2024-08-30 00:00:00&#x27;, &#x27;2024-08-30 03:00:00&#x27;,
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time2</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-129a741f-033f-4adf-b983-ee1e419516a3' class='xr-index-data-in' type='checkbox'/><label for='index-129a741f-033f-4adf-b983-ee1e419516a3' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2024-12-03 00:00:00&#x27;, &#x27;2024-12-03 03:00:00&#x27;,
+               &#x27;2024-12-03 06:00:00&#x27;, &#x27;2024-12-03 09:00:00&#x27;,
+               &#x27;2024-12-03 12:00:00&#x27;, &#x27;2024-12-03 15:00:00&#x27;,
+               &#x27;2024-12-03 18:00:00&#x27;, &#x27;2024-12-03 21:00:00&#x27;,
+               &#x27;2024-12-04 00:00:00&#x27;, &#x27;2024-12-04 03:00:00&#x27;,
                ...
-               &#x27;2024-09-12 21:00:00&#x27;, &#x27;2024-09-13 00:00:00&#x27;,
-               &#x27;2024-09-13 03:00:00&#x27;, &#x27;2024-09-13 06:00:00&#x27;,
-               &#x27;2024-09-13 09:00:00&#x27;, &#x27;2024-09-13 12:00:00&#x27;,
-               &#x27;2024-09-13 15:00:00&#x27;, &#x27;2024-09-13 18:00:00&#x27;,
-               &#x27;2024-09-13 21:00:00&#x27;, &#x27;2024-09-14 00:00:00&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time2&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-6b4ae36b-042d-4e2a-a536-90e77ef5bc8e' class='xr-index-data-in' type='checkbox'/><label for='index-6b4ae36b-042d-4e2a-a536-90e77ef5bc8e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
+               &#x27;2024-12-17 21:00:00&#x27;, &#x27;2024-12-18 00:00:00&#x27;,
+               &#x27;2024-12-18 03:00:00&#x27;, &#x27;2024-12-18 06:00:00&#x27;,
+               &#x27;2024-12-18 09:00:00&#x27;, &#x27;2024-12-18 12:00:00&#x27;,
+               &#x27;2024-12-18 15:00:00&#x27;, &#x27;2024-12-18 18:00:00&#x27;,
+               &#x27;2024-12-18 21:00:00&#x27;, &#x27;2024-12-19 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time2&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-458433b5-f8d0-4a92-ab07-3d08b19b6e49' class='xr-index-data-in' type='checkbox'/><label for='index-458433b5-f8d0-4a92-ab07-3d08b19b6e49' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
            70.0,    100.0,    200.0,    300.0,    500.0,    700.0,   1000.0,
          1500.0,   2000.0,   3000.0,   4000.0,   5000.0,   7000.0,  10000.0,
         15000.0,  20000.0,  25000.0,  30000.0,  35000.0,  40000.0,  45000.0,
         50000.0,  55000.0,  60000.0,  65000.0,  70000.0,  75000.0,  80000.0,
         85000.0,  90000.0,  92500.0,  95000.0,  97500.0, 100000.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b243554a-0271-497e-b91f-4b9027091b72' class='xr-section-summary-in' type='checkbox'  ><label for='section-b243554a-0271-497e-b91f-4b9027091b72' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Geopotential height @ Isobaric surface</dd><dt><span>units :</span></dt><dd>gpm</dd><dt><span>abbreviation :</span></dt><dd>HGT</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-3-5_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 3 5]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Mass</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>Geopotential height</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6f91c6ae-397b-4e26-81d8-10f588d2224d' class='xr-section-summary-in' type='checkbox'  ><label for='section-6f91c6ae-397b-4e26-81d8-10f588d2224d' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Geopotential height @ Isobaric surface</dd><dt><span>units :</span></dt><dd>gpm</dd><dt><span>abbreviation :</span></dt><dd>HGT</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-3-5_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 3 5]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Mass</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>Geopotential height</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>What units of Geopotential Height?<br><br><br><br></p>
 <p>How many available forecast hours are there?<br><br><br><br></p>
@@ -1395,13 +1408,14 @@ Attributes: (12/13)
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -1446,7 +1460,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -1454,7 +1468,9 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -1464,6 +1480,10 @@ body.vscode-dark {
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -1487,7 +1507,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -1498,7 +1518,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1570,15 +1590,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1729,14 +1749,14 @@ dl.xr-attrs {
   fill: currentColor;
 }
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;u-component_of_wind_isobaric&#x27; (time2: 129, isobaric: 41,
-                                                  lat: 181, lon: 360)&gt;
+                                                  lat: 181, lon: 360)&gt; Size: 1GB
 [344631240 values with dtype=float32]
 Coordinates:
-  * lat       (lat) float32 90.0 89.0 88.0 87.0 86.0 ... -87.0 -88.0 -89.0 -90.0
-  * lon       (lon) float32 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
-    reftime   datetime64[ns] ...
-  * time2     (time2) datetime64[ns] 2024-08-29 ... 2024-09-14
-  * isobaric  (isobaric) float32 1.0 2.0 4.0 7.0 ... 9.5e+04 9.75e+04 1e+05
+  * lat       (lat) float32 724B 90.0 89.0 88.0 87.0 ... -87.0 -88.0 -89.0 -90.0
+  * lon       (lon) float32 1kB 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
+    reftime   datetime64[ns] 8B ...
+  * time2     (time2) datetime64[ns] 1kB 2024-12-03 ... 2024-12-19
+  * isobaric  (isobaric) float32 164B 1.0 2.0 4.0 7.0 ... 9.5e+04 9.75e+04 1e+05
 Attributes: (12/13)
     long_name:                       u-component of wind @ Isobaric surface
     units:                           m/s
@@ -1750,7 +1770,7 @@ Attributes: (12/13)
     Grib2_Level_Type:                100
     Grib2_Level_Desc:                Isobaric surface
     Grib2_Generating_Process_Type:   Forecast
-    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'u-component_of_wind_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time2</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-62e15a1c-b7fa-4fc9-bd38-0657941f90f4' class='xr-array-in' type='checkbox' checked><label for='section-62e15a1c-b7fa-4fc9-bd38-0657941f90f4' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-18026ecc-15c6-44a0-a662-aa0079a0f9df' class='xr-section-summary-in' type='checkbox'  checked><label for='section-18026ecc-15c6-44a0-a662-aa0079a0f9df' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-250c4add-c7f8-424d-b183-227bc9cb6ab7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-250c4add-c7f8-424d-b183-227bc9cb6ab7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d5967319-ede9-4406-bbab-1f2c62cffa90' class='xr-var-data-in' type='checkbox'><label for='data-d5967319-ede9-4406-bbab-1f2c62cffa90' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
+    Grib2_Statistical_Process_Type:  UnknownStatType--1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'u-component_of_wind_isobaric'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time2</span>: 129</li><li><span class='xr-has-index'>isobaric</span>: 41</li><li><span class='xr-has-index'>lat</span>: 181</li><li><span class='xr-has-index'>lon</span>: 360</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-674bbfec-b7cf-4d09-a170-1820c03960c9' class='xr-array-in' type='checkbox' checked><label for='section-674bbfec-b7cf-4d09-a170-1820c03960c9' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[344631240 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-77b84d32-842b-41fb-961e-b3fe67d80bea' class='xr-section-summary-in' type='checkbox'  checked><label for='section-77b84d32-842b-41fb-961e-b3fe67d80bea' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>90.0 89.0 88.0 ... -89.0 -90.0</div><input id='attrs-9abad78b-ce2b-403d-b935-7bec7a1b173e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9abad78b-ce2b-403d-b935-7bec7a1b173e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-07186a2d-e300-4ae6-b135-5cf503f707a7' class='xr-var-data-in' type='checkbox'><label for='data-07186a2d-e300-4ae6-b135-5cf503f707a7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>array([ 90.,  89.,  88.,  87.,  86.,  85.,  84.,  83.,  82.,  81.,  80.,  79.,
         78.,  77.,  76.,  75.,  74.,  73.,  72.,  71.,  70.,  69.,  68.,  67.,
         66.,  65.,  64.,  63.,  62.,  61.,  60.,  59.,  58.,  57.,  56.,  55.,
         54.,  53.,  52.,  51.,  50.,  49.,  48.,  47.,  46.,  45.,  44.,  43.,
@@ -1765,100 +1785,100 @@ Attributes: (12/13)
        -54., -55., -56., -57., -58., -59., -60., -61., -62., -63., -64., -65.,
        -66., -67., -68., -69., -70., -71., -72., -73., -74., -75., -76., -77.,
        -78., -79., -80., -81., -82., -83., -84., -85., -86., -87., -88., -89.,
-       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-d7656774-5bd9-498e-b3ff-821cabb64709' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d7656774-5bd9-498e-b3ff-821cabb64709' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-24cfe84e-d9fd-4984-a0b9-42d2a674dfce' class='xr-var-data-in' type='checkbox'><label for='data-24cfe84e-d9fd-4984-a0b9-42d2a674dfce' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-25c88a6d-d01c-4d28-be60-2abd55c2ddb5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-25c88a6d-d01c-4d28-be60-2abd55c2ddb5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7a6178d2-24df-49e3-8ee3-66c2ec9de966' class='xr-var-data-in' type='checkbox'><label for='data-7a6178d2-24df-49e3-8ee3-66c2ec9de966' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time2</span></div><div class='xr-var-dims'>(time2)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2024-08-29 ... 2024-09-14</div><input id='attrs-2bc641cf-0e57-4dfa-a8fd-1f9085fd3ae1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2bc641cf-0e57-4dfa-a8fd-1f9085fd3ae1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-41a9f47b-a9dd-471d-b7d6-dc228875a244' class='xr-var-data-in' type='checkbox'><label for='data-41a9f47b-a9dd-471d-b7d6-dc228875a244' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2024-08-29T00:00:00.000000000&#x27;, &#x27;2024-08-29T03:00:00.000000000&#x27;,
-       &#x27;2024-08-29T06:00:00.000000000&#x27;, &#x27;2024-08-29T09:00:00.000000000&#x27;,
-       &#x27;2024-08-29T12:00:00.000000000&#x27;, &#x27;2024-08-29T15:00:00.000000000&#x27;,
-       &#x27;2024-08-29T18:00:00.000000000&#x27;, &#x27;2024-08-29T21:00:00.000000000&#x27;,
-       &#x27;2024-08-30T00:00:00.000000000&#x27;, &#x27;2024-08-30T03:00:00.000000000&#x27;,
-       &#x27;2024-08-30T06:00:00.000000000&#x27;, &#x27;2024-08-30T09:00:00.000000000&#x27;,
-       &#x27;2024-08-30T12:00:00.000000000&#x27;, &#x27;2024-08-30T15:00:00.000000000&#x27;,
-       &#x27;2024-08-30T18:00:00.000000000&#x27;, &#x27;2024-08-30T21:00:00.000000000&#x27;,
-       &#x27;2024-08-31T00:00:00.000000000&#x27;, &#x27;2024-08-31T03:00:00.000000000&#x27;,
-       &#x27;2024-08-31T06:00:00.000000000&#x27;, &#x27;2024-08-31T09:00:00.000000000&#x27;,
-       &#x27;2024-08-31T12:00:00.000000000&#x27;, &#x27;2024-08-31T15:00:00.000000000&#x27;,
-       &#x27;2024-08-31T18:00:00.000000000&#x27;, &#x27;2024-08-31T21:00:00.000000000&#x27;,
-       &#x27;2024-09-01T00:00:00.000000000&#x27;, &#x27;2024-09-01T03:00:00.000000000&#x27;,
-       &#x27;2024-09-01T06:00:00.000000000&#x27;, &#x27;2024-09-01T09:00:00.000000000&#x27;,
-       &#x27;2024-09-01T12:00:00.000000000&#x27;, &#x27;2024-09-01T15:00:00.000000000&#x27;,
-       &#x27;2024-09-01T18:00:00.000000000&#x27;, &#x27;2024-09-01T21:00:00.000000000&#x27;,
-       &#x27;2024-09-02T00:00:00.000000000&#x27;, &#x27;2024-09-02T03:00:00.000000000&#x27;,
-       &#x27;2024-09-02T06:00:00.000000000&#x27;, &#x27;2024-09-02T09:00:00.000000000&#x27;,
-       &#x27;2024-09-02T12:00:00.000000000&#x27;, &#x27;2024-09-02T15:00:00.000000000&#x27;,
-       &#x27;2024-09-02T18:00:00.000000000&#x27;, &#x27;2024-09-02T21:00:00.000000000&#x27;,
-       &#x27;2024-09-03T00:00:00.000000000&#x27;, &#x27;2024-09-03T03:00:00.000000000&#x27;,
-       &#x27;2024-09-03T06:00:00.000000000&#x27;, &#x27;2024-09-03T09:00:00.000000000&#x27;,
-       &#x27;2024-09-03T12:00:00.000000000&#x27;, &#x27;2024-09-03T15:00:00.000000000&#x27;,
-       &#x27;2024-09-03T18:00:00.000000000&#x27;, &#x27;2024-09-03T21:00:00.000000000&#x27;,
-       &#x27;2024-09-04T00:00:00.000000000&#x27;, &#x27;2024-09-04T03:00:00.000000000&#x27;,
-       &#x27;2024-09-04T06:00:00.000000000&#x27;, &#x27;2024-09-04T09:00:00.000000000&#x27;,
-       &#x27;2024-09-04T12:00:00.000000000&#x27;, &#x27;2024-09-04T15:00:00.000000000&#x27;,
-       &#x27;2024-09-04T18:00:00.000000000&#x27;, &#x27;2024-09-04T21:00:00.000000000&#x27;,
-       &#x27;2024-09-05T00:00:00.000000000&#x27;, &#x27;2024-09-05T03:00:00.000000000&#x27;,
-       &#x27;2024-09-05T06:00:00.000000000&#x27;, &#x27;2024-09-05T09:00:00.000000000&#x27;,
-       &#x27;2024-09-05T12:00:00.000000000&#x27;, &#x27;2024-09-05T15:00:00.000000000&#x27;,
-       &#x27;2024-09-05T18:00:00.000000000&#x27;, &#x27;2024-09-05T21:00:00.000000000&#x27;,
-       &#x27;2024-09-06T00:00:00.000000000&#x27;, &#x27;2024-09-06T03:00:00.000000000&#x27;,
-       &#x27;2024-09-06T06:00:00.000000000&#x27;, &#x27;2024-09-06T09:00:00.000000000&#x27;,
-       &#x27;2024-09-06T12:00:00.000000000&#x27;, &#x27;2024-09-06T15:00:00.000000000&#x27;,
-       &#x27;2024-09-06T18:00:00.000000000&#x27;, &#x27;2024-09-06T21:00:00.000000000&#x27;,
-       &#x27;2024-09-07T00:00:00.000000000&#x27;, &#x27;2024-09-07T03:00:00.000000000&#x27;,
-       &#x27;2024-09-07T06:00:00.000000000&#x27;, &#x27;2024-09-07T09:00:00.000000000&#x27;,
-       &#x27;2024-09-07T12:00:00.000000000&#x27;, &#x27;2024-09-07T15:00:00.000000000&#x27;,
-       &#x27;2024-09-07T18:00:00.000000000&#x27;, &#x27;2024-09-07T21:00:00.000000000&#x27;,
-       &#x27;2024-09-08T00:00:00.000000000&#x27;, &#x27;2024-09-08T03:00:00.000000000&#x27;,
-       &#x27;2024-09-08T06:00:00.000000000&#x27;, &#x27;2024-09-08T09:00:00.000000000&#x27;,
-       &#x27;2024-09-08T12:00:00.000000000&#x27;, &#x27;2024-09-08T15:00:00.000000000&#x27;,
-       &#x27;2024-09-08T18:00:00.000000000&#x27;, &#x27;2024-09-08T21:00:00.000000000&#x27;,
-       &#x27;2024-09-09T00:00:00.000000000&#x27;, &#x27;2024-09-09T03:00:00.000000000&#x27;,
-       &#x27;2024-09-09T06:00:00.000000000&#x27;, &#x27;2024-09-09T09:00:00.000000000&#x27;,
-       &#x27;2024-09-09T12:00:00.000000000&#x27;, &#x27;2024-09-09T15:00:00.000000000&#x27;,
-       &#x27;2024-09-09T18:00:00.000000000&#x27;, &#x27;2024-09-09T21:00:00.000000000&#x27;,
-       &#x27;2024-09-10T00:00:00.000000000&#x27;, &#x27;2024-09-10T03:00:00.000000000&#x27;,
-       &#x27;2024-09-10T06:00:00.000000000&#x27;, &#x27;2024-09-10T09:00:00.000000000&#x27;,
-       &#x27;2024-09-10T12:00:00.000000000&#x27;, &#x27;2024-09-10T15:00:00.000000000&#x27;,
-       &#x27;2024-09-10T18:00:00.000000000&#x27;, &#x27;2024-09-10T21:00:00.000000000&#x27;,
-       &#x27;2024-09-11T00:00:00.000000000&#x27;, &#x27;2024-09-11T03:00:00.000000000&#x27;,
-       &#x27;2024-09-11T06:00:00.000000000&#x27;, &#x27;2024-09-11T09:00:00.000000000&#x27;,
-       &#x27;2024-09-11T12:00:00.000000000&#x27;, &#x27;2024-09-11T15:00:00.000000000&#x27;,
-       &#x27;2024-09-11T18:00:00.000000000&#x27;, &#x27;2024-09-11T21:00:00.000000000&#x27;,
-       &#x27;2024-09-12T00:00:00.000000000&#x27;, &#x27;2024-09-12T03:00:00.000000000&#x27;,
-       &#x27;2024-09-12T06:00:00.000000000&#x27;, &#x27;2024-09-12T09:00:00.000000000&#x27;,
-       &#x27;2024-09-12T12:00:00.000000000&#x27;, &#x27;2024-09-12T15:00:00.000000000&#x27;,
-       &#x27;2024-09-12T18:00:00.000000000&#x27;, &#x27;2024-09-12T21:00:00.000000000&#x27;,
-       &#x27;2024-09-13T00:00:00.000000000&#x27;, &#x27;2024-09-13T03:00:00.000000000&#x27;,
-       &#x27;2024-09-13T06:00:00.000000000&#x27;, &#x27;2024-09-13T09:00:00.000000000&#x27;,
-       &#x27;2024-09-13T12:00:00.000000000&#x27;, &#x27;2024-09-13T15:00:00.000000000&#x27;,
-       &#x27;2024-09-13T18:00:00.000000000&#x27;, &#x27;2024-09-13T21:00:00.000000000&#x27;,
-       &#x27;2024-09-14T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-85463b1a-056f-4579-9c04-4d4f4c98b8cd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-85463b1a-056f-4579-9c04-4d4f4c98b8cd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f031d4d2-399d-48e4-b56d-00be65570d1a' class='xr-var-data-in' type='checkbox'><label for='data-f031d4d2-399d-48e4-b56d-00be65570d1a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
+       -90.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 1.0 2.0 ... 357.0 358.0 359.0</div><input id='attrs-a1e2f6b5-72f4-4d3b-88fb-8f2f7fb48dff' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a1e2f6b5-72f4-4d3b-88fb-8f2f7fb48dff' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bb121725-ea12-43a9-8258-319ede5e8a98' class='xr-var-data-in' type='checkbox'><label for='data-bb121725-ea12-43a9-8258-319ede5e8a98' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>array([  0.,   1.,   2., ..., 357., 358., 359.], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>reftime</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d77d9175-09a0-4b81-8b53-c576f28b4353' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d77d9175-09a0-4b81-8b53-c576f28b4353' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b866b7e5-d2aa-49b7-b172-3ccbf2cf7875' class='xr-var-data-in' type='checkbox'><label for='data-b866b7e5-d2aa-49b7-b172-3ccbf2cf7875' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>forecast_reference_time</dd><dt><span>long_name :</span></dt><dd>GRIB reference time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>RunTime</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time2</span></div><div class='xr-var-dims'>(time2)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2024-12-03 ... 2024-12-19</div><input id='attrs-576125ca-c0d8-4723-850f-9b9527829eb9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-576125ca-c0d8-4723-850f-9b9527829eb9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-04d91217-1382-4108-a8ab-625b1048087a' class='xr-var-data-in' type='checkbox'><label for='data-04d91217-1382-4108-a8ab-625b1048087a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>long_name :</span></dt><dd>GRIB forecast or observation time</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2024-12-03T00:00:00.000000000&#x27;, &#x27;2024-12-03T03:00:00.000000000&#x27;,
+       &#x27;2024-12-03T06:00:00.000000000&#x27;, &#x27;2024-12-03T09:00:00.000000000&#x27;,
+       &#x27;2024-12-03T12:00:00.000000000&#x27;, &#x27;2024-12-03T15:00:00.000000000&#x27;,
+       &#x27;2024-12-03T18:00:00.000000000&#x27;, &#x27;2024-12-03T21:00:00.000000000&#x27;,
+       &#x27;2024-12-04T00:00:00.000000000&#x27;, &#x27;2024-12-04T03:00:00.000000000&#x27;,
+       &#x27;2024-12-04T06:00:00.000000000&#x27;, &#x27;2024-12-04T09:00:00.000000000&#x27;,
+       &#x27;2024-12-04T12:00:00.000000000&#x27;, &#x27;2024-12-04T15:00:00.000000000&#x27;,
+       &#x27;2024-12-04T18:00:00.000000000&#x27;, &#x27;2024-12-04T21:00:00.000000000&#x27;,
+       &#x27;2024-12-05T00:00:00.000000000&#x27;, &#x27;2024-12-05T03:00:00.000000000&#x27;,
+       &#x27;2024-12-05T06:00:00.000000000&#x27;, &#x27;2024-12-05T09:00:00.000000000&#x27;,
+       &#x27;2024-12-05T12:00:00.000000000&#x27;, &#x27;2024-12-05T15:00:00.000000000&#x27;,
+       &#x27;2024-12-05T18:00:00.000000000&#x27;, &#x27;2024-12-05T21:00:00.000000000&#x27;,
+       &#x27;2024-12-06T00:00:00.000000000&#x27;, &#x27;2024-12-06T03:00:00.000000000&#x27;,
+       &#x27;2024-12-06T06:00:00.000000000&#x27;, &#x27;2024-12-06T09:00:00.000000000&#x27;,
+       &#x27;2024-12-06T12:00:00.000000000&#x27;, &#x27;2024-12-06T15:00:00.000000000&#x27;,
+       &#x27;2024-12-06T18:00:00.000000000&#x27;, &#x27;2024-12-06T21:00:00.000000000&#x27;,
+       &#x27;2024-12-07T00:00:00.000000000&#x27;, &#x27;2024-12-07T03:00:00.000000000&#x27;,
+       &#x27;2024-12-07T06:00:00.000000000&#x27;, &#x27;2024-12-07T09:00:00.000000000&#x27;,
+       &#x27;2024-12-07T12:00:00.000000000&#x27;, &#x27;2024-12-07T15:00:00.000000000&#x27;,
+       &#x27;2024-12-07T18:00:00.000000000&#x27;, &#x27;2024-12-07T21:00:00.000000000&#x27;,
+       &#x27;2024-12-08T00:00:00.000000000&#x27;, &#x27;2024-12-08T03:00:00.000000000&#x27;,
+       &#x27;2024-12-08T06:00:00.000000000&#x27;, &#x27;2024-12-08T09:00:00.000000000&#x27;,
+       &#x27;2024-12-08T12:00:00.000000000&#x27;, &#x27;2024-12-08T15:00:00.000000000&#x27;,
+       &#x27;2024-12-08T18:00:00.000000000&#x27;, &#x27;2024-12-08T21:00:00.000000000&#x27;,
+       &#x27;2024-12-09T00:00:00.000000000&#x27;, &#x27;2024-12-09T03:00:00.000000000&#x27;,
+       &#x27;2024-12-09T06:00:00.000000000&#x27;, &#x27;2024-12-09T09:00:00.000000000&#x27;,
+       &#x27;2024-12-09T12:00:00.000000000&#x27;, &#x27;2024-12-09T15:00:00.000000000&#x27;,
+       &#x27;2024-12-09T18:00:00.000000000&#x27;, &#x27;2024-12-09T21:00:00.000000000&#x27;,
+       &#x27;2024-12-10T00:00:00.000000000&#x27;, &#x27;2024-12-10T03:00:00.000000000&#x27;,
+       &#x27;2024-12-10T06:00:00.000000000&#x27;, &#x27;2024-12-10T09:00:00.000000000&#x27;,
+       &#x27;2024-12-10T12:00:00.000000000&#x27;, &#x27;2024-12-10T15:00:00.000000000&#x27;,
+       &#x27;2024-12-10T18:00:00.000000000&#x27;, &#x27;2024-12-10T21:00:00.000000000&#x27;,
+       &#x27;2024-12-11T00:00:00.000000000&#x27;, &#x27;2024-12-11T03:00:00.000000000&#x27;,
+       &#x27;2024-12-11T06:00:00.000000000&#x27;, &#x27;2024-12-11T09:00:00.000000000&#x27;,
+       &#x27;2024-12-11T12:00:00.000000000&#x27;, &#x27;2024-12-11T15:00:00.000000000&#x27;,
+       &#x27;2024-12-11T18:00:00.000000000&#x27;, &#x27;2024-12-11T21:00:00.000000000&#x27;,
+       &#x27;2024-12-12T00:00:00.000000000&#x27;, &#x27;2024-12-12T03:00:00.000000000&#x27;,
+       &#x27;2024-12-12T06:00:00.000000000&#x27;, &#x27;2024-12-12T09:00:00.000000000&#x27;,
+       &#x27;2024-12-12T12:00:00.000000000&#x27;, &#x27;2024-12-12T15:00:00.000000000&#x27;,
+       &#x27;2024-12-12T18:00:00.000000000&#x27;, &#x27;2024-12-12T21:00:00.000000000&#x27;,
+       &#x27;2024-12-13T00:00:00.000000000&#x27;, &#x27;2024-12-13T03:00:00.000000000&#x27;,
+       &#x27;2024-12-13T06:00:00.000000000&#x27;, &#x27;2024-12-13T09:00:00.000000000&#x27;,
+       &#x27;2024-12-13T12:00:00.000000000&#x27;, &#x27;2024-12-13T15:00:00.000000000&#x27;,
+       &#x27;2024-12-13T18:00:00.000000000&#x27;, &#x27;2024-12-13T21:00:00.000000000&#x27;,
+       &#x27;2024-12-14T00:00:00.000000000&#x27;, &#x27;2024-12-14T03:00:00.000000000&#x27;,
+       &#x27;2024-12-14T06:00:00.000000000&#x27;, &#x27;2024-12-14T09:00:00.000000000&#x27;,
+       &#x27;2024-12-14T12:00:00.000000000&#x27;, &#x27;2024-12-14T15:00:00.000000000&#x27;,
+       &#x27;2024-12-14T18:00:00.000000000&#x27;, &#x27;2024-12-14T21:00:00.000000000&#x27;,
+       &#x27;2024-12-15T00:00:00.000000000&#x27;, &#x27;2024-12-15T03:00:00.000000000&#x27;,
+       &#x27;2024-12-15T06:00:00.000000000&#x27;, &#x27;2024-12-15T09:00:00.000000000&#x27;,
+       &#x27;2024-12-15T12:00:00.000000000&#x27;, &#x27;2024-12-15T15:00:00.000000000&#x27;,
+       &#x27;2024-12-15T18:00:00.000000000&#x27;, &#x27;2024-12-15T21:00:00.000000000&#x27;,
+       &#x27;2024-12-16T00:00:00.000000000&#x27;, &#x27;2024-12-16T03:00:00.000000000&#x27;,
+       &#x27;2024-12-16T06:00:00.000000000&#x27;, &#x27;2024-12-16T09:00:00.000000000&#x27;,
+       &#x27;2024-12-16T12:00:00.000000000&#x27;, &#x27;2024-12-16T15:00:00.000000000&#x27;,
+       &#x27;2024-12-16T18:00:00.000000000&#x27;, &#x27;2024-12-16T21:00:00.000000000&#x27;,
+       &#x27;2024-12-17T00:00:00.000000000&#x27;, &#x27;2024-12-17T03:00:00.000000000&#x27;,
+       &#x27;2024-12-17T06:00:00.000000000&#x27;, &#x27;2024-12-17T09:00:00.000000000&#x27;,
+       &#x27;2024-12-17T12:00:00.000000000&#x27;, &#x27;2024-12-17T15:00:00.000000000&#x27;,
+       &#x27;2024-12-17T18:00:00.000000000&#x27;, &#x27;2024-12-17T21:00:00.000000000&#x27;,
+       &#x27;2024-12-18T00:00:00.000000000&#x27;, &#x27;2024-12-18T03:00:00.000000000&#x27;,
+       &#x27;2024-12-18T06:00:00.000000000&#x27;, &#x27;2024-12-18T09:00:00.000000000&#x27;,
+       &#x27;2024-12-18T12:00:00.000000000&#x27;, &#x27;2024-12-18T15:00:00.000000000&#x27;,
+       &#x27;2024-12-18T18:00:00.000000000&#x27;, &#x27;2024-12-18T21:00:00.000000000&#x27;,
+       &#x27;2024-12-19T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>1.0 2.0 4.0 ... 9.75e+04 1e+05</div><input id='attrs-151aaa52-6c02-4630-9540-b81864613e64' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-151aaa52-6c02-4630-9540-b81864613e64' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6bf2f3d7-eba8-4e27-b098-7cd72ac2e2b1' class='xr-var-data-in' type='checkbox'><label for='data-6bf2f3d7-eba8-4e27-b098-7cd72ac2e2b1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>Isobaric surface</dd><dt><span>positive :</span></dt><dd>down</dd><dt><span>Grib_level_type :</span></dt><dd>100</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Pressure</dd><dt><span>_CoordinateZisPositive :</span></dt><dd>down</dd></dl></div><div class='xr-var-data'><pre>array([1.00e+00, 2.00e+00, 4.00e+00, 7.00e+00, 1.00e+01, 2.00e+01, 4.00e+01,
        7.00e+01, 1.00e+02, 2.00e+02, 3.00e+02, 5.00e+02, 7.00e+02, 1.00e+03,
        1.50e+03, 2.00e+03, 3.00e+03, 4.00e+03, 5.00e+03, 7.00e+03, 1.00e+04,
        1.50e+04, 2.00e+04, 2.50e+04, 3.00e+04, 3.50e+04, 4.00e+04, 4.50e+04,
        5.00e+04, 5.50e+04, 6.00e+04, 6.50e+04, 7.00e+04, 7.50e+04, 8.00e+04,
        8.50e+04, 9.00e+04, 9.25e+04, 9.50e+04, 9.75e+04, 1.00e+05],
-      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-000a2a5a-427a-4796-b8cc-34915e7a86d7' class='xr-section-summary-in' type='checkbox'  ><label for='section-000a2a5a-427a-4796-b8cc-34915e7a86d7' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-cd17021f-5e93-42e5-bc54-5048f6d33ecb' class='xr-index-data-in' type='checkbox'/><label for='index-cd17021f-5e93-42e5-bc54-5048f6d33ecb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
+      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c6024cc4-4d79-43b0-9e5f-6ee149faff35' class='xr-section-summary-in' type='checkbox'  ><label for='section-c6024cc4-4d79-43b0-9e5f-6ee149faff35' class='xr-section-summary' >Indexes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b0746ea8-e6bc-4594-847e-59202288c9e2' class='xr-index-data-in' type='checkbox'/><label for='index-b0746ea8-e6bc-4594-847e-59202288c9e2' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 90.0,  89.0,  88.0,  87.0,  86.0,  85.0,  84.0,  83.0,  82.0,  81.0,
        ...
        -81.0, -82.0, -83.0, -84.0, -85.0, -86.0, -87.0, -88.0, -89.0, -90.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-66864ddf-299c-4619-a55f-b3ba9c01d5a7' class='xr-index-data-in' type='checkbox'/><label for='index-66864ddf-299c-4619-a55f-b3ba9c01d5a7' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=181))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-830d931f-e5ad-4167-9924-60897c3b3042' class='xr-index-data-in' type='checkbox'/><label for='index-830d931f-e5ad-4167-9924-60897c3b3042' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.0,   1.0,   2.0,   3.0,   4.0,   5.0,   6.0,   7.0,   8.0,   9.0,
        ...
        350.0, 351.0, 352.0, 353.0, 354.0, 355.0, 356.0, 357.0, 358.0, 359.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time2</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-eb971a7f-ac69-40d8-948e-5decb26b674e' class='xr-index-data-in' type='checkbox'/><label for='index-eb971a7f-ac69-40d8-948e-5decb26b674e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2024-08-29 00:00:00&#x27;, &#x27;2024-08-29 03:00:00&#x27;,
-               &#x27;2024-08-29 06:00:00&#x27;, &#x27;2024-08-29 09:00:00&#x27;,
-               &#x27;2024-08-29 12:00:00&#x27;, &#x27;2024-08-29 15:00:00&#x27;,
-               &#x27;2024-08-29 18:00:00&#x27;, &#x27;2024-08-29 21:00:00&#x27;,
-               &#x27;2024-08-30 00:00:00&#x27;, &#x27;2024-08-30 03:00:00&#x27;,
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=360))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time2</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-43921928-9e08-45b3-9df9-dce7baf38d24' class='xr-index-data-in' type='checkbox'/><label for='index-43921928-9e08-45b3-9df9-dce7baf38d24' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2024-12-03 00:00:00&#x27;, &#x27;2024-12-03 03:00:00&#x27;,
+               &#x27;2024-12-03 06:00:00&#x27;, &#x27;2024-12-03 09:00:00&#x27;,
+               &#x27;2024-12-03 12:00:00&#x27;, &#x27;2024-12-03 15:00:00&#x27;,
+               &#x27;2024-12-03 18:00:00&#x27;, &#x27;2024-12-03 21:00:00&#x27;,
+               &#x27;2024-12-04 00:00:00&#x27;, &#x27;2024-12-04 03:00:00&#x27;,
                ...
-               &#x27;2024-09-12 21:00:00&#x27;, &#x27;2024-09-13 00:00:00&#x27;,
-               &#x27;2024-09-13 03:00:00&#x27;, &#x27;2024-09-13 06:00:00&#x27;,
-               &#x27;2024-09-13 09:00:00&#x27;, &#x27;2024-09-13 12:00:00&#x27;,
-               &#x27;2024-09-13 15:00:00&#x27;, &#x27;2024-09-13 18:00:00&#x27;,
-               &#x27;2024-09-13 21:00:00&#x27;, &#x27;2024-09-14 00:00:00&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time2&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a51b5e26-2706-4854-8359-e25a601b6930' class='xr-index-data-in' type='checkbox'/><label for='index-a51b5e26-2706-4854-8359-e25a601b6930' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
+               &#x27;2024-12-17 21:00:00&#x27;, &#x27;2024-12-18 00:00:00&#x27;,
+               &#x27;2024-12-18 03:00:00&#x27;, &#x27;2024-12-18 06:00:00&#x27;,
+               &#x27;2024-12-18 09:00:00&#x27;, &#x27;2024-12-18 12:00:00&#x27;,
+               &#x27;2024-12-18 15:00:00&#x27;, &#x27;2024-12-18 18:00:00&#x27;,
+               &#x27;2024-12-18 21:00:00&#x27;, &#x27;2024-12-19 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time2&#x27;, length=129, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-5bd0efe5-31c0-481f-8d8a-2c61ac9b190e' class='xr-index-data-in' type='checkbox'/><label for='index-5bd0efe5-31c0-481f-8d8a-2c61ac9b190e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     1.0,      2.0,      4.0,      7.0,     10.0,     20.0,     40.0,
            70.0,    100.0,    200.0,    300.0,    500.0,    700.0,   1000.0,
          1500.0,   2000.0,   3000.0,   4000.0,   5000.0,   7000.0,  10000.0,
         15000.0,  20000.0,  25000.0,  30000.0,  35000.0,  40000.0,  45000.0,
         50000.0,  55000.0,  60000.0,  65000.0,  70000.0,  75000.0,  80000.0,
         85000.0,  90000.0,  92500.0,  95000.0,  97500.0, 100000.0],
-      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e54585ff-977d-43bd-8a30-2ecaca5f460e' class='xr-section-summary-in' type='checkbox'  ><label for='section-e54585ff-977d-43bd-8a30-2ecaca5f460e' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>u-component of wind @ Isobaric surface</dd><dt><span>units :</span></dt><dd>m/s</dd><dt><span>abbreviation :</span></dt><dd>UGRD</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-2-2_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 2 2]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Momentum</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>u-component of wind</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b38fbb2a-fa1c-4cc2-b529-541f17de7f84' class='xr-section-summary-in' type='checkbox'  ><label for='section-b38fbb2a-fa1c-4cc2-b529-541f17de7f84' class='xr-section-summary' >Attributes: <span>(13)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>u-component of wind @ Isobaric surface</dd><dt><span>units :</span></dt><dd>m/s</dd><dt><span>abbreviation :</span></dt><dd>UGRD</dd><dt><span>grid_mapping :</span></dt><dd>LatLon_Projection</dd><dt><span>Grib_Variable_Id :</span></dt><dd>VAR_0-2-2_L100</dd><dt><span>Grib2_Parameter :</span></dt><dd>[0 2 2]</dd><dt><span>Grib2_Parameter_Discipline :</span></dt><dd>Meteorological products</dd><dt><span>Grib2_Parameter_Category :</span></dt><dd>Momentum</dd><dt><span>Grib2_Parameter_Name :</span></dt><dd>u-component of wind</dd><dt><span>Grib2_Level_Type :</span></dt><dd>100</dd><dt><span>Grib2_Level_Desc :</span></dt><dd>Isobaric surface</dd><dt><span>Grib2_Generating_Process_Type :</span></dt><dd>Forecast</dd><dt><span>Grib2_Statistical_Process_Type :</span></dt><dd>UnknownStatType--1</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>You will ALWAYS want to check the gridded file to know what different
 variables are called and know some of the basic information about the
@@ -1892,11 +1912,10 @@ Use the information on this page to help you out!</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="gridded_data_location.html"
@@ -1916,17 +1935,16 @@ Use the information on this page to help you out!</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1957,6 +1975,7 @@ By Kevin Goebbert
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -1989,8 +2008,8 @@ All other non-code content is licensed under
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

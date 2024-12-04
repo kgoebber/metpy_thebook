@@ -70,7 +70,7 @@ elements of each element are given below.
   * This attribute can change the color of the plotted observation.
     Default is 'black'. Acceptable colors are those available through
     Matplotlib:
-    <https://matplotlib.org/3.1.1/_images/sphx_glr_named_colors_003.png>
+    <https://matplotlib.org/stable/_images/sphx_glr_named_colors_003.png>
 
 ### **plot_units (optional)**
   * A list of the desired units to plot the fields in. Will only work if

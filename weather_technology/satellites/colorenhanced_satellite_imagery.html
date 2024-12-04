@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>21.5. Color-Enhanced Satellite Imagery &#8212; Introduction to Weather Technology using MetPy</title>
   
@@ -15,52 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weather_technology/satellites/colorenhanced_satellite_imagery';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -68,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="21.4. Satellite Feature Identification" href="satellite_features.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -75,23 +75,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -99,7 +92,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,16 +99,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -129,9 +130,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
+  
   
   
   
@@ -141,12 +146,19 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-light" alt="Introduction to Weather Technology using MetPy - Home"/>
+    <img src="../../_static/metpy_thebook_graphic.png" class="logo__image only-dark pst-js-only" alt="Introduction to Weather Technology using MetPy - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -158,10 +170,10 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/introduction.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/whypython.html">1.1. Why Python?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/jlab_environ.html">1.2. Jupyter Lab Environment</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../introduction/linux_intro.html">1.3. Linux Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../introduction/linux_intro.html">1.3. Linux Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_paths.html">Linux Paths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_pwd.html">Where am I?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_list.html">What do I have here?</a></li>
@@ -173,38 +185,38 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_remove.html">How do I remove a file?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../introduction/linux_cat_less_more.html">What’s in a file?</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/vi_intro.html">1.4. Editing Files in Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/basic_html.html">1.5. Hypertext Markup Language (HTML)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/python_script_from_notebook.html">1.6. Python Script from a Notebook File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/create_looping_gifs.html">1.7. Create Looping GIFs</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Syntax</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_intro.html">2. Python Basics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_intro.html">2. Python Basics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/basics1.html">2.1. Python Syntax - Basics #1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/basics2.html">2.2. Python Syntax - Basics #2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/basics3.html">2.3. Python Syntax - Basics #3</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_control_flow.html">3. Python Program Control Flow</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/python_control_flow.html">3. Python Program Control Flow</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/program_control_ifthen.html">3.1. If-Then Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/program_control_looping.html">3.2. Looping for Repetitive Tasks</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/datetime_intro.html">4. Datetime Module</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python_basics/datetime_intro.html">4. Datetime Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../python_basics/datetime_timedelta_time.html">4.1. Datetime Functionality</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_basics/python_scripting.html">5. Python Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_basics/advanced_script_control.html">6. Runtime Control with Scripts</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Meteorological Concepts, Data Analysis, and Visualization using MetPy</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../metpy_intro.html">7. MetPy Introduction</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../surface_plots/surface_obs_intro.html">8. Surface Obs and Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../surface_plots/surface_obs_intro.html">8. Surface Obs and Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/surface_obs.html">8.1. Review of Surface Station Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/surface_charts.html">8.2. Surface Observation Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/typical_notebook_structure.html">8.3. Common Notebook Structure</a></li>
@@ -215,8 +227,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/saving_images.html">8.8. Saving Images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surface_plots/map_making_summary.html">8.9. Map Making Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../upperair_plots/upperair_intro.html">9. Upperair Obs and Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../upperair_plots/upperair_intro.html">9. Upperair Obs and Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_station_model.html">9.1. Upperair Station Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_station_model_decoding_practice.html">9.2. Practice Decoding Upperair Station Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/map_projections.html">9.3. Map Projections</a></li>
@@ -226,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/projection_practice.html">9.7. Practice Tasks - Using Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upperair_plots/upperair_practice_tasks.html">9.8. Practice Tasks - Upperair Maps</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_analysis/hand_analysis_intro.html">10. Introduction to Hand Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_analysis/hand_analysis_intro.html">10. Introduction to Hand Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step1.html">10.3. Step 1: Draw Contours In Pencil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step2.html">10.4. Step 2: Meteorological Consistency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/hand_analysis_step3.html">10.5. Step 3: Labeling contours</a></li>
@@ -238,8 +250,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/drawing_fronts.html">10.10. Drawing Fronts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hand_analysis/practice_surface_analysis.html">10.11. Practice Tasks - Surface Contouring</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../atmospheric_forces/forces_intro.html">11. Atmospheric Forces</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../atmospheric_forces/forces_intro.html">11. Atmospheric Forces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/pressure_gradient_force.html">11.1. Pressure Gradient Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/coriolis_force.html">11.2. Coriolis Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/centrifugal_force.html">11.3. Centrifugal Force</a></li>
@@ -247,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/gravity.html">11.5. Gravity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../atmospheric_forces/forces_practice_tasks.html">11.6. Practice Tasks - Forces</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../contour_plots/gridded_data_intro.html">12. Gridded Data and Contour Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contour_plots/gridded_data_intro.html">12. Gridded Data and Contour Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contour_plots/gridded_data_location.html">12.1. Gridded Data Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contour_plots/model_file_info.html">12.2. Model Output Contents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contour_plots/contour_plotting.html">12.3. Contour Plotting</a></li>
@@ -257,24 +269,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../contour_plots/multiple_contours.html">12.6. Plotting Multiple Contours</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contour_plots/contour_plot_practice_tasks.html">12.7. Practice Tasks - Contour Plotting</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../force_balances/force_balances_intro.html">13. Atmospheric Force Balances</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../force_balances/force_balances_intro.html">13. Atmospheric Force Balances</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/hydrostatic_balance.html">13.1. Hydrostatic Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/geostrophic_balance.html">13.2. Geostrophic Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/gradient_balance.html">13.3. Gradient Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/surface_balance.html">13.4. Guldberg-Mohn Balance (Surface Balance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../force_balances/thermal_wind_balance.html">13.5. Thermal Wind Balance</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../colorfilled_plots/colorfilled_intro.html">14. Color-filled Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../colorfilled_plots/colorfilled_intro.html">14. Color-filled Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/colorfilled_gridded_output.html">14.2. Color-filled Contouring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smoothing_data.html">14.3. Smoothing Data Fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smooth_field.html">14.4. Smooth Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/smooth_contour.html">14.5. Smooth Contour</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../colorfilled_plots/colorfilled_practice_tasks.html">14.6. Practice Tasks - Color-filled Plotting</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_intro.html">15. Life Cycle of Mid-Latitude Cyclones</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_intro.html">15. Life Cycle of Mid-Latitude Cyclones</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_pre_environment.html">15.3. Pre-Environment Stage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_cyclogenesis.html">15.4. Cyclogenesis Stage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_mature.html">15.5. Mature Stage</a></li>
@@ -285,24 +297,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_warm_sector.html">15.10. Warm Sector Rain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../midlat_cyclone/midlatitude_cyclone_tracks.html">15.11. Cyclone Tracks</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../overlay_maps/overlay_maps_intro.html">16. Overlay Observations and Contours</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../overlay_maps/overlay_maps_intro.html">16. Overlay Observations and Contours</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../overlay_maps/upperair_500_obs_contours.html">16.1. Overlay Observations and Contours</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../nwp/nwp_intro.html">17. Numerical Weather Prediction</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nwp/nwp_intro.html">17. Numerical Weather Prediction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../nwp/nwp_overview.html">17.1. NWP Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../nwp/operational_models.html">17.2. Operational NWP Models</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../derived_parameters/derived_intro.html">18. Derived Atmospheric Parameters</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../derived_parameters/derived_intro.html">18. Derived Atmospheric Parameters</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/thickness.html">18.1. Atmospheric Thickness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/vorticity.html">18.2. Vorticity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/advection.html">18.3. Advection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../derived_parameters/derived_parameters_practice_tasks.html">18.4. Practice Tasks - Derived Parameters</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../metpy_calculations/calc_intro.html">19. Calculations with MetPy</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../metpy_calculations/calc_intro.html">19. Calculations with MetPy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/simple_calcs.html">19.1. Simple Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_thickness.html">19.2. Thickness Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/scaling_values.html">19.3. Scaling Parameters</a></li>
@@ -316,8 +328,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/gridded_calculation_vorticity.html">19.11. Relative Vorticity Calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metpy_calculations/calculation_practice_tasks.html">19.12. Practice Tasks - MetPy Calculations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/skewt_intro.html">20. Skew-T Log-p Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/skewt_intro.html">20. Skew-T Log-p Diagram</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../skewt/stability_review.html">20.1. Atmospheric Stability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skewt/skewt_diagram.html">20.2. Skew-T Log-p Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skewt/skewt_attributes.html">20.3. Sounding attributes</a></li>
@@ -331,15 +343,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../skewt/metpy_skewt_calc_practice.html">20.12. Practice Tasks - MetPy Sounding Calculations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="satellite_intro.html">21. Satellite Observations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="satellite_intro.html">21. Satellite Observations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="satellite_types.html">21.1. Types of Satellites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="satellite_channels.html">21.2. Satellite Channels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="satellite_imagery.html">21.3. Satellite Imagery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="satellite_features.html">21.4. Satellite Feature Identification</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">21.5. Color-Enhanced Satellite Imagery</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -348,7 +360,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/upperair_data_access.html">Accessing Upperair Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/gridded_archive_data_access.html">Access Gridded Archive Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/working_with_NAM_data.html">Working with NAM Data</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/metpy_declarative_details.html">MetPy Declarative Syntax</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_plotobs.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PlotObs()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_contourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">ContourPlot()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_filledcontourplot.html">MetPy - <code class="docutils literal notranslate"><span class="pre">FilledContourPlot()</span></code></a></li>
@@ -361,7 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_mappanel.html">MetPy - <code class="docutils literal notranslate"><span class="pre">MapPanel()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/metpy_declarative_panelcontainer.html">MetPy - <code class="docutils literal notranslate"><span class="pre">PanelContainer()</span></code></a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -377,7 +389,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -386,14 +398,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -515,26 +527,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-  </button>
-`);
-</script>
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -567,14 +573,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="color-enhanced-satellite-imagery">
-<h1><span class="section-number">21.5. </span>Color-Enhanced Satellite Imagery<a class="headerlink" href="#color-enhanced-satellite-imagery" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">21.5. </span>Color-Enhanced Satellite Imagery<a class="headerlink" href="#color-enhanced-satellite-imagery" title="Link to this heading">#</a></h1>
 <p>To plot satellite imagery we can use data that we bring in through our local data feed or remote access from UCAR. Satellite data are stored in <code class="docutils literal notranslate"><span class="pre">/data/ldmdata/satellite</span></code> for both GOES-16 and GOES-17 or at <code class="docutils literal notranslate"><span class="pre">https://thredds.ucar.edu/thredds/idd/satellite.html</span></code>. We’ll be using the remote data source in this notebook. There are a couple of different sectors that we can view the data from, but the most common for synoptic-dynamic purposes would be the CONUS projection. Data are available every 5 min.</p>
 <p>For this plotting we are doing to use the declarative plotting syntax using Python and the MetPy module.</p>
 <section id="import-packages">
-<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">UTC</span>
@@ -591,7 +597,7 @@ document.write(`
 </div>
 </section>
 <section id="get-data">
-<h2>Get Data<a class="headerlink" href="#get-data" title="Permalink to this heading">#</a></h2>
+<h2>Get Data<a class="headerlink" href="#get-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">UTC</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
@@ -616,7 +622,7 @@ document.write(`
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">filter_time_nearest</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;_s(?P&lt;strptime&gt;\d</span><span class="si">{13}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">strptime</span><span class="o">=</span><span class="s1">&#39;%Y%j%H%M%S&#39;</span><span class="p">)</span>
 
 <span class="c1"># Open most recent file available</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">remote_access</span><span class="p">(</span><span class="n">use_xarray</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">remote_access</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="s1">&#39;OPENDAP&#39;</span><span class="p">,</span> <span class="n">use_xarray</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Apply a square root correction for visible imagery only</span>
 <span class="k">if</span> <span class="n">channel</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -630,7 +636,7 @@ document.write(`
 </div>
 </section>
 <section id="plot-imagery">
-<h2>Plot Imagery<a class="headerlink" href="#plot-imagery" title="Permalink to this heading">#</a></h2>
+<h2>Plot Imagery<a class="headerlink" href="#plot-imagery" title="Link to this heading">#</a></h2>
 <p>Color enhancement colormaps are available from MetPy and can be found at: <a href="https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ctables.html" target="_blank">https://unidata.github.io/MetPy/latest/api/generated/metpy.plots.ctables.html</a></p>
 <p>Water Vapor Colormaps:</p>
 <ul class="simple">
@@ -676,7 +682,7 @@ Depending on the data you may have to switch between reveresed and non-reveresed
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/56a15c85d9a7574fe07f5dceaeeda596b4257b8a5010e493c5eaa79cb45ff4d8.png" src="../../_images/56a15c85d9a7574fe07f5dceaeeda596b4257b8a5010e493c5eaa79cb45ff4d8.png" />
+<img alt="../../_images/c87d34998f6a3368438642deb2f9579f5df972f8ce86efb68233f31748cc6549.png" src="../../_images/c87d34998f6a3368438642deb2f9579f5df972f8ce86efb68233f31748cc6549.png" />
 </div>
 </div>
 </section>
@@ -707,11 +713,10 @@ Depending on the data you may have to switch between reveresed and non-reveresed
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="satellite_features.html"
@@ -731,17 +736,16 @@ Depending on the data you may have to switch between reveresed and non-reveresed
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -773,6 +777,7 @@ By Kevin Goebbert
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -805,8 +810,8 @@ All other non-code content is licensed under
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
