@@ -16,6 +16,7 @@ dependencies:
   - cartopy
   - siphon
   - metpy
+  - mystmd
   - xarray
   - urllib3
   - pandas
