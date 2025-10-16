@@ -40,7 +40,6 @@ td, th {
 :align: center
 :name: upa-height-decode
 :header-rows: 1
-:width: 45
 :class: td, th
 
 "Pressure (hPa)", "Prefix to Plotted Value", "Suffix to Plotted Value", "Plotted", "Height (m)"

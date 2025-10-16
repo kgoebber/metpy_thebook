@@ -35,7 +35,7 @@ parts:
           - file: python_basics/basics1.ipynb
           - file: python_basics/basics2.ipynb
           - file: python_basics/basics3.ipynb
-      - file: python_basics/python_control_flow.ipynb
+      - file: python_basics/python_control_flow.md
         sections:
           - file: python_basics/program_control_ifthen.ipynb
           - file: python_basics/program_control_looping.ipynb
