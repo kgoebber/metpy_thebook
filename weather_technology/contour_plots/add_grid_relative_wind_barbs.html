@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'weather_technology/contour_plots/add_grid_relative_wind_barbs';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="12.7. Overlay Multiple Contours" href="overlay_contours.html" />
+    <link rel="next" title="12.6. Overlay Multiple Contours" href="overlay_contours.html" />
     <link rel="prev" title="12.4. Contour Plotting with Wind Barbs" href="add_wind_barbs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -277,10 +277,9 @@
 <li class="toctree-l2"><a class="reference internal" href="contour_plotting.html">12.3. Contour Plotting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="add_wind_barbs.html">12.4. Contour Plotting with Wind Barbs</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">12.5. Plotting Grid-Relative Wind Barbs</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="overlay_contours.html">12.7. Overlay Multiple Contours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multiple_contours.html">12.8. Plotting Multiple Contours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contour_plot_practice_tasks.html">12.9. Practice Tasks - Contour Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_contours.html">12.6. Overlay Multiple Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiple_contours.html">12.7. Plotting Multiple Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contour_plot_practice_tasks.html">12.8. Practice Tasks - Contour Plotting</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../force_balances/force_balances_intro.html">13. Atmospheric Force Balances</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -582,8 +581,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">12.5. Plotting Grid-Relative Wind Barbs</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-relative-wind-barbs">12.6. Grid-Relative Wind Barbs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-relative-wind-barbs">Grid-Relative Wind Barbs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages">Import Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot Data</a></li>
@@ -593,9 +591,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-grid-relative-winds">Converting Grid-Relative Winds</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-wind-barb-comparison">Direct Wind Barb Comparison</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -611,11 +606,11 @@ document.write(`
 <p>This notebook demonstrates plotting grid-relative wind components as
 wind barbs along with contours. We’ll continue to use 500-hPa as an
 example level for plotting purposes.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="grid-relative-wind-barbs">
-<h1><span class="section-number">12.6. </span>Grid-Relative Wind Barbs<a class="headerlink" href="#grid-relative-wind-barbs" title="Link to this heading">#</a></h1>
+<section id="grid-relative-wind-barbs">
+<h2>Grid-Relative Wind Barbs<a class="headerlink" href="#grid-relative-wind-barbs" title="Link to this heading">#</a></h2>
 <p>Unlike observation data, wind components can be stored in two different ways: 1) Earth relative or 2) grid relative. The most common way for the wind components to be stored would be as Earth relative, meaning that the winds are stored in what would be considered the “common” way on a rectilinear grid and would be comparable tp standard observation data. Grid-relative means that the compnents are stored relative to a particular grid projection. Currently the two datasets that have wind components often stored in this grid-relative manner are the North American Model (NAM) and the North American Regional Reanalysis (NARR), whose grid was based off of a historic NAM grid. However, they may not always be stored that way, so you should ALWAYS pay close attention to the meta data associated with your dataset and ensuring the plotted winds conform to known meteorological relationships (e.g., geostrophic/gradient wind balance).</p>
 <p>This notebook will demonstrate how MetPy can convert grid-relative winds to be appropriate for your chosen map projection.</p>
+</section>
 <section id="import-packages">
 <h2>Import Packages<a class="headerlink" href="#import-packages" title="Link to this heading">#</a></h2>
 <p>Here we bring in the needed Python modules to be able to plot contours using the computer. Note that there are fewer needed for this particular plotting scenario.</p>
@@ -878,7 +873,7 @@ example level for plotting purposes.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">12.7. </span>Overlay Multiple Contours</p>
+        <p class="prev-next-title"><span class="section-number">12.6. </span>Overlay Multiple Contours</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -898,8 +893,7 @@ example level for plotting purposes.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">12.5. Plotting Grid-Relative Wind Barbs</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-relative-wind-barbs">12.6. Grid-Relative Wind Barbs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-relative-wind-barbs">Grid-Relative Wind Barbs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages">Import Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot Data</a></li>
@@ -909,9 +903,6 @@ example level for plotting purposes.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-grid-relative-winds">Converting Grid-Relative Winds</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-wind-barb-comparison">Direct Wind Barb Comparison</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
