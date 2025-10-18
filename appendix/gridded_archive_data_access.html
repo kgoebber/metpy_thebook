@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -67,7 +64,6 @@
     <link rel="prev" title="Accessing Upperair Data" href="upperair_data_access.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,8 +79,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -92,6 +99,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -99,8 +107,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -116,8 +124,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -147,17 +154,21 @@
     
     
     <img src="../_static/metpy_thebook_graphic.png" class="logo__image only-light" alt="Introduction to Weather Technology using MetPy - Home"/>
-    <img src="../_static/metpy_thebook_graphic.png" class="logo__image only-dark pst-js-only" alt="Introduction to Weather Technology using MetPy - Home"/>
+    <script>document.write(`<img src="../_static/metpy_thebook_graphic.png" class="logo__image only-dark" alt="Introduction to Weather Technology using MetPy - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -265,9 +276,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/model_file_info.html">12.2. Model Output Contents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/contour_plotting.html">12.3. Contour Plotting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/add_wind_barbs.html">12.4. Contour Plotting with Wind Barbs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/overlay_contours.html">12.5. Overlay Multiple Contours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/multiple_contours.html">12.6. Plotting Multiple Contours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/contour_plot_practice_tasks.html">12.7. Practice Tasks - Contour Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/add_grid_relative_wind_barbs.html">12.5. Plotting Grid-Relative Wind Barbs</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/overlay_contours.html">12.7. Overlay Multiple Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/multiple_contours.html">12.8. Plotting Multiple Contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../weather_technology/contour_plots/contour_plot_practice_tasks.html">12.9. Practice Tasks - Contour Plotting</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../weather_technology/force_balances/force_balances_intro.html">13. Atmospheric Force Balances</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -528,16 +541,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -598,10 +619,10 @@ to help you choose the best data access method for the question(s) you are attem
 to answer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">metpy.calc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpcalc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 </pre></div>
 </div>
 </div>
@@ -620,26 +641,22 @@ times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data available July 30, 1999 at 18 UTC through December 6, 2007 at 06 UTC</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/1/TP&#39;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://tds.gdex.ucar.edu/thredds/dodsC/aggregations/g/d083002/1/TP&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>syntax error, unexpected WORD_WORD, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
-context: &lt;!DOCTYPE^ html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;style&gt;html { color-scheme: light dark; }body { width: 35em; margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;An error occurred.&lt;/h1&gt;&lt;p&gt;Sorry, the page you are looking for is currently unavailable.&lt;br/&gt;Please try again later.&lt;/p&gt;&lt;p&gt;If you are the system administrator of this resource then you should checkthe error log for details.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Faithfully yours, nginx.&lt;/em&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time9: 12074, isobaric1: 26,
-                                                  lat: 181, lon: 360)&gt; Size: 82GB
-[20455287840 values with dtype=float32]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time6: 11974, isobaric2: 26,
+                                                  lat: 181, lon: 360)&gt; Size: 81GB
+[20285871840 values with dtype=float32]
 Coordinates:
   * lat        (lat) float32 724B 90.0 89.0 88.0 87.0 ... -88.0 -89.0 -90.0
   * lon        (lon) float32 1kB 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
-  * time9      (time9) datetime64[ns] 97kB 1999-07-30T18:00:00 ... 2007-12-06...
-    reftime9   (time9) datetime64[ns] 97kB ...
-  * isobaric1  (isobaric1) float32 104B 10.0 20.0 30.0 ... 950.0 975.0 1e+03
+  * time6      (time6) datetime64[ns] 96kB 1999-07-30T18:00:00 ... 2007-12-06...
+    reftime6   (time6) datetime64[ns] 96kB ...
+  * isobaric2  (isobaric2) float32 104B 10.0 20.0 30.0 ... 950.0 975.0 1e+03
 Attributes: (12/14)
     long_name:             Geopotential height @ Isobaric surface
     units:                 gpm
@@ -661,33 +678,25 @@ Attributes: (12/14)
 </section>
 <section id="gfs-one-degree-archive-to-current">
 <h3>GFS One Degree Archive - to current<a class="headerlink" href="#gfs-one-degree-archive-to-current" title="Link to this heading">#</a></h3>
-<p>12 UTC 6 December 2007 to 18 UTC 13 March 2023</p>
+<p>12 UTC 6 December 2007 to current</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Available December 6, 2007 at 06 UTC through March 31, 2023 at 18 UTC</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.rda.ucar.edu/thredds/dodsC/aggregations/g/ds083.2/2/TP&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Available December 6, 2007 at 06 UTC through October 2025</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://tds.gdex.ucar.edu/thredds/dodsC/aggregations/g/d083002/2/TP&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>syntax error, unexpected WORD_WORD, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
-context: &lt;!DOCTYPE^ html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;style&gt;html { color-scheme: light dark; }body { width: 35em; margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;An error occurred.&lt;/h1&gt;&lt;p&gt;Sorry, the page you are looking for is currently unavailable.&lt;br/&gt;Please try again later.&lt;/p&gt;&lt;p&gt;If you are the system administrator of this resource then you should checkthe error log for details.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Faithfully yours, nginx.&lt;/em&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>syntax error, unexpected WORD_WORD, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
-context: &lt;!DOCTYPE^ html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;style&gt;html { color-scheme: light dark; }body { width: 35em; margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif; }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;An error occurred.&lt;/h1&gt;&lt;p&gt;Sorry, the page you are looking for is currently unavailable.&lt;br/&gt;Please try again later.&lt;/p&gt;&lt;p&gt;If you are the system administrator of this resource then you should checkthe error log for details.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Faithfully yours, nginx.&lt;/em&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time8: 22306, isobaric1: 41,
-                                                  lat: 181, lon: 360)&gt; Size: 238GB
-[59591817360 values with dtype=float32]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time7: 26097, isobaric1: 41,
+                                                  lat: 181, lon: 360)&gt; Size: 279GB
+[69719701320 values with dtype=float32]
 Coordinates:
   * lat        (lat) float32 724B 90.0 89.0 88.0 87.0 ... -88.0 -89.0 -90.0
   * lon        (lon) float32 1kB 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
-  * time8      (time8) datetime64[ns] 178kB 2007-12-06T12:00:00 ... 2023-03-1...
-    reftime8   (time8) datetime64[ns] 178kB ...
+  * time7      (time7) datetime64[ns] 209kB 2007-12-06T12:00:00 ... 2025-10-1...
+    reftime7   (time7) datetime64[ns] 209kB ...
   * isobaric1  (isobaric1) float32 164B 1.0 2.0 4.0 ... 9.5e+04 9.75e+04 1e+05
 Attributes: (12/13)
     long_name:                       Geopotential height @ Isobaric surface
@@ -717,7 +726,7 @@ Attributes: (12/13)
 
 <span class="c1"># Current data from January 15, 2015 at 00 UTC through present</span>
 <span class="c1"># Direct file access</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.rda.ucar.edu/thredds/dodsC/files/g/ds084.1/&#39;</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://tds.gdex.ucar.edu/thredds/dodsC/files/g/d084001/&#39;</span>
                     <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">/gfs.0p25.</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d%H</span><span class="si">}</span><span class="s1">.f000.grib2&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="p">)</span>
@@ -725,7 +734,7 @@ Attributes: (12/13)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time: 1, isobaric3: 31,
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time: 1, isobaric4: 31,
                                                   lat: 721, lon: 1440)&gt; Size: 129MB
 [32185440 values with dtype=float32]
 Coordinates:
@@ -733,7 +742,7 @@ Coordinates:
   * lon        (lon) float32 6kB 0.0 0.25 0.5 0.75 ... 359.0 359.2 359.5 359.8
     reftime    datetime64[ns] 8B ...
   * time       (time) datetime64[ns] 8B 2019-03-12
-  * isobaric3  (isobaric3) float32 124B 100.0 200.0 300.0 ... 9.75e+04 1e+05
+  * isobaric4  (isobaric4) float32 124B 100.0 200.0 300.0 ... 9.75e+04 1e+05
 Attributes: (12/13)
     long_name:                       Geopotential height @ Isobaric surface
     units:                           gpm
@@ -777,28 +786,29 @@ analysis (e.g., F000) for each of the model runs (00, 06, 12, 18).</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time: 1, isobaric: 31,
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time: 1, isobaric4: 31,
                                                   lat: 361, lon: 720)&gt; Size: 32MB
 [8057520 values with dtype=float32]
 Coordinates:
-  * lat       (lat) float32 1kB 90.0 89.5 89.0 88.5 ... -88.5 -89.0 -89.5 -90.0
-  * lon       (lon) float32 3kB 0.0 0.5 1.0 1.5 2.0 ... 358.0 358.5 359.0 359.5
-    reftime   datetime64[ns] 8B ...
-  * time      (time) datetime64[ns] 8B 2018-12-25
-  * isobaric  (isobaric) float32 124B 100.0 200.0 300.0 ... 9.75e+04 1e+05
-Attributes:
-    long_name:                      Geopotential height @ Isobaric surface
-    units:                          gpm
-    abbreviation:                   HGT
-    grid_mapping:                   LatLon_Projection
-    Grib_Variable_Id:               VAR_0-3-5_L100
-    Grib2_Parameter:                [0 3 5]
-    Grib2_Parameter_Discipline:     Meteorological products
-    Grib2_Parameter_Category:       Mass
-    Grib2_Parameter_Name:           Geopotential height
-    Grib2_Level_Type:               100
-    Grib2_Level_Desc:               Isobaric surface
-    Grib2_Generating_Process_Type:  Forecast
+  * lat        (lat) float32 1kB 90.0 89.5 89.0 88.5 ... -88.5 -89.0 -89.5 -90.0
+  * lon        (lon) float32 3kB 0.0 0.5 1.0 1.5 2.0 ... 358.0 358.5 359.0 359.5
+    reftime    datetime64[ns] 8B ...
+  * time       (time) datetime64[ns] 8B 2018-12-25
+  * isobaric4  (isobaric4) float32 124B 100.0 200.0 300.0 ... 9.75e+04 1e+05
+Attributes: (12/13)
+    long_name:                       Geopotential height @ Isobaric surface
+    units:                           gpm
+    abbreviation:                    HGT
+    grid_mapping:                    LatLon_Projection
+    Grib_Variable_Id:                VAR_0-3-5_L100
+    Grib2_Parameter:                 [0 3 5]
+    ...                              ...
+    Grib2_Parameter_Category:        Mass
+    Grib2_Parameter_Name:            Geopotential height
+    Grib2_Level_Type:                100
+    Grib2_Level_Desc:                Isobaric surface
+    Grib2_Generating_Process_Type:   Forecast
+    Grib2_Statistical_Process_Type:  UnknownStatType--1
 </pre></div>
 </div>
 </div>
@@ -812,7 +822,7 @@ analysis (e.g., F000) for each of the model runs (00, 06, 12, 18).</p>
 <p>GFS One Degree Data from March 2004 - nearly present</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># GFS 1-degree Analysis back to 00 UTC 2 March 2004 to April 2020</span>
 <span class="c1"># Dates after April 5, 2017 use the suffix of .grb2 instead of .grb</span>
@@ -835,21 +845,22 @@ Coordinates:
   * lat        (lat) float32 724B 90.0 89.0 88.0 87.0 ... -88.0 -89.0 -90.0
   * lon        (lon) float32 1kB 0.0 1.0 2.0 3.0 4.0 ... 356.0 357.0 358.0 359.0
     reftime    datetime64[ns] 8B ...
-  * time       (time) datetime64[ns] 8B 2004-03-02
+  * time       (time) datetime64[ns] 8B 2005-03-02
   * isobaric2  (isobaric2) float32 104B 10.0 20.0 30.0 ... 950.0 975.0 1e+03
-Attributes:
+Attributes: (12/14)
     long_name:             Geopotential height @ Isobaric surface
     units:                 gpm
     description:           Geopotential height
     grid_mapping:          LatLon_Projection
     Grib_Variable_Id:      VAR_7-0-2-7_L100
     Grib1_Center:          7
-    Grib1_Subcenter:       0
-    Grib1_TableVersion:    2
+    ...                    ...
     Grib1_Parameter:       7
     Grib1_Parameter_Name:  HGT
     Grib1_Level_Type:      100
     Grib1_Level_Desc:      Isobaric surface
+    Grib1_Interval_Type:   -1
+    Grib1_Interval_Name:   Unknown Time Range Indicator -1
 </pre></div>
 </div>
 </div>
@@ -879,28 +890,29 @@ analysis (e.g., F000) for each of the model runs (00, 06, 12, 18).</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time: 1, isobaric: 39,
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time: 1, isobaric1: 39,
                                                   y: 428, x: 614)&gt; Size: 41MB
 [10248888 values with dtype=float32]
 Coordinates:
-  * x         (x) float32 2kB -4.224e+03 -4.211e+03 ... 3.237e+03 3.249e+03
-  * y         (y) float32 2kB -832.2 -820.0 -807.8 ... 4.361e+03 4.373e+03
-    reftime   datetime64[ns] 8B ...
-  * time      (time) datetime64[ns] 8B 2008-03-02T18:00:00
-  * isobaric  (isobaric) float32 156B 50.0 75.0 100.0 ... 950.0 975.0 1e+03
-Attributes:
+  * x          (x) float32 2kB -4.224e+03 -4.211e+03 ... 3.237e+03 3.249e+03
+  * y          (y) float32 2kB -832.2 -820.0 -807.8 ... 4.361e+03 4.373e+03
+    reftime    datetime64[ns] 8B ...
+  * time       (time) datetime64[ns] 8B 2008-03-02T18:00:00
+  * isobaric1  (isobaric1) float32 156B 50.0 75.0 100.0 ... 950.0 975.0 1e+03
+Attributes: (12/14)
     long_name:             Geopotential height @ Isobaric surface
     units:                 gpm
     description:           Geopotential height
     grid_mapping:          LambertConformal_Projection
     Grib_Variable_Id:      VAR_7-0-2-7_L100
     Grib1_Center:          7
-    Grib1_Subcenter:       0
-    Grib1_TableVersion:    2
+    ...                    ...
     Grib1_Parameter:       7
     Grib1_Parameter_Name:  HGT
     Grib1_Level_Type:      100
     Grib1_Level_Desc:      Isobaric surface
+    Grib1_Interval_Type:   -1
+    Grib1_Interval_Name:   Unknown Time Range Indicator -1
 </pre></div>
 </div>
 </div>
@@ -914,38 +926,44 @@ that was stored in this location from September 2014. The data are on the NAM gr
 <p>NARR Data from January 1979 - September 2014</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1999</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># North American Regional Reanalysis Analysis back to 0 UTC 1 January 1979 to 30 September 2014</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://www.ncei.noaa.gov/thredds/dodsC/model-narr-a-files/&#39;</span>
-                     <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m/%Y%m%d</span><span class="si">}</span><span class="s1">/narr-a_221_</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d_%H</span><span class="si">}</span><span class="s1">00_000.grb&#39;</span><span class="p">)</span>
+<span class="c1"># North American Regional Reanalysis Analysis back to 0 UTC 1 January 1979 to 30 September 2025</span>
+<span class="c1"># Note: The 2009 months of March through December wer re-run and they are in the year-month folder </span>
+<span class="c1"># with rerun added to the end of it (e.g., 200903rerun) - you&#39;ll need to modify the second line of the </span>
+<span class="c1"># open_dataset call to be f&#39;{date:%Y%m}rerun/merged_AWIP32.{date:%Y%m%d}.tar&#39;</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://tds.gdex.ucar.edu/thredds/dodsC/files/g/d608000/NARRraw/&#39;</span>
+                     <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m</span><span class="si">}</span><span class="s1">/merged_AWIP32.</span><span class="si">{</span><span class="n">date</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">.tar&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (time2: 1, isobaric1: 29,
-                                                  y: 277, x: 349)&gt; Size: 11MB
-[2803517 values with dtype=float32]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;Geopotential_height_isobaric&#39; (reftime: 8, timeOffset: 1,
+                                                  isobaric1: 29, y: 277, x: 349)&gt; Size: 90MB
+[22428136 values with dtype=float32]
 Coordinates:
-  * x          (x) float32 1kB -5.629e+03 -5.597e+03 ... 5.635e+03 5.668e+03
-  * y          (y) float32 1kB -4.61e+03 -4.577e+03 ... 4.317e+03 4.35e+03
-    reftime    datetime64[ns] 8B ...
-  * time2      (time2) datetime64[ns] 8B 1991-10-15
-  * isobaric1  (isobaric1) float32 116B 100.0 125.0 150.0 ... 950.0 975.0 1e+03
-Attributes:
-    long_name:           Geopotential height @ Isobaric surface
-    units:               gpm
-    description:         Geopotential height
-    grid_mapping:        LambertConformal_Projection
-    Grib_Variable_Id:    VAR_7-15-131-7_L100
-    Grib1_Center:        7
-    Grib1_Subcenter:     15
-    Grib1_TableVersion:  131
-    Grib1_Parameter:     7
-    Grib1_Level_Type:    100
-    Grib1_Level_Desc:    Isobaric surface
+  * x           (x) float32 1kB -5.629e+03 -5.597e+03 ... 5.635e+03 5.668e+03
+  * y           (y) float32 1kB -4.61e+03 -4.577e+03 ... 4.317e+03 4.35e+03
+  * reftime     (reftime) datetime64[ns] 64B 1999-10-15 ... 1999-10-15T21:00:00
+  * timeOffset  (timeOffset) float64 8B 0.0
+  * isobaric1   (isobaric1) float32 116B 100.0 125.0 150.0 ... 950.0 975.0 1e+03
+    time        (reftime, timeOffset) datetime64[ns] 64B ...
+Attributes: (12/14)
+    long_name:             Geopotential height @ Isobaric surface
+    units:                 gpm
+    description:           Geopotential height
+    grid_mapping:          LambertConformal_Projection
+    Grib_Variable_Id:      VAR_7-15-131-7_L100
+    Grib1_Center:          7
+    ...                    ...
+    Grib1_Parameter:       7
+    Grib1_Parameter_Name:  
+    Grib1_Level_Type:      100
+    Grib1_Level_Desc:      Isobaric surface
+    Grib1_Interval_Type:   -1
+    Grib1_Interval_Name:   Unknown Time Range Indicator -1
 </pre></div>
 </div>
 </div>
@@ -1008,8 +1026,7 @@ Attributes:
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1082,8 +1099,8 @@ All other non-code content is licensed under
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
