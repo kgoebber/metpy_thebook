@@ -94,6 +94,7 @@ parts:
           - file: weather_technology/contour_plots/model_file_info
           - file: weather_technology/contour_plots/contour_plotting
           - file: weather_technology/contour_plots/add_wind_barbs
+          - file: weather_technology/contour_plots/add_grid_relative_wind_barbs
           - file: weather_technology/contour_plots/overlay_contours
           - file: weather_technology/contour_plots/multiple_contours
           - file: weather_technology/contour_plots/contour_plot_practice_tasks
