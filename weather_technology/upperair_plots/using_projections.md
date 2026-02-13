@@ -15,7 +15,7 @@ There are three pre-defined projections that can be used, `‘lcc’`, `‘mer�
 
 Additionally, the projection can also be set to any valid Cartopy Projection...
 
-Cartopy Projections: <a href="https://scitools.org.uk/cartopy/docs/latest/reference/projections.html" target="_blank">https://scitools.org.uk/cartopy/docs/latest/reference/projections.html</a>
+Cartopy Projections: <a href="https://cartopy.readthedocs.io/stable/" target="_blank">https://cartopy.readthedocs.io/stable/</a>
 
 To use a Cartopy Projection you need to add to your import list the following:
 
