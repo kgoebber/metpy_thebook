@@ -94,4 +94,4 @@ features. There are a number of websites that have good information about variou
 map projections and I found that this
 [ESRI site](https://pro.arcgis.com/en/pro-app/latest/help/mapping/properties/plate-carree.htm)
 was particularly good. For a full list of the projections available within the Cartopy
-package, visit this [site](https://scitools.org.uk/cartopy/docs/latest/reference/projections.html).
+package, visit this [site](https://cartopy.readthedocs.io/stable/).

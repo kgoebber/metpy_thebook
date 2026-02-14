@@ -24,6 +24,4 @@ dependencies:
   - geopandas
   - nodejs
   - notebook
-  - myst-nb
-  - myst-parser
   - mystmd
