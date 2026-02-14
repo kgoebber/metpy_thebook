@@ -16,17 +16,18 @@ with full descriptions given in the table below the figure.
 Graphic representation of the parameters plotted around the upperair station model.
 ```
 
-```{csv-table} Decoding upperair station model
-:name: upa-stn-decode
-:header-rows: 1
-:widths: 5, 15
+```{table} Decoding upperair station model
+:widths: 10, 15
 :align: left
-"Parameter Reference", "Description"
-"**FF**","The wind speed. Typically reported in knots, but can be mph or m s$^{-1}$."
-"**WD**","The wind direction. Indicated by the stem, the wind is always described by where the wind is coming from. The depiction above would be a west wind."
-"**TT**","The temperature in Celsius (different from the surface model)"
-"**DD**","The dewpoint depression or spread between the temperature and the dewpoint. <br><br>For example at 500 hPa,<br><br>DD	=	T(500)  -  Td(500)<br><br>If the dewpoint is the same as the temperature (i.e., the atmosphere is saturated at 500 hPa), then the dewpoint depression (DD) is zero.<br><br>Very Moist Air	DD = 0<br><br>Very Dry Air  DD >= 30"
-"**HHH**","The height that you must go (referenced to mean sea level) up in order to reach the stated pressure level at the given location. This is in a code. See Table {numref}`upa-height-decode` below for a description of how to interpret at different pressure levels."
+:name: upa-stn-decode
+
+| Parameter Reference | Description |
+| --- | --- |
+| **FF** | The wind speed. Typically reported in knots, but can be mph or m s$^{-1}$. |
+| **WD** | The wind direction. Indicated by the stem, the wind is always described by where the wind is coming from. The depiction above would be a west wind. |
+| **TT** | The temperature in Celsius (different from the surface model) |
+| **DD** | The dewpoint depression or spread between the temperature and the dewpoint. <br><br>For example at 500 hPa,<br><br>DD	=	T(500)  -  Td(500)<br><br>If the dewpoint is the same as the temperature (i.e., the atmosphere is saturated at 500 hPa), then the dewpoint depression (DD) is zero.<br><br>Very Moist Air	DD = 0<br><br>Very Dry Air  DD >= 30 |
+| **HHH** | The height that you must go (referenced to mean sea level) up in order to reach the stated pressure level at the given location. This is in a code. See Table {numref}`upa-height-decode` below for a description of how to interpret at different pressure levels. |
 ```
 
 To decode the three-digit height values that are plotted on an upperair map you can use
