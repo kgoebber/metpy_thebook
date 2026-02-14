@@ -12,6 +12,7 @@ dependencies:
   - netcdf4
   - jupyter
   - jupyterlab
+  - jupyterlab-myst
   - jupyter-book
   - cartopy
   - siphon
@@ -25,3 +26,4 @@ dependencies:
   - notebook
   - myst-nb
   - myst-parser
+  - mystmd
