@@ -3,7 +3,7 @@ name: metpy_book
 channels:
   - conda-forge
 dependencies:
-  - python<=3.11
+  - python<=3.13
   - numpy
   - shapely
   - matplotlib
@@ -23,3 +23,5 @@ dependencies:
   - geopandas
   - nodejs
   - notebook
+  - myst-nb
+  - myst-parser
