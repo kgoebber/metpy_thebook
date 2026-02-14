@@ -17,7 +17,6 @@ Graphic representation of the parameters plotted around the upperair station mod
 ```
 
 ```{table} Decoding upperair station model
-:widths: 10, 15
 :align: left
 :name: upa-stn-decode
 
