@@ -9,7 +9,7 @@ need to do the analysis or draw the contours of the map we are making.
 ## Current Model Output - Remote Access
 For current model output, the best remote site is:
 
-<a href="https://thredds.ucar.edu/thredds/idd/forecastModels.html" target="_blank">https://thredds.ucar.edu/thredds/idd/forecastModels.html</a>
+<a href="https://thredds.ucar.edu/thredds/catalog/idd/forecastModels.html" target="_blank">https://thredds.ucar.edu/thredds/catalog/idd/forecastModels.html</a>
 
 Below are the URL filename structures for the most common synoptic models available
 through the Unidata THREDDS server. There are at least two weeks of current model
