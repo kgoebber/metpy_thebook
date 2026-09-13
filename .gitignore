@@ -30,6 +30,7 @@ share/python-wheels/
 MANIFEST
 .vscode/
 *.DS_Store
+exports
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
