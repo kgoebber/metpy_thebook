@@ -27,7 +27,7 @@ information to help you with your pressure or height analysis.
 
 ```{figure} ../../images/draw_contour_example.png
 :alt: Example of hand drawn contours through data
-:width: 150px
+:width: 250px
 :align: center
 :name: contour_draw_example
 

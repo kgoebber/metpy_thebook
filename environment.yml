@@ -13,7 +13,7 @@ dependencies:
   - jupyter
   - jupyterlab
   - jupyterlab-myst
-  - jupyter-book=1.*
+  - jupyter-book=2
   - cartopy
   - siphon
   - metpy

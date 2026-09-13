@@ -1,4 +1,4 @@
-# Python Basics
+# Python Syntax
 
 This section will cover some basic fundamental aspects to the Python
 programming language to make reading and writing code that comes

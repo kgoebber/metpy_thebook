@@ -1,5 +1,7 @@
 # Introduction to Weather Technology using MetPy
 
+By: Kevin Goebbert
+
 This is a textbook to demonstrate the use of the MetPy declarative syntax and develop
 knowledge within the meteorological domain at an early collegiate level. Prior coursework
 in an introductory meteorology is expected to be able to follow and work through all material
