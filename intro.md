@@ -7,8 +7,3 @@ knowledge within the meteorological domain at an early collegiate level. Prior c
 in an introductory meteorology is expected to be able to follow and work through all material
 but even just a basic understanding of meteorology content and processes should be enough
 to understand the vast majority of the content of this book.
-
-The text is contain in four main parts as exhibited in the table of contents below.
-
-```{tableofcontents}
-```
