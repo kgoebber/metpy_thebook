@@ -28,11 +28,11 @@ URL (catalog.html) with the filename using the given format.
 
         Filename Format: GFS_Global_0p5deg_YYYYMMDD_HHMM.grib2
 
--   NAM CONUS 12km from CONDUIT (OPeNDAP)
+-   RRFS CONUS 13km from CONDUIT (OPeNDAP)
 
-    -   https://thredds.ucar.edu/thredds/catalog/grib/NCEP/NAM/CONUS_12km/conduit/catalog.html
+    -   https://thredds.ucar.edu/thredds/catalog/grib/NCEP/RRFS/NA_13km/catalog.html
     
-        Filename Format: NAM_CONUS_12km_conduit_YYYYMMDD_HHMM.grib2
+        Filename Format: RRFS_NA_13km_YYYYMMDD_HHMM.grib2
 
 -   Rapid Refresh CONUS 13 km (OPeNDAP)
 

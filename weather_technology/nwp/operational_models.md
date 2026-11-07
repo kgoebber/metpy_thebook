@@ -1,12 +1,12 @@
 # Operational NWP Models
 
 There are three primary synoptic models that are used for forecasting across the
-United States: the Rapid Refresh (RAP), the North American Model (NAM),
+United States: the Rapid Refresh (RAP), the Rapid Refresh Forecast System (RRFS),
 and the Global Forecast System (GFS) model. All three models have a
 slightly varying purpose and have different forecast periods, which are
 summarized below.
 
-| | RAP | NAM | GFS |
+| | RAP | RRFS | GFS |
 | - | - | - | - |
 | Forecast Hours | 48 | 84 | 384
 | Model Type | Grid Point | Grid Point | Finite Volume |

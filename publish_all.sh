@@ -6,7 +6,7 @@
 #
 
 # Create Full Jupyter Book as HTML
-myst build --execute --html
+jupyter book build --html --execute
 
 # Publish Webpage via ghp
 ghp-import -n -p -f _build/html

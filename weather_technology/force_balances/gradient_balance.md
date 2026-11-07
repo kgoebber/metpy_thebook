@@ -7,11 +7,9 @@ force, and the centrifugal force ({numref}`Fig. %s <gradient>`).
 This balance applies in upper-level
 troughs and ridges and can be written algebraically as,
 
-$$
-0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} + f V + \frac{V^2}{R}
+$$0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} + f V + \frac{V^2}{R}$$
 
-0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} - f U + \frac{U^2}{R}
-$$
+$$0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} - f U + \frac{U^2}{R}$$
 
 This equation can be solved using the quadratic formula. If the pressure
 gradient were equal around both a high and a low, gradient wind balance

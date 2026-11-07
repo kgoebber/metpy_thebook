@@ -6,11 +6,9 @@ force subsequently does not turn the wind as much and therefore the wind
 will flow across isobars. This is known as the Guldberg-Mohn force
 balance and can be written algebraically as,
 
-$$
-0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} + f V - k U
+$$0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} + f V - k U$$
 
-0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta y} - f U - k V
-$$
+$$0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta y} - f U - k V$$
 
 The greater the roughness of the surface, the stronger the friction,
 the greater the angle that the flow will cross the isobars. In

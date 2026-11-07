@@ -9,32 +9,27 @@ geostrophic balance. The balance is between the pressure gradient
 (height gradient) force and the Coriolis force ({numref}`Fig. %s <geostrophic>`)
 and can be written algebraically for a constant height surface as,
 
-$$
-0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} + f v_g
+$$0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta x} + f v_g$$
 
-0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta y} - f u_g
-$$
+$$0 = -\frac{1}{\rho}\frac{\Delta p}{\Delta y} - f u_g$$
+
 
 where the subscript $g$ signifies the geostrophic wind. Note how we also
 choose to separate the wind into $u_g$ and $v_g$ components,
 symbolizing west/east and south/north flow respectively. We can rewrite
 the right-hand side of the force balance for geopotential height as,
 
-$$
-0 = -g\frac{\Delta z}{\Delta x} + f v_g
+$$0 = -g\frac{\Delta z}{\Delta x} + f v_g$$
 
-0 = -g\frac{\Delta z}{\Delta y} - f u_g
-$$
+$$0 = -g\frac{\Delta z}{\Delta y} - f u_g$$
 
 where $g\Delta z = \Delta \Phi$ and is known as geopotential height.
 Solving for $v_g$ and $u_g$ yields an equation for the geostrophic wind
 on a constant pressure surface,
 
-$$
-v_g = \frac{g}{f}\frac{\Delta z}{\Delta x}
+$$v_g = \frac{g}{f}\frac{\Delta z}{\Delta x}$$
 
-u_g = -\frac{g}{f}\frac{\Delta z}{\Delta y}
-$$
+$$u_g = -\frac{g}{f}\frac{\Delta z}{\Delta y}$$
 
 ```{figure} ../../images/geostrophic_balance.png
 :alt: Geostrophic Balance
