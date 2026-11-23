@@ -6,7 +6,7 @@ dependencies:
   - python<=3.13
   - numpy
   - shapely
-  - matplotlib
+  - matplotlib<=3.10
   - scipy
   - pint
   - netcdf4
