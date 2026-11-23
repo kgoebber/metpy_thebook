@@ -81,8 +81,7 @@ project:
             - file: weather_technology/surface_plots/surface_obs.md
             - file: weather_technology/surface_plots/surface_charts.md
             - file: weather_technology/surface_plots/typical_notebook_structure.md
-            - file: >-
-                weather_technology/surface_plots/current_surface_observation_plots.ipynb
+            - file: weather_technology/surface_plots/current_surface_observation_plots.ipynb
             - file: weather_technology/surface_plots/practice_tasks_surface.md
             - file: weather_technology/surface_plots/observation_locations.md
             - file: weather_technology/surface_plots/full_surface_station_model.ipynb
@@ -91,8 +90,7 @@ project:
         - file: weather_technology/upperair_plots/upperair_intro.md
           children:
             - file: weather_technology/upperair_plots/upperair_station_model.md
-            - file: >-
-                weather_technology/upperair_plots/upperair_station_model_decoding_practice.md
+            - file: weather_technology/upperair_plots/upperair_station_model_decoding_practice.md
             - file: weather_technology/upperair_plots/map_projections.md
             - file: weather_technology/upperair_plots/using_projections.md
             - file: weather_technology/upperair_plots/plot_areas.md
@@ -105,11 +103,9 @@ project:
             - file: weather_technology/hand_analysis/hand_analysis_step2.md
             - file: weather_technology/hand_analysis/hand_analysis_step3.md
             - file: weather_technology/hand_analysis/hand_analysis_step4.md
-            - file: >-
-                weather_technology/hand_analysis/upperair_analysis_contour_parameters.md
+            - file: weather_technology/hand_analysis/upperair_analysis_contour_parameters.md
             - file: weather_technology/hand_analysis/hand_analysis_practice_tasks.md
-            - file: >-
-                weather_technology/hand_analysis/surface_analysis_contour_parameters.md
+            - file: weather_technology/hand_analysis/surface_analysis_contour_parameters.md
             - file: weather_technology/hand_analysis/drawing_fronts.md
             - file: weather_technology/hand_analysis/practice_surface_analysis.md
         - file: weather_technology/atmospheric_forces/forces_intro.md
